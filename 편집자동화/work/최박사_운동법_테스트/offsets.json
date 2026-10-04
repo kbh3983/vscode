@@ -1,0 +1,18 @@
+[
+  {
+    "a": "C:\\Users\\bbong\\Desktop\\복사_261004_최박사_운동법_테스트\\C0017.mp4",
+    "b": "C:\\Users\\bbong\\Desktop\\복사_261004_최박사_운동법_테스트\\C0019.mp4",
+    "b_start_in_a_coarse": -7.207,
+    "peak_ratio": 9.559801253424485,
+    "confidence": 0.8953953148720761,
+    "overlap_sec": 325.325,
+    "b_start_in_a": -7.190312500000001,
+    "b_start_in_a_frames": -215,
+    "fps": 29.97002997002997,
+    "windows": 16,
+    "spread_frames_iqr": 0.6523164335664206,
+    "drift_frames_start_to_end": -0.6245776282539356,
+    "drift_warning": false,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "scene_01",
+    "reference": "C0019.mp4",
+    "sequence": "v01_sync",
+    "clips": [
+      { "file": "C0019.mp4", "camera": "A(임시: 가장 긴 클립)", "track": "V1/A1", "timeline_start_sec": 0.0, "offset_frames": 0 },
+      { "file": "C0017.mp4", "camera": "B(임시)", "track": "V2/A2", "timeline_start_sec": 7.173833, "offset_frames": 215,
+        "confidence": 0.90, "spread_frames_iqr": 0.65, "drift_frames_start_to_end": -0.62, "status": "ok" }
+    ]
+  }
+]

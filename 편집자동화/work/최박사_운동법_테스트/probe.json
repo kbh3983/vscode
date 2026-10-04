@@ -1,0 +1,58 @@
+[
+  {
+    "path": "C:\\Users\\bbong\\Desktop\\복사_261004_최박사_운동법_테스트\\C0017.mp4",
+    "duration": 325.325,
+    "creation_time": "2026-10-04T12:19:54.000000Z",
+    "timecode": null,
+    "camera_model": "AVC Coding",
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1280,
+      "height": 720,
+      "fps": 29.97002997002997,
+      "fps_raw": "30000/1001",
+      "pix_fmt": "yuv420p",
+      "bit_rate": "3305027"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "format_tags": {
+      "major_brand": "mp42",
+      "minor_version": "0",
+      "compatible_brands": "mp42mp41",
+      "creation_time": "2026-10-04T12:19:54.000000Z"
+    }
+  },
+  {
+    "path": "C:\\Users\\bbong\\Desktop\\복사_261004_최박사_운동법_테스트\\C0019.mp4",
+    "duration": 332.8325,
+    "creation_time": "2026-10-04T12:18:33.000000Z",
+    "timecode": null,
+    "camera_model": "AVC Coding",
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1280,
+      "height": 720,
+      "fps": 29.97002997002997,
+      "fps_raw": "30000/1001",
+      "pix_fmt": "yuv420p",
+      "bit_rate": "3303158"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "format_tags": {
+      "major_brand": "mp42",
+      "minor_version": "0",
+      "compatible_brands": "mp42mp41",
+      "creation_time": "2026-10-04T12:18:33.000000Z"
+    }
+  }
+]

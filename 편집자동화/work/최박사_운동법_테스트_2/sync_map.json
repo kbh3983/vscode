@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "scene_01",
+    "reference": "C0020-002.MP4",
+    "sequence": "v01_sync_2",
+    "clips": [
+      { "file": "C0020-002.MP4", "camera": "A", "basis": "정면 + 넓은 샷 (프레임 캡처)", "label": 1, "track": "V1/A1", "timeline_start_sec": 0.0, "offset_frames": 0 },
+      { "file": "C0018-004.MP4", "camera": "B", "basis": "측면 + 가까운 샷 (프레임 캡처)", "label": 0, "track": "V2/A2", "timeline_start_sec": 1.001, "offset_frames": 30,
+        "confidence": 0.89, "spread_frames_iqr": 0.98, "drift_frames_start_to_end": 0.05, "status": "ok" }
+    ]
+  }
+]
