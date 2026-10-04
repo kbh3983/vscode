@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__premiere-pro__verify_premiere_connection"
+    ]
+  }
+}

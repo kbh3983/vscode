@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "premiere-pro": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\bbong\\Adobe_Premiere_Pro_MCP\\dist\\cli.js"
+      ]
+    }
+  }
+}
