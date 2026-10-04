@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+# 촬영본에서 캡처한 프레임 (출연자 얼굴 포함)
+work/**/*.jpg
+work/**/*.png
+
+# 영상·오디오 원본과 결과물
+input/
+output/
+*.mp4
+*.MP4
+*.mov
+*.wav
