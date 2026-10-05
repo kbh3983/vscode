@@ -1,4 +1,4 @@
-﻿# 진행 기록
+# 진행 기록
 
 ## 2026-10-04
 - 프로젝트 생성 (폴더 구조, README)
@@ -19,4 +19,18 @@
 - 다음: 사용자 싱크 확인·카메라 A/B 확정 → layout.py
 - 싱크 승인, A캠=C0019 확정, 카메라 라벨(A 창포색 1 / B 보라 0) 기본값 확정, 프로젝트 저장 → 2캠 단일 장면 싱크 완료
 - 싱크 두 번째 테스트 (둔근 운동법 4K 2캠): playbook 그대로 실행 → 프레임 캡처 A캠 판단·싱크 모두 승인, v01_sync_2 저장
+- git: 편집자동화 안의 중복 저장소 제거, 상위 vscode 저장소로 통합 (강제 푸시는 사용자가 직접 실행 필요)
+
+## 2026-10-05
+- 컷편집 C7: 테이크 선택 이유를 받아 take_choices.md에 기록·학습하는 절차 추가
+- 컷편집은 자막을 넣지 않음. transcript 없이는 컷 판단 불가 → 자막 에이전트 신설 (agents/자막/: AGENT, criteria, glossary, review, learnings, failures, log)
+- 자막 엔진: Premiere Speech to Text 단독으로 확정 (Whisper는 비교 후 제외·삭제). 전사 파일명 transcript.json 고정
+- 자막 첫 검토 목록: agents/자막/review/2026-10-05_최박사_운동법_테스트_2.md (꼭 확인 38, 참고 15)
+- 다음: 사용자 검토 → glossary 첫 학습 → transcript_reviewed.json → 컷편집 첫 테스트
+- 자막 요구사항(agents/자막/AGENT.md에 통합) 파이프라인 구현·실행: asr_pipeline.py(0~3) → candidates.py(5) → corrections.json(4, Claude) → finalize.py(6~7) → Premiere `시퀀스/v01_sync_2_자막` 자막 트랙(8), 저장 완료
+- 다음: 사용자 자막 확인·질문 33개 답변 → 학습
+
+- 자막: Whisper → CLOVA 모두 정확도 부족 → **텍스트 생성 포기**, Cutback SRT를 받아 싱크·폭·위치만 담당하도록 재정의. CLOVA 연결 해제
+- 다음: 자막 `srt_tools.py` 구현 (S1 검사, S3 싱크, S4 폭 맞추기), Cutback SRT 첫 파일 받기
+
 - 보류: 여러 장면 촬영본 싱크(layout.py, S3 장면 묶기, S8 짝 없는 클립)는 이후 별도 진행 (사용자 결정)

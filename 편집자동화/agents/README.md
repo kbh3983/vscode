@@ -54,4 +54,8 @@ MCP는 라벨을 번호(colorIndex)로만 다룬다. MCP 도구 설명의 영어
 | 순서 | 에이전트 | 상태 |
 |---|---|---|
 | 1 | [싱크](싱크/AGENT.md) | 2캠 단일 장면 동작 확인 (여러 장면은 보류) |
-| 2 | [컷편집](컷편집/AGENT.md) | 설계 중 (미결: 플러그인 단어 단위 타임코드) |
+| 2 | [자막](자막/AGENT.md) | Cutback SRT(`subtitle/cutback.srt`) → 싱크·폭 맞추기·위치 → Premiere 자막 트랙 (역할 재정의, `srt_tools.py` 구현 예정) |
+| 3 | [컷편집](컷편집/AGENT.md) | 설계 완료 — `subtitle.json`의 단어 시간으로 컷 → `edit_decisions.json` |
+| 4 | [자막](자막/AGENT.md) 2차 | 컷 반영 재정렬 → `.srt` |
+
+에이전트끼리는 `work/<프로젝트명>/`의 파일로만 주고받는다.
