@@ -1,0 +1,4854 @@
+{
+ "tracks": [
+  {
+   "track": "A1",
+   "clip_id": "000f4705",
+   "path": "C:\\DADA\\1.프로젝트\\260929_최박사\\옆구리 살 빼주는 최고의 운동\\20260908_B_CAM0152.MP4",
+   "start": 0.0,
+   "in": 6.47313333333333,
+   "end": 176.176,
+   "gain_db": 0.0
+  },
+  {
+   "track": "A1",
+   "clip_id": "000f4706",
+   "path": "C:\\DADA\\1.프로젝트\\260929_최박사\\옆구리 살 빼주는 최고의 운동\\20260908_B_CAM0154.MP4",
+   "start": 176.176,
+   "in": 1.23456666666667,
+   "end": 1316.58193333333,
+   "gain_db": 0.0
+  },
+  {
+   "track": "A2",
+   "clip_id": "000f4707",
+   "path": "C:\\DADA\\1.프로젝트\\260929_최박사\\옆구리 살 빼주는 최고의 운동\\C0027.MP4",
+   "start": 0.0,
+   "in": 0.0,
+   "end": 176.176,
+   "gain_db": 0.0,
+   "fill": "L"
+  },
+  {
+   "track": "A2",
+   "clip_id": "000f4708",
+   "path": "C:\\DADA\\1.프로젝트\\260929_최박사\\옆구리 살 빼주는 최고의 운동\\C0028.MP4",
+   "start": 176.176,
+   "in": 0.0,
+   "end": 1316.58193333333,
+   "gain_db": 0.0,
+   "fill": "L"
+  }
+ ],
+ "whole_peak_db": -13.24,
+ "true_peak_db": 0.32,
+ "sentence_median_db": -13.0,
+ "sentence_p10_db": -21.1,
+ "sentence_p90_db": -8.73,
+ "gain_to_target_db": 8.0,
+ "needs_keyframes": true,
+ "sentences": [
+  {
+   "cue": 1,
+   "start": 0.1,
+   "end": 0.95,
+   "text": "",
+   "peak_db": -10.45,
+   "peak_verified_db": -7.8
+  },
+  {
+   "cue": 2,
+   "start": 3.4,
+   "end": 3.8,
+   "text": "",
+   "peak_db": -11.2,
+   "peak_verified_db": -7.95
+  },
+  {
+   "cue": 4,
+   "start": 5.85,
+   "end": 7.15,
+   "text": "",
+   "peak_db": -16.87,
+   "peak_verified_db": -6.93
+  },
+  {
+   "cue": 5,
+   "start": 7.6,
+   "end": 9.05,
+   "text": "",
+   "peak_db": -13.93,
+   "peak_verified_db": -8.06
+  },
+  {
+   "cue": 6,
+   "start": 10.9,
+   "end": 13.95,
+   "text": "",
+   "peak_db": -17.86,
+   "peak_verified_db": -7.51
+  },
+  {
+   "cue": 7,
+   "start": 15.3,
+   "end": 15.95,
+   "text": "",
+   "peak_db": -16.42,
+   "peak_verified_db": -7.33
+  },
+  {
+   "cue": 8,
+   "start": 18.0,
+   "end": 20.35,
+   "text": "",
+   "peak_db": -14.84,
+   "peak_verified_db": -7.46
+  },
+  {
+   "cue": 9,
+   "start": 22.3,
+   "end": 23.05,
+   "text": "",
+   "peak_db": -20.45,
+   "peak_verified_db": -19.39
+  },
+  {
+   "cue": 10,
+   "start": 26.7,
+   "end": 27.9,
+   "text": "",
+   "peak_db": -21.49,
+   "peak_verified_db": -8.12
+  },
+  {
+   "cue": 11,
+   "start": 28.9,
+   "end": 29.7,
+   "text": "",
+   "peak_db": -22.63,
+   "peak_verified_db": -8.61
+  },
+  {
+   "cue": 12,
+   "start": 30.45,
+   "end": 34.4,
+   "text": "",
+   "peak_db": -8.56,
+   "peak_verified_db": -7.99
+  },
+  {
+   "cue": 13,
+   "start": 34.9,
+   "end": 39.6,
+   "text": "",
+   "peak_db": -8.71,
+   "peak_verified_db": -8.03
+  },
+  {
+   "cue": 14,
+   "start": 40.1,
+   "end": 53.8,
+   "text": "",
+   "peak_db": -9.86,
+   "peak_verified_db": -7.66
+  },
+  {
+   "cue": 15,
+   "start": 54.25,
+   "end": 54.8,
+   "text": "",
+   "peak_db": -20.97,
+   "peak_verified_db": -8.78
+  },
+  {
+   "cue": 16,
+   "start": 55.25,
+   "end": 56.2,
+   "text": "",
+   "peak_db": -17.46,
+   "peak_verified_db": -9.55
+  },
+  {
+   "cue": 18,
+   "start": 57.55,
+   "end": 60.65,
+   "text": "",
+   "peak_db": -10.43,
+   "peak_verified_db": -7.46
+  },
+  {
+   "cue": 19,
+   "start": 61.35,
+   "end": 64.4,
+   "text": "",
+   "peak_db": -17.51,
+   "peak_verified_db": -7.15
+  },
+  {
+   "cue": 20,
+   "start": 64.9,
+   "end": 65.3,
+   "text": "",
+   "peak_db": -10.17,
+   "peak_verified_db": -7.24
+  },
+  {
+   "cue": 22,
+   "start": 66.95,
+   "end": 67.6,
+   "text": "",
+   "peak_db": -24.66,
+   "peak_verified_db": -9.66
+  },
+  {
+   "cue": 23,
+   "start": 68.1,
+   "end": 69.25,
+   "text": "",
+   "peak_db": -21.46,
+   "peak_verified_db": -6.8
+  },
+  {
+   "cue": 24,
+   "start": 69.9,
+   "end": 70.9,
+   "text": "",
+   "peak_db": -14.43,
+   "peak_verified_db": -7.67
+  },
+  {
+   "cue": 25,
+   "start": 72.1,
+   "end": 74.45,
+   "text": "",
+   "peak_db": -12.13,
+   "peak_verified_db": -6.98
+  },
+  {
+   "cue": 26,
+   "start": 75.0,
+   "end": 76.2,
+   "text": "",
+   "peak_db": -24.18,
+   "peak_verified_db": -14.65
+  },
+  {
+   "cue": 27,
+   "start": 77.05,
+   "end": 78.85,
+   "text": "",
+   "peak_db": -12.19,
+   "peak_verified_db": -7.28
+  },
+  {
+   "cue": 28,
+   "start": 79.3,
+   "end": 80.35,
+   "text": "",
+   "peak_db": -20.22,
+   "peak_verified_db": -7.59
+  },
+  {
+   "cue": 29,
+   "start": 80.9,
+   "end": 87.6,
+   "text": "",
+   "peak_db": -10.34,
+   "peak_verified_db": -7.66
+  },
+  {
+   "cue": 30,
+   "start": 88.25,
+   "end": 88.75,
+   "text": "",
+   "peak_db": -29.57,
+   "peak_verified_db": -14.7
+  },
+  {
+   "cue": 31,
+   "start": 89.35,
+   "end": 91.1,
+   "text": "",
+   "peak_db": -15.69,
+   "peak_verified_db": -8.86
+  },
+  {
+   "cue": 33,
+   "start": 92.65,
+   "end": 94.2,
+   "text": "",
+   "peak_db": -14.64,
+   "peak_verified_db": -8.81
+  },
+  {
+   "cue": 35,
+   "start": 96.15,
+   "end": 98.0,
+   "text": "",
+   "peak_db": -7.84,
+   "peak_verified_db": -7.1
+  },
+  {
+   "cue": 38,
+   "start": 100.5,
+   "end": 101.3,
+   "text": "",
+   "peak_db": -15.58,
+   "peak_verified_db": -7.53
+  },
+  {
+   "cue": 40,
+   "start": 104.6,
+   "end": 106.8,
+   "text": "",
+   "peak_db": -12.87,
+   "peak_verified_db": -7.82
+  },
+  {
+   "cue": 41,
+   "start": 107.4,
+   "end": 108.05,
+   "text": "",
+   "peak_db": -22.67,
+   "peak_verified_db": -7.16
+  },
+  {
+   "cue": 42,
+   "start": 108.65,
+   "end": 111.6,
+   "text": "",
+   "peak_db": -17.66,
+   "peak_verified_db": -7.89
+  },
+  {
+   "cue": 44,
+   "start": 112.85,
+   "end": 113.2,
+   "text": "",
+   "peak_db": -11.96,
+   "peak_verified_db": -10.01
+  },
+  {
+   "cue": 46,
+   "start": 114.75,
+   "end": 119.55,
+   "text": "",
+   "peak_db": -8.75,
+   "peak_verified_db": -7.48
+  },
+  {
+   "cue": 47,
+   "start": 120.3,
+   "end": 123.25,
+   "text": "",
+   "peak_db": -8.74,
+   "peak_verified_db": -7.82
+  },
+  {
+   "cue": 48,
+   "start": 123.85,
+   "end": 124.7,
+   "text": "",
+   "peak_db": -10.59,
+   "peak_verified_db": -7.94
+  },
+  {
+   "cue": 49,
+   "start": 125.35,
+   "end": 133.8,
+   "text": "",
+   "peak_db": -11.33,
+   "peak_verified_db": -8.18
+  },
+  {
+   "cue": 51,
+   "start": 135.3,
+   "end": 136.45,
+   "text": "",
+   "peak_db": -14.3,
+   "peak_verified_db": -8.44
+  },
+  {
+   "cue": 52,
+   "start": 137.2,
+   "end": 145.45,
+   "text": "",
+   "peak_db": -10.27,
+   "peak_verified_db": -7.77
+  },
+  {
+   "cue": 55,
+   "start": 152.25,
+   "end": 153.9,
+   "text": "",
+   "peak_db": -11.81,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 57,
+   "start": 155.0,
+   "end": 163.95,
+   "text": "",
+   "peak_db": -13.35,
+   "peak_verified_db": -8.79
+  },
+  {
+   "cue": 58,
+   "start": 164.9,
+   "end": 165.3,
+   "text": "",
+   "peak_db": -9.36,
+   "peak_verified_db": -7.79
+  },
+  {
+   "cue": 59,
+   "start": 166.9,
+   "end": 168.0,
+   "text": "",
+   "peak_db": -9.84,
+   "peak_verified_db": -7.51
+  },
+  {
+   "cue": 60,
+   "start": 169.55,
+   "end": 169.95,
+   "text": "",
+   "peak_db": -7.86,
+   "peak_verified_db": -7.03
+  },
+  {
+   "cue": 61,
+   "start": 170.35,
+   "end": 175.75,
+   "text": "",
+   "peak_db": -8.63,
+   "peak_verified_db": -7.69
+  },
+  {
+   "cue": 63,
+   "start": 177.1,
+   "end": 177.65,
+   "text": "",
+   "peak_db": -24.83,
+   "peak_verified_db": -10.11
+  },
+  {
+   "cue": 66,
+   "start": 181.5,
+   "end": 184.3,
+   "text": "",
+   "peak_db": -9.6,
+   "peak_verified_db": -7.49
+  },
+  {
+   "cue": 68,
+   "start": 185.4,
+   "end": 189.15,
+   "text": "",
+   "peak_db": -14.8,
+   "peak_verified_db": -7.44
+  },
+  {
+   "cue": 69,
+   "start": 189.65,
+   "end": 192.5,
+   "text": "",
+   "peak_db": -14.85,
+   "peak_verified_db": -7.42
+  },
+  {
+   "cue": 71,
+   "start": 195.95,
+   "end": 198.95,
+   "text": "",
+   "peak_db": -13.13,
+   "peak_verified_db": -7.27
+  },
+  {
+   "cue": 72,
+   "start": 199.75,
+   "end": 200.9,
+   "text": "",
+   "peak_db": -12.48,
+   "peak_verified_db": -7.23
+  },
+  {
+   "cue": 73,
+   "start": 201.3,
+   "end": 202.0,
+   "text": "",
+   "peak_db": -13.79,
+   "peak_verified_db": -7.49
+  },
+  {
+   "cue": 74,
+   "start": 202.4,
+   "end": 204.2,
+   "text": "",
+   "peak_db": -11.3,
+   "peak_verified_db": -7.64
+  },
+  {
+   "cue": 75,
+   "start": 204.9,
+   "end": 207.1,
+   "text": "",
+   "peak_db": -12.88,
+   "peak_verified_db": -8.14
+  },
+  {
+   "cue": 76,
+   "start": 208.75,
+   "end": 209.5,
+   "text": "",
+   "peak_db": -13.04,
+   "peak_verified_db": -8.09
+  },
+  {
+   "cue": 77,
+   "start": 210.05,
+   "end": 211.75,
+   "text": "",
+   "peak_db": -13.82,
+   "peak_verified_db": -7.18
+  },
+  {
+   "cue": 78,
+   "start": 213.05,
+   "end": 215.45,
+   "text": "",
+   "peak_db": -15.14,
+   "peak_verified_db": -8.02
+  },
+  {
+   "cue": 79,
+   "start": 216.75,
+   "end": 219.2,
+   "text": "",
+   "peak_db": -14.39,
+   "peak_verified_db": -7.45
+  },
+  {
+   "cue": 80,
+   "start": 220.45,
+   "end": 221.8,
+   "text": "",
+   "peak_db": -20.65,
+   "peak_verified_db": -8.35
+  },
+  {
+   "cue": 82,
+   "start": 223.15,
+   "end": 223.6,
+   "text": "",
+   "peak_db": -24.05,
+   "peak_verified_db": -9.24
+  },
+  {
+   "cue": 83,
+   "start": 224.1,
+   "end": 228.95,
+   "text": "",
+   "peak_db": -11.83,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 86,
+   "start": 234.75,
+   "end": 235.25,
+   "text": "",
+   "peak_db": -19.01,
+   "peak_verified_db": -7.01
+  },
+  {
+   "cue": 87,
+   "start": 236.15,
+   "end": 236.55,
+   "text": "",
+   "peak_db": -20.18,
+   "peak_verified_db": -8.82
+  },
+  {
+   "cue": 88,
+   "start": 237.7,
+   "end": 238.3,
+   "text": "",
+   "peak_db": -19.9,
+   "peak_verified_db": -10.82
+  },
+  {
+   "cue": 89,
+   "start": 239.45,
+   "end": 241.05,
+   "text": "",
+   "peak_db": -7.49,
+   "peak_verified_db": -7.83
+  },
+  {
+   "cue": 91,
+   "start": 244.4,
+   "end": 245.85,
+   "text": "",
+   "peak_db": -10.12,
+   "peak_verified_db": -7.46
+  },
+  {
+   "cue": 92,
+   "start": 246.85,
+   "end": 247.65,
+   "text": "",
+   "peak_db": -13.58,
+   "peak_verified_db": -8.07
+  },
+  {
+   "cue": 94,
+   "start": 250.8,
+   "end": 251.75,
+   "text": "",
+   "peak_db": -11.24,
+   "peak_verified_db": -7.18
+  },
+  {
+   "cue": 95,
+   "start": 253.3,
+   "end": 256.0,
+   "text": "",
+   "peak_db": -9.95,
+   "peak_verified_db": -7.62
+  },
+  {
+   "cue": 97,
+   "start": 259.05,
+   "end": 260.05,
+   "text": "",
+   "peak_db": -10.69,
+   "peak_verified_db": -7.85
+  },
+  {
+   "cue": 98,
+   "start": 261.25,
+   "end": 263.05,
+   "text": "",
+   "peak_db": -6.6,
+   "peak_verified_db": -7.55
+  },
+  {
+   "cue": 99,
+   "start": 265.65,
+   "end": 266.05,
+   "text": "",
+   "peak_db": -14.34,
+   "peak_verified_db": -7.09
+  },
+  {
+   "cue": 100,
+   "start": 267.8,
+   "end": 268.6,
+   "text": "",
+   "peak_db": -8.21,
+   "peak_verified_db": -7.72
+  },
+  {
+   "cue": 103,
+   "start": 274.75,
+   "end": 275.05,
+   "text": "",
+   "peak_db": -9.6,
+   "peak_verified_db": -7.71
+  },
+  {
+   "cue": 104,
+   "start": 279.55,
+   "end": 279.85,
+   "text": "",
+   "peak_db": -14.12,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 105,
+   "start": 281.45,
+   "end": 283.15,
+   "text": "",
+   "peak_db": -9.68,
+   "peak_verified_db": -7.51
+  },
+  {
+   "cue": 106,
+   "start": 283.6,
+   "end": 284.25,
+   "text": "",
+   "peak_db": -12.4,
+   "peak_verified_db": -7.19
+  },
+  {
+   "cue": 107,
+   "start": 285.2,
+   "end": 288.4,
+   "text": "",
+   "peak_db": -12.4,
+   "peak_verified_db": -7.65
+  },
+  {
+   "cue": 108,
+   "start": 289.5,
+   "end": 290.75,
+   "text": "",
+   "peak_db": -15.68,
+   "peak_verified_db": -8.28
+  },
+  {
+   "cue": 109,
+   "start": 291.6,
+   "end": 293.3,
+   "text": "",
+   "peak_db": -9.2,
+   "peak_verified_db": -8.19
+  },
+  {
+   "cue": 110,
+   "start": 294.45,
+   "end": 295.4,
+   "text": "",
+   "peak_db": -12.52,
+   "peak_verified_db": -7.86
+  },
+  {
+   "cue": 111,
+   "start": 296.45,
+   "end": 298.05,
+   "text": "",
+   "peak_db": -13.93,
+   "peak_verified_db": -8.09
+  },
+  {
+   "cue": 112,
+   "start": 304.45,
+   "end": 305.15,
+   "text": "",
+   "peak_db": -8.85,
+   "peak_verified_db": -7.57
+  },
+  {
+   "cue": 114,
+   "start": 309.1,
+   "end": 310.5,
+   "text": "",
+   "peak_db": -15.96,
+   "peak_verified_db": -7.06
+  },
+  {
+   "cue": 116,
+   "start": 312.4,
+   "end": 315.85,
+   "text": "",
+   "peak_db": -11.34,
+   "peak_verified_db": -7.89
+  },
+  {
+   "cue": 117,
+   "start": 316.5,
+   "end": 318.4,
+   "text": "",
+   "peak_db": -19.03,
+   "peak_verified_db": -7.74
+  },
+  {
+   "cue": 119,
+   "start": 322.05,
+   "end": 324.15,
+   "text": "",
+   "peak_db": -22.32,
+   "peak_verified_db": -8.55
+  },
+  {
+   "cue": 120,
+   "start": 324.75,
+   "end": 331.15,
+   "text": "",
+   "peak_db": -11.68,
+   "peak_verified_db": -7.67
+  },
+  {
+   "cue": 121,
+   "start": 331.65,
+   "end": 335.05,
+   "text": "",
+   "peak_db": -13.6,
+   "peak_verified_db": -6.98
+  },
+  {
+   "cue": 122,
+   "start": 335.55,
+   "end": 337.4,
+   "text": "",
+   "peak_db": -14.57,
+   "peak_verified_db": -7.22
+  },
+  {
+   "cue": 123,
+   "start": 337.85,
+   "end": 343.15,
+   "text": "",
+   "peak_db": -11.09,
+   "peak_verified_db": -7.77
+  },
+  {
+   "cue": 124,
+   "start": 343.6,
+   "end": 344.5,
+   "text": "",
+   "peak_db": -11.19,
+   "peak_verified_db": -7.61
+  },
+  {
+   "cue": 125,
+   "start": 344.9,
+   "end": 353.15,
+   "text": "",
+   "peak_db": -13.73,
+   "peak_verified_db": -7.92
+  },
+  {
+   "cue": 126,
+   "start": 353.6,
+   "end": 356.65,
+   "text": "",
+   "peak_db": -7.86,
+   "peak_verified_db": -7.18
+  },
+  {
+   "cue": 128,
+   "start": 360.05,
+   "end": 361.45,
+   "text": "",
+   "peak_db": -10.44,
+   "peak_verified_db": -7.83
+  },
+  {
+   "cue": 129,
+   "start": 363.55,
+   "end": 364.45,
+   "text": "",
+   "peak_db": -13.37,
+   "peak_verified_db": -8.19
+  },
+  {
+   "cue": 130,
+   "start": 365.35,
+   "end": 367.3,
+   "text": "",
+   "peak_db": -11.46,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 132,
+   "start": 369.45,
+   "end": 370.8,
+   "text": "",
+   "peak_db": -11.53,
+   "peak_verified_db": -7.88
+  },
+  {
+   "cue": 133,
+   "start": 372.3,
+   "end": 373.1,
+   "text": "",
+   "peak_db": -10.37,
+   "peak_verified_db": -7.06
+  },
+  {
+   "cue": 135,
+   "start": 374.5,
+   "end": 376.1,
+   "text": "",
+   "peak_db": -12.43,
+   "peak_verified_db": -7.2
+  },
+  {
+   "cue": 136,
+   "start": 376.7,
+   "end": 378.45,
+   "text": "",
+   "peak_db": -9.22,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 137,
+   "start": 378.95,
+   "end": 380.0,
+   "text": "",
+   "peak_db": -15.44,
+   "peak_verified_db": -7.7
+  },
+  {
+   "cue": 138,
+   "start": 380.5,
+   "end": 382.25,
+   "text": "",
+   "peak_db": -14.55,
+   "peak_verified_db": -8.38
+  },
+  {
+   "cue": 139,
+   "start": 382.85,
+   "end": 384.55,
+   "text": "",
+   "peak_db": -12.54,
+   "peak_verified_db": -7.69
+  },
+  {
+   "cue": 140,
+   "start": 385.45,
+   "end": 386.0,
+   "text": "",
+   "peak_db": -18.82,
+   "peak_verified_db": -10.77
+  },
+  {
+   "cue": 141,
+   "start": 386.5,
+   "end": 388.05,
+   "text": "",
+   "peak_db": -15.81,
+   "peak_verified_db": -7.56
+  },
+  {
+   "cue": 144,
+   "start": 390.3,
+   "end": 395.85,
+   "text": "",
+   "peak_db": -13.87,
+   "peak_verified_db": -7.74
+  },
+  {
+   "cue": 145,
+   "start": 396.35,
+   "end": 397.3,
+   "text": "",
+   "peak_db": -12.98,
+   "peak_verified_db": -7.9
+  },
+  {
+   "cue": 149,
+   "start": 405.6,
+   "end": 407.0,
+   "text": "",
+   "peak_db": -12.74,
+   "peak_verified_db": -7.65
+  },
+  {
+   "cue": 150,
+   "start": 407.4,
+   "end": 407.85,
+   "text": "",
+   "peak_db": -9.89,
+   "peak_verified_db": -8.61
+  },
+  {
+   "cue": 152,
+   "start": 411.3,
+   "end": 412.3,
+   "text": "",
+   "peak_db": -16.24,
+   "peak_verified_db": -9.1
+  },
+  {
+   "cue": 153,
+   "start": 413.1,
+   "end": 413.5,
+   "text": "",
+   "peak_db": -17.67,
+   "peak_verified_db": -8.91
+  },
+  {
+   "cue": 155,
+   "start": 415.55,
+   "end": 416.3,
+   "text": "",
+   "peak_db": -20.07,
+   "peak_verified_db": -12.14
+  },
+  {
+   "cue": 156,
+   "start": 417.25,
+   "end": 417.6,
+   "text": "",
+   "peak_db": -23.01,
+   "peak_verified_db": -7.72
+  },
+  {
+   "cue": 157,
+   "start": 419.1,
+   "end": 419.55,
+   "text": "",
+   "peak_db": -16.92,
+   "peak_verified_db": -7.67
+  },
+  {
+   "cue": 158,
+   "start": 420.5,
+   "end": 423.0,
+   "text": "",
+   "peak_db": -9.2,
+   "peak_verified_db": -6.3
+  },
+  {
+   "cue": 160,
+   "start": 425.4,
+   "end": 428.5,
+   "text": "",
+   "peak_db": -10.67,
+   "peak_verified_db": -7.88
+  },
+  {
+   "cue": 161,
+   "start": 429.2,
+   "end": 430.1,
+   "text": "",
+   "peak_db": -14.86,
+   "peak_verified_db": -8.44
+  },
+  {
+   "cue": 162,
+   "start": 431.4,
+   "end": 432.9,
+   "text": "",
+   "peak_db": -14.46,
+   "peak_verified_db": -7.76
+  },
+  {
+   "cue": 163,
+   "start": 435.5,
+   "end": 436.15,
+   "text": "",
+   "peak_db": -23.51,
+   "peak_verified_db": -23.33
+  },
+  {
+   "cue": 165,
+   "start": 437.6,
+   "end": 438.1,
+   "text": "",
+   "peak_db": -26.59,
+   "peak_verified_db": -24.77
+  },
+  {
+   "cue": 167,
+   "start": 439.35,
+   "end": 440.55,
+   "text": "",
+   "peak_db": -9.37,
+   "peak_verified_db": -7.27
+  },
+  {
+   "cue": 168,
+   "start": 440.95,
+   "end": 441.4,
+   "text": "",
+   "peak_db": -14.59,
+   "peak_verified_db": -7.13
+  },
+  {
+   "cue": 169,
+   "start": 442.65,
+   "end": 445.0,
+   "text": "",
+   "peak_db": -12.77,
+   "peak_verified_db": -7.17
+  },
+  {
+   "cue": 170,
+   "start": 445.55,
+   "end": 448.1,
+   "text": "",
+   "peak_db": -13.91,
+   "peak_verified_db": -7.56
+  },
+  {
+   "cue": 171,
+   "start": 448.7,
+   "end": 453.0,
+   "text": "",
+   "peak_db": -13.74,
+   "peak_verified_db": -7.71
+  },
+  {
+   "cue": 172,
+   "start": 453.8,
+   "end": 455.15,
+   "text": "",
+   "peak_db": -10.03,
+   "peak_verified_db": -6.79
+  },
+  {
+   "cue": 173,
+   "start": 455.9,
+   "end": 456.4,
+   "text": "",
+   "peak_db": -15.07,
+   "peak_verified_db": -7.44
+  },
+  {
+   "cue": 174,
+   "start": 457.1,
+   "end": 459.25,
+   "text": "",
+   "peak_db": -13.96,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 175,
+   "start": 459.75,
+   "end": 460.05,
+   "text": "",
+   "peak_db": -17.51,
+   "peak_verified_db": -7.91
+  },
+  {
+   "cue": 176,
+   "start": 460.5,
+   "end": 462.25,
+   "text": "",
+   "peak_db": -10.92,
+   "peak_verified_db": -6.89
+  },
+  {
+   "cue": 177,
+   "start": 462.65,
+   "end": 463.6,
+   "text": "",
+   "peak_db": -15.44,
+   "peak_verified_db": -7.14
+  },
+  {
+   "cue": 178,
+   "start": 464.05,
+   "end": 464.8,
+   "text": "",
+   "peak_db": -14.65,
+   "peak_verified_db": -7.59
+  },
+  {
+   "cue": 179,
+   "start": 465.4,
+   "end": 466.3,
+   "text": "",
+   "peak_db": -19.73,
+   "peak_verified_db": -8.17
+  },
+  {
+   "cue": 181,
+   "start": 478.1,
+   "end": 478.65,
+   "text": "",
+   "peak_db": -19.99,
+   "peak_verified_db": -8.07
+  },
+  {
+   "cue": 182,
+   "start": 482.6,
+   "end": 484.5,
+   "text": "",
+   "peak_db": -9.0,
+   "peak_verified_db": -7.12
+  },
+  {
+   "cue": 184,
+   "start": 488.4,
+   "end": 489.55,
+   "text": "",
+   "peak_db": -14.12,
+   "peak_verified_db": -7.72
+  },
+  {
+   "cue": 185,
+   "start": 490.1,
+   "end": 490.6,
+   "text": "",
+   "peak_db": -9.94,
+   "peak_verified_db": -7.94
+  },
+  {
+   "cue": 186,
+   "start": 497.6,
+   "end": 499.05,
+   "text": "",
+   "peak_db": -17.56,
+   "peak_verified_db": -7.72
+  },
+  {
+   "cue": 187,
+   "start": 499.6,
+   "end": 500.5,
+   "text": "",
+   "peak_db": -21.22,
+   "peak_verified_db": -6.99
+  },
+  {
+   "cue": 188,
+   "start": 501.05,
+   "end": 502.6,
+   "text": "",
+   "peak_db": -15.06,
+   "peak_verified_db": -7.28
+  },
+  {
+   "cue": 189,
+   "start": 503.4,
+   "end": 504.95,
+   "text": "",
+   "peak_db": -11.94,
+   "peak_verified_db": -7.61
+  },
+  {
+   "cue": 190,
+   "start": 505.45,
+   "end": 509.3,
+   "text": "",
+   "peak_db": -11.84,
+   "peak_verified_db": -8.17
+  },
+  {
+   "cue": 191,
+   "start": 509.9,
+   "end": 511.15,
+   "text": "",
+   "peak_db": -10.03,
+   "peak_verified_db": -7.69
+  },
+  {
+   "cue": 192,
+   "start": 514.8,
+   "end": 515.15,
+   "text": "",
+   "peak_db": -17.31,
+   "peak_verified_db": -7.16
+  },
+  {
+   "cue": 193,
+   "start": 522.1,
+   "end": 523.35,
+   "text": "",
+   "peak_db": -14.32,
+   "peak_verified_db": -8.15
+  },
+  {
+   "cue": 195,
+   "start": 527.45,
+   "end": 527.85,
+   "text": "",
+   "peak_db": -11.22,
+   "peak_verified_db": -7.97
+  },
+  {
+   "cue": 197,
+   "start": 543.15,
+   "end": 543.55,
+   "text": "",
+   "peak_db": -12.41,
+   "peak_verified_db": -6.98
+  },
+  {
+   "cue": 198,
+   "start": 549.7,
+   "end": 550.1,
+   "text": "",
+   "peak_db": -13.73,
+   "peak_verified_db": -6.58
+  },
+  {
+   "cue": 199,
+   "start": 556.85,
+   "end": 557.3,
+   "text": "",
+   "peak_db": -10.56,
+   "peak_verified_db": -7.52
+  },
+  {
+   "cue": 200,
+   "start": 563.9,
+   "end": 564.3,
+   "text": "",
+   "peak_db": -9.58,
+   "peak_verified_db": -7.26
+  },
+  {
+   "cue": 201,
+   "start": 570.55,
+   "end": 572.1,
+   "text": "",
+   "peak_db": -11.18,
+   "peak_verified_db": -8.3
+  },
+  {
+   "cue": 203,
+   "start": 573.5,
+   "end": 574.75,
+   "text": "",
+   "peak_db": -18.94,
+   "peak_verified_db": -11.3
+  },
+  {
+   "cue": 204,
+   "start": 575.3,
+   "end": 575.85,
+   "text": "",
+   "peak_db": -26.43,
+   "peak_verified_db": -9.19
+  },
+  {
+   "cue": 205,
+   "start": 576.35,
+   "end": 576.95,
+   "text": "",
+   "peak_db": -21.87,
+   "peak_verified_db": -9.19
+  },
+  {
+   "cue": 206,
+   "start": 577.7,
+   "end": 582.3,
+   "text": "",
+   "peak_db": -9.99,
+   "peak_verified_db": -8.19
+  },
+  {
+   "cue": 207,
+   "start": 583.25,
+   "end": 583.95,
+   "text": "",
+   "peak_db": -17.08,
+   "peak_verified_db": -7.67
+  },
+  {
+   "cue": 208,
+   "start": 584.45,
+   "end": 585.3,
+   "text": "",
+   "peak_db": -12.54,
+   "peak_verified_db": -7.45
+  },
+  {
+   "cue": 209,
+   "start": 585.8,
+   "end": 586.2,
+   "text": "",
+   "peak_db": -16.29,
+   "peak_verified_db": -7.32
+  },
+  {
+   "cue": 210,
+   "start": 587.05,
+   "end": 592.6,
+   "text": "",
+   "peak_db": -18.01,
+   "peak_verified_db": -7.53
+  },
+  {
+   "cue": 211,
+   "start": 593.15,
+   "end": 593.55,
+   "text": "",
+   "peak_db": -22.1,
+   "peak_verified_db": -7.23
+  },
+  {
+   "cue": 212,
+   "start": 594.0,
+   "end": 596.3,
+   "text": "",
+   "peak_db": -11.38,
+   "peak_verified_db": -7.87
+  },
+  {
+   "cue": 213,
+   "start": 597.2,
+   "end": 599.05,
+   "text": "",
+   "peak_db": -18.48,
+   "peak_verified_db": -7.45
+  },
+  {
+   "cue": 214,
+   "start": 599.5,
+   "end": 601.35,
+   "text": "",
+   "peak_db": -7.05,
+   "peak_verified_db": -8.93
+  },
+  {
+   "cue": 218,
+   "start": 613.4,
+   "end": 614.75,
+   "text": "",
+   "peak_db": -14.46,
+   "peak_verified_db": -7.44
+  },
+  {
+   "cue": 219,
+   "start": 616.0,
+   "end": 618.4,
+   "text": "",
+   "peak_db": -13.86,
+   "peak_verified_db": -8.22
+  },
+  {
+   "cue": 220,
+   "start": 625.2,
+   "end": 625.95,
+   "text": "",
+   "peak_db": -17.75,
+   "peak_verified_db": -7.28
+  },
+  {
+   "cue": 225,
+   "start": 657.3,
+   "end": 657.65,
+   "text": "",
+   "peak_db": -10.58,
+   "peak_verified_db": -6.78
+  },
+  {
+   "cue": 226,
+   "start": 664.55,
+   "end": 664.95,
+   "text": "",
+   "peak_db": -12.2,
+   "peak_verified_db": -6.85
+  },
+  {
+   "cue": 227,
+   "start": 671.3,
+   "end": 672.15,
+   "text": "",
+   "peak_db": -11.03,
+   "peak_verified_db": -7.13
+  },
+  {
+   "cue": 229,
+   "start": 684.85,
+   "end": 688.2,
+   "text": "",
+   "peak_db": -9.95,
+   "peak_verified_db": -8.91
+  },
+  {
+   "cue": 231,
+   "start": 689.75,
+   "end": 690.6,
+   "text": "",
+   "peak_db": -17.69,
+   "peak_verified_db": -7.74
+  },
+  {
+   "cue": 232,
+   "start": 693.15,
+   "end": 695.85,
+   "text": "",
+   "peak_db": -13.05,
+   "peak_verified_db": -8.76
+  },
+  {
+   "cue": 234,
+   "start": 698.95,
+   "end": 702.4,
+   "text": "",
+   "peak_db": -14.78,
+   "peak_verified_db": -8.54
+  },
+  {
+   "cue": 235,
+   "start": 702.9,
+   "end": 703.3,
+   "text": "",
+   "peak_db": -13.57,
+   "peak_verified_db": -9.12
+  },
+  {
+   "cue": 236,
+   "start": 703.75,
+   "end": 704.6,
+   "text": "",
+   "peak_db": -14.6,
+   "peak_verified_db": -7.93
+  },
+  {
+   "cue": 237,
+   "start": 705.15,
+   "end": 706.15,
+   "text": "",
+   "peak_db": -9.58,
+   "peak_verified_db": -8.37
+  },
+  {
+   "cue": 238,
+   "start": 708.6,
+   "end": 709.4,
+   "text": "",
+   "peak_db": -21.74,
+   "peak_verified_db": -7.77
+  },
+  {
+   "cue": 239,
+   "start": 710.8,
+   "end": 712.05,
+   "text": "",
+   "peak_db": -19.09,
+   "peak_verified_db": -8.59
+  },
+  {
+   "cue": 241,
+   "start": 714.1,
+   "end": 717.0,
+   "text": "",
+   "peak_db": -20.47,
+   "peak_verified_db": -8.78
+  },
+  {
+   "cue": 242,
+   "start": 717.4,
+   "end": 722.05,
+   "text": "",
+   "peak_db": -6.99,
+   "peak_verified_db": -6.53
+  },
+  {
+   "cue": 243,
+   "start": 722.5,
+   "end": 729.5,
+   "text": "",
+   "peak_db": -6.74,
+   "peak_verified_db": -7.65
+  },
+  {
+   "cue": 244,
+   "start": 730.15,
+   "end": 730.5,
+   "text": "",
+   "peak_db": -22.55,
+   "peak_verified_db": -12.97
+  },
+  {
+   "cue": 245,
+   "start": 731.0,
+   "end": 732.3,
+   "text": "",
+   "peak_db": -13.48,
+   "peak_verified_db": -8.04
+  },
+  {
+   "cue": 246,
+   "start": 732.85,
+   "end": 735.6,
+   "text": "",
+   "peak_db": -10.84,
+   "peak_verified_db": -9.03
+  },
+  {
+   "cue": 247,
+   "start": 737.0,
+   "end": 738.55,
+   "text": "",
+   "peak_db": -6.61,
+   "peak_verified_db": -7.9
+  },
+  {
+   "cue": 248,
+   "start": 739.15,
+   "end": 742.6,
+   "text": "",
+   "peak_db": -7.51,
+   "peak_verified_db": -7.42
+  },
+  {
+   "cue": 249,
+   "start": 743.05,
+   "end": 745.1,
+   "text": "",
+   "peak_db": -9.3,
+   "peak_verified_db": -6.98
+  },
+  {
+   "cue": 250,
+   "start": 745.7,
+   "end": 750.9,
+   "text": "",
+   "peak_db": -9.76,
+   "peak_verified_db": -7.3
+  },
+  {
+   "cue": 251,
+   "start": 751.4,
+   "end": 752.55,
+   "text": "",
+   "peak_db": -9.34,
+   "peak_verified_db": -7.57
+  },
+  {
+   "cue": 253,
+   "start": 753.65,
+   "end": 754.65,
+   "text": "",
+   "peak_db": -11.99,
+   "peak_verified_db": -7.78
+  },
+  {
+   "cue": 254,
+   "start": 755.3,
+   "end": 756.3,
+   "text": "",
+   "peak_db": -16.25,
+   "peak_verified_db": -7.25
+  },
+  {
+   "cue": 255,
+   "start": 757.5,
+   "end": 758.75,
+   "text": "",
+   "peak_db": -14.58,
+   "peak_verified_db": -6.82
+  },
+  {
+   "cue": 256,
+   "start": 759.15,
+   "end": 762.2,
+   "text": "",
+   "peak_db": -13.17,
+   "peak_verified_db": -7.28
+  },
+  {
+   "cue": 257,
+   "start": 762.9,
+   "end": 767.9,
+   "text": "",
+   "peak_db": -12.88,
+   "peak_verified_db": -7.64
+  },
+  {
+   "cue": 258,
+   "start": 768.4,
+   "end": 769.55,
+   "text": "",
+   "peak_db": -7.41,
+   "peak_verified_db": -8.17
+  },
+  {
+   "cue": 259,
+   "start": 770.0,
+   "end": 770.35,
+   "text": "",
+   "peak_db": -4.69,
+   "peak_verified_db": -6.39
+  },
+  {
+   "cue": 260,
+   "start": 771.0,
+   "end": 773.65,
+   "text": "",
+   "peak_db": -8.0,
+   "peak_verified_db": -6.78
+  },
+  {
+   "cue": 261,
+   "start": 774.1,
+   "end": 777.25,
+   "text": "",
+   "peak_db": -12.09,
+   "peak_verified_db": -8.37
+  },
+  {
+   "cue": 262,
+   "start": 779.75,
+   "end": 780.65,
+   "text": "",
+   "peak_db": -12.13,
+   "peak_verified_db": -8.33
+  },
+  {
+   "cue": 263,
+   "start": 781.25,
+   "end": 783.55,
+   "text": "",
+   "peak_db": -13.95,
+   "peak_verified_db": -6.73
+  },
+  {
+   "cue": 266,
+   "start": 789.1,
+   "end": 793.75,
+   "text": "",
+   "peak_db": -10.67,
+   "peak_verified_db": -7.55
+  },
+  {
+   "cue": 267,
+   "start": 794.4,
+   "end": 795.85,
+   "text": "",
+   "peak_db": -9.71,
+   "peak_verified_db": -7.46
+  },
+  {
+   "cue": 268,
+   "start": 798.75,
+   "end": 799.2,
+   "text": "",
+   "peak_db": -25.75,
+   "peak_verified_db": -7.9
+  },
+  {
+   "cue": 269,
+   "start": 799.8,
+   "end": 801.55,
+   "text": "",
+   "peak_db": -28.21,
+   "peak_verified_db": -10.44
+  },
+  {
+   "cue": 271,
+   "start": 802.65,
+   "end": 804.75,
+   "text": "",
+   "peak_db": -7.02,
+   "peak_verified_db": -7.28
+  },
+  {
+   "cue": 272,
+   "start": 813.1,
+   "end": 814.95,
+   "text": "",
+   "peak_db": -11.79,
+   "peak_verified_db": -7.89
+  },
+  {
+   "cue": 273,
+   "start": 815.5,
+   "end": 816.75,
+   "text": "",
+   "peak_db": -22.78,
+   "peak_verified_db": -8.34
+  },
+  {
+   "cue": 276,
+   "start": 822.3,
+   "end": 822.9,
+   "text": "",
+   "peak_db": -13.31,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 277,
+   "start": 823.55,
+   "end": 824.35,
+   "text": "",
+   "peak_db": -8.6,
+   "peak_verified_db": -7.6
+  },
+  {
+   "cue": 279,
+   "start": 826.5,
+   "end": 827.15,
+   "text": "",
+   "peak_db": -11.51,
+   "peak_verified_db": -7.34
+  },
+  {
+   "cue": 282,
+   "start": 833.35,
+   "end": 834.15,
+   "text": "",
+   "peak_db": -8.76,
+   "peak_verified_db": -7.21
+  },
+  {
+   "cue": 283,
+   "start": 834.9,
+   "end": 835.2,
+   "text": "",
+   "peak_db": -5.73,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 284,
+   "start": 837.4,
+   "end": 837.75,
+   "text": "",
+   "peak_db": -9.63,
+   "peak_verified_db": -7.64
+  },
+  {
+   "cue": 285,
+   "start": 840.05,
+   "end": 840.45,
+   "text": "",
+   "peak_db": -8.49,
+   "peak_verified_db": -6.73
+  },
+  {
+   "cue": 287,
+   "start": 842.35,
+   "end": 842.8,
+   "text": "",
+   "peak_db": -4.73,
+   "peak_verified_db": -7.09
+  },
+  {
+   "cue": 288,
+   "start": 843.7,
+   "end": 844.55,
+   "text": "",
+   "peak_db": -9.5,
+   "peak_verified_db": -6.99
+  },
+  {
+   "cue": 289,
+   "start": 845.55,
+   "end": 846.0,
+   "text": "",
+   "peak_db": -8.13,
+   "peak_verified_db": -7.01
+  },
+  {
+   "cue": 290,
+   "start": 846.5,
+   "end": 846.9,
+   "text": "",
+   "peak_db": -6.86,
+   "peak_verified_db": -6.99
+  },
+  {
+   "cue": 291,
+   "start": 849.9,
+   "end": 853.05,
+   "text": "",
+   "peak_db": -13.23,
+   "peak_verified_db": -6.9
+  },
+  {
+   "cue": 292,
+   "start": 853.6,
+   "end": 854.0,
+   "text": "",
+   "peak_db": -8.27,
+   "peak_verified_db": -7.15
+  },
+  {
+   "cue": 294,
+   "start": 859.1,
+   "end": 859.9,
+   "text": "",
+   "peak_db": -9.46,
+   "peak_verified_db": -7.66
+  },
+  {
+   "cue": 296,
+   "start": 865.95,
+   "end": 866.35,
+   "text": "",
+   "peak_db": -9.27,
+   "peak_verified_db": -6.91
+  },
+  {
+   "cue": 297,
+   "start": 869.55,
+   "end": 870.85,
+   "text": "",
+   "peak_db": -11.17,
+   "peak_verified_db": -7.25
+  },
+  {
+   "cue": 298,
+   "start": 871.45,
+   "end": 872.55,
+   "text": "",
+   "peak_db": -13.02,
+   "peak_verified_db": -8.31
+  },
+  {
+   "cue": 299,
+   "start": 873.7,
+   "end": 874.35,
+   "text": "",
+   "peak_db": -24.0,
+   "peak_verified_db": -8.09
+  },
+  {
+   "cue": 300,
+   "start": 875.1,
+   "end": 875.85,
+   "text": "",
+   "peak_db": -17.01,
+   "peak_verified_db": -6.82
+  },
+  {
+   "cue": 301,
+   "start": 877.95,
+   "end": 880.9,
+   "text": "",
+   "peak_db": -10.21,
+   "peak_verified_db": -7.67
+  },
+  {
+   "cue": 302,
+   "start": 881.9,
+   "end": 882.8,
+   "text": "",
+   "peak_db": -9.04,
+   "peak_verified_db": -7.41
+  },
+  {
+   "cue": 303,
+   "start": 884.75,
+   "end": 885.1,
+   "text": "",
+   "peak_db": -7.75,
+   "peak_verified_db": -7.63
+  },
+  {
+   "cue": 304,
+   "start": 887.85,
+   "end": 888.25,
+   "text": "",
+   "peak_db": -9.32,
+   "peak_verified_db": -7.0
+  },
+  {
+   "cue": 305,
+   "start": 890.9,
+   "end": 891.95,
+   "text": "",
+   "peak_db": -11.76,
+   "peak_verified_db": -7.9
+  },
+  {
+   "cue": 306,
+   "start": 893.7,
+   "end": 894.8,
+   "text": "",
+   "peak_db": -6.82,
+   "peak_verified_db": -7.61
+  },
+  {
+   "cue": 307,
+   "start": 895.25,
+   "end": 900.35,
+   "text": "",
+   "peak_db": -9.24,
+   "peak_verified_db": -7.17
+  },
+  {
+   "cue": 308,
+   "start": 900.85,
+   "end": 906.85,
+   "text": "",
+   "peak_db": -10.24,
+   "peak_verified_db": -7.51
+  },
+  {
+   "cue": 309,
+   "start": 907.3,
+   "end": 909.05,
+   "text": "",
+   "peak_db": -11.86,
+   "peak_verified_db": -8.62
+  },
+  {
+   "cue": 310,
+   "start": 909.5,
+   "end": 910.55,
+   "text": "",
+   "peak_db": -14.22,
+   "peak_verified_db": -7.59
+  },
+  {
+   "cue": 312,
+   "start": 913.55,
+   "end": 914.55,
+   "text": "",
+   "peak_db": -14.23,
+   "peak_verified_db": -7.8
+  },
+  {
+   "cue": 313,
+   "start": 915.0,
+   "end": 915.5,
+   "text": "",
+   "peak_db": -14.13,
+   "peak_verified_db": -8.31
+  },
+  {
+   "cue": 315,
+   "start": 917.1,
+   "end": 917.5,
+   "text": "",
+   "peak_db": -15.74,
+   "peak_verified_db": -8.66
+  },
+  {
+   "cue": 316,
+   "start": 918.65,
+   "end": 923.0,
+   "text": "",
+   "peak_db": -12.81,
+   "peak_verified_db": -7.73
+  },
+  {
+   "cue": 317,
+   "start": 924.3,
+   "end": 925.25,
+   "text": "",
+   "peak_db": -20.62,
+   "peak_verified_db": -10.68
+  },
+  {
+   "cue": 318,
+   "start": 925.7,
+   "end": 927.6,
+   "text": "",
+   "peak_db": -14.49,
+   "peak_verified_db": -8.23
+  },
+  {
+   "cue": 320,
+   "start": 930.2,
+   "end": 931.25,
+   "text": "",
+   "peak_db": -25.26,
+   "peak_verified_db": -13.74
+  },
+  {
+   "cue": 321,
+   "start": 933.0,
+   "end": 935.3,
+   "text": "",
+   "peak_db": -15.67,
+   "peak_verified_db": -8.2
+  },
+  {
+   "cue": 322,
+   "start": 935.8,
+   "end": 938.85,
+   "text": "",
+   "peak_db": -25.06,
+   "peak_verified_db": -9.43
+  },
+  {
+   "cue": 323,
+   "start": 939.45,
+   "end": 940.5,
+   "text": "",
+   "peak_db": -23.34,
+   "peak_verified_db": -7.49
+  },
+  {
+   "cue": 324,
+   "start": 941.2,
+   "end": 944.8,
+   "text": "",
+   "peak_db": -14.38,
+   "peak_verified_db": -7.57
+  },
+  {
+   "cue": 326,
+   "start": 946.55,
+   "end": 947.05,
+   "text": "",
+   "peak_db": -16.18,
+   "peak_verified_db": -9.27
+  },
+  {
+   "cue": 327,
+   "start": 947.55,
+   "end": 949.0,
+   "text": "",
+   "peak_db": -18.51,
+   "peak_verified_db": -7.16
+  },
+  {
+   "cue": 329,
+   "start": 951.55,
+   "end": 952.75,
+   "text": "",
+   "peak_db": -16.91,
+   "peak_verified_db": -10.44
+  },
+  {
+   "cue": 330,
+   "start": 953.4,
+   "end": 958.15,
+   "text": "",
+   "peak_db": -9.64,
+   "peak_verified_db": -7.46
+  },
+  {
+   "cue": 331,
+   "start": 958.6,
+   "end": 960.4,
+   "text": "",
+   "peak_db": -9.87,
+   "peak_verified_db": -7.39
+  },
+  {
+   "cue": 332,
+   "start": 960.95,
+   "end": 961.5,
+   "text": "",
+   "peak_db": -7.03,
+   "peak_verified_db": -7.97
+  },
+  {
+   "cue": 333,
+   "start": 962.15,
+   "end": 962.45,
+   "text": "",
+   "peak_db": -9.84,
+   "peak_verified_db": -7.78
+  },
+  {
+   "cue": 334,
+   "start": 963.1,
+   "end": 966.15,
+   "text": "",
+   "peak_db": -9.41,
+   "peak_verified_db": -6.87
+  },
+  {
+   "cue": 335,
+   "start": 967.3,
+   "end": 969.85,
+   "text": "",
+   "peak_db": -10.55,
+   "peak_verified_db": -7.1
+  },
+  {
+   "cue": 336,
+   "start": 970.35,
+   "end": 972.55,
+   "text": "",
+   "peak_db": -12.28,
+   "peak_verified_db": -7.22
+  },
+  {
+   "cue": 337,
+   "start": 973.85,
+   "end": 975.65,
+   "text": "",
+   "peak_db": -13.42,
+   "peak_verified_db": -7.91
+  },
+  {
+   "cue": 340,
+   "start": 978.55,
+   "end": 980.65,
+   "text": "",
+   "peak_db": -12.44,
+   "peak_verified_db": -10.57
+  },
+  {
+   "cue": 341,
+   "start": 981.1,
+   "end": 982.15,
+   "text": "",
+   "peak_db": -22.81,
+   "peak_verified_db": -8.3
+  },
+  {
+   "cue": 342,
+   "start": 982.6,
+   "end": 983.6,
+   "text": "",
+   "peak_db": -15.59,
+   "peak_verified_db": -7.21
+  },
+  {
+   "cue": 343,
+   "start": 984.35,
+   "end": 984.8,
+   "text": "",
+   "peak_db": -12.38,
+   "peak_verified_db": -7.55
+  },
+  {
+   "cue": 346,
+   "start": 986.95,
+   "end": 989.0,
+   "text": "",
+   "peak_db": -12.14,
+   "peak_verified_db": -7.05
+  },
+  {
+   "cue": 347,
+   "start": 989.55,
+   "end": 991.3,
+   "text": "",
+   "peak_db": -12.32,
+   "peak_verified_db": -7.51
+  },
+  {
+   "cue": 348,
+   "start": 991.8,
+   "end": 994.65,
+   "text": "",
+   "peak_db": -14.32,
+   "peak_verified_db": -7.22
+  },
+  {
+   "cue": 349,
+   "start": 995.25,
+   "end": 997.35,
+   "text": "",
+   "peak_db": -12.56,
+   "peak_verified_db": -6.89
+  },
+  {
+   "cue": 350,
+   "start": 997.85,
+   "end": 1000.2,
+   "text": "",
+   "peak_db": -11.22,
+   "peak_verified_db": -7.11
+  },
+  {
+   "cue": 351,
+   "start": 1000.75,
+   "end": 1005.75,
+   "text": "",
+   "peak_db": -13.03,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 352,
+   "start": 1006.3,
+   "end": 1007.25,
+   "text": "",
+   "peak_db": -19.68,
+   "peak_verified_db": -6.99
+  },
+  {
+   "cue": 353,
+   "start": 1007.75,
+   "end": 1014.95,
+   "text": "",
+   "peak_db": -12.74,
+   "peak_verified_db": -7.71
+  },
+  {
+   "cue": 354,
+   "start": 1015.45,
+   "end": 1017.75,
+   "text": "",
+   "peak_db": -14.82,
+   "peak_verified_db": -7.38
+  },
+  {
+   "cue": 355,
+   "start": 1018.6,
+   "end": 1019.5,
+   "text": "",
+   "peak_db": -11.68,
+   "peak_verified_db": -7.84
+  },
+  {
+   "cue": 356,
+   "start": 1020.75,
+   "end": 1021.75,
+   "text": "",
+   "peak_db": -12.64,
+   "peak_verified_db": -7.23
+  },
+  {
+   "cue": 358,
+   "start": 1023.05,
+   "end": 1024.75,
+   "text": "",
+   "peak_db": -9.57,
+   "peak_verified_db": -7.56
+  },
+  {
+   "cue": 359,
+   "start": 1025.35,
+   "end": 1026.15,
+   "text": "",
+   "peak_db": -11.71,
+   "peak_verified_db": -7.15
+  },
+  {
+   "cue": 360,
+   "start": 1027.15,
+   "end": 1029.7,
+   "text": "",
+   "peak_db": -7.51,
+   "peak_verified_db": -7.43
+  },
+  {
+   "cue": 361,
+   "start": 1031.25,
+   "end": 1033.7,
+   "text": "",
+   "peak_db": -9.32,
+   "peak_verified_db": -7.12
+  },
+  {
+   "cue": 363,
+   "start": 1037.3,
+   "end": 1038.8,
+   "text": "",
+   "peak_db": -20.51,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 365,
+   "start": 1040.9,
+   "end": 1041.95,
+   "text": "",
+   "peak_db": -10.75,
+   "peak_verified_db": -8.07
+  },
+  {
+   "cue": 366,
+   "start": 1044.2,
+   "end": 1044.75,
+   "text": "",
+   "peak_db": -6.87,
+   "peak_verified_db": -7.85
+  },
+  {
+   "cue": 367,
+   "start": 1047.65,
+   "end": 1048.9,
+   "text": "",
+   "peak_db": -8.86,
+   "peak_verified_db": -7.36
+  },
+  {
+   "cue": 368,
+   "start": 1050.1,
+   "end": 1051.2,
+   "text": "",
+   "peak_db": -22.19,
+   "peak_verified_db": -7.82
+  },
+  {
+   "cue": 369,
+   "start": 1051.65,
+   "end": 1052.0,
+   "text": "",
+   "peak_db": -11.06,
+   "peak_verified_db": -7.4
+  },
+  {
+   "cue": 370,
+   "start": 1052.55,
+   "end": 1057.95,
+   "text": "",
+   "peak_db": -8.75,
+   "peak_verified_db": -7.81
+  },
+  {
+   "cue": 371,
+   "start": 1058.4,
+   "end": 1060.55,
+   "text": "",
+   "peak_db": -9.96,
+   "peak_verified_db": -7.74
+  },
+  {
+   "cue": 372,
+   "start": 1061.0,
+   "end": 1063.95,
+   "text": "",
+   "peak_db": -14.21,
+   "peak_verified_db": -7.37
+  },
+  {
+   "cue": 373,
+   "start": 1064.4,
+   "end": 1065.65,
+   "text": "",
+   "peak_db": -12.72,
+   "peak_verified_db": -7.42
+  },
+  {
+   "cue": 374,
+   "start": 1066.1,
+   "end": 1067.95,
+   "text": "",
+   "peak_db": -14.42,
+   "peak_verified_db": -7.01
+  },
+  {
+   "cue": 375,
+   "start": 1068.75,
+   "end": 1070.65,
+   "text": "",
+   "peak_db": -13.75,
+   "peak_verified_db": -7.41
+  },
+  {
+   "cue": 376,
+   "start": 1071.45,
+   "end": 1071.8,
+   "text": "",
+   "peak_db": -13.17,
+   "peak_verified_db": -6.82
+  },
+  {
+   "cue": 377,
+   "start": 1072.5,
+   "end": 1074.4,
+   "text": "",
+   "peak_db": -12.06,
+   "peak_verified_db": -7.53
+  },
+  {
+   "cue": 379,
+   "start": 1079.75,
+   "end": 1084.3,
+   "text": "",
+   "peak_db": -9.27,
+   "peak_verified_db": -8.27
+  },
+  {
+   "cue": 380,
+   "start": 1085.65,
+   "end": 1086.6,
+   "text": "",
+   "peak_db": -9.03,
+   "peak_verified_db": -7.15
+  },
+  {
+   "cue": 381,
+   "start": 1087.3,
+   "end": 1087.75,
+   "text": "",
+   "peak_db": -14.59,
+   "peak_verified_db": -7.06
+  },
+  {
+   "cue": 382,
+   "start": 1089.1,
+   "end": 1089.55,
+   "text": "",
+   "peak_db": -12.31,
+   "peak_verified_db": -6.93
+  },
+  {
+   "cue": 383,
+   "start": 1090.9,
+   "end": 1091.35,
+   "text": "",
+   "peak_db": -16.5,
+   "peak_verified_db": -7.15
+  },
+  {
+   "cue": 384,
+   "start": 1092.95,
+   "end": 1093.9,
+   "text": "",
+   "peak_db": -13.73,
+   "peak_verified_db": -7.14
+  },
+  {
+   "cue": 385,
+   "start": 1094.75,
+   "end": 1095.9,
+   "text": "",
+   "peak_db": -13.06,
+   "peak_verified_db": -7.64
+  },
+  {
+   "cue": 387,
+   "start": 1098.1,
+   "end": 1098.85,
+   "text": "",
+   "peak_db": -14.15,
+   "peak_verified_db": -7.4
+  },
+  {
+   "cue": 388,
+   "start": 1100.0,
+   "end": 1105.4,
+   "text": "",
+   "peak_db": -12.93,
+   "peak_verified_db": -8.41
+  },
+  {
+   "cue": 389,
+   "start": 1106.4,
+   "end": 1106.8,
+   "text": "",
+   "peak_db": -19.3,
+   "peak_verified_db": -8.15
+  },
+  {
+   "cue": 390,
+   "start": 1108.9,
+   "end": 1111.3,
+   "text": "",
+   "peak_db": -11.07,
+   "peak_verified_db": -7.85
+  },
+  {
+   "cue": 391,
+   "start": 1111.95,
+   "end": 1113.3,
+   "text": "",
+   "peak_db": -17.04,
+   "peak_verified_db": -7.74
+  },
+  {
+   "cue": 392,
+   "start": 1113.7,
+   "end": 1116.1,
+   "text": "",
+   "peak_db": -15.52,
+   "peak_verified_db": -8.39
+  },
+  {
+   "cue": 394,
+   "start": 1121.3,
+   "end": 1121.8,
+   "text": "",
+   "peak_db": -4.96,
+   "peak_verified_db": -7.5
+  },
+  {
+   "cue": 395,
+   "start": 1122.3,
+   "end": 1123.45,
+   "text": "",
+   "peak_db": -9.55,
+   "peak_verified_db": -9.15
+  },
+  {
+   "cue": 396,
+   "start": 1125.1,
+   "end": 1125.45,
+   "text": "",
+   "peak_db": -27.94,
+   "peak_verified_db": -10.1
+  },
+  {
+   "cue": 399,
+   "start": 1133.25,
+   "end": 1139.85,
+   "text": "",
+   "peak_db": -6.3,
+   "peak_verified_db": -7.86
+  },
+  {
+   "cue": 403,
+   "start": 1143.35,
+   "end": 1145.95,
+   "text": "",
+   "peak_db": -11.67,
+   "peak_verified_db": -7.78
+  },
+  {
+   "cue": 404,
+   "start": 1146.75,
+   "end": 1149.1,
+   "text": "",
+   "peak_db": -13.7,
+   "peak_verified_db": -7.95
+  },
+  {
+   "cue": 405,
+   "start": 1149.7,
+   "end": 1150.35,
+   "text": "",
+   "peak_db": -17.47,
+   "peak_verified_db": -7.69
+  },
+  {
+   "cue": 406,
+   "start": 1151.2,
+   "end": 1160.0,
+   "text": "",
+   "peak_db": -14.69,
+   "peak_verified_db": -7.33
+  },
+  {
+   "cue": 407,
+   "start": 1160.55,
+   "end": 1161.25,
+   "text": "",
+   "peak_db": -14.11,
+   "peak_verified_db": -8.15
+  },
+  {
+   "cue": 408,
+   "start": 1161.7,
+   "end": 1163.2,
+   "text": "",
+   "peak_db": -16.81,
+   "peak_verified_db": -7.84
+  },
+  {
+   "cue": 409,
+   "start": 1163.85,
+   "end": 1170.45,
+   "text": "",
+   "peak_db": -11.7,
+   "peak_verified_db": -7.85
+  },
+  {
+   "cue": 410,
+   "start": 1170.9,
+   "end": 1174.75,
+   "text": "",
+   "peak_db": -11.8,
+   "peak_verified_db": -8.36
+  },
+  {
+   "cue": 411,
+   "start": 1175.2,
+   "end": 1177.95,
+   "text": "",
+   "peak_db": -16.35,
+   "peak_verified_db": -8.29
+  },
+  {
+   "cue": 412,
+   "start": 1178.55,
+   "end": 1179.1,
+   "text": "",
+   "peak_db": -6.72,
+   "peak_verified_db": -7.62
+  },
+  {
+   "cue": 413,
+   "start": 1179.65,
+   "end": 1182.2,
+   "text": "",
+   "peak_db": -11.19,
+   "peak_verified_db": -7.78
+  },
+  {
+   "cue": 414,
+   "start": 1182.85,
+   "end": 1189.6,
+   "text": "",
+   "peak_db": -11.84,
+   "peak_verified_db": -7.82
+  },
+  {
+   "cue": 416,
+   "start": 1190.85,
+   "end": 1192.8,
+   "text": "",
+   "peak_db": -12.99,
+   "peak_verified_db": -8.58
+  },
+  {
+   "cue": 417,
+   "start": 1193.2,
+   "end": 1194.75,
+   "text": "",
+   "peak_db": -14.22,
+   "peak_verified_db": -9.08
+  },
+  {
+   "cue": 418,
+   "start": 1195.25,
+   "end": 1198.1,
+   "text": "",
+   "peak_db": -11.3,
+   "peak_verified_db": -7.56
+  },
+  {
+   "cue": 419,
+   "start": 1198.55,
+   "end": 1198.95,
+   "text": "",
+   "peak_db": -8.04,
+   "peak_verified_db": -7.21
+  },
+  {
+   "cue": 420,
+   "start": 1199.35,
+   "end": 1200.1,
+   "text": "",
+   "peak_db": -15.34,
+   "peak_verified_db": -8.87
+  },
+  {
+   "cue": 421,
+   "start": 1204.65,
+   "end": 1206.2,
+   "text": "",
+   "peak_db": -19.46,
+   "peak_verified_db": -8.85
+  },
+  {
+   "cue": 422,
+   "start": 1207.7,
+   "end": 1209.0,
+   "text": "",
+   "peak_db": -14.39,
+   "peak_verified_db": -8.52
+  },
+  {
+   "cue": 423,
+   "start": 1209.95,
+   "end": 1211.35,
+   "text": "",
+   "peak_db": -13.15,
+   "peak_verified_db": -10.61
+  },
+  {
+   "cue": 425,
+   "start": 1212.85,
+   "end": 1215.4,
+   "text": "",
+   "peak_db": -21.63,
+   "peak_verified_db": -7.8
+  },
+  {
+   "cue": 426,
+   "start": 1216.05,
+   "end": 1216.6,
+   "text": "",
+   "peak_db": -26.22,
+   "peak_verified_db": -8.64
+  },
+  {
+   "cue": 427,
+   "start": 1217.45,
+   "end": 1217.8,
+   "text": "",
+   "peak_db": -13.3,
+   "peak_verified_db": -8.39
+  },
+  {
+   "cue": 428,
+   "start": 1218.3,
+   "end": 1220.0,
+   "text": "",
+   "peak_db": -20.96,
+   "peak_verified_db": -7.18
+  },
+  {
+   "cue": 429,
+   "start": 1221.3,
+   "end": 1221.75,
+   "text": "",
+   "peak_db": -24.09,
+   "peak_verified_db": -7.39
+  },
+  {
+   "cue": 430,
+   "start": 1222.2,
+   "end": 1222.85,
+   "text": "",
+   "peak_db": -23.96,
+   "peak_verified_db": -7.93
+  },
+  {
+   "cue": 431,
+   "start": 1223.3,
+   "end": 1224.4,
+   "text": "",
+   "peak_db": -18.27,
+   "peak_verified_db": -7.41
+  },
+  {
+   "cue": 435,
+   "start": 1228.2,
+   "end": 1228.75,
+   "text": "",
+   "peak_db": -11.25,
+   "peak_verified_db": -7.85
+  },
+  {
+   "cue": 436,
+   "start": 1231.3,
+   "end": 1232.6,
+   "text": "",
+   "peak_db": -12.24,
+   "peak_verified_db": -7.22
+  },
+  {
+   "cue": 437,
+   "start": 1234.5,
+   "end": 1237.6,
+   "text": "",
+   "peak_db": -15.3,
+   "peak_verified_db": -8.07
+  },
+  {
+   "cue": 438,
+   "start": 1238.1,
+   "end": 1241.4,
+   "text": "",
+   "peak_db": -15.55,
+   "peak_verified_db": -9.01
+  },
+  {
+   "cue": 439,
+   "start": 1241.8,
+   "end": 1242.3,
+   "text": "",
+   "peak_db": -22.26,
+   "peak_verified_db": -10.84
+  },
+  {
+   "cue": 441,
+   "start": 1245.8,
+   "end": 1248.45,
+   "text": "",
+   "peak_db": -10.14,
+   "peak_verified_db": -7.38
+  },
+  {
+   "cue": 442,
+   "start": 1251.15,
+   "end": 1251.85,
+   "text": "",
+   "peak_db": -16.38,
+   "peak_verified_db": -7.8
+  },
+  {
+   "cue": 443,
+   "start": 1252.6,
+   "end": 1252.95,
+   "text": "",
+   "peak_db": -8.82,
+   "peak_verified_db": -8.18
+  },
+  {
+   "cue": 446,
+   "start": 1258.15,
+   "end": 1259.3,
+   "text": "",
+   "peak_db": -20.94,
+   "peak_verified_db": -8.47
+  },
+  {
+   "cue": 447,
+   "start": 1260.6,
+   "end": 1261.7,
+   "text": "",
+   "peak_db": -11.63,
+   "peak_verified_db": -6.84
+  },
+  {
+   "cue": 448,
+   "start": 1263.5,
+   "end": 1264.65,
+   "text": "",
+   "peak_db": -12.62,
+   "peak_verified_db": -7.54
+  },
+  {
+   "cue": 449,
+   "start": 1266.25,
+   "end": 1267.2,
+   "text": "",
+   "peak_db": -19.28,
+   "peak_verified_db": -8.77
+  },
+  {
+   "cue": 451,
+   "start": 1268.65,
+   "end": 1269.3,
+   "text": "",
+   "peak_db": -9.92,
+   "peak_verified_db": -7.95
+  },
+  {
+   "cue": 452,
+   "start": 1270.25,
+   "end": 1270.85,
+   "text": "",
+   "peak_db": -8.55,
+   "peak_verified_db": -8.54
+  },
+  {
+   "cue": 453,
+   "start": 1271.4,
+   "end": 1272.9,
+   "text": "",
+   "peak_db": -6.99,
+   "peak_verified_db": -8.08
+  },
+  {
+   "cue": 454,
+   "start": 1273.8,
+   "end": 1274.25,
+   "text": "",
+   "peak_db": -21.05,
+   "peak_verified_db": -8.11
+  },
+  {
+   "cue": 455,
+   "start": 1277.5,
+   "end": 1278.85,
+   "text": "",
+   "peak_db": -12.35,
+   "peak_verified_db": -7.47
+  },
+  {
+   "cue": 456,
+   "start": 1279.4,
+   "end": 1280.35,
+   "text": "",
+   "peak_db": -9.47,
+   "peak_verified_db": -9.39
+  },
+  {
+   "cue": 457,
+   "start": 1281.95,
+   "end": 1282.45,
+   "text": "",
+   "peak_db": -11.7,
+   "peak_verified_db": -7.84
+  },
+  {
+   "cue": 458,
+   "start": 1284.1,
+   "end": 1284.5,
+   "text": "",
+   "peak_db": -6.64,
+   "peak_verified_db": -7.92
+  },
+  {
+   "cue": 459,
+   "start": 1286.25,
+   "end": 1286.75,
+   "text": "",
+   "peak_db": -22.31,
+   "peak_verified_db": -8.23
+  },
+  {
+   "cue": 460,
+   "start": 1288.3,
+   "end": 1288.75,
+   "text": "",
+   "peak_db": -19.07,
+   "peak_verified_db": -8.21
+  },
+  {
+   "cue": 461,
+   "start": 1290.45,
+   "end": 1290.9,
+   "text": "",
+   "peak_db": -19.58,
+   "peak_verified_db": -8.48
+  },
+  {
+   "cue": 462,
+   "start": 1292.6,
+   "end": 1293.0,
+   "text": "",
+   "peak_db": -18.19,
+   "peak_verified_db": -8.64
+  },
+  {
+   "cue": 463,
+   "start": 1294.85,
+   "end": 1295.65,
+   "text": "",
+   "peak_db": -18.87,
+   "peak_verified_db": -8.78
+  },
+  {
+   "cue": 467,
+   "start": 1303.45,
+   "end": 1305.85,
+   "text": "",
+   "peak_db": -9.99,
+   "peak_verified_db": -8.03
+  },
+  {
+   "cue": 468,
+   "start": 1306.6,
+   "end": 1307.2,
+   "text": "",
+   "peak_db": -24.55,
+   "peak_verified_db": -10.64
+  },
+  {
+   "cue": 469,
+   "start": 1307.7,
+   "end": 1308.55,
+   "text": "",
+   "peak_db": -16.64,
+   "peak_verified_db": -10.14
+  },
+  {
+   "cue": 471,
+   "start": 1309.9,
+   "end": 1311.95,
+   "text": "",
+   "peak_db": -20.72,
+   "peak_verified_db": -9.46
+  },
+  {
+   "cue": 473,
+   "start": 1313.3,
+   "end": 1314.1,
+   "text": "",
+   "peak_db": -21.78,
+   "peak_verified_db": -11.72
+  }
+ ],
+ "verified": {
+  "wav": "work/최박사_운동법_AI/audio/결과_옆구리살_가편_오디오2.wav",
+  "sentence_median_db": -7.71,
+  "sentence_p10_db": -9.02,
+  "sentence_p90_db": -7.06,
+  "in_range": 0,
+  "total": 368,
+  "true_peak_db": -0.0,
+  "over_minus1_secs": [
+   720,
+   721
+  ],
+  "clipped_secs": [
+   720,
+   721
+  ],
+  "out_of_range": [
+   {
+    "start": 0.1,
+    "end": 0.95,
+    "peak_db": -7.8
+   },
+   {
+    "start": 3.4,
+    "end": 3.8,
+    "peak_db": -7.95
+   },
+   {
+    "start": 5.85,
+    "end": 7.15,
+    "peak_db": -6.93
+   },
+   {
+    "start": 7.6,
+    "end": 9.05,
+    "peak_db": -8.06
+   },
+   {
+    "start": 10.9,
+    "end": 13.95,
+    "peak_db": -7.51
+   },
+   {
+    "start": 15.3,
+    "end": 15.95,
+    "peak_db": -7.33
+   },
+   {
+    "start": 18.0,
+    "end": 20.35,
+    "peak_db": -7.46
+   },
+   {
+    "start": 22.3,
+    "end": 23.05,
+    "peak_db": -19.39
+   },
+   {
+    "start": 26.7,
+    "end": 27.9,
+    "peak_db": -8.12
+   },
+   {
+    "start": 28.9,
+    "end": 29.7,
+    "peak_db": -8.61
+   },
+   {
+    "start": 30.45,
+    "end": 34.4,
+    "peak_db": -7.99
+   },
+   {
+    "start": 34.9,
+    "end": 39.6,
+    "peak_db": -8.03
+   },
+   {
+    "start": 40.1,
+    "end": 53.8,
+    "peak_db": -7.66
+   },
+   {
+    "start": 54.25,
+    "end": 54.8,
+    "peak_db": -8.78
+   },
+   {
+    "start": 55.25,
+    "end": 56.2,
+    "peak_db": -9.55
+   },
+   {
+    "start": 57.55,
+    "end": 60.65,
+    "peak_db": -7.46
+   },
+   {
+    "start": 61.35,
+    "end": 64.4,
+    "peak_db": -7.15
+   },
+   {
+    "start": 64.9,
+    "end": 65.3,
+    "peak_db": -7.24
+   },
+   {
+    "start": 66.95,
+    "end": 67.6,
+    "peak_db": -9.66
+   },
+   {
+    "start": 68.1,
+    "end": 69.25,
+    "peak_db": -6.8
+   },
+   {
+    "start": 69.9,
+    "end": 70.9,
+    "peak_db": -7.67
+   },
+   {
+    "start": 72.1,
+    "end": 74.45,
+    "peak_db": -6.98
+   },
+   {
+    "start": 75.0,
+    "end": 76.2,
+    "peak_db": -14.65
+   },
+   {
+    "start": 77.05,
+    "end": 78.85,
+    "peak_db": -7.28
+   },
+   {
+    "start": 79.3,
+    "end": 80.35,
+    "peak_db": -7.59
+   },
+   {
+    "start": 80.9,
+    "end": 87.6,
+    "peak_db": -7.66
+   },
+   {
+    "start": 88.25,
+    "end": 88.75,
+    "peak_db": -14.7
+   },
+   {
+    "start": 89.35,
+    "end": 91.1,
+    "peak_db": -8.86
+   },
+   {
+    "start": 92.65,
+    "end": 94.2,
+    "peak_db": -8.81
+   },
+   {
+    "start": 96.15,
+    "end": 98.0,
+    "peak_db": -7.1
+   },
+   {
+    "start": 100.5,
+    "end": 101.3,
+    "peak_db": -7.53
+   },
+   {
+    "start": 104.6,
+    "end": 106.8,
+    "peak_db": -7.82
+   },
+   {
+    "start": 107.4,
+    "end": 108.05,
+    "peak_db": -7.16
+   },
+   {
+    "start": 108.65,
+    "end": 111.6,
+    "peak_db": -7.89
+   },
+   {
+    "start": 112.85,
+    "end": 113.2,
+    "peak_db": -10.01
+   },
+   {
+    "start": 114.75,
+    "end": 119.55,
+    "peak_db": -7.48
+   },
+   {
+    "start": 120.3,
+    "end": 123.25,
+    "peak_db": -7.82
+   },
+   {
+    "start": 123.85,
+    "end": 124.7,
+    "peak_db": -7.94
+   },
+   {
+    "start": 125.35,
+    "end": 133.8,
+    "peak_db": -8.18
+   },
+   {
+    "start": 135.3,
+    "end": 136.45,
+    "peak_db": -8.44
+   },
+   {
+    "start": 137.2,
+    "end": 145.45,
+    "peak_db": -7.77
+   },
+   {
+    "start": 152.25,
+    "end": 153.9,
+    "peak_db": -7.54
+   },
+   {
+    "start": 155.0,
+    "end": 163.95,
+    "peak_db": -8.79
+   },
+   {
+    "start": 164.9,
+    "end": 165.3,
+    "peak_db": -7.79
+   },
+   {
+    "start": 166.9,
+    "end": 168.0,
+    "peak_db": -7.51
+   },
+   {
+    "start": 169.55,
+    "end": 169.95,
+    "peak_db": -7.03
+   },
+   {
+    "start": 170.35,
+    "end": 175.75,
+    "peak_db": -7.69
+   },
+   {
+    "start": 177.1,
+    "end": 177.65,
+    "peak_db": -10.11
+   },
+   {
+    "start": 181.5,
+    "end": 184.3,
+    "peak_db": -7.49
+   },
+   {
+    "start": 185.4,
+    "end": 189.15,
+    "peak_db": -7.44
+   },
+   {
+    "start": 189.65,
+    "end": 192.5,
+    "peak_db": -7.42
+   },
+   {
+    "start": 195.95,
+    "end": 198.95,
+    "peak_db": -7.27
+   },
+   {
+    "start": 199.75,
+    "end": 200.9,
+    "peak_db": -7.23
+   },
+   {
+    "start": 201.3,
+    "end": 202.0,
+    "peak_db": -7.49
+   },
+   {
+    "start": 202.4,
+    "end": 204.2,
+    "peak_db": -7.64
+   },
+   {
+    "start": 204.9,
+    "end": 207.1,
+    "peak_db": -8.14
+   },
+   {
+    "start": 208.75,
+    "end": 209.5,
+    "peak_db": -8.09
+   },
+   {
+    "start": 210.05,
+    "end": 211.75,
+    "peak_db": -7.18
+   },
+   {
+    "start": 213.05,
+    "end": 215.45,
+    "peak_db": -8.02
+   },
+   {
+    "start": 216.75,
+    "end": 219.2,
+    "peak_db": -7.45
+   },
+   {
+    "start": 220.45,
+    "end": 221.8,
+    "peak_db": -8.35
+   },
+   {
+    "start": 223.15,
+    "end": 223.6,
+    "peak_db": -9.24
+   },
+   {
+    "start": 224.1,
+    "end": 228.95,
+    "peak_db": -7.54
+   },
+   {
+    "start": 234.75,
+    "end": 235.25,
+    "peak_db": -7.01
+   },
+   {
+    "start": 236.15,
+    "end": 236.55,
+    "peak_db": -8.82
+   },
+   {
+    "start": 237.7,
+    "end": 238.3,
+    "peak_db": -10.82
+   },
+   {
+    "start": 239.45,
+    "end": 241.05,
+    "peak_db": -7.83
+   },
+   {
+    "start": 244.4,
+    "end": 245.85,
+    "peak_db": -7.46
+   },
+   {
+    "start": 246.85,
+    "end": 247.65,
+    "peak_db": -8.07
+   },
+   {
+    "start": 250.8,
+    "end": 251.75,
+    "peak_db": -7.18
+   },
+   {
+    "start": 253.3,
+    "end": 256.0,
+    "peak_db": -7.62
+   },
+   {
+    "start": 259.05,
+    "end": 260.05,
+    "peak_db": -7.85
+   },
+   {
+    "start": 261.25,
+    "end": 263.05,
+    "peak_db": -7.55
+   },
+   {
+    "start": 265.65,
+    "end": 266.05,
+    "peak_db": -7.09
+   },
+   {
+    "start": 267.8,
+    "end": 268.6,
+    "peak_db": -7.72
+   },
+   {
+    "start": 274.75,
+    "end": 275.05,
+    "peak_db": -7.71
+   },
+   {
+    "start": 279.55,
+    "end": 279.85,
+    "peak_db": -7.54
+   },
+   {
+    "start": 281.45,
+    "end": 283.15,
+    "peak_db": -7.51
+   },
+   {
+    "start": 283.6,
+    "end": 284.25,
+    "peak_db": -7.19
+   },
+   {
+    "start": 285.2,
+    "end": 288.4,
+    "peak_db": -7.65
+   },
+   {
+    "start": 289.5,
+    "end": 290.75,
+    "peak_db": -8.28
+   },
+   {
+    "start": 291.6,
+    "end": 293.3,
+    "peak_db": -8.19
+   },
+   {
+    "start": 294.45,
+    "end": 295.4,
+    "peak_db": -7.86
+   },
+   {
+    "start": 296.45,
+    "end": 298.05,
+    "peak_db": -8.09
+   },
+   {
+    "start": 304.45,
+    "end": 305.15,
+    "peak_db": -7.57
+   },
+   {
+    "start": 309.1,
+    "end": 310.5,
+    "peak_db": -7.06
+   },
+   {
+    "start": 312.4,
+    "end": 315.85,
+    "peak_db": -7.89
+   },
+   {
+    "start": 316.5,
+    "end": 318.4,
+    "peak_db": -7.74
+   },
+   {
+    "start": 322.05,
+    "end": 324.15,
+    "peak_db": -8.55
+   },
+   {
+    "start": 324.75,
+    "end": 331.15,
+    "peak_db": -7.67
+   },
+   {
+    "start": 331.65,
+    "end": 335.05,
+    "peak_db": -6.98
+   },
+   {
+    "start": 335.55,
+    "end": 337.4,
+    "peak_db": -7.22
+   },
+   {
+    "start": 337.85,
+    "end": 343.15,
+    "peak_db": -7.77
+   },
+   {
+    "start": 343.6,
+    "end": 344.5,
+    "peak_db": -7.61
+   },
+   {
+    "start": 344.9,
+    "end": 353.15,
+    "peak_db": -7.92
+   },
+   {
+    "start": 353.6,
+    "end": 356.65,
+    "peak_db": -7.18
+   },
+   {
+    "start": 360.05,
+    "end": 361.45,
+    "peak_db": -7.83
+   },
+   {
+    "start": 363.55,
+    "end": 364.45,
+    "peak_db": -8.19
+   },
+   {
+    "start": 365.35,
+    "end": 367.3,
+    "peak_db": -7.54
+   },
+   {
+    "start": 369.45,
+    "end": 370.8,
+    "peak_db": -7.88
+   },
+   {
+    "start": 372.3,
+    "end": 373.1,
+    "peak_db": -7.06
+   },
+   {
+    "start": 374.5,
+    "end": 376.1,
+    "peak_db": -7.2
+   },
+   {
+    "start": 376.7,
+    "end": 378.45,
+    "peak_db": -7.37
+   },
+   {
+    "start": 378.95,
+    "end": 380.0,
+    "peak_db": -7.7
+   },
+   {
+    "start": 380.5,
+    "end": 382.25,
+    "peak_db": -8.38
+   },
+   {
+    "start": 382.85,
+    "end": 384.55,
+    "peak_db": -7.69
+   },
+   {
+    "start": 385.45,
+    "end": 386.0,
+    "peak_db": -10.77
+   },
+   {
+    "start": 386.5,
+    "end": 388.05,
+    "peak_db": -7.56
+   },
+   {
+    "start": 390.3,
+    "end": 395.85,
+    "peak_db": -7.74
+   },
+   {
+    "start": 396.35,
+    "end": 397.3,
+    "peak_db": -7.9
+   },
+   {
+    "start": 405.6,
+    "end": 407.0,
+    "peak_db": -7.65
+   },
+   {
+    "start": 407.4,
+    "end": 407.85,
+    "peak_db": -8.61
+   },
+   {
+    "start": 411.3,
+    "end": 412.3,
+    "peak_db": -9.1
+   },
+   {
+    "start": 413.1,
+    "end": 413.5,
+    "peak_db": -8.91
+   },
+   {
+    "start": 415.55,
+    "end": 416.3,
+    "peak_db": -12.14
+   },
+   {
+    "start": 417.25,
+    "end": 417.6,
+    "peak_db": -7.72
+   },
+   {
+    "start": 419.1,
+    "end": 419.55,
+    "peak_db": -7.67
+   },
+   {
+    "start": 420.5,
+    "end": 423.0,
+    "peak_db": -6.3
+   },
+   {
+    "start": 425.4,
+    "end": 428.5,
+    "peak_db": -7.88
+   },
+   {
+    "start": 429.2,
+    "end": 430.1,
+    "peak_db": -8.44
+   },
+   {
+    "start": 431.4,
+    "end": 432.9,
+    "peak_db": -7.76
+   },
+   {
+    "start": 435.5,
+    "end": 436.15,
+    "peak_db": -23.33
+   },
+   {
+    "start": 437.6,
+    "end": 438.1,
+    "peak_db": -24.77
+   },
+   {
+    "start": 439.35,
+    "end": 440.55,
+    "peak_db": -7.27
+   },
+   {
+    "start": 440.95,
+    "end": 441.4,
+    "peak_db": -7.13
+   },
+   {
+    "start": 442.65,
+    "end": 445.0,
+    "peak_db": -7.17
+   },
+   {
+    "start": 445.55,
+    "end": 448.1,
+    "peak_db": -7.56
+   },
+   {
+    "start": 448.7,
+    "end": 453.0,
+    "peak_db": -7.71
+   },
+   {
+    "start": 453.8,
+    "end": 455.15,
+    "peak_db": -6.79
+   },
+   {
+    "start": 455.9,
+    "end": 456.4,
+    "peak_db": -7.44
+   },
+   {
+    "start": 457.1,
+    "end": 459.25,
+    "peak_db": -7.37
+   },
+   {
+    "start": 459.75,
+    "end": 460.05,
+    "peak_db": -7.91
+   },
+   {
+    "start": 460.5,
+    "end": 462.25,
+    "peak_db": -6.89
+   },
+   {
+    "start": 462.65,
+    "end": 463.6,
+    "peak_db": -7.14
+   },
+   {
+    "start": 464.05,
+    "end": 464.8,
+    "peak_db": -7.59
+   },
+   {
+    "start": 465.4,
+    "end": 466.3,
+    "peak_db": -8.17
+   },
+   {
+    "start": 478.1,
+    "end": 478.65,
+    "peak_db": -8.07
+   },
+   {
+    "start": 482.6,
+    "end": 484.5,
+    "peak_db": -7.12
+   },
+   {
+    "start": 488.4,
+    "end": 489.55,
+    "peak_db": -7.72
+   },
+   {
+    "start": 490.1,
+    "end": 490.6,
+    "peak_db": -7.94
+   },
+   {
+    "start": 497.6,
+    "end": 499.05,
+    "peak_db": -7.72
+   },
+   {
+    "start": 499.6,
+    "end": 500.5,
+    "peak_db": -6.99
+   },
+   {
+    "start": 501.05,
+    "end": 502.6,
+    "peak_db": -7.28
+   },
+   {
+    "start": 503.4,
+    "end": 504.95,
+    "peak_db": -7.61
+   },
+   {
+    "start": 505.45,
+    "end": 509.3,
+    "peak_db": -8.17
+   },
+   {
+    "start": 509.9,
+    "end": 511.15,
+    "peak_db": -7.69
+   },
+   {
+    "start": 514.8,
+    "end": 515.15,
+    "peak_db": -7.16
+   },
+   {
+    "start": 522.1,
+    "end": 523.35,
+    "peak_db": -8.15
+   },
+   {
+    "start": 527.45,
+    "end": 527.85,
+    "peak_db": -7.97
+   },
+   {
+    "start": 543.15,
+    "end": 543.55,
+    "peak_db": -6.98
+   },
+   {
+    "start": 549.7,
+    "end": 550.1,
+    "peak_db": -6.58
+   },
+   {
+    "start": 556.85,
+    "end": 557.3,
+    "peak_db": -7.52
+   },
+   {
+    "start": 563.9,
+    "end": 564.3,
+    "peak_db": -7.26
+   },
+   {
+    "start": 570.55,
+    "end": 572.1,
+    "peak_db": -8.3
+   },
+   {
+    "start": 573.5,
+    "end": 574.75,
+    "peak_db": -11.3
+   },
+   {
+    "start": 575.3,
+    "end": 575.85,
+    "peak_db": -9.19
+   },
+   {
+    "start": 576.35,
+    "end": 576.95,
+    "peak_db": -9.19
+   },
+   {
+    "start": 577.7,
+    "end": 582.3,
+    "peak_db": -8.19
+   },
+   {
+    "start": 583.25,
+    "end": 583.95,
+    "peak_db": -7.67
+   },
+   {
+    "start": 584.45,
+    "end": 585.3,
+    "peak_db": -7.45
+   },
+   {
+    "start": 585.8,
+    "end": 586.2,
+    "peak_db": -7.32
+   },
+   {
+    "start": 587.05,
+    "end": 592.6,
+    "peak_db": -7.53
+   },
+   {
+    "start": 593.15,
+    "end": 593.55,
+    "peak_db": -7.23
+   },
+   {
+    "start": 594.0,
+    "end": 596.3,
+    "peak_db": -7.87
+   },
+   {
+    "start": 597.2,
+    "end": 599.05,
+    "peak_db": -7.45
+   },
+   {
+    "start": 599.5,
+    "end": 601.35,
+    "peak_db": -8.93
+   },
+   {
+    "start": 613.4,
+    "end": 614.75,
+    "peak_db": -7.44
+   },
+   {
+    "start": 616.0,
+    "end": 618.4,
+    "peak_db": -8.22
+   },
+   {
+    "start": 625.2,
+    "end": 625.95,
+    "peak_db": -7.28
+   },
+   {
+    "start": 657.3,
+    "end": 657.65,
+    "peak_db": -6.78
+   },
+   {
+    "start": 664.55,
+    "end": 664.95,
+    "peak_db": -6.85
+   },
+   {
+    "start": 671.3,
+    "end": 672.15,
+    "peak_db": -7.13
+   },
+   {
+    "start": 684.85,
+    "end": 688.2,
+    "peak_db": -8.91
+   },
+   {
+    "start": 689.75,
+    "end": 690.6,
+    "peak_db": -7.74
+   },
+   {
+    "start": 693.15,
+    "end": 695.85,
+    "peak_db": -8.76
+   },
+   {
+    "start": 698.95,
+    "end": 702.4,
+    "peak_db": -8.54
+   },
+   {
+    "start": 702.9,
+    "end": 703.3,
+    "peak_db": -9.12
+   },
+   {
+    "start": 703.75,
+    "end": 704.6,
+    "peak_db": -7.93
+   },
+   {
+    "start": 705.15,
+    "end": 706.15,
+    "peak_db": -8.37
+   },
+   {
+    "start": 708.6,
+    "end": 709.4,
+    "peak_db": -7.77
+   },
+   {
+    "start": 710.8,
+    "end": 712.05,
+    "peak_db": -8.59
+   },
+   {
+    "start": 714.1,
+    "end": 717.0,
+    "peak_db": -8.78
+   },
+   {
+    "start": 717.4,
+    "end": 722.05,
+    "peak_db": -6.53
+   },
+   {
+    "start": 722.5,
+    "end": 729.5,
+    "peak_db": -7.65
+   },
+   {
+    "start": 730.15,
+    "end": 730.5,
+    "peak_db": -12.97
+   },
+   {
+    "start": 731.0,
+    "end": 732.3,
+    "peak_db": -8.04
+   },
+   {
+    "start": 732.85,
+    "end": 735.6,
+    "peak_db": -9.03
+   },
+   {
+    "start": 737.0,
+    "end": 738.55,
+    "peak_db": -7.9
+   },
+   {
+    "start": 739.15,
+    "end": 742.6,
+    "peak_db": -7.42
+   },
+   {
+    "start": 743.05,
+    "end": 745.1,
+    "peak_db": -6.98
+   },
+   {
+    "start": 745.7,
+    "end": 750.9,
+    "peak_db": -7.3
+   },
+   {
+    "start": 751.4,
+    "end": 752.55,
+    "peak_db": -7.57
+   },
+   {
+    "start": 753.65,
+    "end": 754.65,
+    "peak_db": -7.78
+   },
+   {
+    "start": 755.3,
+    "end": 756.3,
+    "peak_db": -7.25
+   },
+   {
+    "start": 757.5,
+    "end": 758.75,
+    "peak_db": -6.82
+   },
+   {
+    "start": 759.15,
+    "end": 762.2,
+    "peak_db": -7.28
+   },
+   {
+    "start": 762.9,
+    "end": 767.9,
+    "peak_db": -7.64
+   },
+   {
+    "start": 768.4,
+    "end": 769.55,
+    "peak_db": -8.17
+   },
+   {
+    "start": 770.0,
+    "end": 770.35,
+    "peak_db": -6.39
+   },
+   {
+    "start": 771.0,
+    "end": 773.65,
+    "peak_db": -6.78
+   },
+   {
+    "start": 774.1,
+    "end": 777.25,
+    "peak_db": -8.37
+   },
+   {
+    "start": 779.75,
+    "end": 780.65,
+    "peak_db": -8.33
+   },
+   {
+    "start": 781.25,
+    "end": 783.55,
+    "peak_db": -6.73
+   },
+   {
+    "start": 789.1,
+    "end": 793.75,
+    "peak_db": -7.55
+   },
+   {
+    "start": 794.4,
+    "end": 795.85,
+    "peak_db": -7.46
+   },
+   {
+    "start": 798.75,
+    "end": 799.2,
+    "peak_db": -7.9
+   },
+   {
+    "start": 799.8,
+    "end": 801.55,
+    "peak_db": -10.44
+   },
+   {
+    "start": 802.65,
+    "end": 804.75,
+    "peak_db": -7.28
+   },
+   {
+    "start": 813.1,
+    "end": 814.95,
+    "peak_db": -7.89
+   },
+   {
+    "start": 815.5,
+    "end": 816.75,
+    "peak_db": -8.34
+   },
+   {
+    "start": 822.3,
+    "end": 822.9,
+    "peak_db": -7.37
+   },
+   {
+    "start": 823.55,
+    "end": 824.35,
+    "peak_db": -7.6
+   },
+   {
+    "start": 826.5,
+    "end": 827.15,
+    "peak_db": -7.34
+   },
+   {
+    "start": 833.35,
+    "end": 834.15,
+    "peak_db": -7.21
+   },
+   {
+    "start": 834.9,
+    "end": 835.2,
+    "peak_db": -7.37
+   },
+   {
+    "start": 837.4,
+    "end": 837.75,
+    "peak_db": -7.64
+   },
+   {
+    "start": 840.05,
+    "end": 840.45,
+    "peak_db": -6.73
+   },
+   {
+    "start": 842.35,
+    "end": 842.8,
+    "peak_db": -7.09
+   },
+   {
+    "start": 843.7,
+    "end": 844.55,
+    "peak_db": -6.99
+   },
+   {
+    "start": 845.55,
+    "end": 846.0,
+    "peak_db": -7.01
+   },
+   {
+    "start": 846.5,
+    "end": 846.9,
+    "peak_db": -6.99
+   },
+   {
+    "start": 849.9,
+    "end": 853.05,
+    "peak_db": -6.9
+   },
+   {
+    "start": 853.6,
+    "end": 854.0,
+    "peak_db": -7.15
+   },
+   {
+    "start": 859.1,
+    "end": 859.9,
+    "peak_db": -7.66
+   },
+   {
+    "start": 865.95,
+    "end": 866.35,
+    "peak_db": -6.91
+   },
+   {
+    "start": 869.55,
+    "end": 870.85,
+    "peak_db": -7.25
+   },
+   {
+    "start": 871.45,
+    "end": 872.55,
+    "peak_db": -8.31
+   },
+   {
+    "start": 873.7,
+    "end": 874.35,
+    "peak_db": -8.09
+   },
+   {
+    "start": 875.1,
+    "end": 875.85,
+    "peak_db": -6.82
+   },
+   {
+    "start": 877.95,
+    "end": 880.9,
+    "peak_db": -7.67
+   },
+   {
+    "start": 881.9,
+    "end": 882.8,
+    "peak_db": -7.41
+   },
+   {
+    "start": 884.75,
+    "end": 885.1,
+    "peak_db": -7.63
+   },
+   {
+    "start": 887.85,
+    "end": 888.25,
+    "peak_db": -7.0
+   },
+   {
+    "start": 890.9,
+    "end": 891.95,
+    "peak_db": -7.9
+   },
+   {
+    "start": 893.7,
+    "end": 894.8,
+    "peak_db": -7.61
+   },
+   {
+    "start": 895.25,
+    "end": 900.35,
+    "peak_db": -7.17
+   },
+   {
+    "start": 900.85,
+    "end": 906.85,
+    "peak_db": -7.51
+   },
+   {
+    "start": 907.3,
+    "end": 909.05,
+    "peak_db": -8.62
+   },
+   {
+    "start": 909.5,
+    "end": 910.55,
+    "peak_db": -7.59
+   },
+   {
+    "start": 913.55,
+    "end": 914.55,
+    "peak_db": -7.8
+   },
+   {
+    "start": 915.0,
+    "end": 915.5,
+    "peak_db": -8.31
+   },
+   {
+    "start": 917.1,
+    "end": 917.5,
+    "peak_db": -8.66
+   },
+   {
+    "start": 918.65,
+    "end": 923.0,
+    "peak_db": -7.73
+   },
+   {
+    "start": 924.3,
+    "end": 925.25,
+    "peak_db": -10.68
+   },
+   {
+    "start": 925.7,
+    "end": 927.6,
+    "peak_db": -8.23
+   },
+   {
+    "start": 930.2,
+    "end": 931.25,
+    "peak_db": -13.74
+   },
+   {
+    "start": 933.0,
+    "end": 935.3,
+    "peak_db": -8.2
+   },
+   {
+    "start": 935.8,
+    "end": 938.85,
+    "peak_db": -9.43
+   },
+   {
+    "start": 939.45,
+    "end": 940.5,
+    "peak_db": -7.49
+   },
+   {
+    "start": 941.2,
+    "end": 944.8,
+    "peak_db": -7.57
+   },
+   {
+    "start": 946.55,
+    "end": 947.05,
+    "peak_db": -9.27
+   },
+   {
+    "start": 947.55,
+    "end": 949.0,
+    "peak_db": -7.16
+   },
+   {
+    "start": 951.55,
+    "end": 952.75,
+    "peak_db": -10.44
+   },
+   {
+    "start": 953.4,
+    "end": 958.15,
+    "peak_db": -7.46
+   },
+   {
+    "start": 958.6,
+    "end": 960.4,
+    "peak_db": -7.39
+   },
+   {
+    "start": 960.95,
+    "end": 961.5,
+    "peak_db": -7.97
+   },
+   {
+    "start": 962.15,
+    "end": 962.45,
+    "peak_db": -7.78
+   },
+   {
+    "start": 963.1,
+    "end": 966.15,
+    "peak_db": -6.87
+   },
+   {
+    "start": 967.3,
+    "end": 969.85,
+    "peak_db": -7.1
+   },
+   {
+    "start": 970.35,
+    "end": 972.55,
+    "peak_db": -7.22
+   },
+   {
+    "start": 973.85,
+    "end": 975.65,
+    "peak_db": -7.91
+   },
+   {
+    "start": 978.55,
+    "end": 980.65,
+    "peak_db": -10.57
+   },
+   {
+    "start": 981.1,
+    "end": 982.15,
+    "peak_db": -8.3
+   },
+   {
+    "start": 982.6,
+    "end": 983.6,
+    "peak_db": -7.21
+   },
+   {
+    "start": 984.35,
+    "end": 984.8,
+    "peak_db": -7.55
+   },
+   {
+    "start": 986.95,
+    "end": 989.0,
+    "peak_db": -7.05
+   },
+   {
+    "start": 989.55,
+    "end": 991.3,
+    "peak_db": -7.51
+   },
+   {
+    "start": 991.8,
+    "end": 994.65,
+    "peak_db": -7.22
+   },
+   {
+    "start": 995.25,
+    "end": 997.35,
+    "peak_db": -6.89
+   },
+   {
+    "start": 997.85,
+    "end": 1000.2,
+    "peak_db": -7.11
+   },
+   {
+    "start": 1000.75,
+    "end": 1005.75,
+    "peak_db": -7.54
+   },
+   {
+    "start": 1006.3,
+    "end": 1007.25,
+    "peak_db": -6.99
+   },
+   {
+    "start": 1007.75,
+    "end": 1014.95,
+    "peak_db": -7.71
+   },
+   {
+    "start": 1015.45,
+    "end": 1017.75,
+    "peak_db": -7.38
+   },
+   {
+    "start": 1018.6,
+    "end": 1019.5,
+    "peak_db": -7.84
+   },
+   {
+    "start": 1020.75,
+    "end": 1021.75,
+    "peak_db": -7.23
+   },
+   {
+    "start": 1023.05,
+    "end": 1024.75,
+    "peak_db": -7.56
+   },
+   {
+    "start": 1025.35,
+    "end": 1026.15,
+    "peak_db": -7.15
+   },
+   {
+    "start": 1027.15,
+    "end": 1029.7,
+    "peak_db": -7.43
+   },
+   {
+    "start": 1031.25,
+    "end": 1033.7,
+    "peak_db": -7.12
+   },
+   {
+    "start": 1037.3,
+    "end": 1038.8,
+    "peak_db": -7.37
+   },
+   {
+    "start": 1040.9,
+    "end": 1041.95,
+    "peak_db": -8.07
+   },
+   {
+    "start": 1044.2,
+    "end": 1044.75,
+    "peak_db": -7.85
+   },
+   {
+    "start": 1047.65,
+    "end": 1048.9,
+    "peak_db": -7.36
+   },
+   {
+    "start": 1050.1,
+    "end": 1051.2,
+    "peak_db": -7.82
+   },
+   {
+    "start": 1051.65,
+    "end": 1052.0,
+    "peak_db": -7.4
+   },
+   {
+    "start": 1052.55,
+    "end": 1057.95,
+    "peak_db": -7.81
+   },
+   {
+    "start": 1058.4,
+    "end": 1060.55,
+    "peak_db": -7.74
+   },
+   {
+    "start": 1061.0,
+    "end": 1063.95,
+    "peak_db": -7.37
+   },
+   {
+    "start": 1064.4,
+    "end": 1065.65,
+    "peak_db": -7.42
+   },
+   {
+    "start": 1066.1,
+    "end": 1067.95,
+    "peak_db": -7.01
+   },
+   {
+    "start": 1068.75,
+    "end": 1070.65,
+    "peak_db": -7.41
+   },
+   {
+    "start": 1071.45,
+    "end": 1071.8,
+    "peak_db": -6.82
+   },
+   {
+    "start": 1072.5,
+    "end": 1074.4,
+    "peak_db": -7.53
+   },
+   {
+    "start": 1079.75,
+    "end": 1084.3,
+    "peak_db": -8.27
+   },
+   {
+    "start": 1085.65,
+    "end": 1086.6,
+    "peak_db": -7.15
+   },
+   {
+    "start": 1087.3,
+    "end": 1087.75,
+    "peak_db": -7.06
+   },
+   {
+    "start": 1089.1,
+    "end": 1089.55,
+    "peak_db": -6.93
+   },
+   {
+    "start": 1090.9,
+    "end": 1091.35,
+    "peak_db": -7.15
+   },
+   {
+    "start": 1092.95,
+    "end": 1093.9,
+    "peak_db": -7.14
+   },
+   {
+    "start": 1094.75,
+    "end": 1095.9,
+    "peak_db": -7.64
+   },
+   {
+    "start": 1098.1,
+    "end": 1098.85,
+    "peak_db": -7.4
+   },
+   {
+    "start": 1100.0,
+    "end": 1105.4,
+    "peak_db": -8.41
+   },
+   {
+    "start": 1106.4,
+    "end": 1106.8,
+    "peak_db": -8.15
+   },
+   {
+    "start": 1108.9,
+    "end": 1111.3,
+    "peak_db": -7.85
+   },
+   {
+    "start": 1111.95,
+    "end": 1113.3,
+    "peak_db": -7.74
+   },
+   {
+    "start": 1113.7,
+    "end": 1116.1,
+    "peak_db": -8.39
+   },
+   {
+    "start": 1121.3,
+    "end": 1121.8,
+    "peak_db": -7.5
+   },
+   {
+    "start": 1122.3,
+    "end": 1123.45,
+    "peak_db": -9.15
+   },
+   {
+    "start": 1125.1,
+    "end": 1125.45,
+    "peak_db": -10.1
+   },
+   {
+    "start": 1133.25,
+    "end": 1139.85,
+    "peak_db": -7.86
+   },
+   {
+    "start": 1143.35,
+    "end": 1145.95,
+    "peak_db": -7.78
+   },
+   {
+    "start": 1146.75,
+    "end": 1149.1,
+    "peak_db": -7.95
+   },
+   {
+    "start": 1149.7,
+    "end": 1150.35,
+    "peak_db": -7.69
+   },
+   {
+    "start": 1151.2,
+    "end": 1160.0,
+    "peak_db": -7.33
+   },
+   {
+    "start": 1160.55,
+    "end": 1161.25,
+    "peak_db": -8.15
+   },
+   {
+    "start": 1161.7,
+    "end": 1163.2,
+    "peak_db": -7.84
+   },
+   {
+    "start": 1163.85,
+    "end": 1170.45,
+    "peak_db": -7.85
+   },
+   {
+    "start": 1170.9,
+    "end": 1174.75,
+    "peak_db": -8.36
+   },
+   {
+    "start": 1175.2,
+    "end": 1177.95,
+    "peak_db": -8.29
+   },
+   {
+    "start": 1178.55,
+    "end": 1179.1,
+    "peak_db": -7.62
+   },
+   {
+    "start": 1179.65,
+    "end": 1182.2,
+    "peak_db": -7.78
+   },
+   {
+    "start": 1182.85,
+    "end": 1189.6,
+    "peak_db": -7.82
+   },
+   {
+    "start": 1190.85,
+    "end": 1192.8,
+    "peak_db": -8.58
+   },
+   {
+    "start": 1193.2,
+    "end": 1194.75,
+    "peak_db": -9.08
+   },
+   {
+    "start": 1195.25,
+    "end": 1198.1,
+    "peak_db": -7.56
+   },
+   {
+    "start": 1198.55,
+    "end": 1198.95,
+    "peak_db": -7.21
+   },
+   {
+    "start": 1199.35,
+    "end": 1200.1,
+    "peak_db": -8.87
+   },
+   {
+    "start": 1204.65,
+    "end": 1206.2,
+    "peak_db": -8.85
+   },
+   {
+    "start": 1207.7,
+    "end": 1209.0,
+    "peak_db": -8.52
+   },
+   {
+    "start": 1209.95,
+    "end": 1211.35,
+    "peak_db": -10.61
+   },
+   {
+    "start": 1212.85,
+    "end": 1215.4,
+    "peak_db": -7.8
+   },
+   {
+    "start": 1216.05,
+    "end": 1216.6,
+    "peak_db": -8.64
+   },
+   {
+    "start": 1217.45,
+    "end": 1217.8,
+    "peak_db": -8.39
+   },
+   {
+    "start": 1218.3,
+    "end": 1220.0,
+    "peak_db": -7.18
+   },
+   {
+    "start": 1221.3,
+    "end": 1221.75,
+    "peak_db": -7.39
+   },
+   {
+    "start": 1222.2,
+    "end": 1222.85,
+    "peak_db": -7.93
+   },
+   {
+    "start": 1223.3,
+    "end": 1224.4,
+    "peak_db": -7.41
+   },
+   {
+    "start": 1228.2,
+    "end": 1228.75,
+    "peak_db": -7.85
+   },
+   {
+    "start": 1231.3,
+    "end": 1232.6,
+    "peak_db": -7.22
+   },
+   {
+    "start": 1234.5,
+    "end": 1237.6,
+    "peak_db": -8.07
+   },
+   {
+    "start": 1238.1,
+    "end": 1241.4,
+    "peak_db": -9.01
+   },
+   {
+    "start": 1241.8,
+    "end": 1242.3,
+    "peak_db": -10.84
+   },
+   {
+    "start": 1245.8,
+    "end": 1248.45,
+    "peak_db": -7.38
+   },
+   {
+    "start": 1251.15,
+    "end": 1251.85,
+    "peak_db": -7.8
+   },
+   {
+    "start": 1252.6,
+    "end": 1252.95,
+    "peak_db": -8.18
+   },
+   {
+    "start": 1258.15,
+    "end": 1259.3,
+    "peak_db": -8.47
+   },
+   {
+    "start": 1260.6,
+    "end": 1261.7,
+    "peak_db": -6.84
+   },
+   {
+    "start": 1263.5,
+    "end": 1264.65,
+    "peak_db": -7.54
+   },
+   {
+    "start": 1266.25,
+    "end": 1267.2,
+    "peak_db": -8.77
+   },
+   {
+    "start": 1268.65,
+    "end": 1269.3,
+    "peak_db": -7.95
+   },
+   {
+    "start": 1270.25,
+    "end": 1270.85,
+    "peak_db": -8.54
+   },
+   {
+    "start": 1271.4,
+    "end": 1272.9,
+    "peak_db": -8.08
+   },
+   {
+    "start": 1273.8,
+    "end": 1274.25,
+    "peak_db": -8.11
+   },
+   {
+    "start": 1277.5,
+    "end": 1278.85,
+    "peak_db": -7.47
+   },
+   {
+    "start": 1279.4,
+    "end": 1280.35,
+    "peak_db": -9.39
+   },
+   {
+    "start": 1281.95,
+    "end": 1282.45,
+    "peak_db": -7.84
+   },
+   {
+    "start": 1284.1,
+    "end": 1284.5,
+    "peak_db": -7.92
+   },
+   {
+    "start": 1286.25,
+    "end": 1286.75,
+    "peak_db": -8.23
+   },
+   {
+    "start": 1288.3,
+    "end": 1288.75,
+    "peak_db": -8.21
+   },
+   {
+    "start": 1290.45,
+    "end": 1290.9,
+    "peak_db": -8.48
+   },
+   {
+    "start": 1292.6,
+    "end": 1293.0,
+    "peak_db": -8.64
+   },
+   {
+    "start": 1294.85,
+    "end": 1295.65,
+    "peak_db": -8.78
+   },
+   {
+    "start": 1303.45,
+    "end": 1305.85,
+    "peak_db": -8.03
+   },
+   {
+    "start": 1306.6,
+    "end": 1307.2,
+    "peak_db": -10.64
+   },
+   {
+    "start": 1307.7,
+    "end": 1308.55,
+    "peak_db": -10.14
+   },
+   {
+    "start": 1309.9,
+    "end": 1311.95,
+    "peak_db": -9.46
+   },
+   {
+    "start": 1313.3,
+    "end": 1314.1,
+    "peak_db": -11.72
+   }
+  ]
+ }
+}
