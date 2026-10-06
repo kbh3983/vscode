@@ -57,5 +57,6 @@ MCP는 라벨을 번호(colorIndex)로만 다룬다. MCP 도구 설명의 영어
 | 2 | [자막](자막/AGENT.md) | Cutback SRT(`subtitle/cutback.srt`) → 싱크·폭 맞추기·위치 → Premiere 자막 트랙 (역할 재정의, `srt_tools.py` 구현 예정) |
 | 3 | [컷편집](컷편집/AGENT.md) | 설계 완료 — `subtitle.json`의 단어 시간으로 컷 → `edit_decisions.json` |
 | 4 | [자막](자막/AGENT.md) 2차 | 컷 반영 재정렬 → `.srt` |
+| 5 | [오디오](오디오/AGENT.md) | 설계 완료 — 말소리 -4~-6 / 배경음악 -18~-21 / 효과음 -10~-12 dB로 음량 맞춤 (측정 기준 확인 대기, `scripts/audio/levels.py` 구현 예정) |
 
 에이전트끼리는 `work/<프로젝트명>/`의 파일로만 주고받는다.
