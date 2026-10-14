@@ -1,0 +1,1 @@
+(function(){var f=new File("C:/DADA/9.AI/vscode/편집자동화/work/회고/tpl/ae/probe.txt");f.encoding="UTF-8";f.open("w");f.write("ok "+app.version+" proj="+(app.project?app.project.file:"none")+" items="+(app.project?app.project.numItems:0));f.close();})();

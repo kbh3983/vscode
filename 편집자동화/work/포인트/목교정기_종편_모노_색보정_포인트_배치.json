@@ -1,0 +1,597 @@
+{
+ "sequence": "목교정기_종편_모노_색보정_포인트",
+ "sequence_id": "4acba82e-fadc-4edb-be98-99466685c517",
+ "first_track": 8,
+ "points": [
+  {
+   "n": 1,
+   "start": 3.703,
+   "end": 4.7379999999999995,
+   "type": "강조",
+   "dialogue": "근데 지금 이거 없으면 잠을 못 잡니다",
+   "text": "이거 없으면 잠을 못 잡니다",
+   "why": "첫 결론·훅",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "start": 9.242,
+   "end": 12.379,
+   "type": "긍정",
+   "dialogue": "아침에 일어날 때도 너무 개운하고 일단 호흡이 잘 돼요",
+   "text": "아침에 너무 개운하고",
+   "why": "긍정 감정",
+   "candidates": [
+    {
+     "template": "봄자막 13-기분좋은 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 13-기분좋은 움직임.mogrt"
+    },
+    {
+     "template": "봄자막 04-즐겁게 흥얼거리는 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 04-즐겁게 흥얼거리는 움직임.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]러블리-분홍_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]러블리-분홍_2110.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "start": 12.379,
+   "end": 15.281,
+   "type": "부정",
+   "dialogue": "제가 이 거북목이랑 등 때문에 굉장히 힘들었었거든요",
+   "text": "굉장히 힘들었었거든요",
+   "why": "고통 호소",
+   "candidates": [
+    {
+     "template": "05_실망 우울 좌절 모션자막",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\05_실망 우울 좌절 모션자막.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-우울_2112",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-우울_2112.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울1_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울1_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울2_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울2_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-눈물_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-눈물_2111.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "start": 18.518,
+   "end": 20.387,
+   "type": "놀람",
+   "dialogue": "근데 진짜 이제 간증들이 쏟아지죠",
+   "text": "간증들이 쏟아지죠",
+   "why": "놀람·반응",
+   "candidates": [
+    {
+     "template": "PYNPA-[기본예능]의성어-깜짝_2116",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-깜짝_2116.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "봄자막 06-뿅 솟아오르는(빠르게)",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 06-뿅 솟아오르는(빠르게).mogrt"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "start": 31.664,
+   "end": 35.835,
+   "type": "긍정",
+   "dialogue": "허리 편해요 눕고 나니까 구분등 편해지고 거북목 좋아지고 있어요",
+   "text": "거북목 좋아지고 있어요",
+   "why": "후기 긍정",
+   "candidates": [
+    {
+     "template": "봄자막 13-기분좋은 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 13-기분좋은 움직임.mogrt"
+    },
+    {
+     "template": "봄자막 04-즐겁게 흥얼거리는 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 04-즐겁게 흥얼거리는 움직임.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]러블리-분홍_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]러블리-분홍_2110.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "start": 39.672,
+   "end": 42.542,
+   "type": "정보",
+   "dialogue": "지금 이제 일주일 만에 막 교정되고 있는 걸 느끼고 계시니까",
+   "text": "일주일 만에 교정되고 있는 걸",
+   "why": "핵심 정보",
+   "candidates": [
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "start": 50.417,
+   "end": 54.687,
+   "type": "부정",
+   "dialogue": "그렇게 효과가 많이 없었어 할 때는 좀 괜찮은데 교정 효과가 없는 거죠",
+   "text": "효과가 많이 없었어",
+   "why": "실망",
+   "candidates": [
+    {
+     "template": "05_실망 우울 좌절 모션자막",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\05_실망 우울 좌절 모션자막.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-우울_2112",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-우울_2112.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울1_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울1_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울2_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울2_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-눈물_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-눈물_2111.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "start": 72.872,
+   "end": 74.808,
+   "type": "정보",
+   "dialogue": "한번 분석을 해 드릴게요 왜 안 됐는지",
+   "text": "왜 안 됐는지 분석해 드릴게요",
+   "why": "전환·예고",
+   "candidates": [
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "start": 98.031,
+   "end": 100.5,
+   "type": "부정",
+   "dialogue": "좀 불편해요 이게 좀 약간 왔다 갔다 해가지고",
+   "text": "좀 불편해요",
+   "why": "불편 호소",
+   "candidates": [
+    {
+     "template": "05_실망 우울 좌절 모션자막",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\05_실망 우울 좌절 모션자막.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-우울_2112",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-우울_2112.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울1_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울1_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]우울2_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울2_2109.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-눈물_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-눈물_2111.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "start": 125.358,
+   "end": 127.36,
+   "type": "정보",
+   "dialogue": "이 근육들이 다 짧아져요",
+   "text": "근육들이 다 짧아져요",
+   "why": "핵심 원리",
+   "candidates": [
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "start": 173.106,
+   "end": 174.707,
+   "type": "강조",
+   "dialogue": "그러니까 교정이 안 되는 거죠",
+   "text": "교정이 안 되는 거죠",
+   "why": "결론",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "start": 229.796,
+   "end": 236.302,
+   "type": "정보",
+   "dialogue": "이게 단순히 목만 견인시키는 게 아니라 내 등을 굽어지게 만들고 말게 동그랗게 말리게끔 만드는 근육들이 다 이완되고 있는 거예요",
+   "text": "목만 견인시키는 게 아니라",
+   "why": "핵심 원리·반전",
+   "candidates": [
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "start": 239.606,
+   "end": 243.209,
+   "type": "강조",
+   "dialogue": "그냥 인체 역학적 구조적 차원에서 완전히 다르죠",
+   "text": "완전히 다르죠",
+   "why": "비교 결론",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "start": 263.062,
+   "end": 266.633,
+   "type": "놀람",
+   "dialogue": "자 근데 신기하게 이거 하고 딱 빼면 편하죠",
+   "text": "신기하게 빼면 편하죠",
+   "why": "놀람",
+   "candidates": [
+    {
+     "template": "PYNPA-[기본예능]의성어-깜짝_2116",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-깜짝_2116.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "봄자막 06-뿅 솟아오르는(빠르게)",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 06-뿅 솟아오르는(빠르게).mogrt"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "start": 280.88,
+   "end": 283.216,
+   "type": "강조",
+   "dialogue": "이건 정말 엄청난 차이가 있는 거예요",
+   "text": "정말 엄청난 차이",
+   "why": "강한 결론",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "start": 304.47,
+   "end": 305.938,
+   "type": "강조",
+   "dialogue": "완전히 다른 효과가 나타날 수밖에 없죠",
+   "text": "완전히 다른 효과",
+   "why": "결론",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "start": 330.029,
+   "end": 332.799,
+   "type": "정보",
+   "dialogue": "호흡 자체가 편해지니까 몸 전체가 편해지고",
+   "text": "몸 전체가 편해지고",
+   "why": "효과 정보",
+   "candidates": [
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "start": 352.151,
+   "end": 354.721,
+   "type": "화남",
+   "dialogue": "하지 마라 말리면 저는 화낼 겁니다",
+   "text": "말리면 저는 화낼 겁니다",
+   "why": "화남(재미)",
+   "candidates": [
+    {
+     "template": "08_분노 화나는 모션자막",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\08_분노 화나는 모션자막.mogrt"
+    },
+    {
+     "template": "10_분노 화나는 모션자막",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\10_분노 화나는 모션자막.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-분노_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-분노_2111.mogrt"
+    },
+    {
+     "template": "PYNPA-불말_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-불말_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]불말-빨강_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]불말-빨강_2110.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]불말-주황_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]불말-주황_2110.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "start": 361.994,
+   "end": 364.063,
+   "type": "웃음",
+   "dialogue": "다 이거 누워 있어요 너무 웃겨요",
+   "text": "다 누워 있어요 너무 웃겨요",
+   "why": "웃음",
+   "candidates": [
+    {
+     "template": "봄자막 03-잔망스럽고 귀여운 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 03-잔망스럽고 귀여운 움직임.mogrt"
+    },
+    {
+     "template": "봄자막 12-꼬물꼬물",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 12-꼬물꼬물.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-부끄_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-부끄_2111.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "start": 374.14,
+   "end": 375.341,
+   "type": "강조",
+   "dialogue": "이거 운동 도구입니다",
+   "text": "이거 운동 도구입니다",
+   "why": "핵심 정보·반전",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-주황_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-주황_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강한말-검정_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-검정_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-하늘_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-하늘_2106.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "start": 375.742,
+   "end": 377.176,
+   "type": "웃음",
+   "dialogue": "저는 맨날 누워만 있거든요",
+   "text": "저는 맨날 누워만 있거든요",
+   "why": "웃음·당황",
+   "candidates": [
+    {
+     "template": "봄자막 03-잔망스럽고 귀여운 움직임",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 03-잔망스럽고 귀여운 움직임.mogrt"
+    },
+    {
+     "template": "봄자막 12-꼬물꼬물",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 12-꼬물꼬물.mogrt"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-부끄_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-부끄_2111.mogrt"
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "start": 379.145,
+   "end": 383.716,
+   "type": "마무리",
+   "dialogue": "제가 그래서 지금 이제부터 터틀을 활용한 운동 영상 계속 올릴 거예요 운동 좀 하시라고 네",
+   "text": "운동 영상 계속 올릴 거예요",
+   "why": "마무리 안내",
+   "candidates": [
+    {
+     "template": "PYNPA-[데코]에필-노랑_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]에필-노랑_2110.mogrt"
+    },
+    {
+     "template": "PYNPA-[데코]에필-초록_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]에필-초록_2110.mogrt"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt"
+    }
+   ]
+  }
+ ]
+}

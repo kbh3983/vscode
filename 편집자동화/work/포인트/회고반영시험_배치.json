@@ -1,0 +1,261 @@
+{
+ "sequence": "옆구리살_종편_모노_컷전환_색보정_포인트_회고반영시험",
+ "sequence_id": "fccc5585-c92b-4357-82c5-a1e004a9c676",
+ "first_track": 4,
+ "points": [
+  {
+   "n": 1,
+   "start": 3.357,
+   "end": 4.737,
+   "cue_start": 0.017,
+   "time_by": "단어",
+   "type": "강조",
+   "person": false,
+   "who": "",
+   "suggest": "인트로 뿅 효과음",
+   "dialogue": "볼록 튀어나온 옆구리 살과 축 처진 엉덩이 살을 한꺼번에 빼면서",
+   "text": "한꺼번에 빼면서",
+   "why": "인트로 핵심 — 짧게 (회고: 사용자 '한꺼번에 빼면서')",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt",
+     "kind": "AE",
+     "text": "한꺼번에 빼면서"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "한꺼번에 빼면서"
+    },
+    {
+     "template": "PYNPA-뾰족말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-뾰족말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "한꺼번에 빼면서"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "start": 28.838,
+   "end": 31.738,
+   "cue_start": 28.178,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "dialogue": "손을 이때는 손끝이 앞을 향하셔야 돼요",
+   "text": "손 끝이 / 몸 앞을 향해야 함",
+   "why": "동작 요령 — 요약·명령형",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "손 끝이",
+      "아랫줄 텍스트": "몸 앞을 향해야 함"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "손 끝이",
+      "아랫줄 텍스트": "몸 앞을 향해야 함"
+     }
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "start": 57.733,
+   "end": 62.68,
+   "cue_start": 55.973,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "dialogue": "네 등을 최대한 말지 않도록",
+   "text": "등을 최대한 / 말지 않도록 주의하기",
+   "why": "동작 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "등을 최대한",
+      "아랫줄 텍스트": "말지 않도록 주의하기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "등을 최대한",
+      "아랫줄 텍스트": "말지 않도록 주의하기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "start": 87.604,
+   "end": 89.904,
+   "cue_start": 83.801,
+   "time_by": "추정",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "dialogue": "후 지금 네 번 했나요?",
+   "text": "[운동하느라 대답할 정신없음..ㅎ]",
+   "why": "질문에 대답 못 하는 출연자 상태 해설",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[운동하느라 대답할 정신없음..ㅎ]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "start": 202.252,
+   "end": 207.658,
+   "cue_start": 202.252,
+   "time_by": "추정",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "dialogue": "이게 양쪽을 번갈아 하면서 하나 해서 10번씩 3세트 이어가 보실게요",
+   "text": "좌우 동작을 1번으로 카운트, {10번씩 3세트} 진행해 주세요",
+   "why": "세트·횟수 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "좌우 동작을 1번으로 카운트, ",
+      "강조 문구": "10번씩 3세트",
+      "뒤 문구": " 진행해 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "start": 563.522,
+   "end": 565.452,
+   "cue_start": 562.012,
+   "time_by": "단어",
+   "type": "부정",
+   "person": true,
+   "who": "오른쪽",
+   "suggest": "",
+   "dialogue": "네 쉽지 않은데요",
+   "text": "쉽지 않은데요",
+   "why": "출연자 힘듦 반응",
+   "candidates": [
+    {
+     "template": "05_실망 우울 좌절 모션자막_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\05_실망 우울 좌절 모션자막_AE.mogrt",
+     "kind": "AE",
+     "text": "쉽지 않은데요"
+    },
+    {
+     "template": "PYNPA-[데코]우울1_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울1_2109.mogrt",
+     "kind": "AE",
+     "text": "쉽지 않은데요"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-우울_2112",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-우울_2112.mogrt",
+     "kind": "AE",
+     "text": "쉽지 않은데요"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "start": 726.496,
+   "end": 728.196,
+   "cue_start": 726.476,
+   "time_by": "단어",
+   "type": "웃음",
+   "person": true,
+   "who": "왼쪽",
+   "suggest": "",
+   "dialogue": "땀이 땀이 땀이 어떠세요?",
+   "text": "땀이..",
+   "why": "출연자 땀 반응 — 얼굴 근처 작은 라벨",
+   "candidates": [
+    {
+     "template": "봄자막 12-꼬물꼬물_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 12-꼬물꼬물_AE.mogrt",
+     "kind": "AE",
+     "text": "땀이.."
+    },
+    {
+     "template": "봄자막 03-잔망스럽고 귀여운 움직임_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 03-잔망스럽고 귀여운 움직임_AE.mogrt",
+     "kind": "AE",
+     "text": "땀이.."
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-부끄_2111",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-부끄_2111.mogrt",
+     "kind": "AE",
+     "text": "땀이.."
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "start": 735.476,
+   "end": 736.776,
+   "cue_start": 733.516,
+   "time_by": "단어",
+   "type": "강조",
+   "person": false,
+   "who": "",
+   "suggest": "띠링 효과음 + 터틀볼 클로즈업(A캠 확대)",
+   "dialogue": "네 장비 없어서 운동 못 하는 거 아니죠? 터틀블 하나만 있으면 되고",
+   "text": "터틀볼 하나면 OK",
+   "why": "제품 메시지",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt",
+     "kind": "AE",
+     "text": "터틀볼 하나면 OK"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "터틀볼 하나면 OK"
+    },
+    {
+     "template": "PYNPA-뾰족말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-뾰족말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "터틀볼 하나면 OK"
+    }
+   ]
+  }
+ ]
+}

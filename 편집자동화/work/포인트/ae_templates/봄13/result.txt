@@ -1,0 +1,5 @@
+font=Paperlogy-7Bold
+expr
+layers=3
+addToMGT=true
+export=true

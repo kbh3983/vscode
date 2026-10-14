@@ -1,0 +1,10 @@
+start
+opened
+layer ok
+text ok
+animators 3
+pos expr: seedRandom(textIndex, true); var ph = random(0, 1000); var n = noise([time*3.5 + ph, textIndex*3.7]); var v = 50 + n*50; [v, v, v]
+rot expr: seedRandom(textIndex, true); var ph = random(0, 1000); var n = noise([time*3.5 + ph, textIndex*3.7]); var up = -n; var k = clamp((up - 0.25) / (0.55 - 0.25), 0, 1); var d = (Math.floor(ph) % 2 == 0) ? 1 : -1; var v = k*d*100; [v, v, v]
+expr set
+ok
+end

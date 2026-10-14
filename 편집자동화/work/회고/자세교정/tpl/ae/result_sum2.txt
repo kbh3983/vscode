@@ -1,0 +1,15 @@
+프로젝트 저장
+크기 아랫줄 110.856506347656 윗줄 79.4263687133789
+  빨강 글자
+  빨강 움직임·색
+  내보내기 시작 Red
+Red export=true
+  노랑 글자
+  노랑 움직임·색
+  내보내기 시작 Yellow
+Yellow export=true
+  초록 글자
+  초록 움직임·색
+  내보내기 시작 Green
+Green export=true
+Sum2 export 끝

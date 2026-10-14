@@ -1,0 +1,1037 @@
+{
+ "sequence": "틀어진골반_종편_모노_컷전환_색보정_샷사이즈_포인트_색보정_포인트",
+ "sequence_id": "b967ee9f-5593-47ad-a491-0ebd0842e965",
+ "first_track": 4,
+ "points": [
+  {
+   "n": 1,
+   "start": 10.06,
+   "end": 15.06,
+   "cue_start": 7.825,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "앉을 때마다 나도 모르게 한쪽 다리를 올려야지만 편하심 혹은 이제 이렇게 발을 올리고 있어야지만 편하신 분들",
+   "text": "다리를 꼬아야 편하다면 / [골반이 틀어졌다는 신호]",
+   "why": "도입 — 시청자 자가 진단",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "다리를 꼬아야 편하다면 [골반이 틀어졌다는 신호]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "다리를 꼬아야 편하다면",
+      "아랫줄 텍스트": "골반이 틀어졌다는 신호"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "다리를 꼬아야 편하다면 골반이 틀어졌다는 신호"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "start": 30.047,
+   "end": 35.047,
+   "cue_start": 23.24,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 서 있는 남성 옆모습(검은 반팔, 검은 바지) 두 명을 나란히 — 왼쪽은 골반이 뒤로 무너진 자세, 오른쪽은 허리가 과하게 휜 과전만 자세. 몸 위에 반투명 척추·골반 오버레이, 골반 기울기를 빨간 화살표로 표시, 고관절 부위는 빨갛게 빛남. 한글 설명 상자: 빨강 제목 '골반 무너짐' / '과전만' + 설명 한 줄씩 '둘 다 고관절 문제 신호'. 깔끔한 정보그래픽, 글자는 크고 짧게",
+   "bcam": false,
+   "dialogue": "이게 너무 타이트해져 가지고 약간 에스라인 뭐 예쁜 에스라인이라고 생각하지만 오히려 너무 타이트해져서 과전만 된 상태로 약간 뒤뚱뒤뚱 걷는 것처럼 이렇게 전부 다 고관절에 문제가 생겼고 골반이 틀어져 있을 확률이 높습니다",
+   "text": "{과전만}·뒤뚱 걸음도 / [고관절 문제] 신호",
+   "why": "도입 — 반대 유형",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{과전만}·뒤뚱 걸음도 [고관절 문제] 신호"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "과전만·뒤뚱 걸음도",
+      "아랫줄 텍스트": "고관절 문제 신호"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "과전만·뒤뚱 걸음도 고관절 문제 신호"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "start": 55.94,
+   "end": 57.507,
+   "cue_start": 55.94,
+   "time_by": "추정",
+   "type": "강조",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": true,
+   "dialogue": "가장 많이 틀어진 분을 선정했습니다",
+   "text": "가장 많이 틀어진 분 선정",
+   "why": "출연자 소개 — 재미",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt",
+     "kind": "AE",
+     "text": "가장 많이 틀어진 분 선정"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "가장 많이 틀어진 분 선정"
+    },
+    {
+     "template": "PYNPA-뾰족말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-뾰족말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "가장 많이 틀어진 분 선정"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "start": 87.482,
+   "end": 92.482,
+   "cue_start": 85.502,
+   "time_by": "단어",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 매트 위에 엎드린 남성(검은 반팔, 검은 바지)을 위에서 본 모습. 골반을 반투명 오버레이로 표시하고 한쪽이 기울어진 것을 빨간 선으로, 양쪽 뒤꿈치 끝에 가로 기준선 — 한쪽 다리가 더 길게 나온 차이를 빨간 양방향 화살표로. 한글 설명 상자: 빨강 제목 '다리 길이 차이' + 설명 '골반이 틀어지면 / 엎드렸을 때 한쪽이 길어 보임'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "골반이 이렇게 보는데 이 다리가 지금 이 다리보다 훨씬 길게 나오고 어우 뻣뻣해 잘 안 돌아가요 지금 이 자체도 잘 안 돌아가요 뒤꿈치 기준으로 보면 이 발이 지금 훨씬 더 길게 보일 거예요",
+   "text": "엎드려 보면 / 한쪽 다리가 [훨씬 길어요]",
+   "why": "골반 틀어짐 확인 장면",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "엎드려 보면 한쪽 다리가 [훨씬 길어요]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "엎드려 보면",
+      "아랫줄 텍스트": "한쪽 다리가 훨씬 길어요"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "엎드려 보면 한쪽 다리가 훨씬 길어요"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "start": 116.706,
+   "end": 121.706,
+   "cue_start": 115.566,
+   "time_by": "단어",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "자 우선은 지금 고관절 주변이 워낙 뻣뻣해서 지금 힘들어요 그래서 허리 골반을 좀 부드럽게 풀어줄 수 있는 이 운동부터 먼저 진행을 하시면 좋을 것 같아요",
+   "text": "고관절이 뻣뻣하면 / [허리·골반부터 풀기]",
+   "why": "첫 운동 이유",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "고관절이 뻣뻣하면 [허리·골반부터 풀기]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "고관절이 뻣뻣하면",
+      "아랫줄 텍스트": "허리·골반부터 풀기"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "고관절이 뻣뻣하면 허리·골반부터 풀기"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "start": 139.623,
+   "end": 144.923,
+   "cue_start": 132.016,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "그래서 네 접어주시고 피디님이 좋아하는 이 자세를 잡아드릴게요 편한데요 네 네 좋아요 손 여기 바닥 짚어 주시고 이 상태에서 이쪽으로 완전히 넘어가면 돼요 바닥 닿을 때까지",
+   "text": "다리를 접고 손은 바닥에 / 바닥 닿을 때까지 넘기기",
+   "why": "첫 운동 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "다리를 접고 손은 바닥에",
+      "아랫줄 텍스트": "바닥 닿을 때까지 넘기기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "다리를 접고 손은 바닥에",
+      "아랫줄 텍스트": "바닥 닿을 때까지 넘기기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "start": 155.903,
+   "end": 159.476,
+   "cue_start": 156.273,
+   "time_by": "단어",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "자 열 번만 왔다 갔다 하세요",
+   "text": "좌우 {10번} 왔다 갔다 해 주세요",
+   "why": "횟수 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "좌우 ",
+      "강조 문구": "10번",
+      "뒤 문구": " 왔다 갔다 해 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "start": 177.353,
+   "end": 182.653,
+   "cue_start": 176.093,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이때 가급적이면 이 경갑이 뜨지 않도록 눌러주시면서 꾹꾹 눌러주시면서 동작을 해 주셔야 됩니다 몸통이 같이 뜨면 안 돼요",
+   "text": "어깨가 뜨지 않게 / 꾹 누르면서 넘기기",
+   "why": "흔한 실수 교정",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "어깨가 뜨지 않게",
+      "아랫줄 텍스트": "꾹 누르면서 넘기기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "어깨가 뜨지 않게",
+      "아랫줄 텍스트": "꾹 누르면서 넘기기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "start": 219.915,
+   "end": 224.108,
+   "cue_start": 218.335,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "부드럽게 왔다 갔다 하시면서 너무 세게 안 당기셔도 돼요 부드럽게 움직이면서 풀어지는 거예요",
+   "text": "세게 당기지 말고 / 부드럽게 왔다 갔다",
+   "why": "강도 조절 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "세게 당기지 말고",
+      "아랫줄 텍스트": "부드럽게 왔다 갔다"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "세게 당기지 말고",
+      "아랫줄 텍스트": "부드럽게 왔다 갔다"
+     }
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "start": 265.331,
+   "end": 270.631,
+   "cue_start": 264.581,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "네 터틀볼에 이렇게 무릎을 올려놓고 반대발을 무릎보다 좀 더 멀리 나가게끔 한 상태에서 그냥 앞으로 미는 게 아니라 터틀볼이 있기 때문에 누르기가 편해요 이 골반을 밑으로 눌러주시면서 무릎 앞으로 미는 거예요",
+   "text": "터틀볼에 무릎 올리고 / 골반을 눌러 무릎 앞으로 밀기",
+   "why": "두 번째 운동 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼에 무릎 올리고",
+      "아랫줄 텍스트": "골반을 눌러 무릎 앞으로 밀기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼에 무릎 올리고",
+      "아랫줄 텍스트": "골반을 눌러 무릎 앞으로 밀기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "start": 280.43,
+   "end": 285.73,
+   "cue_start": 280.43,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "손을 쭉 들어 올리셔 가지고 옆으로 이렇게 넘겨주시면 네 가장 효과적입니다",
+   "text": "손을 쭉 들어 / 옆으로 넘기면 가장 효과적",
+   "why": "두 번째 운동 핵심",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "손을 쭉 들어",
+      "아랫줄 텍스트": "옆으로 넘기면 가장 효과적"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "손을 쭉 들어",
+      "아랫줄 텍스트": "옆으로 넘기면 가장 효과적"
+     }
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "start": 287.514,
+   "end": 290.514,
+   "cue_start": 287.504,
+   "time_by": "단어",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "30초만 해볼게요",
+   "text": "{30초}간 버텨 주세요",
+   "why": "시간 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "",
+      "강조 문구": "30초",
+      "뒤 문구": "간 버텨 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "start": 297.391,
+   "end": 299.891,
+   "cue_start": 294.211,
+   "time_by": "단어",
+   "type": "강조",
+   "person": false,
+   "who": "",
+   "suggest": "반짝 강조 + 터틀볼 제품 사진/상세페이지 + 띠링",
+   "image_prompt": "",
+   "bcam": true,
+   "dialogue": "오 너무 튼튼한데요 네 두껍게 만들어져서 되게 튼튼해요 이게 운동 도구입니다",
+   "text": "이게 운동 도구입니다",
+   "why": "제품 메시지",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt",
+     "kind": "AE",
+     "text": "이게 운동 도구입니다"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "이게 운동 도구입니다"
+    },
+    {
+     "template": "PYNPA-뾰족말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-뾰족말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "이게 운동 도구입니다"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "start": 332.892,
+   "end": 337.892,
+   "cue_start": 321.572,
+   "time_by": "단어",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 터틀볼 위에 한쪽 무릎을 대고 런지 자세로 손을 위로 뻗은 남성 옆모습(검은 반팔). 몸 안쪽 깊은 곳의 장요근(허리뼈에서 넓적다리뼈로 이어지는 근육)을 반투명 오버레이로 표시 — 늘어나는 방향으로 파란 화살표, 근육은 파랗게 빛남. 둥근 확대 원에 장요근 위치. 한글 설명 상자: 파랑 제목 '장요근' + 설명 '다리를 접고 당기는 코어 근육 / 짧아지면 골반이 틀어짐'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "네 이게 지금 어 장요근 이제 코어 근육 중에 이 다리를 접고 당겨주는 고관절을 움직이는데 굉장히 중요한 역할을 하는 장요근이라는 운동 근육이 있어요 자 그 근육을 이제 짧아진 근육을 쭉 이완시켜 주면서 활성화시켜 주는 운동입니다",
+   "text": "{장요근}을 늘리고 / [활성화]시키는 운동",
+   "why": "운동 원리 설명",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{장요근}을 늘리고 [활성화]시키는 운동"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "장요근을 늘리고",
+      "아랫줄 텍스트": "활성화시키는 운동"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "장요근을 늘리고 활성화시키는 운동"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "start": 367.996,
+   "end": 369.753,
+   "cue_start": 359.476,
+   "time_by": "추정",
+   "type": "강조",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": true,
+   "dialogue": "힘드시죠 그래도 하셔야 돼요 누르고 지금 안 하시면 나중에 고통 때문에 더 힘드실 거예요",
+   "text": "안 하면 나중에 더 아파요",
+   "why": "동기 부여 한마디",
+   "candidates": [
+    {
+     "template": "PYNPA-강한말-빨강_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강한말-빨강_2106.mogrt",
+     "kind": "AE",
+     "text": "안 하면 나중에 더 아파요"
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "안 하면 나중에 더 아파요"
+    },
+    {
+     "template": "PYNPA-뾰족말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-뾰족말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "안 하면 나중에 더 아파요"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "start": 400.783,
+   "end": 406.083,
+   "cue_start": 399.683,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "한쪽이 좀 더 편하고 한쪽이 좀 더 괴로우실 거예요 네 그래 좀 안 되는 쪽도 좀 이제 신경 써 가지고 될 때까지 좀 해 주셔야 됩니다",
+   "text": "더 괴로운 쪽을 / 될 때까지 더 신경 쓰기",
+   "why": "좌우 차이 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "더 괴로운 쪽을",
+      "아랫줄 텍스트": "될 때까지 더 신경 쓰기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "더 괴로운 쪽을",
+      "아랫줄 텍스트": "될 때까지 더 신경 쓰기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "start": 439.167,
+   "end": 444.467,
+   "cue_start": 437.02,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이 양발 뒤꿈치를 이렇게 브이자 형태로 모은 상태에서 이 뒤꿈치를 꾹 누를 거예요 그리고 이렇게 엎드린 동작에서 무릎을 굽힌 상태에서 이 무릎을 펴주실 거예요",
+   "text": "뒤꿈치를 V자로 붙이고 / 엎드려 무릎 펴기",
+   "why": "세 번째 운동 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "뒤꿈치를 V자로 붙이고",
+      "아랫줄 텍스트": "엎드려 무릎 펴기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "뒤꿈치를 V자로 붙이고",
+      "아랫줄 텍스트": "엎드려 무릎 펴기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "start": 470.213,
+   "end": 475.192,
+   "cue_start": 469.953,
+   "time_by": "단어",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "네 이거 딱 10회만 같이 한번 해보실게요",
+   "text": "딱 {10회}만 진행해 주세요",
+   "why": "횟수 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "딱 ",
+      "강조 문구": "10회",
+      "뒤 문구": "만 진행해 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "start": 531.174,
+   "end": 532.794,
+   "cue_start": 531.014,
+   "time_by": "단어",
+   "type": "부정",
+   "person": true,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": true,
+   "dialogue": "뒤꿈치 붙이는 게 진짜 힘든 거 같아요",
+   "text": "뒤꿈치 붙이기 힘들어요",
+   "why": "출연자 힘듦 반응",
+   "candidates": [
+    {
+     "template": "05_실망 우울 좌절 모션자막_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\05_실망 우울 좌절 모션자막_AE.mogrt",
+     "kind": "AE",
+     "text": "뒤꿈치 붙이기 힘들어요"
+    },
+    {
+     "template": "PYNPA-[데코]우울1_2109",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]우울1_2109.mogrt",
+     "kind": "AE",
+     "text": "뒤꿈치 붙이기 힘들어요"
+    },
+    {
+     "template": "PYNPA-[기본예능]의성어-우울_2112",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[기본예능]의성어-우울_2112.mogrt",
+     "kind": "AE",
+     "text": "뒤꿈치 붙이기 힘들어요"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "start": 538.85,
+   "end": 544.15,
+   "cue_start": 537.22,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "근데 이 동작할 때 너무 과하게 허리가 많이 굽거나 다리가 안 펴지면 손을 조금 더 멀리 하셔도 됩니다",
+   "text": "허리가 굽거나 다리가 안 펴지면 / 손을 더 멀리 짚기",
+   "why": "쉬운 버전 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "허리가 굽거나 다리가 안 펴지면",
+      "아랫줄 텍스트": "손을 더 멀리 짚기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "허리가 굽거나 다리가 안 펴지면",
+      "아랫줄 텍스트": "손을 더 멀리 짚기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "start": 582.833,
+   "end": 587.833,
+   "cue_start": 579.996,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 걷는 남성의 정면(검은 반팔, 검은 바지). 고관절은 회색으로 굳은 모습, 무릎과 발목 관절은 빨갛게 빛나는 부하 표시, 짧은 쪽 다리 발이 바깥으로 돌아가는 빨간 회전 화살표. 한글 설명 상자: 빨강 제목 '고관절이 굳으면' + 설명 '무릎·발목이 대신 일하고 / 걸을 때 다리가 돌아감'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "평상시에는 고관절이 같이 쓰여야 되는데 굳어있다 보니까 무릎이랑 발목이랑 부하가 많이 걸려요 특히 짧아진 쪽 다리는 회전이 더 많을 수밖에 없어요 긴 쪽은 디뎠는데 짧은 쪽은 아직 안 닿으니까 이게 돌아가면서 디디게 되죠",
+   "text": "고관절이 굳으면 / [무릎·발목에 부하]",
+   "why": "마지막 운동 이유",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "고관절이 굳으면 [무릎·발목에 부하]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "고관절이 굳으면",
+      "아랫줄 텍스트": "무릎·발목에 부하"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "고관절이 굳으면 무릎·발목에 부하"
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "start": 657.807,
+   "end": 662.807,
+   "cue_start": 654.604,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "발가락 힘이 얼마나 약한지 아시겠죠? 엉덩이 사실 이거는 발가락 힘의 문제가 아니에요 엉덩이 힘이 약해서 이래요 엉덩이 힘이 좋으면 여기서 딱 고정이 되는데 내가 엉덩이 힘이 약하면 고정이 안 돼요",
+   "text": "{발가락} 문제가 아니라 / [엉덩이 힘]이 약해서",
+   "why": "핵심 원리",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{발가락} 문제가 아니라 [엉덩이 힘]이 약해서"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "발가락 문제가 아니라",
+      "아랫줄 텍스트": "엉덩이 힘이 약해서"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "발가락 문제가 아니라 엉덩이 힘이 약해서"
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "start": 667.551,
+   "end": 670.82,
+   "cue_start": 667.551,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "뒤꿈치 들고 엉덩이에 힘을 딱 주셔야 돼요 발로 하는 게 아니에요",
+   "text": "뒤꿈치 들고 / 엉덩이에 힘 딱 주기",
+   "why": "마지막 운동 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "뒤꿈치 들고",
+      "아랫줄 텍스트": "엉덩이에 힘 딱 주기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "뒤꿈치 들고",
+      "아랫줄 텍스트": "엉덩이에 힘 딱 주기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "start": 694.867,
+   "end": 700.167,
+   "cue_start": 690.807,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "무릎 쓰고 계시잖아요 무릎 쓰고 계시잖아요 힙을 끌어 올려야지 네 무릎을 최대한 쓰지 말고 힙을 쓰시는 거예요",
+   "text": "무릎 말고 / 힙을 끌어 올려서 가기",
+   "why": "흔한 실수 교정",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "무릎 말고",
+      "아랫줄 텍스트": "힙을 끌어 올려서 가기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "무릎 말고",
+      "아랫줄 텍스트": "힙을 끌어 올려서 가기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "start": 708.076,
+   "end": 710.376,
+   "cue_start": 706.656,
+   "time_by": "단어",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이게 아 진짜 어렵네",
+   "text": "[생각보다 너무 어려운 한 칸..]",
+   "why": "출연자가 어려워하는 순간",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[생각보다 너무 어려운 한 칸..]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "start": 782.666,
+   "end": 787.666,
+   "cue_start": 781.064,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "하시는 분들이 있으시면 힙이 지금 제대로 기능을 안 하고 계신 거예요 그래서 이 끌어올린 자체를 모르신다라는 자체가 이 골반에 문제가 심각하다는 뜻입니다",
+   "text": "힙 끌어올리기를 모르겠다면 / [골반 문제가 심각]",
+   "why": "시청자 자가 진단",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "힙 끌어올리기를 모르겠다면 [골반 문제가 심각]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "힙 끌어올리기를 모르겠다면",
+      "아랫줄 텍스트": "골반 문제가 심각"
+     }
+    },
+    {
+     "template": "PYNPA-강조말-노랑_2106",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-강조말-노랑_2106.mogrt",
+     "kind": "AE",
+     "text": "힙 끌어올리기를 모르겠다면 골반 문제가 심각"
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "start": 821.102,
+   "end": 823.402,
+   "cue_start": 819.502,
+   "time_by": "단어",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "근데 야릇한 소리 내지 마시고 누굴 꼬시려고 지금 여기 다 남자밖에 없는데",
+   "text": "[야릇한 소리 주의..ㅎ]",
+   "why": "웃음 포인트를 해설로",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[야릇한 소리 주의..ㅎ]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "start": 934.462,
+   "end": 936.762,
+   "cue_start": 932.982,
+   "time_by": "단어",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "와 근데 진짜 힘드네 아 진짜 이 뒤꿈치 들고 골반으로 골반으로",
+   "text": "[골반으로 걷기.. 생각보다 빡셈]",
+   "why": "출연자 힘듦 해설",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[골반으로 걷기.. 생각보다 빡셈]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "start": 1004.773,
+   "end": 1006.733,
+   "cue_start": 1004.153,
+   "time_by": "단어",
+   "type": "긍정",
+   "person": false,
+   "who": "",
+   "suggest": "양쪽 뒤꿈치 클로즈업(B캠 확대)으로 전후 비교",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "발 길이 한번 볼까요? 뒤꿈치 똑같아졌죠 아까 전에는 얘가 월등히 길었거든요 지금은 네 교정이 된 게 보여요",
+   "text": "다리 길이가 똑같아졌어요",
+   "why": "교정 효과 확인 (효과·후기 = 긍정)",
+   "candidates": [
+    {
+     "template": "PYNPA-[데코]러블리-분홍_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]러블리-분홍_2110.mogrt",
+     "kind": "AE",
+     "text": "다리 길이가 똑같아졌어요"
+    },
+    {
+     "template": "봄자막 13-기분좋은 움직임_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 13-기분좋은 움직임_AE.mogrt",
+     "kind": "AE",
+     "text": "다리 길이가 똑같아졌어요"
+    },
+    {
+     "template": "봄자막 04-즐겁게 흥얼거리는 움직임_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 04-즐겁게 흥얼거리는 움직임_AE.mogrt",
+     "kind": "AE",
+     "text": "다리 길이가 똑같아졌어요"
+    }
+   ]
+  }
+ ]
+}

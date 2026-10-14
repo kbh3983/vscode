@@ -1,0 +1,5 @@
+font=Paperlogy-7Bold
+animator ok
+effects=1
+addToMGT=true
+export=true

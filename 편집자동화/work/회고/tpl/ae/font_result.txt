@@ -1,0 +1,6 @@
+GmarketSansBold -> GmarketSansBold h=96 w=639
+Pretendard-Regular -> Pretendard-Regular h=85 w=548
+Pretendard-SemiBold -> Pretendard-SemiBold h=86 w=555
+GangwonEduAllBold -> GangwonEduAllBold h=78 w=500
+Paperlogy-6SemiBold -> Paperlogy-6SemiBold h=91 w=572
+NanumMyeongjoExtraBold -> NanumMyeongjoExtraBold h=92 w=609

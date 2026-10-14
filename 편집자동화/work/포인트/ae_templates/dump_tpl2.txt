@@ -1,0 +1,190 @@
+##### work\포인트\ae_templates\05_실망\05_실망_AE.aep
+== COMP 실망_우울_좌절_AE dur 3.003
+  L1 그라데이션
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); [960, L.toComp([r.left, r.top])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); [960, L.toComp([r.left, r.top+r.height])[1]]
+  L2 자막
+     식 /효과/뒤틀기 변위/진행: var f=Math.max(0, Math.floor((timeToFrames(time)-1)/10)*10+1); framesToTime(f)*943.8
+     식 /변형/기준점: var r=sourceRectAtTime(time,false);[r.left+r.width/2, r.top+r.height/2]
+     키 /변형/위치 (21): 0s=[960,878,0] 0.033s=[960,878,0] 0.067s=[960,884,0] … 0.601s=[960,933,0] 0.634s=[960,933,0] 0.667s=[960,934,0]
+     키 /변형/불투명도 (10): 0s=0 0.033s=7.7 0.067s=15.8 … 0.234s=66.5 0.267s=81.4 0.3s=100
+  L3 테두리
+     식 /텍스트/소스 텍스트: var s=thisComp.layer("자막").text.sourceText; s.style.setText(s.value).setFillColor([0.12,0.12,0.12]).setApplyStroke(true).setStrokeColor([0.12,0.12,0.12]).setStrokeWidth(12)
+     식 /효과/뒤틀기 변위/진행: var f=Math.max(0, Math.floor((timeToFrames(time)-1)/10)*10+1); framesToTime(f)*943.8
+     식 /변형/기준점: var r=sourceRectAtTime(time,false);[r.left+r.width/2, r.top+r.height/2]
+     식 /변형/위치: thisComp.layer("자막").transform.position
+     식 /변형/불투명도: thisComp.layer("자막").transform.opacity
+##### work\포인트\ae_templates\08_분노\08_분노_AE.aep
+== COMP 분노_화나는_AE dur 2.002
+  L1 자막
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+##### work\포인트\ae_templates\10_분노\10_분노_AE.aep
+== COMP 분노_화나는2_AE dur 2.002
+  L1 그라데이션
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); fromComp(L.toComp([r.left+r.width/2, r.top]))
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); fromComp(L.toComp([r.left+r.width/2, r.top+r.height*0.86]))
+  L2 자막
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+  L3 검은 테두리
+     식 /텍스트/소스 텍스트: var s=thisComp.layer("자막").text.sourceText; s.style.setText(s.value).setFillColor([0.02,0.02,0.02]).setApplyStroke(true).setStrokeColor([0.02,0.02,0.02]).setStrokeWidth(10)
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+  L4 흰 테두리
+     식 /텍스트/소스 텍스트: var s=thisComp.layer("자막").text.sourceText; s.style.setText(s.value).setFillColor([1,1,1]).setApplyStroke(true).setStrokeColor([1,1,1]).setStrokeWidth(18)
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+  L5 조절
+     식 /변형/위치: var t=Math.max(0,time-0.2002002002002); value + (time<0.2002002002002?[0,0]:wiggle(15,6.6,1,0.5,t+thisComp.frameDuration*6)-value)
+     키 /변형/비율 (7): 0s=[300,300,100] 0.033s=[284,284,100] 0.067s=[214,214,100] 0.1s=[173,173,100] 0.133s=[137,137,100] 0.167s=[112,112,100] 0.2s=[100,100,100]
+##### work\포인트\ae_templates\봄03\봄03_AE.aep
+== COMP 잔망스럽고_귀여운_AE dur 2.002
+  L1 자막
+     식 /텍스트/애니메이터/글자 튀기/선택기/표현식 선택기 1/양: var ph = (textIndex*137.13) % 1000; var n = noise([time*3.5 + ph, textIndex*3.7]); var v = 50 + n*50; [v, v, v]
+     식 /텍스트/애니메이터/튈 때 기울기/선택기/표현식 선택기 1/양: var ph = (textIndex*137.13) % 1000; var n = noise([time*3.5 + ph, textIndex*3.7]); var s = 0; for (var q = -3; q <= 3; q++) s += noise([(time + q*thisComp.frameDuration*3)*3.5 + ph, textIndex*3.7]); var up = -s/7; var k = ease(up, 0.2, 0.55, 0, 1); var d = (textIndex % 4 < 2) ? 1 : -1; var v = k*d*100; [v, v, v]
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+##### work\포인트\ae_templates\봄04\봄04_AE.aep
+== COMP 즐겁게_흥얼거리는_AE dur 2.002
+  L1 자막
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+##### work\포인트\ae_templates\봄06\봄06_AE.aep
+== COMP 뿅_솟아오르는_AE dur 1.835
+  L1 자막
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height]
+     키 /변형/비율 (13): 0s=[100,0,100] 0.033s=[100,36,100] 0.067s=[100,82,100] … 0.334s=[100,96,100] 0.367s=[100,99,100] 0.4s=[100,100,100]
+##### work\포인트\ae_templates\봄12\봄12_AE.aep
+== COMP 꼬물꼬물_AE dur 1.835
+  L1 자막
+     식 /효과/뒤틀기 변위/진행: var f=timeToFrames(time), st=30/4, k=0; while (Math.floor((k+1)*st)+1 <= f) k++; k/4*943.75
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+##### work\포인트\ae_templates\봄13\봄13_AE.aep
+== COMP 기분좋은_AE dur 1.835
+  L1 그라데이션
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); fromComp(L.toComp([r.left+r.width/2, r.top]))
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("자막"); var r=L.sourceRectAtTime(time,false); fromComp(L.toComp([r.left+r.width/2, r.top+r.height]))
+  L2 자막
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+  L3 테두리
+     식 /텍스트/소스 텍스트: var s=thisComp.layer("자막").text.sourceText; s.style.setText(s.value).setFillColor([0.7059,0.0471,0.0471]).setApplyStroke(true).setStrokeColor([0.7059,0.0471,0.0471]).setStrokeWidth(5)
+     식 /변형/기준점: var r=sourceRectAtTime(0,false);[r.left+r.width/2, r.top+r.height/2]
+##### work\회고\tpl\ae\info4.aep
+== COMP 정보바_세트안내 dur 10.01
+  L1 표시
+     식 /텍스트/소스 텍스트: var a=""+thisComp.layer("앞 문구").text.sourceText, b=""+thisComp.layer("강조 문구").text.sourceText, c=""+thisComp.layer("뒤 문구").text.sourceText; text.sourceText.style.setText(a+b+c)
+     식 /텍스트/애니메이터/애니메이터 1/선택기/범위 선택기 1/시작: (""+thisComp.layer("앞 문구").text.sourceText).length
+     식 /텍스트/애니메이터/애니메이터 1/선택기/범위 선택기 1/종료: (""+thisComp.layer("앞 문구").text.sourceText).length+(""+thisComp.layer("강조 문구").text.sourceText).length
+     키 /변형/불투명도 (8): 0s=0 0.033s=5.8 0.067s=20.5 0.1s=39.7 0.133s=60.3 0.167s=79.5 0.2s=94.2 0.234s=100
+  L2 상자
+     식 /콘텐트/그룹 1/콘텐트/사각형 패스 1/크기: var r=thisComp.layer("표시").sourceRectAtTime(time,false); [r.width+47, 97]
+     식 /변형/위치: var L=thisComp.layer("표시"), r=L.sourceRectAtTime(time,false); [L.toComp([r.left+r.width/2, 0])[0], 976]
+     키 /변형/불투명도 (8): 0s=0 0.033s=5.8 0.067s=20.5 0.1s=39.7 0.133s=60.3 0.167s=79.5 0.2s=94.2 0.234s=100
+  L3 뒤 문구
+  L4 강조 문구
+  L5 앞 문구
+== COMP 해설_괄호 dur 10.01
+  L1 CTRL
+     키 /변형/불투명도 (15): 0s=0 0.033s=0.4 0.067s=1.6 … 0.4s=97.4 0.434s=99.8 0.467s=100
+  L2 해설
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+== COMP Tip_동작요령_2단 dur 10.01
+  L1 CTRL
+     키 /변형/위치 (2): 0s=[900,540,0] 0.334s=[960,540,0]
+     키 /변형/불투명도 (11): 0s=0 0.033s=6.5 0.067s=15.5 … 0.267s=84.6 0.3s=93.6 0.334s=100
+  L2 아랫줄
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+  L3 윗줄
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+  L4 Tip
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+  L5 배지
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+== COMP 요령_노랑_2단 dur 10.01
+  L1 CTRL
+     키 /변형/위치 (2): 0s=[900,540,0] 0.334s=[960,540,0]
+     키 /변형/불투명도 (11): 0s=0 0.033s=6.5 0.067s=15.5 … 0.267s=84.6 0.3s=93.6 0.334s=100
+  L2 아랫줄
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+  L3 윗줄
+     식 /변형/불투명도: thisComp.layer("CTRL").transform.opacity
+##### work\회고\목교정기\tpl\ae\info2.aep
+== COMP 정보바_2줄 dur 10.01
+  L1 불투명도
+     키 /효과/변형/불투명도 (16): 0s=0 0.033s=1.2 0.067s=5.1 … 0.434s=94.2 0.467s=98 0.501s=100
+  L2 윗줄
+     식 /텍스트/소스 텍스트: var s=""+thisComp.layer("윗줄 원문").text.sourceText; text.sourceText.style.setText(s.replace(/[\{\}\[\]]/g,""))
+     식 /텍스트/애니메이터/애니메이터 1/선택기/표현식 선택기 1/양: var s=""+thisComp.layer("윗줄 원문").text.sourceText, m=[], on=false; ⏎ for (var i=0;i<s.length;i++){var c=s.charAt(i); if(c=="{"||c=="["){on=(c=="{");continue;} if(c=="}"||c=="]"){on=false;continue;} m.push(on?1:0);} ⏎ var v=((m[textIndex-1]||0)==1)?100:0; [v,v,v]
+  L3 아랫줄
+     식 /텍스트/소스 텍스트: var s=""+thisComp.layer("아랫줄 원문").text.sourceText; text.sourceText.style.setText(s.replace(/[\{\}\[\]]/g,""))
+     식 /텍스트/애니메이터/애니메이터 1/선택기/표현식 선택기 1/양: var s=""+thisComp.layer("아랫줄 원문").text.sourceText, m=[], on=false; ⏎ for (var i=0;i<s.length;i++){var c=s.charAt(i); if(c=="{"||c=="["){on=(c=="{");continue;} if(c=="}"||c=="]"){on=false;continue;} m.push(on?1:0);} ⏎ var v=((m[textIndex-1]||0)==1)?100:0; [v,v,v]
+  L4 아랫줄 원문
+  L5 윗줄 원문
+  L6 상자
+     식 /콘텐트/그룹 1/콘텐트/사각형 패스 1/크기: var a=thisComp.layer("윗줄"), b=thisComp.layer("아랫줄"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false);var l=Math.min(a.toComp([ra.left,0])[0], b.toComp([rb.left,0])[0]), r=Math.max(a.toComp([ra.left+ra.width,0])[0], b.toComp([rb.left+rb.width,0])[0]); [r-l+48.3997080787085, 151]
+     식 /변형/위치: var a=thisComp.layer("윗줄"), b=thisComp.layer("아랫줄"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false);var l=Math.min(a.toComp([ra.left,0])[0], b.toComp([rb.left,0])[0]), r=Math.max(a.toComp([ra.left+ra.width,0])[0], b.toComp([rb.left+rb.width,0])[0]); [(l+r)/2+-0.20002824184485, 963]
+== COMP 요약_색강조_한줄 dur 10.01
+  L1 불투명도
+     식 /효과/변형/불투명도: thisComp.layer("CTRL").transform.opacity
+  L2 초록 색
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("글자"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+10])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("글자"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+r.height-10])[1]]
+  L3 하늘 색
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("글자"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+10])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("글자"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+r.height-10])[1]]
+  L4 CTRL
+     키 /변형/위치 (13): 0s=[-89,0,0] 0.033s=[-83,0,0] 0.067s=[-67,0,0] … 0.334s=[-4.4,0,0] 0.367s=[-2,0,0] 0.4s=[0,0,0]
+     키 /변형/불투명도 (2): 0s=10 0.557s=100
+  L5 FIT
+     식 /변형/비율: var r=thisComp.layer("글자").sourceRectAtTime(time,false); var k=Math.min(100,1523/Math.max(1,r.width)*100); [k,k]
+  L6 초록 매트
+     식 /텍스트/소스 텍스트: var s=""+thisComp.layer("원문").text.sourceText; text.sourceText.style.setText(s.replace(/[\{\}\[\]]/g,""))
+     식 /텍스트/애니메이터/애니메이터 1/선택기/표현식 선택기 1/양: var s=""+thisComp.layer("원문").text.sourceText, m=[], on=false; ⏎ for (var i=0;i<s.length;i++){var c=s.charAt(i); if(c=="{"||c=="["){on=(c=="[");continue;} if(c=="}"||c=="]"){on=false;continue;} m.push(on?1:0);} ⏎ var v=((m[textIndex-1]||0)==0)?100:0; [v,v,v]
+  L7 하늘 매트
+     식 /텍스트/소스 텍스트: var s=""+thisComp.layer("원문").text.sourceText; text.sourceText.style.setText(s.replace(/[\{\}\[\]]/g,""))
+     식 /텍스트/애니메이터/애니메이터 1/선택기/표현식 선택기 1/양: var s=""+thisComp.layer("원문").text.sourceText, m=[], on=false; ⏎ for (var i=0;i<s.length;i++){var c=s.charAt(i); if(c=="{"||c=="["){on=(c=="{");continue;} if(c=="}"||c=="]"){on=false;continue;} m.push(on?1:0);} ⏎ var v=((m[textIndex-1]||0)==0)?100:0; [v,v,v]
+  L8 글자
+     식 /텍스트/소스 텍스트: var s=""+thisComp.layer("원문").text.sourceText; text.sourceText.style.setText(s.replace(/[\{\}\[\]]/g,""))
+  L9 원문
+##### work\회고\자세교정\tpl\ae\sum2.aep
+== COMP 요약_2단_초록 dur 10.01
+  L1 불투명도
+     키 /효과/변형/불투명도 (2): 0s=10 0.684s=100
+  L2 초록 색
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+10])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+r.height-10])[1]]
+  L3 CTRL
+     키 /변형/위치 (23): 0s=[-90,0,0] 0.033s=[-82,0,0] 0.067s=[-75,0,0] … 0.667s=[-2,0,0] 0.701s=[-1,0,0] 0.734s=[0,0,0]
+  L4 FIT
+     식 /변형/비율: var r=thisComp.layer("아랫줄").sourceRectAtTime(time,false); var k=Math.min(100,1520/Math.max(1,r.width)*100); [k,k]
+  L5 아랫줄 매트
+     식 /텍스트/소스 텍스트: thisComp.layer("아랫줄").text.sourceText
+  L6 윗줄
+     식 /변형/위치: var B=thisComp.layer("아랫줄"), rb=B.sourceRectAtTime(time,false), r=sourceRectAtTime(time,false); [B.transform.position[0]+rb.left-r.left+24, value[1]]
+  L7 아랫줄
+== COMP 요약_2단_빨강 dur 10.01
+  L1 불투명도
+     키 /효과/변형/불투명도 (2): 0s=10 0.684s=100
+  L2 빨강 색
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+10])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+r.height-10])[1]]
+  L3 CTRL
+     키 /변형/위치 (23): 0s=[-90,0,0] 0.033s=[-82,0,0] 0.067s=[-75,0,0] … 0.667s=[-2,0,0] 0.701s=[-1,0,0] 0.734s=[0,0,0]
+  L4 FIT
+     식 /변형/비율: var r=thisComp.layer("아랫줄").sourceRectAtTime(time,false); var k=Math.min(100,1520/Math.max(1,r.width)*100); [k,k]
+  L5 아랫줄 매트
+     식 /텍스트/소스 텍스트: thisComp.layer("아랫줄").text.sourceText
+  L6 윗줄
+     식 /변형/위치: var B=thisComp.layer("아랫줄"), rb=B.sourceRectAtTime(time,false), r=sourceRectAtTime(time,false); [B.transform.position[0]+rb.left-r.left+24, value[1]]
+  L7 아랫줄
+== COMP 요약_2단_노랑 dur 10.01
+  L1 불투명도
+     키 /효과/변형/불투명도 (2): 0s=10 0.684s=100
+  L2 노랑 색
+     식 /효과/그라디언트 경사/경사 시작: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+10])[1]]
+     식 /효과/그라디언트 경사/경사 끝: var L=thisComp.layer("아랫줄"), r=L.sourceRectAtTime(time,false); [960, L.toComp([0, r.top+r.height-10])[1]]
+  L3 CTRL
+     키 /변형/위치 (23): 0s=[-90,0,0] 0.033s=[-82,0,0] 0.067s=[-75,0,0] … 0.667s=[-2,0,0] 0.701s=[-1,0,0] 0.734s=[0,0,0]
+  L4 FIT
+     식 /변형/비율: var r=thisComp.layer("아랫줄").sourceRectAtTime(time,false); var k=Math.min(100,1520/Math.max(1,r.width)*100); [k,k]
+  L5 아랫줄 매트
+     식 /텍스트/소스 텍스트: thisComp.layer("아랫줄").text.sourceText
+  L6 윗줄
+     식 /변형/위치: var B=thisComp.layer("아랫줄"), rb=B.sourceRectAtTime(time,false), r=sourceRectAtTime(time,false); [B.transform.position[0]+rb.left-r.left+24, value[1]]
+  L7 아랫줄
+DUMP2 END

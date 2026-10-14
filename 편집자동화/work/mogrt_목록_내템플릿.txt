@@ -1,0 +1,287 @@
+01_실망 우울 좌절 모션자막.mogrt
+03-쇠맛 메탈 자막.mogrt
+05_실망 우울 좌절 모션자막.mogrt
+06-골드 자막.mogrt
+08_분노 화나는 모션자막.mogrt
+1.mogrt
+10.mogrt
+10_분노 화나는 모션자막.mogrt
+11-유리재질 자막.mogrt
+11.mogrt
+12.mogrt
+13.mogrt
+14.mogrt
+15.mogrt
+16.mogrt
+17.mogrt
+18.mogrt
+19.mogrt
+2.mogrt
+20.mogrt
+3.mogrt
+4.mogrt
+5.mogrt
+6.mogrt
+7.mogrt
+8.mogrt
+9.mogrt
+ALBYUL-SUB (1).mogrt
+ALBYUL-SUB (10).mogrt
+ALBYUL-SUB (11).mogrt
+ALBYUL-SUB (12).mogrt
+ALBYUL-SUB (13).mogrt
+ALBYUL-SUB (14).mogrt
+ALBYUL-SUB (2).mogrt
+ALBYUL-SUB (3).mogrt
+ALBYUL-SUB (4).mogrt
+ALBYUL-SUB (5).mogrt
+ALBYUL-SUB (6).mogrt
+ALBYUL-SUB (7).mogrt
+ALBYUL-SUB (8).mogrt
+ALBYUL-SUB (9).mogrt
+Basic Variety (1).mogrt
+Basic Variety (10).mogrt
+Basic Variety (11).mogrt
+Basic Variety (12).mogrt
+Basic Variety (13).mogrt
+Basic Variety (14).mogrt
+Basic Variety (15).mogrt
+Basic Variety (16).mogrt
+Basic Variety (17).mogrt
+Basic Variety (2).mogrt
+Basic Variety (3).mogrt
+Basic Variety (4).mogrt
+Basic Variety (5).mogrt
+Basic Variety (6).mogrt
+Basic Variety (7).mogrt
+Basic Variety (8).mogrt
+Basic Variety (9).mogrt
+Full_Graphics_Overlay_0s.mogrt
+MP기분이요동치는_01.mogrt
+MP기분이요동치는_02.mogrt
+MP기분이요동치는_03.mogrt
+MP기분이요동치는_04.mogrt
+MP기분이요동치는_05.mogrt
+MP기분이요동치는_06.mogrt
+MP기분이요동치는_07.mogrt
+MP기분이요동치는_08.mogrt
+MP기분이요동치는_09.mogrt
+MP기분이요동치는_10.mogrt
+PYNPA- 감성 (1).mogrt
+PYNPA- 감성 (10).mogrt
+PYNPA- 감성 (2).mogrt
+PYNPA- 감성 (3).mogrt
+PYNPA- 감성 (4).mogrt
+PYNPA- 감성 (5).mogrt
+PYNPA- 감성 (6).mogrt
+PYNPA- 감성 (7).mogrt
+PYNPA- 감성 (8).mogrt
+PYNPA- 감성 (9).mogrt
+PYNPA-[겨울]감성1두줄-민트_2112.mogrt
+PYNPA-[겨울]감성1두줄-하늘_2112.mogrt
+PYNPA-[겨울]감성1한줄-민트_2112.mogrt
+PYNPA-[겨울]감성1한줄-하늘_2112.mogrt
+PYNPA-[겨울]감성2_2112.mogrt
+PYNPA-[겨울]상황-민트_2112.mogrt
+PYNPA-[겨울]상황-하늘_2112.mogrt
+PYNPA-[겨울]상황-회색_2112.mogrt
+PYNPA-[겨울]상황2-민트_2112.mogrt
+PYNPA-[겨울]상황2-하늘_2112.mogrt
+PYNPA-[겨울]상황2-회색_2112.mogrt
+PYNPA-[기본예능]강한말-분홍_2111.mogrt
+PYNPA-[기본예능]기본-분홍_2111.mogrt
+PYNPA-[기본예능]기본말-분홍_2111.mogrt
+PYNPA-[기본예능]말바-분홍_2111.mogrt
+PYNPA-[기본예능]옆말(아래)-분홍_2111.mogrt
+PYNPA-[기본예능]옆말(우)-분홍_2111.mogrt
+PYNPA-[기본예능]옆말(좌)-분홍_2111.mogrt
+PYNPA-[기본예능]의성어-기본_2112.mogrt
+PYNPA-[기본예능]의성어-깜짝_2116.mogrt
+PYNPA-[기본예능]의성어-눈물_2111.mogrt
+PYNPA-[기본예능]의성어-부끄_2111.mogrt
+PYNPA-[기본예능]의성어-분노_2111.mogrt
+PYNPA-[기본예능]의성어-우울_2112.mogrt
+PYNPA-[기본예능]이름말바-분홍_2111.mogrt
+PYNPA-[데코]공포1_2109.mogrt
+PYNPA-[데코]공포2_2109.mogrt
+PYNPA-[데코]금빛1_2109.mogrt
+PYNPA-[데코]금빛2_2109.mogrt
+PYNPA-[데코]러블리-보라_2110.mogrt
+PYNPA-[데코]러블리-분홍_2110.mogrt
+PYNPA-[데코]명언_2110.mogrt
+PYNPA-[데코]불말-빨강_2110.mogrt
+PYNPA-[데코]불말-주황_2110.mogrt
+PYNPA-[데코]에필-노랑_2110.mogrt
+PYNPA-[데코]에필-초록_2110.mogrt
+PYNPA-[데코]우울1_2109.mogrt
+PYNPA-[데코]우울2_2109.mogrt
+PYNPA-[데코]울렁_2110.mogrt
+PYNPA-[쇼핑]기본말_221118.mogrt
+PYNPA-[쇼핑]기본상황_221118.mogrt
+PYNPA-[쇼핑]네임_221118.mogrt
+PYNPA-[쇼핑]말바_221118.mogrt
+PYNPA-[쇼핑]옆말아래_221118.mogrt
+PYNPA-[쇼핑]옆말오른_221118.mogrt
+PYNPA-[쇼핑]옆말왼_221118.mogrt
+PYNPA-[쇼핑]의성의태_221118.mogrt
+PYNPA-[쇼핑]텍_221118.mogrt
+PYNPA-[할로윈]강조-빨강_2110.mogrt
+PYNPA-[할로윈]강조-주황_2110.mogrt
+PYNPA-[할로윈]기본-빨강_2110.mogrt
+PYNPA-[할로윈]기본-주황_2110.mogrt
+PYNPA-[할로윈]말-묘비_2110.mogrt
+PYNPA-[할로윈]말-박쥐_2110.mogrt
+PYNPA-[할로윈]말-유령_2110.mogrt
+PYNPA-[할로윈]말-호박_2110.mogrt
+PYNPA-[할로윈]재미-빨강_2110.mogrt
+PYNPA-[할로윈]재미-주황_2110.mogrt
+PYNPA-강조말-노랑_2106.mogrt
+PYNPA-강조말-하늘_2106.mogrt
+PYNPA-강한말-검정_2106.mogrt
+PYNPA-강한말-빨강_2106.mogrt
+PYNPA-강한말-주황_2106.mogrt
+PYNPA-복고 (1).mogrt
+PYNPA-복고 (2).mogrt
+PYNPA-복고 (3).mogrt
+PYNPA-복고 (4).mogrt
+PYNPA-복고 (5).mogrt
+PYNPA-복고 (6).mogrt
+PYNPA-복고 (7).mogrt
+PYNPA-복고 (8).mogrt
+PYNPA-불말_2106.mogrt
+PYNPA-뾰족말-노랑_2106.mogrt
+PYNPA-뾰족말-하늘_2106.mogrt
+PYNPA_ 심플브이로그 (1).mogrt
+PYNPA_ 심플브이로그 (2).mogrt
+PYNPA_ 심플브이로그 (3).mogrt
+PYNPA_ 심플브이로그 (4).mogrt
+PYNPA_ 심플브이로그 (5).mogrt
+PYNPA_ 심플브이로그 (6).mogrt
+PYNPA_ 심플브이로그 (7).mogrt
+PYNPA_ 심플브이로그 (8).mogrt
+PYNPA_ 심플브이로그 (9).mogrt
+Promo-1 (1).mogrt
+Promo-1 (10).mogrt
+Promo-1 (2).mogrt
+Promo-1 (3).mogrt
+Promo-1 (4).mogrt
+Promo-1 (5).mogrt
+Promo-1 (6).mogrt
+Promo-1 (7).mogrt
+Promo-1 (8).mogrt
+Promo-1 (9).mogrt
+Promo-3 (1).mogrt
+Promo-3 (10).mogrt
+Promo-3 (2).mogrt
+Promo-3 (3).mogrt
+Promo-3 (4).mogrt
+Promo-3 (5).mogrt
+Promo-3 (6).mogrt
+Promo-3 (7).mogrt
+Promo-3 (9).mogrt
+Runningman (1).mogrt
+Runningman (10).mogrt
+Runningman (11).mogrt
+Runningman (12).mogrt
+Runningman (13).mogrt
+Runningman (14).mogrt
+Runningman (15).mogrt
+Runningman (16).mogrt
+Runningman (17).mogrt
+Runningman (18).mogrt
+Runningman (19).mogrt
+Runningman (2).mogrt
+Runningman (24).mogrt
+Runningman (25).mogrt
+Runningman (26).mogrt
+Runningman (27).mogrt
+Runningman (3).mogrt
+Runningman (4).mogrt
+Runningman (5).mogrt
+Runningman (6).mogrt
+Runningman (7).mogrt
+Runningman (8).mogrt
+Runningman (9).mogrt
+Uquiz01-1.mogrt
+Uquiz01-2.mogrt
+Uquiz01-3.mogrt
+Uquiz02.mogrt
+Uquiz03.mogrt
+Uquiz04.mogrt
+Uquiz05.mogrt
+Uquiz06-1.mogrt
+Uquiz06-2.mogrt
+Uquiz07.mogrt
+Uquiz08.mogrt
+Uquiz09-1.mogrt
+Uquiz09-2.mogrt
+Uquiz10-1.mogrt
+Uquiz10-2.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver1.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver10.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver2.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver3.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver4.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver5.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver6.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver7.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver8.mogrt
+[by. Lily] #28 예능 강조 자막 모음.ver9.mogrt
+info-BG.mogrt
+info-arrow sub.mogrt
+info-green line.mogrt
+info-half photo.mogrt
+info-memo.mogrt
+info-mini sub.mogrt
+info-news.mogrt
+info-news2.mogrt
+info-news3.mogrt
+info-photo sub1-L.mogrt
+info-photo sub1-R.mogrt
+info-photo sub2-L.mogrt
+info-photo sub2-R.mogrt
+info-sub1.mogrt
+info-sub2.mogrt
+info-talk black.mogrt
+info-talk green.mogrt
+info-title sub.mogrt
+info-title.mogrt
+까딱까딱-01.mogrt
+까딱까딱-02.mogrt
+까딱까딱-03.mogrt
+꼬물꼬물-01.mogrt
+꼬물꼬물-02.mogrt
+꼬물꼬물-03.mogrt
+본인_카톡 (2021이상).mogrt
+봄자막 01-마스크 페이드 웨이브.mogrt
+봄자막 02-두근두근 스케일.mogrt
+봄자막 03-잔망스럽고 귀여운 움직임.mogrt
+봄자막 04-즐겁게 흥얼거리는 움직임.mogrt
+봄자막 05-리듬에 몸을 맡기듯한 움직임.mogrt
+봄자막 06-뿅 솟아오르는(빠르게).mogrt
+봄자막 07-뿅 솟아오르는.mogrt
+봄자막 08-옆으로 뿅.mogrt
+봄자막 09-부드럽게 웨이프 풀리는.mogrt
+봄자막 10-살랑살랑 웨이브 계속.mogrt
+봄자막 11-세로 웨이브.mogrt
+봄자막 12-꼬물꼬물.mogrt
+봄자막 13-기분좋은 움직임.mogrt
+봄자막 14-마스크 웨이브로 등장.mogrt
+봄자막 15-로맨틱한 자막에 웨이브.mogrt
+봄자막 16-봄바람에 휘날리는.mogrt
+상대방_카톡 (2021이상).mogrt
+이미지_가로형 (2021이상).mogrt
+이미지_세로형 (2021이상).mogrt
+자막 (1).mogrt
+자막 (10).mogrt
+자막 (2).mogrt
+자막 (3).mogrt
+자막 (4).mogrt
+자막 (5).mogrt
+자막 (6).mogrt
+자막 (7).mogrt
+자막 (8).mogrt
+자막 (9).mogrt
+출렁출렁-01.mogrt
+출렁출렁-02.mogrt
+출렁출렁-03.mogrt

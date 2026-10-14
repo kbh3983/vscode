@@ -1,0 +1,52 @@
+{
+ "comp": "기분좋은_AE",
+ "text": "기분조아짐",
+ "dur": 1.835,
+ "size": 161,
+ "track": 0,
+ "x": 965,
+ "y": 926,
+ "anchor": "center",
+ "fill": [
+  255,
+  255,
+  255
+ ],
+ "gradient": {
+  "top": [
+   252,
+   140,
+   140
+  ],
+  "bottom": [
+   255,
+   236,
+   236
+  ]
+ },
+ "stroke": {
+  "color": [
+   180,
+   12,
+   12
+  ],
+  "width": 5
+ },
+ "glow": {
+  "color": [
+   249,
+   153,
+   153
+  ],
+  "opacity": 70,
+  "soft": 45
+ },
+ "wave": {
+  "height": -2,
+  "width": 96,
+  "dir": 90,
+  "speed": 2
+ },
+ "name": "봄13",
+ "out": "C:\\DADA\\9.AI\\vscode\\편집자동화\\work\\포인트\\ae_templates\\봄13"
+}

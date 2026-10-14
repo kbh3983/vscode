@@ -1,0 +1,11 @@
+{
+ "sequence": "옆구리살_가편_오디오2",
+ "sequence_id": "68f7bad5-7aad-4fca-bff3-a2108503aea9",
+ "width": 1920,
+ "height": 1080,
+ "fps": 29.97002997,
+ "clip": "C0027.MP4 + C0028.MP4",
+ "path": "work/최박사_운동법_AI/audio/결과_옆구리살_가편_오디오2.wav",
+ "start": 0.0,
+ "note": "V2(C캠) 클립 2개. 정렬용 오디오는 시퀀스 전체를 내보낸 WAV(오디오 에이전트 결과)"
+}

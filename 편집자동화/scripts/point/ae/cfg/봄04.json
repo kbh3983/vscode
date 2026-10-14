@@ -1,0 +1,49 @@
+{
+ "comp": "즐겁게_흥얼거리는_AE",
+ "text": "신나고 즐겁게 흥얼거리는 자막 효과",
+ "dur": 2.002,
+ "size": 113,
+ "track": 0,
+ "x": 962,
+ "y": 940,
+ "anchor": "center",
+ "fill": [
+  255,
+  255,
+  255
+ ],
+ "stroke": {
+  "color": [
+   12,
+   12,
+   12
+  ],
+  "width": 7
+ },
+ "colorRange": {
+  "color": [
+   251,
+   180,
+   180
+  ],
+  "start": 60,
+  "end": 100
+ },
+ "shadow": {
+  "color": [
+   36,
+   36,
+   36
+  ],
+  "opacity": 50,
+  "dist": 7,
+  "dir": 155,
+  "soft": 2
+ },
+ "charWiggleY": {
+  "amp": 14.6,
+  "freq": 3
+ },
+ "name": "봄04",
+ "out": "C:\\DADA\\9.AI\\vscode\\편집자동화\\work\\포인트\\ae_templates\\봄04"
+}

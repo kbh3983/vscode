@@ -1,0 +1,784 @@
+{
+ "sequence": "하체루틴_종편_모노_컷전환_색보정_샷사이즈_포인트_색보정_포인트",
+ "sequence_id": "377aa5f0-afdb-44e2-8f04-63554fe75802",
+ "first_track": 5,
+ "points": [
+  {
+   "n": 1,
+   "start": 26.41,
+   "end": 31.41,
+   "cue_start": 24.608,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 맨바닥에서 스쾃 자세를 한 남성 옆모습(검은 민소매, 검은 반바지, 흰 운동화). 발바닥 아래에 발 압력 표시 — 앞꿈치와 뒤꿈치 사이를 오가는 빨간 화살표, 몸 가운데 무게 중심선이 흔들리는 점선. 허벅지 근육은 반투명 오버레이로 빨강↔연한 색이 깜빡이는 느낌. 한글 설명 상자: 빨강 제목 '무게 중심 흔들림' + 설명 '발 압력이 앞뒤로 오가면 / 자극이 풀렸다 들어옴'. 깔끔한 정보그래픽, 글자는 크고 짧게",
+   "bcam": false,
+   "dialogue": "이게 왔다 갔다 하게 되면서 무게 중심축이 흔들리기 때문에 고립을 주고 있는 근육의 자극이 지속적으로 자극이 가지 않고 풀렸다가 들어오는 경우가 많습니다",
+   "text": "{무게 중심}이 흔들리면 / [자극이 풀렸다 들어옴]",
+   "why": "터틀볼을 쓰는 이유 — 핵심 설명 요약",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{무게 중심}이 흔들리면 [자극이 풀렸다 들어옴]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "무게 중심이 흔들리면",
+      "아랫줄 텍스트": "자극이 풀렸다 들어옴"
+     }
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "start": 40.308,
+   "end": 45.029,
+   "cue_start": 37.788,
+   "time_by": "단어",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "터틀볼 밟은 발 클로즈업(B캠 확대) + 반짝 강조",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 같은 스쾃 자세, 앞꿈치 아래에 연두색 반구형 터틀볼. 발바닥 압력 표시가 뒤꿈치에 파랑으로 고정, 무게 중심선은 곧은 실선. 허벅지 근육은 파랑으로 일정하게 빛남. 한글 설명 상자: 파랑 제목 '뒤꿈치에 무게 중심 고정' + 설명 '터틀볼을 살짝 밟으면 / 같은 자극이 계속 유지'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "살짝만 밟아주게 되면 몸의 무게 중심이 뒤꿈치의 압력이 딱 고정되어 있게 되겠죠 앞쪽으로 안 밀리고 딱 뒤꿈치로 가기 때문에",
+   "text": "터틀볼을 살짝 밟으면 / [뒤꿈치에 무게 중심 고정]",
+   "why": "제품 효과 요약",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "터틀볼을 살짝 밟으면 [뒤꿈치에 무게 중심 고정]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼을 살짝 밟으면",
+      "아랫줄 텍스트": "뒤꿈치에 무게 중심 고정"
+     }
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "start": 68.877,
+   "end": 74.177,
+   "cue_start": 66.717,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "네 자 이렇게 어깨 너비 골반 너비 2배 정도 벌린 상태에서 발끝을 이렇게 터틀볼을 이렇게 밟아 주실 거예요 네 이때 발 내각은 45도 정도 틀어주실 겁니다",
+   "text": "골반 너비 2배로 서서 / 발끝 45도로 터틀볼 밟기",
+   "why": "와이드 스쾃 준비 자세",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "골반 너비 2배로 서서",
+      "아랫줄 텍스트": "발끝 45도로 터틀볼 밟기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "골반 너비 2배로 서서",
+      "아랫줄 텍스트": "발끝 45도로 터틀볼 밟기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "start": 80.13,
+   "end": 85.43,
+   "cue_start": 80.13,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "힙이 뒤로 빠지면서 그리고 가슴은 살짝 앞으로 뻗어준다는 느낌으로 등이 말리지 않은 상태에서",
+   "text": "힙은 뒤로, 가슴은 앞으로 / 등이 말리지 않게 앉기",
+   "why": "와이드 스쾃 동작 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "힙은 뒤로, 가슴은 앞으로",
+      "아랫줄 텍스트": "등이 말리지 않게 앉기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "힙은 뒤로, 가슴은 앞으로",
+      "아랫줄 텍스트": "등이 말리지 않게 앉기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "start": 126.377,
+   "end": 131.677,
+   "cue_start": 126.377,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "허벅지 안쪽을 마치 가위질하듯이 쥐어 짜준다는 느낌으로 올라오시게 되면 허벅지 안쪽과 엉덩이 쪽에 자극이 들어오실 거예요",
+   "text": "허벅지 안쪽을 / 가위질하듯 쥐어짜며 올라오기",
+   "why": "올라올 때 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "허벅지 안쪽을",
+      "아랫줄 텍스트": "가위질하듯 쥐어짜며 올라오기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "허벅지 안쪽을",
+      "아랫줄 텍스트": "가위질하듯 쥐어짜며 올라오기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "start": 140.651,
+   "end": 145.951,
+   "cue_start": 140.591,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "내려갈 때 호흡을 마시고 올라올 때 호흡을 뱉습니다",
+   "text": "내려갈 때 마시고 / 올라올 때 뱉기",
+   "why": "호흡 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "내려갈 때 마시고",
+      "아랫줄 텍스트": "올라올 때 뱉기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "내려갈 때 마시고",
+      "아랫줄 텍스트": "올라올 때 뱉기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "start": 205.689,
+   "end": 210.689,
+   "cue_start": 203.387,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이 전체적인 몸의 중심 무게 중심을 잘못 잡아주고 흔들렸을 확률이 높고 두 번째는 무릎과 발끝 각도가 틀어지면서 안 됐을 확률이 높으신데",
+   "text": "{무게 중심}이 흔들리고 / [무릎·발끝 각도]가 틀어진 탓",
+   "why": "평소 와이드 스쾃에 자극이 안 왔던 이유",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{무게 중심}이 흔들리고 [무릎·발끝 각도]가 틀어진 탓"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "무게 중심이 흔들리고",
+      "아랫줄 텍스트": "무릎·발끝 각도가 틀어진 탓"
+     }
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "start": 233.117,
+   "end": 235.919,
+   "cue_start": 228.045,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "우리가 보통 런지가 이렇게 앞으로 무릎을 굽히면서 내려가는 동작이었다면 옆으로 무릎을 굽히면서 내려가는 동작이에요",
+   "text": "{사이드 런지}는 / 무릎을 [옆으로] 굽히며 내려가기",
+   "why": "두 번째 운동 소개",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{사이드 런지}는 무릎을 [옆으로] 굽히며 내려가기"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "사이드 런지는",
+      "아랫줄 텍스트": "무릎을 옆으로 굽히며 내려가기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "start": 245.262,
+   "end": 250.262,
+   "cue_start": 243.46,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 사이드 런지 자세의 남성 정면(검은 민소매, 검은 반바지). 굽힌 무릎이 안쪽으로 돌아간 모습에 빨간 회전 화살표, 고관절과 허벅지 안쪽 근육이 빨갛게 빛남(대신 일하는 근육), 허벅지 바깥쪽은 흐림. 둥근 확대 원으로 무릎 회전 부위. 한글 설명 상자: 빨강 제목 '무릎이 돌아가면' + 설명 '바깥쪽 대신 / 고관절·안쪽 허벅지가 일함'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "이렇게 하게 되면 무릎이 회전되면서 실질적으로 측면에 힘을 많이 못 주게 되고 고관절이라든가 허벅지 안쪽에 보상을 주기 때문에 제대로 된 동작이 안 나오고 내가 원했던 자극을 못 받을 수 있어요",
+   "text": "무릎이 돌아가면 / [허벅지 안쪽이 대신 일함]",
+   "why": "흔한 실수와 이유",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "무릎이 돌아가면 [허벅지 안쪽이 대신 일함]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "무릎이 돌아가면",
+      "아랫줄 텍스트": "허벅지 안쪽이 대신 일함"
+     }
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "start": 257.648,
+   "end": 262.948,
+   "cue_start": 258.108,
+   "time_by": "단어",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "하나의 일직선상에 발을 두는데 내가 운동할 발은 뒤꿈치가 이 선상에 그리고 뒤로 빠져있는 보조하는 발은 앞꿈치가 선상에 놓도록 해서",
+   "text": "운동할 발은 뒤꿈치, / 보조 발은 앞꿈치를 일직선에",
+   "why": "사이드 런지 발 위치",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "운동할 발은 뒤꿈치,",
+      "아랫줄 텍스트": "보조 발은 앞꿈치를 일직선에"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "운동할 발은 뒤꿈치,",
+      "아랫줄 텍스트": "보조 발은 앞꿈치를 일직선에"
+     }
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "start": 278.428,
+   "end": 283.728,
+   "cue_start": 275.726,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이 상태에서 이렇게 왔을 때 이 발과 무릎과 엉덩이가 일직선상에 위치하도록 이렇게 덜 빠지거나 너무 많이 가거나 하지 않고 마치 스쾃 할 때처럼 일직선상에 위치하도록",
+   "text": "발·무릎·엉덩이가 / 일직선이 되도록 앉기",
+   "why": "사이드 런지 핵심 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "발·무릎·엉덩이가",
+      "아랫줄 텍스트": "일직선이 되도록 앉기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "발·무릎·엉덩이가",
+      "아랫줄 텍스트": "일직선이 되도록 앉기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "start": 393.009,
+   "end": 398.015,
+   "cue_start": 392.609,
+   "time_by": "단어",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "자 열 번만 한번 해볼게요",
+   "text": "한쪽 {10번}씩 양쪽 진행해 주세요",
+   "why": "세트·횟수 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "한쪽 ",
+      "강조 문구": "10번",
+      "뒤 문구": "씩 양쪽 진행해 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "start": 407.224,
+   "end": 409.724,
+   "cue_start": 403.153,
+   "time_by": "추정",
+   "type": "긍정",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "우와 딱 옆에 장이 딱 들어오시죠? 네 여기 옆 부분이 땡땡해지는 느낌",
+   "text": "옆이 땡땡해지는 느낌",
+   "why": "운동 효과 후기 (효과·후기 = 긍정)",
+   "candidates": [
+    {
+     "template": "PYNPA-[데코]러블리-분홍_2110",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\PYNPA-[데코]러블리-분홍_2110.mogrt",
+     "kind": "AE",
+     "text": "옆이 땡땡해지는 느낌"
+    },
+    {
+     "template": "봄자막 13-기분좋은 움직임_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\봄자막 13-기분좋은 움직임_AE.mogrt",
+     "kind": "AE",
+     "text": "옆이 땡땡해지는 느낌"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "start": 428.771,
+   "end": 433.771,
+   "cue_start": 428.445,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "반짝 강조 + 제품 사진",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "이게 터틀볼이 고립을 잘 시켜 주기 때문에 생각보다 되게 쉽게 배울 수 있어요 그리고 확실하게 작업하기 때문에 이게 의심의 여지가 없이 잘 되죠",
+   "text": "터틀볼이 고립을 잡아줘서 / 처음 해도 [쉽게] 배움",
+   "why": "제품 효과",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "터틀볼이 고립을 잡아줘서 처음 해도 [쉽게] 배움"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼이 고립을 잡아줘서",
+      "아랫줄 텍스트": "처음 해도 쉽게 배움"
+     }
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "start": 512.262,
+   "end": 517.562,
+   "cue_start": 512.262,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "터틀볼을 앞쪽에 놓아주시고 여기에 이렇게 무릎을 꿇고 올라갑니다 네 이 상태에서 손을 앞으로 나란히 하시고",
+   "text": "터틀볼 위에 무릎 꿇고 / 손은 앞으로 나란히",
+   "why": "세 번째 운동 준비 자세",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼 위에 무릎 꿇고",
+      "아랫줄 텍스트": "손은 앞으로 나란히"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "터틀볼 위에 무릎 꿇고",
+      "아랫줄 텍스트": "손은 앞으로 나란히"
+     }
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "start": 593.202,
+   "end": 598.202,
+   "cue_start": 582.032,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "16:9 가로, 흰 스튜디오 배경의 사실적인 사진 + 의료 일러스트 합성. 터틀볼 위에 무릎 꿇고 상체를 뒤로 기울인 남성 옆모습(검은 민소매). 허벅지 앞쪽 근육(대퇴사두근)을 반투명 오버레이로 표시 — 늘어나는 방향의 파란 화살표와 근섬유가 길게 늘어난 모습, 강하게 빛남. 둥근 확대 원 2개: '줄어들며 힘쓰기(단축성)' 작은 근섬유 / '늘어나며 버티기(신장성)' 길게 늘어난 근섬유에 빨간 강조. 한글 설명 상자: 파랑 제목 '신장성 수축' + 설명 '늘어나며 버틸 때 / 근육 발달에 더 효과적'. 깔끔한 정보그래픽",
+   "bcam": false,
+   "dialogue": "이게 확 허벅지에 힘을 주고 올라오기 때문에 이게 원래 그 근육 자체는 이렇게 단축성보다 이렇게 신장성일 때 더 많이 찢어지거든요 그래서 허벅지 근육을 발달시키는 데는 효과적입니다",
+   "text": "늘어나며 버틸 때 / [허벅지 근육 발달]에 효과적",
+   "why": "신장성 수축 설명",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "늘어나며 버틸 때 [허벅지 근육 발달]에 효과적"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "늘어나며 버틸 때",
+      "아랫줄 텍스트": "허벅지 근육 발달에 효과적"
+     }
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "start": 659.413,
+   "end": 664.713,
+   "cue_start": 656.773,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "넓게 이렇게 잡아주시고 이 앞꿈치가 틀볼 위에 올라오도록 이렇게 밟아주실 거예요 자 그리고 쪼그려 앉아서 터트볼 앞쪽을 잡아주시고 이 상태에서 엉덩이를 들어 올렸다가 다시 내려갔다가 들어 올렸다가 내려갔다가",
+   "text": "앞꿈치는 터틀볼 위에 / 엉덩이를 들었다 내렸다",
+   "why": "네 번째(허벅지 뒤쪽) 운동 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "앞꿈치는 터틀볼 위에",
+      "아랫줄 텍스트": "엉덩이를 들었다 내렸다"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "앞꿈치는 터틀볼 위에",
+      "아랫줄 텍스트": "엉덩이를 들었다 내렸다"
+     }
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "start": 724.958,
+   "end": 730.814,
+   "cue_start": 724.908,
+   "time_by": "단어",
+   "type": "세트안내",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "20회 진행해 볼까요?",
+   "text": "{20회} 진행해 주세요",
+   "why": "횟수 안내",
+   "candidates": [
+    {
+     "template": "정보바_세트안내_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\정보바_세트안내_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "앞 문구": "",
+      "강조 문구": "20회",
+      "뒤 문구": " 진행해 주세요"
+     }
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "start": 771.228,
+   "end": 773.528,
+   "cue_start": 758.008,
+   "time_by": "단어",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "여섯 일곱 여덟 아홉 넷",
+   "text": "[아홉 다음은.. 넷?ㅎ]",
+   "why": "숫자를 잘못 센 순간 해설",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[아홉 다음은.. 넷?ㅎ]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "start": 796.312,
+   "end": 798.812,
+   "cue_start": 796.312,
+   "time_by": "추정",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "불가리안 스플릿 스쾃라고 들어보셨나요?",
+   "text": "{불가리안 스플릿 스쾃}은 / [앞다리 힘]으로 내려가기",
+   "why": "다섯 번째 운동 소개",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "{불가리안 스플릿 스쾃}은 [앞다리 힘]으로 내려가기"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "불가리안 스플릿 스쾃은",
+      "아랫줄 텍스트": "앞다리 힘으로 내려가기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "start": 843.56,
+   "end": 848.86,
+   "cue_start": 839.189,
+   "time_by": "추정",
+   "type": "요령",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "내가 상체를 힙을 살짝 뒤로 빼면서 상체를 기울였을 때 내 엉덩이가 저기 터틀볼을 향하게끔 이 각도를 만든 상태에서 자연스럽게 이 다리가 굽어져서 내려갔다가 이 다리를 펴면서 올라오는 거예요 그래서 나는 내 몸은 사선 방향으로 움직이는 거야",
+   "text": "엉덩이가 터틀볼을 향하게 / 사선으로 내려갔다 올라오기",
+   "why": "불가리안 스플릿 스쾃 요령",
+   "candidates": [
+    {
+     "template": "Tip_동작요령_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\Tip_동작요령_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "엉덩이가 터틀볼을 향하게",
+      "아랫줄 텍스트": "사선으로 내려갔다 올라오기"
+     }
+    },
+    {
+     "template": "요령_노랑_2단_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요령_노랑_2단_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "엉덩이가 터틀볼을 향하게",
+      "아랫줄 텍스트": "사선으로 내려갔다 올라오기"
+     }
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "start": 1054.496,
+   "end": 1056.796,
+   "cue_start": 1053.736,
+   "time_by": "단어",
+   "type": "해설",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "가만히 있어봐 가만히 있어",
+   "text": "[균형 잡느라 필사적..]",
+   "why": "균형 잡느라 버티는 출연자 해설",
+   "candidates": [
+    {
+     "template": "해설_괄호_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\해설_괄호_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "[균형 잡느라 필사적..]"
+     }
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "start": 1070.186,
+   "end": 1073.79,
+   "cue_start": 1069.886,
+   "time_by": "단어",
+   "type": "정보",
+   "person": false,
+   "who": "",
+   "suggest": "",
+   "image_prompt": "",
+   "bcam": false,
+   "dialogue": "자 이렇게 하체 운동 다섯 가지를 배워봤는데요",
+   "text": "오늘 배운 하체 운동 5가지 / [안쪽·바깥쪽·앞쪽·뒤쪽·엉덩이]",
+   "why": "마무리 요약 (엔딩 앞이지만 정보 요약)",
+   "candidates": [
+    {
+     "template": "요약_색강조_한줄_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_색강조_한줄_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "자막 텍스트": "오늘 배운 하체 운동 5가지 [안쪽·바깥쪽·앞쪽·뒤쪽·엉덩이]"
+     }
+    },
+    {
+     "template": "요약_2단_초록_AE",
+     "path": "C:\\Users\\bbong\\AppData\\Roaming\\Adobe\\Common\\Motion Graphics Templates\\요약_2단_초록_AE.mogrt",
+     "kind": "AE",
+     "fields": {
+      "윗줄 텍스트": "오늘 배운 하체 운동 5가지",
+      "아랫줄 텍스트": "안쪽·바깥쪽·앞쪽·뒤쪽·엉덩이"
+     }
+    }
+   ]
+  }
+ ]
+}

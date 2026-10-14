@@ -1,0 +1,3 @@
+글자 튀기 expr err: 
+튈 때 기울기 expr err: 
+ok

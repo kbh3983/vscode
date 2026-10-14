@@ -1,0 +1,41 @@
+{
+ "comp": "꼬물꼬물_AE",
+ "text": "꼬물꼬물 움직이는 자막 효과",
+ "dur": 1.835,
+ "size": 104,
+ "track": 0,
+ "x": 963,
+ "y": 934,
+ "anchor": "center",
+ "fill": [
+  255,
+  232,
+  238
+ ],
+ "stroke": {
+  "color": [
+   204,
+   36,
+   84
+  ],
+  "width": 7
+ },
+ "glow": {
+  "color": [
+   248,
+   138,
+   139
+  ],
+  "opacity": 88,
+  "soft": 110
+ },
+ "turb": {
+  "amount": 21,
+  "size": 16,
+  "complexity": 1,
+  "fps": 4,
+  "evo": 943.75
+ },
+ "name": "봄12",
+ "out": "C:\\DADA\\9.AI\\vscode\\편집자동화\\work\\포인트\\ae_templates\\봄12"
+}
