@@ -100,6 +100,7 @@
 6. **실행 (Execute)**:
    - 시퀀스를 `v03_rough1`로 복제한 뒤 작업
    - 삭제 대상은 **잘라 내지 않고**, 구간을 razor로 나눈 뒤 **클립 비활성화**로 남긴다 (사용자가 다시 켜서 되살릴 수 있도록)
+   - 사용자가 리뷰로 확인한 삭제는 클립을 **지우고 빈 구간을 닫는다** (2026-10-06 사용자 지시)
    - 비활성화한 클립은 색 라벨로 구분한다 (태스크별 색은 `criteria.md`)
    - C9 다듬기 → C10 점프컷 마커 → C7 테이크 그룹 라벨·마커 → `review` 후보에 마커
 7. **자체 점검**: 단어 잘림, 0.5초 미만 조각, 컷 개수·줄어든 시간이 비정상적이지 않은지 확인
@@ -112,6 +113,10 @@
 ## 사용 도구
 - Premiere Pro MCP: 시퀀스 복제, razor, 클립 비활성화(enable_disable_clip), 색 라벨, 마커, 오디오 트랜지션, 프레임 캡처(점프컷 확인)
 - 외부: 무음 탐지는 Premiere `detect_silence` 또는 오디오 분석 스크립트(`scripts/`)
+- 스크립트: 에이전트가 대본을 읽고 `work/<p>/cut/manual.json`(C2~C8 컷, 운동 동작 구간 `keep_silence`, 테이크 그룹, 리뷰로 확인된 삭제 `confirmed_ids_before`) 작성 → `scripts/cut/plan.py`(C1 무음, 단어 컷 경계 오디오 쉼 맞춤, `edit_decisions.json`) → `scripts/cut/ops.py`(`ops.txt`) → `scripts/cut/apply_ops.jsx`(razor → 확인된 삭제 지우기 → 비활성화 → 마커 → **빈 구간 닫기**)
+  - 실행: `execute_extendscript` code = `var SEQ_ID="..."; var OPS="C:/.../cut/ops.txt"; $.evalFile("C:/.../scripts/cut/apply_ops.jsx"); return APPLY_RESULT;`
+- 리뷰 읽기: 사용자가 V3에 넣은 그래픽 텍스트는 `export_as_fcp_xml`로 내보내 그래픽 클립의 효과 이름에서 읽는다 (XML 끝부분이 잘릴 수 있으니 정규식으로 읽기). 내보낸 뒤 Premiere가 1분쯤 응답하지 않을 수 있음
+- 주의: MCP `razor_all_tracks`는 29.97 드롭프레임을 잘못 계산함 → QE `razor(드롭프레임 타임코드)` 사용. 트랙 클립 라벨 색 API 없음 → 마커 색으로 구분. 마커 `end`는 숫자(초)로
 
 ---
 

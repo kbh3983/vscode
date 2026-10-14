@@ -5,6 +5,12 @@
       "args": [
         "C:\\Users\\bbong\\Adobe_Premiere_Pro_MCP\\dist\\cli.js"
       ]
+    },
+    "after-effects": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\bbong\\after-effects-mcp\\build\\index.js"
+      ]
     }
   }
 }

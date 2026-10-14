@@ -1,0 +1,53 @@
+{
+ "comp": "잔망스럽고_귀여운_AE",
+ "text": "잔망스럽지만 귀여운 자막 효과",
+ "dur": 2.002,
+ "size": 116,
+ "track": 0,
+ "x": 963,
+ "y": 933,
+ "anchor": "center",
+ "fill": [
+  255,
+  255,
+  255
+ ],
+ "stroke": {
+  "color": [
+   12,
+   12,
+   12
+  ],
+  "width": 7
+ },
+ "colorRange": {
+  "color": [
+   250,
+   179,
+   179
+  ],
+  "start": 50,
+  "end": 100
+ },
+ "shadow": {
+  "color": [
+   36,
+   36,
+   36
+  ],
+  "opacity": 50,
+  "dist": 7,
+  "dir": 155,
+  "soft": 2
+ },
+ "name": "봄03",
+ "out": "C:\\DADA\\9.AI\\vscode\\편집자동화\\work\\포인트\\ae_templates\\봄03",
+ "charBounce": {
+  "amp": 42,
+  "freq": 3.5,
+  "tilt": 10,
+  "th": 0.2,
+  "full": 0.55,
+  "smooth": 3
+ }
+}
