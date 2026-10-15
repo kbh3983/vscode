@@ -16,7 +16,8 @@
 | 6 | 소스: 롱폼 복제 → 카메라·오디오만 남긴 `<롱폼>_숏폼소스`, A캠을 4K 전체 화면(비율 50·가운데)으로 편 `<롱폼>_숏폼소스_샷` | `make_source_full.jsx` |
 | 7 | **A캠 샷사이즈**: A캠 구간 4K 원본 프레임 → 사람 인식 → 프레이밍(풀샷 기본, 머리 안 잘림, 헤드룸 7%, 인물 가운데) → 카메라 구간별 조각 목록 | `dump_cams.jsx` → `shot_plan.py` → `shot_parts.py` (+ `shot_preview.py`로 눈 확인) |
 | 8 | **시퀀스는 템플릿 복제가 아니라 새로 만든다**: 프레임 png로 `createNewSequenceFromClips`(1080×1920·29.97, 자막 트랙 없음) → V1 조각 / V3 프레임 / V5 안내 박스 / V7 하단 고정 안내 → 자막 트랙은 **대사 1개 + 제목 1개만** | `copy_clean.jsx`(구조 참고), `rebuild_v1.jsx`, `add_bottom_cc.jsx`(하단 안내) |
-| 9 | 확인: 클립 수·길이, V1·A1 틈 0, 프레임 렌더 | `export_frames.jsx`, `fill_gaps.jsx` |
+| 8-1 | **자막 싱크**: 시퀀스를 다 놓은 뒤 숏폼 오디오를 wav로 내보내(`exportAsMediaDirect` + Waveform 48kHz 프리셋) 다시 받아쓰기 → 자막 문구를 새 단어 시간에 맞춤(긴 단어는 말소리 시작, 컷 맞춤, 끝=다음 시작) → **그다음에** 자막 트랙 생성 | `transcribe.py`, `sync_captions.py`(+`resync.speech_onsets`) |
+| 9 | 확인: 클립 수·길이, V1·A1 틈 0, 프레임 렌더. 트랙은 V1 / V2 비움 / V3~ 이어서 | `export_frames.jsx`, `fill_gaps.jsx`, `copy_seq.jsx` |
 | 10 | 사용자 확인 → 자막 트랙 스타일은 사용자가 지정 → 끝나면 중간 시퀀스 지우기(백업 후) | |
 
 ## 2. 꼭 지킬 것 (사용자 결정)
@@ -41,6 +42,8 @@
 | 자막 줄이 26자까지 길어 잘림 | 공백 뺀 14자 + 짧은 줄 합치기 | 공백 포함 15자 DP (`resub.py`) |
 | 프레임 내보내기 실패 | 열려 있지 않은 시퀀스 activeSequence·슬래시 경로 | openSequence 후 지정, 경로는 역슬래시 (`export_frames.jsx`) |
 | 같은 이름 srt를 새로 만들어도 옛 것이 들어감 | 빈 안 같은 이름 항목을 재사용 | 새 srt는 새 빈 이름으로 가져옴 (`SRT_BIN`, `BINS`) |
+| 자막이 말보다 먼저/늦게 뜸 (최대 1.5초) | 롱폼 받아쓰기 단어 시간을 숏폼으로 옮겨 씀 — whisper는 쉼 뒤 첫 단어 시작을 쉼 쪽으로 당기고, 쉼을 단어 길이에 붙임("그냥" 1.7초) | 숏폼 오디오를 다시 받아써서 맞춤(8-1). 확인은 사용자 수정본 비교 |
+| 자막을 읽을 수 없음 | 스크립트 API에 자막 읽기 없음 | 프로젝트 파일(.prproj, gzip XML)에서 CaptionDataClipTrackItem 시간 + base64 글자 읽기 (`read_captions.py`) |
 | MCP 45초 시간 초과 | 숏폼 여러 개를 한 번에 | 한 번에 1~3개, 남은 것을 찾아 이어서 하는 스크립트로 |
 
 ## 4. 정리된 것 (2026-10-16)
