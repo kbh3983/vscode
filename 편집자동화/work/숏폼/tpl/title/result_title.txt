@@ -1,0 +1,9 @@
+프로젝트 저장
+조절 칸
+윗줄 폰트 Pretendard-Black
+아랫줄 폰트 Pretendard-Black
+글자 레이어
+필수 그래픽 등록
+확인 프레임 true
+내보내기 시작
+Title export=true
