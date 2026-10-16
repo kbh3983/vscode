@@ -24,7 +24,7 @@ if sys.argv[3] == "--fps-all":   # 처음부터 끝까지 초당 N장, ffmpeg �
         b = pr.stdout.read(w0 * h0 * 3)
         if len(b) < w0 * h0 * 3: break
         FAST.append(Image.fromarray(np.frombuffer(b, np.uint8).reshape(h0, w0, 3)))
-    T = [i / fpsn for i in range(len(FAST))]
+    T = [(i + 0.5) / fpsn for i in range(len(FAST))]   # ffmpeg fps 필터는 칸 가운데 프레임을 냄 (2026-10-16 확인: 10초 간격에서 표시가 실제보다 5초 빨랐음)
 elif sys.argv[3] == "--times":
     T = [float(x) for x in sys.argv[4].split(",")]; rest = sys.argv[5:]
 else:

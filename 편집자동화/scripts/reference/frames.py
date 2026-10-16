@@ -1,4 +1,4 @@
-"""레퍼런스 분석 — 모든 프레임(29.97fps)을 작게 읽어 프레임별 지표 저장 + 컷·전환 검출
+"""레퍼런스 분석 — 모든 프레임(영상 fps 그대로)을 작게 읽어 프레임별 지표 저장 + 컷·전환 검출
   python frames.py <영상> <out 폴더>
   → frames.npz : 프레임마다 diff(앞 프레임과 차이), hist_d(색 히스토그램 거리), luma, sat, 위·아래 띠 밝기 등
   → cuts.json  : [{f, t, kind: cut|dissolve|fade|flash, len}]  (f = 프레임 번호, 0부터)
@@ -34,7 +34,9 @@ while True:
 p.wait()
 D = {k: np.array(v, np.float32) for k, v in dict(diff=diff, hd=hd, luma=luma, sat=sat, top=top, bot=bot, cen=cen, corr=corr).items()}
 np.savez_compressed(os.path.join(out, "frames.npz"), **D)
-n = len(diff); fps = 30000 / 1001
+n = len(diff)
+num, den = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=r_frame_rate", "-of", "csv=p=0", src], capture_output=True, text=True).stdout.strip().split("/")
+fps = float(num) / float(den or 1)   # 29.97 / 59.94 / 23.976 등 영상마다 다름
 hdv = D["hd"]; dv = D["diff"]
 # 하드 컷
 cuts = []
