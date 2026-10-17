@@ -687,6 +687,205 @@
         anim("헤드라인1", "left", 4, 8); revealAt("헤드라인2", t2);
     }];
 
+    // ───────── 셜록현준 공통 45~62 (2026-10-17 사용자: "교양에 학습해 주고, 템플릿 제작하자." → "정보성에 확정", "18개 모두") ─────────
+    // 근거: work/정보성/분석/통합분석.md 9장, notes/r20-r25.md, 장면 work/정보성/템플릿/ref/45~62.png. 타이틀 콜라주·엔드카드(채널 로고 디자인)는 뺌
+    var TD = [22, 70, 60], TL = [30, 110, 90], MINT = [120, 230, 150], ORG = [235, 110, 35], CREAM = [240, 234, 220], PAPER = [246, 244, 239], INK = [20, 20, 20];
+    function rotate(name, deg) { tp(C.layer(name), "ADBE Rotate Z").expression = cAngle(name + " 기울기", deg); }
+    function grain(name, amt) {   // 종이·인쇄 느낌 (흑백 노이즈)
+        try {
+            C.layer(name).property("ADBE Effect Parade").addProperty("ADBE Noise");
+            C.layer(name).property("ADBE Effect Parade").property("ADBE Noise").property(1).setValue(amt);
+            try { C.layer(name).property("ADBE Effect Parade").property("ADBE Noise").property(2).setValue(0); } catch (e) {}
+        } catch (e) { w("  노이즈 실패 " + name + " " + e.message); }
+    }
+    function blurIn(name, f0, n) {   // 흐림 → 선명 (셜록현준 큰 글자 0.2초)
+        try {
+            C.layer(name).property("ADBE Effect Parade").addProperty("ADBE Gaussian Blur 2");
+            var b = C.layer(name).property("ADBE Effect Parade").property("ADBE Gaussian Blur 2").property(1);
+            b.setValueAtTime(f0 * FR, 40); b.setValueAtTime((f0 + n) * FR, 0);
+        } catch (e) { w("  흐림 실패 " + name + " " + e.message); }
+        anim(name, "fade", f0, n);
+    }
+    function dashStroke(get, idx, dash, gap) {   // get() = 그 Vectors Group (다시 찾기용)
+        var D = get().property(idx).property("ADBE Vector Stroke Dashes");
+        D.addProperty("ADBE Vector Stroke Dash 1"); get().property(idx).property("ADBE Vector Stroke Dashes").addProperty("ADBE Vector Stroke Gap 1");
+        get().property(idx).property("ADBE Vector Stroke Dashes").property(1).setValue(dash);
+        get().property(idx).property("ADBE Vector Stroke Dashes").property(2).setValue(gap);
+    }
+    B[45] = ["셜록_기본자막", 2, function () {   // 흰 상자 + 검은 굵은 글자 + 오른쪽 아래 청록 그림자
+        T("자막", { txt: "사실 인천공항이 만들어진 다음에", font: "GmarketSansMedium", size: 40, col: INK, pos: [958, 993], track: -20 });
+        boxFor("자막", "그림자 상자", { col: TD, pad: [13, 13], dx: 7, dy: 7 });
+        boxFor("자막", "자막 상자", { col: WHT, pad: [13, 13] });
+        master(958, 993); anim("자막", "fade", 0, 2);
+    }];
+    B[46] = ["셜록_Q카드", 2, function () {   // 왼쪽 위 청록 정사각 + 주황 Q(또는 !) + 찢긴 흰 종이 띠 질문
+        T("질문", { txt: "공항이 생긴 후 인천의 변화?", font: "GmarketSansBold", size: 70, just: "L", col: TD, pos: [632, 132], track: -20 });
+        boxFor("질문", "종이 띠", { col: PAPER, pad: [32, 25] });
+        rough("종이 띠", "종이 띠", 3, 20); grain("종이 띠", 6);
+        shape("아이콘 상자", { type: "rect", size: [132, 126], pos: [532, 132], col: TD });
+        T("아이콘", { txt: "Q", font: "GmarketSansBold", size: 100, col: ORG, pos: [532, 132], label: "아이콘 (Q 또는 !)" });
+        master(532, 132); anim("아이콘 상자", "fade", 0, 2); anim("아이콘", "fade", 0, 2); anim("질문", "fade", 0, 2);
+    }];
+    B[47] = ["셜록_오늘의추리", 3, function () {   // 찢긴 흰 종이 + 주황 테이프 + "오늘의 추리" + 큰 청록 주제 (글자 타자)
+        shape("종이", { type: "rect", size: [600, 300], pos: [1540, 460], col: PAPER, scaleCtl: true });
+        rough("종이", "종이", 4, 25); grain("종이", 5); rotate("종이", -1);
+        shape("테이프", { type: "rect", size: [80, 32], pos: [1800, 335], col: ORG, op: 90 }); rotate("테이프", -35);
+        T("라벨", { txt: "오늘의 추리", font: "GmarketSansMedium", size: 30, col: WHT, pos: [1542, 400], track: -10 });
+        boxFor("라벨", "라벨 상자", { col: TD, pad: [14, 10] });
+        T("주제", { txt: "인천광역시", font: "GmarketSansBold", size: 90, col: [25, 80, 65], pos: [1540, 495], track: -30 });
+        master(1540, 460); anim("종이", "pop", 0); anim("테이프", "fade", 2, 3); anim("라벨", "fade", 2, 3); anim("주제", "type", 3, 15);
+    }];
+    B[48] = ["셜록_Chapter카드", 3, function () {   // 화면 가득 구겨진 종이 + 청록 "Chapter.1" + 큰 청록 제목 (사진 콜라주는 아래 트랙에)
+        bg("종이 배경", CREAM, 100); grain("종이 배경", 8);
+        T("라벨", { txt: "Chapter.1", font: "NotoSerifKR-Bold", size: 56, col: [175, 225, 205], pos: [965, 402], italic: true, track: 0 });
+        boxFor("라벨", "라벨 상자", { col: TD, pad: [30, 14] });
+        rough("라벨 상자", "라벨 상자", 4, 15);
+        T("제목", { txt: "인천국제공항", font: "GmarketSansBold", size: 130, col: [25, 85, 70], pos: [955, 565], track: -30 });
+        grain("제목", 6);
+        master(960, 480); anim("종이 배경", "fade", 0, 3); anim("라벨", "fade", 0, 4); anim("제목", "type", 2, 9);
+    }];
+    B[49] = ["셜록_장제목_종이띠", 2, function () {   // 크림 종이 띠(검은 글자) + 아래 청록 띠(흰 글자), 살짝 기울어짐
+        T("윗줄", { txt: "한국 전통을 담은", font: "GmarketSansBold", size: 64, just: "L", col: INK, pos: [212, 450], rot: -1, track: -20 });
+        boxFor("윗줄", "윗줄 띠", { col: CREAM, pad: [22, 14] }); grain("윗줄 띠", 6);
+        T("아랫줄", { txt: "고창만의 랜드마크 설계", font: "GmarketSansBold", size: 72, just: "L", col: WHT, pos: [130, 545], rot: 2, track: -20 });
+        boxFor("아랫줄", "아랫줄 띠", { col: [40, 140, 135], pad: [40, 16] }); grain("아랫줄 띠", 5);
+        master(450, 500); anim("윗줄", "left", 0, 6); anim("아랫줄", "left", 3, 6);
+    }];
+    B[50] = ["셜록_큰글자_양옆", 2, function () {   // 인물 양옆 큰 흰 글자 2개 + 작은 손글씨 한마디
+        T("왼쪽 글자", { txt: "인", font: "BlackHanSans-Regular", size: 300, col: [245, 245, 245], pos: [580, 448], shadow: [35, 3, 12] });
+        T("오른쪽 글자", { txt: "천", font: "BlackHanSans-Regular", size: 300, col: [245, 245, 245], pos: [1330, 448], shadow: [35, 3, 12] });
+        grain("왼쪽 글자", 6); grain("오른쪽 글자", 6);
+        T("손글씨", { txt: "집중 분석!", font: "GangwonEduHyeonokTMedium", size: 60, col: WHT, pos: [1505, 255], rot: 18, shadow: SH });
+        master(960, 448); blurIn("왼쪽 글자", 0, 6); blurIn("오른쪽 글자", 0, 6); anim("손글씨", "pop", 18);
+    }];
+    B[51] = ["셜록_키워드_점선", 2, function () {   // 흰 굵은 두 말 + 가운데 점선 (A ····· B), 점선은 두 말 사이를 따라감
+        T("왼쪽", { txt: "구체적인 조건\r& 결이 맞는 건축가", font: "GmarketSansBold", size: 70, col: WHT, pos: [410, 405], shadow: [50, 2, 10], lead: 85 });
+        T("오른쪽", { txt: "이상적인 집\r완성!", font: "GmarketSansBold", size: 75, col: WHT, pos: [1510, 405], shadow: [50, 2, 10], lead: 85 });
+        var gp = cSlider("점선 여백", 25), lc = cColor("점선 색", WHT), lw = cSlider("점선 두께", 4);
+        var S = C.layers.addShape(); S.name = "점선";
+        C.layer("점선").property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
+        var v = function () { return C.layer("점선").property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group"); };
+        v().addProperty("ADBE Vector Shape - Group"); v().addProperty("ADBE Vector Graphic - Stroke");
+        v().property(1).property("ADBE Vector Shape").expression =
+            'var a=thisComp.layer("왼쪽"), b=thisComp.layer("오른쪽"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false), g=' + gp + ';' +
+            ' var p1=fromComp(a.toComp([ra.left+ra.width, ra.top+ra.height*0.3])), p2=fromComp(b.toComp([rb.left, rb.top+rb.height*0.3]));' +
+            ' var k=linear(time,0.2,0.2+10*thisComp.frameDuration,0,1); createPath([p1+[g,0], p1+[g,0]+(p2-p1-[2*g,0])*k], [], [], false)';
+        v().property(2).property("ADBE Vector Stroke Color").expression = lc;
+        v().property(2).property("ADBE Vector Stroke Width").expression = lw;
+        dashStroke(v, 2, 4, 8);
+        master(960, 405); anim("왼쪽", "fade", 0, 5); anim("오른쪽", "fade", 8, 5);
+    }];
+    B[52] = ["셜록_민트강조", 1, function () {   // 흰 굵게 + 민트 강조어
+        T("문구", { txt: "반면 {우리나라는...}", font: "GmarketSansBold", size: 90, col: WHT, pos: [963, 884], shadow: [55, 3, 10], accent: MINT, track: -20 });
+        master(963, 884); anim("문구", "fade", 0, 4);
+    }];
+    B[53] = ["셜록_숫자카드", 2, function () {   // 청록 라벨 + 큰 흰 숫자 + 민트 비교
+        T("라벨", { txt: "도쿄 인구", font: "GmarketSansMedium", size: 40, just: "L", col: WHT, pos: [114, 668] });
+        boxFor("라벨", "라벨 상자", { col: TD, op: 90, pad: [10, 7] });
+        T("숫자", { txt: "1,400만", font: "GmarketSansBold", size: 130, just: "L", col: WHT, pos: [100, 780], shadow: [50, 3, 10], track: -30 });
+        T("비교", { txt: "서울의 1.5배", font: "GmarketSansBold", size: 60, just: "L", col: MINT, pos: [84, 890], shadow: [50, 2, 8] });
+        master(300, 780); anim("라벨", "fade", 0, 4); anim("숫자", "up", 3, 6); anim("비교", "fade", 8, 5);
+    }];
+    B[54] = ["셜록_인물이름라벨", 2, function () {   // 청록 상자 이름 + 작은 설명 2줄 (인물 누끼·사진 옆)
+        T("이름", { txt: "루시오 코스타", font: "GmarketSansBold", size: 40, just: "L", col: WHT, pos: [1022, 421] });
+        boxFor("이름", "이름 상자", { col: [40, 150, 130], pad: [10, 8] });
+        T("설명", { txt: "브라질리아를 설계한\r브라질의 건축가", font: "GmarketSansMedium", size: 30, just: "L", col: [200, 240, 225], pos: [1022, 505], lead: 42 });
+        boxFor("설명", "설명 상자", { col: TD, op: 75, pad: [10, 8] });
+        master(1150, 470); anim("이름", "left", 0, 6); anim("설명", "fade", 4, 5);
+    }];
+    B[55] = ["셜록_인물인용", 2, function () {   // 영문 원문 + 한글 인용(명조) + 작은 출처 줄
+        T("영문", { txt: "It’s hard to find such an impressive space as this one.", font: "NotoSerifKR-Regular", size: 34, just: "L", col: [235, 235, 235], pos: [70, 400], shadow: SH, track: 0 });
+        T("인용", { txt: "“이처럼 장엄하고 고요한 공간은\r세계 어디에서도 좀처럼 찾기 어렵다.”", font: "NotoSerifKR-Regular", size: 56, just: "L", col: WHT, pos: [70, 510], shadow: SH, lead: 82, track: 0 });
+        T("출처", { txt: "프랭크 게리(Frank Gehry)가 2012년 종묘 방문 당시 발언", font: "GmarketSansLight", size: 30, just: "L", col: [210, 210, 210], pos: [70, 680], shadow: SH, track: 0 });
+        master(70, 520); anim("영문", "fade", 0, 6); anim("인용", "fade", 3, 8); anim("출처", "fade", 8, 6);
+    }];
+    B[56] = ["셜록_종이용어카드", 2, function () {   // 크림 종이 카드 + 테이프 + 굵은 이름 + 설명 3줄
+        shape("카드", { type: "rect", size: [630, 350], pos: [1525, 745], col: CREAM, radius: 30, scaleCtl: true });
+        grain("카드", 5);
+        shape("테이프", { type: "rect", size: [90, 30], pos: [1340, 590], col: [150, 90, 60], op: 85 }); rotate("테이프", -25);
+        T("이름", { txt: "이재 황윤석", font: "GmarketSansBold", size: 62, col: [140, 45, 25], pos: [1525, 672] });
+        T("설명", { txt: "고창 출신의 학자이자 시인.\r조선 영·정조 시대에 활동했으며,\r대표 저서로는 《이재난고》가 있다.", font: "GmarketSansMedium", size: 30, col: [95, 75, 60], pos: [1525, 805], lead: 52, track: -10 });
+        master(1525, 745); anim("카드", "pop", 0); anim("테이프", "fade", 2, 3); anim("이름", "fade", 3, 5); anim("설명", "fade", 5, 5);
+    }];
+    B[57] = ["셜록_지도원라벨", 1, function () {   // 지도 위 청록 원 + 크림 상자 지명
+        shape("원", { type: "ellipse", size: [120, 120], pos: [1160, 515], col: TL, op: 85, scaleCtl: true });
+        rough("원", "원", 3, 20);
+        T("지명", { txt: "인천", font: "GmarketSansBold", size: 60, just: "L", col: INK, pos: [1225, 491] });
+        boxFor("지명", "지명 상자", { col: CREAM, pad: [14, 9] });
+        master(1160, 515); anim("원", "pop", 0); anim("지명", "fade", 3, 4);
+    }];
+    B[58] = ["셜록_연표", 3, function () {   // 가로선 + 청록 점 3개 + 위 설명·아래 연도(명조 기울임)
+        shape("선", { type: "rect", size: [1920, 4], pos: [960, 876], col: WHT, op: 90 });
+        var X = [380, 960, 1536], UP = ["마리나 베이 본격 개발", "마리나 베이 샌즈 개장", "가든스 바이 더 베이 개장"], YR = ["2005", "2005", "2012"];
+        for (var k = 1; k <= 3; k++) {
+            shape("점" + k, { type: "ellipse", size: [24, 24], pos: [X[k - 1], 876], col: TL, stroke: [WHT, 3] });
+            T("설명" + k, { txt: UP[k - 1], font: "GmarketSansMedium", size: 44, col: WHT, pos: [X[k - 1], 822], shadow: SH, track: -20 });
+            T("연도" + k, { txt: YR[k - 1], font: "NotoSerifKR-Bold", size: 56, col: WHT, pos: [X[k - 1], 928], shadow: SH, italic: true, track: 0 });
+            var s = (k == 1) ? "0.2" : cSlider("항목" + k + " 등장(초)", (k - 1) * 0.8);
+            revealAt("설명" + k, s); revealAt("연도" + k, s); revealAt("점" + k, s);
+        }
+        master(960, 876); anim("선", "fade", 0, 5);
+    }];
+    B[59] = ["셜록_치수선", 1, function () {   // 양쪽 화살표 점선 + 길이 숫자
+        var L = cSlider("선 길이", 1670), lc = cColor("선 색", WHT), lw = cSlider("선 두께", 4);
+        var S = C.layers.addShape(); S.name = "치수선";
+        var nm = ["선", "왼쪽 화살", "오른쪽 화살"];
+        var root = function () { return C.layer("치수선").property("ADBE Root Vectors Group"); };
+        for (var q = 0; q < 3; q++) {
+            var g = root().addProperty("ADBE Vector Group"); g.name = nm[q];
+            root().property(nm[q]).property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+            root().property(nm[q]).property("ADBE Vectors Group").addProperty(q ? "ADBE Vector Graphic - Fill" : "ADBE Vector Graphic - Stroke");
+        }
+        var K = 'var k=linear(time,0.1,0.1+10*thisComp.frameDuration,0,1), h=' + L + '/2*k;';
+        var P = [K + ' createPath([[-h,0],[h,0]],[],[],false)', K + ' createPath([[-h,0],[-h+24,-11],[-h+24,11]],[],[],true)', K + ' createPath([[h,0],[h-24,-11],[h-24,11]],[],[],true)'];
+        for (var q = 0; q < 3; q++) {
+            var gq = nm[q], vv = function () { return root().property(gq).property("ADBE Vectors Group"); };
+            vv().property(1).property("ADBE Vector Shape").expression = P[q];
+            if (q) vv().property(2).property("ADBE Vector Fill Color").expression = lc;
+            else { vv().property(2).property("ADBE Vector Stroke Color").expression = lc; vv().property(2).property("ADBE Vector Stroke Width").expression = lw; dashStroke(vv, 2, 6, 7); }
+        }
+        tp(C.layer("치수선"), "ADBE Position").setValue([960, 454]);
+        tp(C.layer("치수선"), "ADBE Position").expression = 'value+' + cPoint("치수선 위치");
+        tp(C.layer("치수선"), "ADBE Rotate Z").expression = cAngle("치수선 기울기", 0);
+        T("길이", { txt: "109m", font: "GmarketSansBold", size: 60, col: WHT, pos: [960, 401], shadow: SH, track: 0 });
+        master(960, 430); anim("길이", "fade", 6, 5);
+    }];
+    B[60] = ["셜록_말풍선", 1, function () {   // 재연 인물 옆 흰 말풍선 + 검은 굵은 글자 (풍선이 글자 크기를 따라감)
+        T("말", { txt: "음...여긴 이렇게\r바꿔주세요", font: "GmarketSansBold", size: 40, col: INK, pos: [1272, 470], lead: 52, track: -20 });
+        var bc = cColor("말풍선 색", PAPER);
+        var S = C.layers.addShape(); S.name = "말풍선";
+        var root = function () { return C.layer("말풍선").property("ADBE Root Vectors Group"); };
+        var g1 = root().addProperty("ADBE Vector Group"); g1.name = "몸통";
+        root().property("몸통").property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Ellipse");
+        root().property("몸통").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+        var g2 = root().addProperty("ADBE Vector Group"); g2.name = "꼬리";
+        root().property("꼬리").property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+        root().property("꼬리").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+        var R = 'var r=thisLayer.parent.sourceRectAtTime(time,false), cx=r.left+r.width/2, cy=r.top+r.height/2, W=r.width+100, H=r.height+80;';
+        var v = function (n) { return root().property(n).property("ADBE Vectors Group"); };
+        v("몸통").property(1).property("ADBE Vector Ellipse Size").expression = R + ' [W,H]';
+        v("몸통").property(1).property("ADBE Vector Ellipse Position").expression = R + ' [cx,cy]';
+        v("몸통").property(2).property("ADBE Vector Fill Color").expression = bc;
+        v("꼬리").property(1).property("ADBE Vector Shape").expression = R + ' createPath([[cx+W*0.22,cy+H*0.36],[cx+W*0.48,cy+H*0.62],[cx+W*0.36,cy+H*0.22]],[],[],true)';
+        v("꼬리").property(2).property("ADBE Vector Fill Color").expression = bc;
+        var L2 = C.layer("말풍선"); L2.parent = C.layer("말");
+        tp(L2, "ADBE Anchor Point").setValue([0, 0]); tp(L2, "ADBE Position").setValue([0, 0]); tp(L2, "ADBE Scale").setValue([100, 100]); tp(L2, "ADBE Rotate Z").setValue(0);
+        tp(L2, "ADBE Opacity").expression = 'thisLayer.parent.transform.opacity';
+        L2.moveAfter(C.layer("말")); BOXES.push("말풍선");
+        rough("말풍선", "말풍선", 2, 25);
+        master(1272, 470); anim("말", "pop", 0);
+    }];
+    B[61] = ["셜록_자료큰글자", 2, function () {   // 자료 그림 위 큰 흰 글자 + 작은 설명(→)
+        T("제목", { txt: "농업혁명", font: "BlackHanSans-Regular", size: 200, col: [245, 245, 245], pos: [960, 512], shadow: [45, 3, 14], track: -20 });
+        grain("제목", 6);
+        T("설명", { txt: "수렵·채집 경제 → 농경 중심의 생산 경제", font: "GmarketSansMedium", size: 44, col: WHT, pos: [960, 677], shadow: SH, track: -20 });
+        master(960, 560); blurIn("제목", 0, 6); anim("설명", "fade", 6, 6);
+    }];
+    B[62] = ["셜록_출처", 1, function () {   // 오른쪽 아래 작은 출처
+        T("출처", { txt: "출처: Google Earth", font: "GmarketSansMedium", size: 26, just: "R", col: [235, 235, 235], pos: [1900, 1040], shadow: [50, 1, 4], track: 0 });
+        master(1900, 1040); anim("출처", "fade", 0, 6);
+    }];
+
     // ───────── 레퍼런스 맞춤 (fit_jeongbo32.jsxinc 의 FIT 표) ─────────
     $.evalFile(new File("C:\\DADA\\9.AI\\vscode\\편집자동화\\scripts\\jeongbo\\ae\\fit_jeongbo32.jsxinc"));
     var TF = 5;   // 다 나타난 뒤 시각에서 잼
@@ -819,9 +1018,9 @@
         w("프로젝트 " + aep.fsName);
         var ids = [], of = new File(OUT + "\\only.txt");
         if (of.exists) { of.open("r"); var s = of.read(); of.close(); var m = s.match(/(\d+)\s*-\s*(\d+)/); for (var i = +m[1]; i <= +m[2]; i++) ids.push(i); }
-        else for (var i = 1; i <= 32; i++) if (!new File(OUT + "\\export_" + (i < 10 ? "0" : "") + i + "\\done.txt").exists) ids.push(i);
-        // 사용자가 지운 템플릿은 만들지 않음 (2026-10-17 "안쓸건 삭제했어. 데이터도 지워도 돼." · 37·39·44는 "검토했어 필요없는 건 삭제했어. 반영해줘.")
-        var DROP = { 5: 1, 6: 1, 8: 1, 9: 1, 16: 1, 22: 1, 23: 1, 25: 1, 27: 1, 28: 1, 29: 1, 30: 1, 32: 1, 37: 1, 39: 1, 44: 1 }, keep = [];
+        else for (var i = 1; i <= 62; i++) if (!new File(OUT + "\\export_" + (i < 10 ? "0" : "") + i + "\\done.txt").exists) ids.push(i);
+        // 사용자가 지운 템플릿은 만들지 않음 (2026-10-17 "안쓸건 삭제했어. 데이터도 지워도 돼." · 37·39·44는 "검토했어 필요없는 건 삭제했어. 반영해줘." · 57·58·59·62는 "지운 것 제외하고 반영해줘.")
+        var DROP = { 5: 1, 6: 1, 8: 1, 9: 1, 16: 1, 22: 1, 23: 1, 25: 1, 27: 1, 28: 1, 29: 1, 30: 1, 32: 1, 37: 1, 39: 1, 44: 1, 57: 1, 58: 1, 59: 1, 62: 1 }, keep = [];
         for (var i = 0; i < ids.length; i++) if (!DROP[ids[i]]) keep.push(ids[i]);
         ids = keep;
         w("대상 " + ids.join(","));
