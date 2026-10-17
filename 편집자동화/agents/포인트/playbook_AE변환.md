@@ -166,3 +166,10 @@
 - 예: `scripts/jeongbo/ae/make_jeongbo32.jsx` (공통 함수 T·boxFor·shape·bg·master·anim·revealAt)
 - **레퍼런스 맞춤 (2026-10-17, 정보성 32종)**: 장면을 원본 크기로 뽑아 `scripts/reference/measure_lines.py`로 줄마다 잉크 위끝·높이·줄 간격을 재고, 표(예: `scripts/jeongbo/ae/fit_jeongbo32.jsxinc`)로 AE가 크기(첫 줄 잉크 높이 기준)·행간·정렬점 위치를 맞춤. 같은 문구로 재야 정확. 확인은 레퍼런스 위에 우리 글자 윤곽 겹치기(`scripts/jeongbo/compare_ref.py`) — 배경 깔린 템플릿은 윤곽이 안 나와 반반 겹침
 - **자간·행간 칸 (2026-10-17, 사용자: "행간, 자간 수정이 안 되네")**: 프리미어는 AE 템플릿 글자의 자간·행간을 못 바꿈 → 글자 요소마다 슬라이더 "<요소> 자간"·"<요소> 행간(%)"를 만들고 소스 텍스트 식 `var s=thisProperty.style; s.setTracking(자간).setAutoLeading(false).setLeading(s.fontSize*행간/100)` (숨은 원문을 따라가는 글자는 `p.style.setText(..)` 뒤에 같은 체인). 자기 값을 써서 프리미어에서 바꾼 문구·폰트·크기 유지. `setAutoLeading(false)` 없으면 행간이 안 바뀜. 예: `scripts/jeongbo/ae/make_jeongbo32.jsx` addSpacing
+
+## 16. 슬라이더 범위도 두 군데 — 100 넘는 값이 잘림 (2026-10-17, 정보성 33~44 확인 중 발견)
+- AE 슬라이더는 mogrt에 **min 0·max 100**으로 들어감 → 프리미어가 값을 잘라 씀: 창 폭 1480→100, 자간 -10→0, 행간 120%→100%, 세로 늘림 200→100. AE 정지 화면은 멀쩡해서 프리미어에서만 틀어짐
+- 범위도 폰트 수정 허용(14장)처럼 `clientControls[].min/max`와 `…capParams[].capPropMin/capPropMax` 두 곳 — **프리미어는 capParams 쪽을 읽음**
+- `scripts/point/ae/mogrt_ranges.py`의 `fix_ranges`(finish_mogrt.py가 자동 호출): 자간 -500~1500, 행간(%) 30~400, (초) 0~10, 크기(%)·늘림 0~500, (%)는 그대로, 그 밖에 기본값이 30 넘으면 max = 기본값×3
+- 이미 설치된 것: `python -I -X utf8 scripts/point/ae/mogrt_ranges.py <백업 폴더> <mogrt...>`. **시퀀스에 올라간 클립은 잘린 값 그대로** → 지우고 새로 넣기
+- 거친 가장자리(ADBE Roughen Edges) 속성 번호: 테두리 = `-0002`, 비율 = `-0005` (`-0003`은 선명도)
