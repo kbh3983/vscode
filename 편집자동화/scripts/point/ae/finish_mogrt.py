@@ -9,6 +9,8 @@
   정지 프레임 = 글자가 다 나타나 멈춘 시점 (잔상·퇴장 전). 렌더는 aerender -rqindex로
 """
 import glob, json, os, sys, zipfile
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from mogrt_ranges import fix_ranges
 
 src_dir, name, display = sys.argv[1:4]
 thumb = None
@@ -42,6 +44,7 @@ with zipfile.ZipFile(src) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED
                 elif isinstance(o, list):
                     for v in o: allow(v)
             allow(d)
+            fix_ranges(d)
             b = json.dumps(d, ensure_ascii=False).encode("utf-8")
         elif it.filename.lower() == "thumb.png" and thumb is not None:
             import io
