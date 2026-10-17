@@ -152,3 +152,17 @@
   - 폴더 전체 점검: `thumb_scan_fix.py scan|fix <템플릿 폴더> <백업 폴더>` → 미리보기 영상(thumb.mp4)에서 고른 뒤 `thumb_refix_still.py`(앞뒤 프레임과 거의 같은 **멈춘 프레임** 중 내용 최대 — '가장 꽉 찬 프레임'은 잔상 겹침·모션 블러가 잡힘). 이번에 34개 교체, 원본 백업 `Documents/mogrt_썸네일_백업_20261013/`. thumb.mp4가 없거나 비어 있는 21개(PYNPA 12·17~19·자막 8~10·Promo-3 10·info-photo sub2-L/R)는 그대로
   - **다시 내보낸 템플릿만** 미리보기가 다시 0프레임이 됨 → 그것만 다시 처리 (프리미어에서 쓰는 것으로는 안 바뀜)
 - 이번 11종은 12장 표준(15초·색 칸)을 적용하지 않았음 — 필요하면 `upgrade_tpl.jsx`·`extend_tpl.jsx`로
+
+## 14. 폰트·크기 수정 허용은 두 군데 (2026-10-17, 교양 테스트영상 피드백 "폰트나 사이즈, 색상 등 디테일 수정이 불가")
+- definition.json에 `clientControls[].fonteditinfo`와 `…capsuleparams.capParams[]` 두 곳에 `capPropFontEdit/FontFauxStyleEdit/FontSizeEdit`가 있음. **프리미어는 capParams 쪽을 읽음** → 앞쪽만 켜면 패널에서 폰트·크기를 못 바꿈
+- `finish_mogrt.py`가 이제 둘 다 켬. 이미 설치된 것은 `allow_font_edit.py <백업 폴더> <mogrt...>`. **이미 시퀀스에 올라간 클립은 클립 값(JSON)이 따로 false** → 새로 넣거나 템플릿 바꾸기(값 옮기기)
+- 글자 색은 AE 템플릿에서 프리미어가 못 바꿈 → 글자 칸마다 색 컨트롤("<칸> 색", 맨 앞 애니메이터)
+- 숨은 원문을 따라가는 표시 글자는 `p=thisComp.layer("원문").text.sourceText; p.style.setText(...)`로 **원문의 style**을 받아야 프리미어에서 바꾼 폰트·크기가 반영됨 (`text.sourceText.style`(자기 것)을 쓰면 반영 안 됨)
+
+## 15. 템플릿 새 표준 (2026-10-17, 사용자: "1 자막 길이는 10초 2 폰트는 프리텐다드 3 요소별 색상, 위치, 사이즈 등 디테일 수정 가능하도록")
+- 새로 만드는 자막 템플릿 기본: **300프레임(10.01초)** (12장의 15초 대신), **Pretendard**, 글자 요소마다 색·위치·크기(%) 칸, 상자·도형 색·투명도 칸, 그림자 색·진하기, 전체 크기·위치
+- 상자는 글자 레이어의 자식(sourceRectAtTime으로 크기) → 글자 크기·위치·기울기를 따라감
+- **ExtendScript에서 `a ? b : c ? d : e` 처럼 겹친 조건식 금지** — 잘못 계산됨(왼쪽 정렬 기준점이 오른쪽 끝으로). if문으로
+- 예: `scripts/jeongbo/ae/make_jeongbo32.jsx` (공통 함수 T·boxFor·shape·bg·master·anim·revealAt)
+- **레퍼런스 맞춤 (2026-10-17, 정보성 32종)**: 장면을 원본 크기로 뽑아 `scripts/reference/measure_lines.py`로 줄마다 잉크 위끝·높이·줄 간격을 재고, 표(예: `scripts/jeongbo/ae/fit_jeongbo32.jsxinc`)로 AE가 크기(첫 줄 잉크 높이 기준)·행간·정렬점 위치를 맞춤. 같은 문구로 재야 정확. 확인은 레퍼런스 위에 우리 글자 윤곽 겹치기(`scripts/jeongbo/compare_ref.py`) — 배경 깔린 템플릿은 윤곽이 안 나와 반반 겹침
+- **자간·행간 칸 (2026-10-17, 사용자: "행간, 자간 수정이 안 되네")**: 프리미어는 AE 템플릿 글자의 자간·행간을 못 바꿈 → 글자 요소마다 슬라이더 "<요소> 자간"·"<요소> 행간(%)"를 만들고 소스 텍스트 식 `var s=thisProperty.style; s.setTracking(자간).setAutoLeading(false).setLeading(s.fontSize*행간/100)` (숨은 원문을 따라가는 글자는 `p.style.setText(..)` 뒤에 같은 체인). 자기 값을 써서 프리미어에서 바꾼 문구·폰트·크기 유지. `setAutoLeading(false)` 없으면 행간이 안 바뀜. 예: `scripts/jeongbo/ae/make_jeongbo32.jsx` addSpacing

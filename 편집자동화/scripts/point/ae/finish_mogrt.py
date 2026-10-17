@@ -34,6 +34,14 @@ with zipfile.ZipFile(src) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED
                 fe = c.get("fonteditinfo")
                 if fe:
                     fe["capPropFontEdit"] = fe["capPropFontFauxStyleEdit"] = fe["capPropFontSizeEdit"] = True
+            # 2026-10-17: 프리미어는 sourceInfoLocalized…capsuleparams.capParams 쪽 값을 읽음 → 여기도 켜야 실제로 폰트·크기 수정 가능 (교양 테스트영상 피드백)
+            def allow(o):
+                if isinstance(o, dict):
+                    if "capPropFontEdit" in o: o["capPropFontEdit"] = o["capPropFontFauxStyleEdit"] = o["capPropFontSizeEdit"] = True
+                    for v in o.values(): allow(v)
+                elif isinstance(o, list):
+                    for v in o: allow(v)
+            allow(d)
             b = json.dumps(d, ensure_ascii=False).encode("utf-8")
         elif it.filename.lower() == "thumb.png" and thumb is not None:
             import io
