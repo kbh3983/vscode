@@ -121,5 +121,25 @@ var FIT = {
     "59": { e: { "길이": { j: "C", x: 960, top: 376, h: 50, f: "GmarketSansBold" } } },
     "60": { e: { "말": { j: "C", x: 1272, top: 443, h: 33, p: 52, f: "GmarketSansBold" } } },
     "61": { e: { "제목": { j: "C", x: 960, top: 425, h: 175, f: "BlackHanSans-Regular" }, "설명": { j: "C", x: 960, top: 658, h: 38, f: "GmarketSansMedium" } } },
-    "62": { e: { "출처": { j: "R", x: 1900, top: 1030, h: 20, f: "GmarketSansMedium" } } }
+    "62": { e: { "출처": { j: "R", x: 1900, top: 1030, h: 20, f: "GmarketSansMedium" } } },
+    // ── 크랩 63~75 (장면 ref/63~75.png, r26~r29) — 폰트는 레퍼런스와 비슷한 무료 폰트(Pretendard·검은고딕·G마켓 산스·본고딕·강원교육현옥샘)
+    "63": { e: { "자막": { j: "C", x: 960, top: 939, h: 53, f: "Pretendard-SemiBold" } } },
+    "64": { e: { "대사": { j: "C", x: 959, top: 928, h: 46, f: "Pretendard-Medium" }, "이름": { j: "L", x: 166, top: 836, h: 54, f: "BlackHanSans-Regular" },
+                 "소속": { j: "L", x: 371, top: 851, h: 29, f: "Pretendard-Medium" } } },
+    "65": { e: { "대사": { j: "C", x: 1039, top: 928, h: 46, f: "Pretendard-Medium" }, "이름": { j: "L", x: 323, top: 836, h: 54, f: "BlackHanSans-Regular" },
+                 "소속": { j: "L", x: 430, top: 851, h: 29, f: "Pretendard-Medium" } } },
+    "66": { e: { "윗글": { j: "L", x: 157, top: 772, h: 85, p: 134, f: "GmarketSansBold" }, "거대 글자": { j: "C", x: 1385, top: 640, h: 430, f: "GmarketSansBold" } } },
+    "67": { e: { "질문": { j: "L", x: 268, top: 300, h: 127, p: 176, f: "NotoSansKR-Bold" } } },
+    "68": { e: { "제목": { j: "C", x: 959, top: 211, h: 105, f: "GmarketSansBold" }, "부제": { j: "C", x: 959, top: 330, h: 48, f: "GmarketSansLight" },
+                 "인용": { j: "C", x: 960, top: 514, h: 46, p: 80, f: "GmarketSansBold" }, "출처": { j: "C", x: 960, top: 681, h: 27, f: "GmarketSansLight" } } },
+    "69": { e: { "윗줄": { j: "C", x: 487, top: 253, h: 168, f: "GmarketSansBold" }, "아랫줄": { j: "C", x: 1174, top: 510, h: 158, f: "GmarketSansBold" } } },
+    "70": { e: { "연도": { j: "C", x: 963, top: 190, h: 625, f: "Pretendard-Bold" }, "사건": { j: "C", x: 957, top: 456, h: 103, f: "NotoSansKR-Bold" },
+                 "메모": { j: "C", x: 1519, top: 357, h: 48, f: "GangwonEduHyeonokTMedium" } } },
+    "71": { e: { "라벨": { j: "C", x: 594, top: 408, h: 60, f: "GangwonEduHyeonokTMedium" } } },
+    "72": { e: { "헤드라인": { j: "C", x: 961, top: 478, h: 54, f: "NotoSansKR-Bold" } } },
+    "73": { e: { "스티커1": { j: "C", x: 1196, top: 158, h: 46, f: "BlackHanSans-Regular" }, "스티커2": { j: "C", x: 356, top: 365, h: 46, f: "BlackHanSans-Regular" },
+                 "스티커3": { j: "C", x: 1353, top: 669, h: 46, f: "BlackHanSans-Regular" } } },
+    "74": { e: { "이름": { j: "R", x: 1163, top: 568, h: 98, f: "NotoSansKR-Medium" }, "설명": { j: "R", x: 1150, top: 696, h: 47, f: "GangwonEduHyeonokTMedium" },
+                 "인용": { j: "C", x: 1020, top: 362, h: 46, f: "GangwonEduHyeonokTMedium" } } },
+    "75": { e: { "검은 말": { j: "C", x: 1303, top: 246, h: 58, f: "Pretendard-Medium" }, "흰 말": { j: "C", x: 830, top: 474, h: 56, f: "GangwonEduHyeonokTMedium" } } }
 };
