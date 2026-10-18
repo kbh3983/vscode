@@ -886,6 +886,233 @@
         master(1900, 1040); anim("출처", "fade", 0, 6);
     }];
 
+    // ───────── 크랩 공통 63~75 (2026-10-17 사용자: "크랩 … 비디오, 구성, 오디오 프레임 단위로 세세히 분석해줘" → 15개 제안 → "14,15 제외하고 만들자") ─────────
+    // 근거: work/정보성/분석/통합분석.md 10장, notes/r26-r29_크랩.md, 장면 work/정보성/템플릿/ref/63~75.png. 로고·엔드 그라데이션(채널 고유)·도넛 차트·로고 글리치는 뺌
+    var LIME = [190, 240, 40], CYEL = [250, 225, 40], CRED = [235, 45, 45], OLIVE = [160, 135, 45];
+    var STRIP2 = {};   // {} 와 [] 두 가지 강조를 쓰는 글자 (addSpacing 에서 [] 도 지움)
+    function tailFor(textName, label, colRef, where, pad) {   // 말풍선 꼬리 (글자 레이어 자식 — 글자 크기를 따라감)
+        var S = C.layers.addShape(); S.name = label;
+        C.layer(label).property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
+        var v = function () { return C.layer(label).property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group"); };
+        v().addProperty("ADBE Vector Shape - Group"); v().addProperty("ADBE Vector Graphic - Fill");
+        var R = 'var r=thisLayer.parent.sourceRectAtTime(time,false), L=r.left-' + pad[0] + ', Rr=r.left+r.width+' + pad[0] + ', T=r.top-' + pad[1] + ', B=r.top+r.height+' + pad[1] + ';';
+        var P = ' createPath([[Rr-44,B-1],[Rr-8,B+24],[Rr-14,B-1]],[],[],true)';
+        if (where == "bl") P = ' createPath([[L+14,B-1],[L+8,B+24],[L+44,B-1]],[],[],true)';
+        else if (where == "r") P = ' createPath([[Rr-1,B-48],[Rr+34,B-30],[Rr-1,B-22]],[],[],true)';
+        v().property(1).property("ADBE Vector Shape").expression = R + P;
+        v().property(2).property("ADBE Vector Fill Color").expression = colRef;
+        var L2 = C.layer(label); L2.parent = C.layer(textName);
+        tp(L2, "ADBE Anchor Point").setValue([0, 0]); tp(L2, "ADBE Position").setValue([0, 0]); tp(L2, "ADBE Scale").setValue([100, 100]); tp(L2, "ADBE Rotate Z").setValue(0);
+        tp(L2, "ADBE Opacity").expression = 'thisLayer.parent.transform.opacity';
+        L2.moveAfter(C.layer(textName)); BOXES.push(label);
+    }
+    function strokeBox(label, colRef, width) {   // boxFor 상자에 테두리 더하기
+        C.layer(label).property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Stroke");
+        var v = function () { return C.layer(label).property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group"); };
+        for (var i = 1; i <= v().numProperties; i++) if (v().property(i).matchName == "ADBE Vector Graphic - Stroke") {
+            v().property(i).property("ADBE Vector Stroke Color").expression = colRef;
+            v().property(i).property("ADBE Vector Stroke Width").expression = width;
+        }
+    }
+    function ellBubble(textName, label, fillRef, strokeRef, strokeW) {   // 타원 말풍선 + 왼쪽 아래 꼬리 (글자 크기를 따라감)
+        var S = C.layers.addShape(); S.name = label;
+        var root = function () { return C.layer(label).property("ADBE Root Vectors Group"); };
+        var g1 = root().addProperty("ADBE Vector Group"); g1.name = "몸통";
+        root().property("몸통").property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Ellipse");
+        root().property("몸통").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Stroke");
+        root().property("몸통").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+        var g2 = root().addProperty("ADBE Vector Group"); g2.name = "꼬리";
+        root().property("꼬리").property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+        root().property("꼬리").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Stroke");
+        root().property("꼬리").property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+        var R = 'var r=thisLayer.parent.sourceRectAtTime(time,false), cx=r.left+r.width/2, cy=r.top+r.height/2, W=r.width*1.35+60, H=r.height*1.6+50;';
+        var v = function (n) { return root().property(n).property("ADBE Vectors Group"); };
+        v("몸통").property(1).property("ADBE Vector Ellipse Size").expression = R + ' [W,H]';
+        v("몸통").property(1).property("ADBE Vector Ellipse Position").expression = R + ' [cx,cy]';
+        v("꼬리").property(1).property("ADBE Vector Shape").expression = R + ' createPath([[cx-W*0.30,cy+H*0.30],[cx-W*0.52,cy+H*0.58],[cx-W*0.12,cy+H*0.44]],[],[],true)';
+        var nm = ["몸통", "꼬리"];
+        for (var q = 0; q < 2; q++) {
+            v(nm[q]).property(2).property("ADBE Vector Stroke Color").expression = strokeRef;
+            v(nm[q]).property(2).property("ADBE Vector Stroke Width").expression = strokeW;
+            v(nm[q]).property(3).property("ADBE Vector Fill Color").expression = fillRef;
+        }
+        var L2 = C.layer(label); L2.parent = C.layer(textName);
+        tp(L2, "ADBE Anchor Point").setValue([0, 0]); tp(L2, "ADBE Position").setValue([0, 0]); tp(L2, "ADBE Scale").setValue([100, 100]); tp(L2, "ADBE Rotate Z").setValue(0);
+        tp(L2, "ADBE Opacity").expression = 'thisLayer.parent.transform.opacity';
+        L2.moveAfter(C.layer(textName)); BOXES.push(label);
+    }
+    function fixedBox(label, w, h, pos, col, op, radius) {   // 글자와 따로 있는 고정 크기 상자 (폭·높이 칸)
+        shape(label, { type: "rect", size: [w, h], pos: pos, col: col, op: op, radius: radius });
+        var W = cSlider(label + " 폭", w), H = cSlider(label + " 높이", h);
+        var vg = C.layer(label).property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group");
+        vg.property(1).property("ADBE Vector Rect Size").expression = '[' + W + ', ' + H + ']';
+    }
+    function followRight(name, to, gapName, gap) {   // name 이 to 글자 오른쪽 끝을 일정 간격으로 따라감
+        var g = cSlider(gapName, gap);
+        tp(C.layer(name), "ADBE Position").expression = 'var D=thisComp.layer("' + to + '"), r=D.sourceRectAtTime(time,false), s=D.transform.scale[0]/100;' +
+            ' [D.transform.position[0]+(r.left+r.width-D.transform.anchorPoint[0])*s+' + g + ', value[1]] + ' + ref(name + " 위치");
+    }
+    function interview(photo) {   // 64·65 인터뷰·전문가: 굵은 흰 이름 + 회색 소속 상자 + 흰 반투명 상자 대사 (+ 원형 얼굴 사진 자리)
+        var bx = photo ? 1039 : 959, bw = photo ? 1441 : 1594, nx = photo ? 323 : 166;
+        fixedBox("대사 상자", bw, 88, [bx, 950], WHT, 92, 16);
+        T("대사", { txt: photo ? "일요일 영업 논쟁도 독일이 경쟁력 회복을 위해" : "다 같이 같은 공간에서 같은 시간을 누릴 수 있다는 게", font: "Pretendard-Medium", size: 46, col: [30, 30, 30], pos: [bx, 950], track: -10 });
+        T("이름", { txt: photo ? "김주희" : "에밀리", font: "BlackHanSans-Regular", size: 64, just: "L", pos: [nx, 862], shadow: [55, 2, 8], track: 0 });
+        T("소속", { txt: photo ? "교수 / 국립부경대 정치외교학과" : "독일 10년 거주", font: "Pretendard-Medium", size: 30, just: "L", pos: [nx + 210, 865], track: -10 });
+        boxFor("소속", "소속 상자", { col: [70, 70, 70], op: 85, pad: [12, 6], radius: 12 });
+        followRight("소속", "이름", "소속 간격", 38);
+        if (photo) { shape("사진 자리", { type: "ellipse", size: [154, 154], pos: [207, 918], col: [130, 130, 130], scaleCtl: true }); shape("사진 테두리", { type: "ellipse", size: [154, 154], pos: [207, 918], stroke: [WHT, 6], scaleCtl: true }); }
+        master(960, 900); anim("이름", "fade", 0, 4); anim("소속", "fade", 0, 4); anim("대사", "fade", 0, 4);
+        anim("대사 상자", "fade", 0, 4); if (photo) { anim("사진 자리", "fade", 0, 4); anim("사진 테두리", "fade", 0, 4); }
+    }
+    B[63] = ["크랩_기본자막", 2, function () {   // 흰 굵은 고딕, 박스 없음, 얇은 그림자
+        T("자막", { txt: "무려 100년 동안 이어져 온 전통이자 원칙이라는데요", font: "Pretendard-SemiBold", size: 50, pos: [960, 966], shadow: [60, 2, 6], track: -10 });
+        master(960, 966); anim("자막", "fade", 0, 2);
+    }];
+    B[64] = ["크랩_인터뷰자막", 2, function () { interview(false); }];
+    B[65] = ["크랩_전문가자막", 2, function () { interview(true); }];
+    B[66] = ["크랩_오프닝큰제목", 3, function () {   // 형광연두 강조 2줄 + 국기색 거대 글자 (튀어나옴)
+        T("윗글", { txt: "{일요일}만 되면\r{조용}~해지는", font: "GmarketSansBold", size: 110, just: "L", pos: [158, 880], shadow: [55, 3, 10], accent: LIME, lead: 134, track: -20 });
+        T("거대 글자", { txt: "독일", font: "GmarketSansBold", size: 330, col: [25, 25, 25], pos: [1385, 848], stroke: [WHT, 12], shadow: [55, 4, 14], track: -20 });
+        var BAND = [[0.36, 0.67, [215, 25, 30]], [0.67, 1.3, [250, 200, 0]]];
+        for (var k = 0; k < 2; k++) {
+            var nm = "거대 글자 띠" + (k + 2);
+            var L = C.layers.addText("독일"); L.name = nm;
+            tdoc(C.layer(nm)).expression = 'var p=thisComp.layer("거대 글자").text.sourceText; p.style.setText(""+p).setApplyStroke(false)';
+            animColor(nm, cColor("거대 글자 색" + (k + 2), BAND[k][2]), null);
+            C.layer(nm).parent = C.layer("거대 글자");
+            tp(C.layer(nm), "ADBE Anchor Point").setValue([0, 0]); tp(C.layer(nm), "ADBE Position").setValue([0, 0]); tp(C.layer(nm), "ADBE Scale").setValue([100, 100]);
+            tp(C.layer(nm), "ADBE Opacity").expression = 'thisLayer.parent.transform.opacity';
+            C.layer(nm).property("ADBE Mask Parade").addProperty("ADBE Mask Atom");
+            C.layer(nm).property("ADBE Mask Parade").property(1).property("ADBE Mask Shape").expression =
+                'var r=sourceRectAtTime(time,false), t=r.top+r.height*' + BAND[k][0] + ', b=r.top+r.height*' + BAND[k][1] + '; createPath([[r.left-60,t],[r.left+r.width+60,t],[r.left+r.width+60,b],[r.left-60,b]],[],[],true)';
+            C.layer(nm).moveBefore(C.layer("거대 글자"));
+        }
+        master(960, 848); anim("윗글", "type", 0, 10); anim("거대 글자", "pop", 24);
+    }];
+    B[67] = ["크랩_오프닝질문", 3, function () {   // 흰 굵은 3줄, {}=노랑 []=빨강, 한 자씩 등장
+        T("질문", { txt: "몇십 년 전까지\r우리가 쓰는 {한글 글꼴}을\r[일본]에 의존했다?", font: "NotoSansKR-Bold", size: 140, just: "L", pos: [268, 540], shadow: [55, 3, 10], accent: CYEL, lead: 176, track: -10 });
+        STRIP2["질문"] = 1;
+        tdoc(C.layer("질문")).expression = 'var p=thisComp.layer("질문 원문").text.sourceText; p.style.setText((""+p).replace(/[\\{\\}\\[\\]]/g,""))';
+        var SEL = function (which) {
+            return 'var s=""+thisComp.layer("질문 원문").text.sourceText, m=[], a=false, b=false;\nfor (var i=0;i<s.length;i++){var c=s.charAt(i); if(c=="{"){a=true;continue;} if(c=="}"){a=false;continue;} if(c=="["){b=true;continue;} if(c=="]"){b=false;continue;} if(c=="\\r"||c=="\\n") continue; m.push(' + which + '?1:0);}\nvar v=(m[textIndex-1]||0)?100:0; [v,v,v]';
+        };
+        C.layer("질문").property("ADBE Text Properties").property("ADBE Text Animators").property("강조").property("ADBE Text Selectors").property(1).property("ADBE Text Expressible Amount").expression = SEL("a");
+        var A = C.layer("질문").property("ADBE Text Properties").property("ADBE Text Animators").addProperty("ADBE Text Animator"); A.name = "강조2";
+        var g = function () { return C.layer("질문").property("ADBE Text Properties").property("ADBE Text Animators").property("강조2"); };
+        g().property("ADBE Text Animator Properties").addProperty("ADBE Text Fill Color");
+        g().property("ADBE Text Animator Properties").property("ADBE Text Fill Color").expression = cColor("질문 강조2 색 ([] 안)", CRED);
+        g().property("ADBE Text Selectors").addProperty("ADBE Text Expressible Selector");
+        g().property("ADBE Text Selectors").property(1).property("ADBE Text Expressible Amount").expression = SEL("b");
+        master(268, 540); anim("질문", "type", 0, 24);
+    }];
+    B[68] = ["크랩_큰글자카드", 3, function () {   // 어둡게 + 형광연두 제목 + 흰 부제 + 인용(연두 강조) + 출처
+        bg("배경 어둡게", BLK, 45);
+        T("제목", { txt: "독일 기본법 140조", font: "GmarketSansBold", size: 130, col: LIME, pos: [959, 263], shadow: [50, 3, 10], track: -20 });
+        T("부제", { txt: "바이마르 헌법 139조 편입", font: "GmarketSansLight", size: 56, pos: [959, 354], shadow: SH, track: -20 });
+        T("인용", { txt: "{일요일}과 국가가 인정한 {공휴일}은\r{노동의 휴식}과 {정신적 고양의 날}로 법률에 의해 보호된다.", font: "GmarketSansBold", size: 56, pos: [960, 580], shadow: [50, 2, 8], accent: LIME, lead: 80, track: -20 });
+        T("출처", { txt: "출처: 독일 연방법무부 법령정보센터", font: "GmarketSansLight", size: 30, col: [205, 205, 205], pos: [960, 694], shadow: SH, track: 0 });
+        master(960, 470); anim("배경 어둡게", "fade", 0, 6); anim("제목", "up", 0, 8); anim("부제", "fade", 4, 6); anim("인용", "fade", 8, 8); anim("출처", "fade", 10, 6);
+    }];
+    B[69] = ["크랩_큰질문글자", 2, function () {   // 노랑 굵은 2줄, 기울어짐, 계단식
+        T("윗줄", { txt: "AGI?", font: "GmarketSansBold", size: 220, col: CYEL, pos: [487, 330], rot: -7, shadow: [60, 4, 14], track: -20 });
+        T("아랫줄", { txt: "범용인공지능?", font: "GmarketSansBold", size: 190, col: CYEL, pos: [1174, 589], rot: -7, shadow: [60, 4, 14], track: -20 });
+        master(960, 460); anim("윗줄", "pop", 0); anim("아랫줄", "pop", 6);
+    }];
+    B[70] = ["크랩_연도카드", 3, function () {   // 크림 종이 + 위 찢긴 띠 + 거대 반투명 연도 + 검은 사건 문구 + 메모 라벨
+        bg("종이 배경", [240, 236, 224], 100); grain("종이 배경", 6);
+        shape("위 띠", { type: "rect", size: [2100, 150], pos: [960, 45], col: [125, 110, 55] }); rough("위 띠", "위 띠", 14, 60); grain("위 띠", 6);
+        T("연도", { txt: "2012", font: "Pretendard-Bold", size: 760, col: OLIVE, pos: [963, 503], track: -20 });
+        grain("연도", 8);
+        var yo = cSlider("연도 투명도(%)", 90);
+        shape("가운데 띠", { type: "rect", size: [2100, 175], pos: [960, 516], col: [240, 236, 224] }); rough("가운데 띠", "가운데 띠", 8, 50); grain("가운데 띠", 6);   // 연도 가운데를 가리는 종이 띠 (레퍼런스: 글자 뒤 띠)
+        T("사건", { txt: "산돌 고딕 Neo→ 애플 OS 탑재", font: "NotoSansKR-Bold", size: 110, col: INK, pos: [957, 508], track: -20 });
+        T("메모", { txt: "산돌 고딕 Neo 1을 살짝 변형", font: "GangwonEduHyeonokTMedium", size: 46, col: WHT, pos: [1519, 382], track: 0 });
+        boxFor("메모", "메모 상자", { col: INK, pad: [18, 12], radius: 8 });
+        tailFor("메모", "메모 꼬리", ref("메모 상자 색"), "br", [18, 12]);
+        master(960, 500); anim("종이 배경", "fade", 0, 4); anim("위 띠", "fade", 0, 4); anim("연도", "fade", 0, 8); anim("가운데 띠", "fade", 0, 6); anim("사건", "up", 4, 8); anim("메모", "pop", 12);
+        tp(C.layer("연도"), "ADBE Opacity").expression = 'value*' + yo + '/100';
+    }];
+    B[71] = ["크랩_종이라벨", 2, function () {   // 노랑 종이 배경 + 위아래 찢긴 띠 + 검은 말풍선 라벨 (로고·사진은 아래 트랙)
+        bg("종이 배경", [214, 190, 108], 100); grain("종이 배경", 8);
+        shape("위 띠", { type: "rect", size: [2100, 170], pos: [960, 20], col: [118, 102, 48] }); rough("위 띠", "위 띠", 14, 60);
+        shape("아래 띠", { type: "rect", size: [2100, 170], pos: [960, 1070], col: [118, 102, 48] }); rough("아래 띠", "아래 띠", 14, 60);
+        T("라벨", { txt: "폰트 플랫폼", font: "GangwonEduHyeonokTMedium", size: 44, col: WHT, pos: [594, 437], track: 0 });
+        boxFor("라벨", "라벨 상자", { col: INK, pad: [14, 10], radius: 6 });
+        tailFor("라벨", "라벨 꼬리", ref("라벨 상자 색"), "br", [14, 10]);
+        master(960, 540); anim("종이 배경", "fade", 0, 4); anim("위 띠", "fade", 0, 4); anim("아래 띠", "fade", 0, 4); anim("라벨", "pop", 6);
+    }];
+    B[72] = ["크랩_헤드라인띠", 2, function () {   // 흰 띠 + 검은 굵은 글자 + {} 부분 노랑 형광펜 (글자 폭을 따라감)
+        T("헤드라인", { txt: "“이 정도까지 된다고?”…{GPT-6 아스트라}에 쏟아진 반응", font: "NotoSansKR-Bold", size: 66, col: INK, pos: [961, 505], accent: INK, track: -30 });
+        boxFor("헤드라인", "띠", { col: WHT, pad: [10, 24] });
+        var HA = ["헤드라인 앞", "헤드라인 끝"], HX = ['var i=s.indexOf("{"), t=(i<0 ? "" : s.substring(0,i));', 'var i=s.indexOf("}"), t=(i<0 ? "" : s.substring(0,i).replace("{",""));'];
+        for (var q = 0; q < 2; q++) {
+            var Hh = C.layers.addText("x"); Hh.name = HA[q];
+            tdoc(C.layer(HA[q])).expression = 'var p=thisComp.layer("헤드라인").text.sourceText, s=""+thisComp.layer("헤드라인 원문").text.sourceText; ' + HX[q] + ' p.style.setText(t)';
+            tp(C.layer(HA[q]), "ADBE Opacity").setValue(0); C.layer(HA[q]).guideLayer = true;
+        }
+        var hc = cColor("형광펜 색", [255, 235, 20]), hop = cSlider("형광펜 투명도(%)", 100);
+        var HL = C.layers.addShape(); HL.name = "형광펜";
+        var hg = HL.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
+        hg.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Rect"); hg.property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+        var PRE = 'var a=thisComp.layer("헤드라인 앞").sourceRectAtTime(time,false), b=thisComp.layer("헤드라인 끝").sourceRectAtTime(time,false), r=thisLayer.parent.sourceRectAtTime(time,false);' +
+            ' var x0=r.left+a.width+2, x1=r.left+b.width+4; var k=linear(time,0.2,0.2+8*thisComp.frameDuration,0,1); x1=x0+(x1-x0)*k;'   // 가운데 정렬이라 폭만 씀;
+        var hv = function () { return C.layer("형광펜").property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group"); };
+        hv().property(1).property("ADBE Vector Rect Size").expression = PRE + ' b.width<1 ? [0,0] : [Math.max(0,x1-x0), r.height+30]';
+        hv().property(1).property("ADBE Vector Rect Position").expression = PRE + ' [(x0+x1)/2, r.top+r.height/2]';
+        hv().property(2).property("ADBE Vector Fill Color").expression = hc;
+        C.layer("형광펜").parent = C.layer("헤드라인");
+        tp(C.layer("형광펜"), "ADBE Anchor Point").setValue([0, 0]); tp(C.layer("형광펜"), "ADBE Position").setValue([0, 0]); tp(C.layer("형광펜"), "ADBE Scale").setValue([100, 100]);
+        tp(C.layer("형광펜"), "ADBE Opacity").expression = hop + '*thisLayer.parent.transform.opacity/100';
+        C.layer("형광펜").moveAfter(C.layer("헤드라인")); BOXES.push("형광펜");
+        master(961, 505); anim("헤드라인", "fade", 0, 4);
+    }];
+    B[73] = ["크랩_반응스티커", 2, function () {   // 흰 띠 스티커 3개, 기울어져 흩어짐 (인터넷 반응)
+        var X = ["손가락은 세마디인데 네마디 길이가 되어버림ㅋㅋ", "고무고무야? ㄷㄷㄷ", "어지간한 냉장고보다 더 비싸네 ㅋㅋㅋ"], P = [[1196, 181], [356, 388], [1353, 692]], RT = [3, -4, 3];
+        for (var k = 1; k <= 3; k++) {
+            T("스티커" + k, { txt: X[k - 1], font: "BlackHanSans-Regular", size: 56, col: INK, pos: P[k - 1], rot: RT[k - 1], track: -20 });
+            boxFor("스티커" + k, "스티커" + k + " 띠", { col: WHT, pad: [14, 10] });
+            strokeBox("스티커" + k + " 띠", ref("띠 테두리 색"), ref("띠 테두리 두께"));
+            anim("스티커" + k, "pop", (k - 1) * 5);
+        }
+        cColor("띠 테두리 색", [40, 40, 40]); cSlider("띠 테두리 두께", 3);
+        master(960, 440);
+    }];
+    B[74] = ["크랩_인물소개", 2, function () {   // 큰 흰 이름 + 손글씨 설명(오른쪽 정렬) + 검은 말풍선 인용
+        T("이름", { txt: "故 석금호", font: "NotoSansKR-Medium", size: 110, just: "R", pos: [1163, 616], shadow: [55, 3, 10], track: -20 });
+        T("설명", { txt: "당시 미국 리더스 다이제스트 디자이너", font: "GangwonEduHyeonokTMedium", size: 56, just: "R", pos: [1150, 719], shadow: [60, 2, 6], track: 0 });
+        T("인용", { txt: "한글은 한국 기계로 해야지...", font: "GangwonEduHyeonokTMedium", size: 58, col: WHT, pos: [1020, 385], track: 0 });
+        boxFor("인용", "인용 상자", { col: INK, op: 92, pad: [18, 14], radius: 10 });
+        tailFor("인용", "인용 꼬리", ref("인용 상자 색"), "bl", [18, 14]);
+        master(1000, 540); anim("인용", "pop", 0); anim("이름", "left", 4, 8); anim("설명", "fade", 8, 6);
+    }];
+    B[75] = ["크랩_말풍선2종", 1, function () {   // 흰 손글씨 타원 말풍선 + 검은 둥근 상자 말풍선 (보이기 고르기)
+        var dd = cDrop("보이기", ["둘 다", "흰 말풍선만", "검은 말풍선만"], 1);
+        T("검은 말", { txt: "기획안 PPT 만들어줘", font: "Pretendard-Medium", size: 60, col: WHT, pos: [1303, 275], track: -10 });
+        boxFor("검은 말", "검은 상자", { col: [18, 18, 18], pad: [70, 58], radius: 22 });
+        strokeBox("검은 상자", cColor("검은 상자 테두리 색", [235, 235, 235]), cSlider("검은 상자 테두리 두께", 6));
+        tailFor("검은 말", "검은 꼬리", ref("검은 상자 색"), "r", [70, 58]);
+        T("흰 말", { txt: "네엡!", font: "GangwonEduHyeonokTMedium", size: 64, col: INK, pos: [830, 502], track: 0 });
+        ellBubble("흰 말", "흰 풍선", cColor("흰 풍선 색", [250, 250, 248]), cColor("흰 풍선 테두리 색", INK), cSlider("흰 풍선 테두리 두께", 4));
+        rough("흰 풍선", "흰 풍선", 2, 30);
+        master(1100, 390); anim("검은 말", "pop", 0); anim("흰 말", "pop", 8);
+        tp(C.layer("검은 말"), "ADBE Opacity").expression = 'value*(Math.round(' + dd + ')==2 ? 0 : 1)';
+        tp(C.layer("흰 말"), "ADBE Opacity").expression = 'value*(Math.round(' + dd + ')==3 ? 0 : 1)';
+    }];
+
+    // ───────── 브이로그 04·06 새 표준판 (2026-10-18 사용자: 12개 중 "2개만 남겼어" → 폰트는 "그냥 이걸로 하자. 새 표준에 맞춰서 템플릿 디벨롭해줘.") ─────────
+    // 원래 판: scripts/vlog/ae/make_vlog5.jsx (15초, 자간·행간·그림자 칸 없음). 모양·폰트(Pretendard ExtraBold)는 그대로, 10초 + 요소별 칸 표준으로
+    B[76] = ["브이로그04_빨간강조", 1, function () {   // 빨강 + 어두운 테두리, 크게 튀어나옴 (140→92→103→100, 8프레임)
+        T("강조", { txt: "필요 없으세요", font: "Pretendard-ExtraBold", size: 110, col: [235, 30, 35], pos: [960, 880], stroke: [[25, 0, 0], 6], shadow: [55, 4, 10], track: -10 });
+        master(960, 880);
+        var L = C.layer("강조"), op = tp(L, "ADBE Opacity"); op.setValueAtTime(0, 0); op.setValueAtTime(2 * FR, 100);
+        var s = tp(C.layer("강조"), "ADBE Scale"), v = s.value, K = [[0, 140], [3, 92], [6, 103], [8, 100]];
+        for (var i = 0; i < K.length; i++) s.setValueAtTime(K[i][0] * FR, [v[0] * K[i][1] / 100, v[1] * K[i][1] / 100]);
+    }];
+    B[77] = ["브이로그06_큰해설", 1, function () {   // 흰 굵은 고딕 + 검은 테두리 + 그림자, 아래에서 살짝 올라오며 나타남
+        T("해설", { txt: "외로운 이쓴 혼자 출발...", font: "Pretendard-ExtraBold", size: 92, col: WHT, pos: [960, 905], stroke: [[15, 15, 15], 6], shadow: [50, 4, 10], track: -10 });
+        master(960, 905); anim("해설", "up", 0, 6);
+    }];
+
     // ───────── 레퍼런스 맞춤 (fit_jeongbo32.jsxinc 의 FIT 표) ─────────
     $.evalFile(new File("C:\\DADA\\9.AI\\vscode\\편집자동화\\scripts\\jeongbo\\ae\\fit_jeongbo32.jsxinc"));
     var TF = 5;   // 다 나타난 뒤 시각에서 잼
@@ -971,7 +1198,8 @@
             var T = cSlider(label + " 자간", td.tracking), Lp = cSlider(label + " 행간(%)", pct);
             var tail = '.setTracking(' + T + ').setAutoLeading(false).setLeading(';
             var P = tdoc(C.layer(disp));
-            if (disp != src) P.expression = 'var p=thisComp.layer("' + src + '").text.sourceText; p.style.setText((""+p).replace(/[\\{\\}]/g,""))' + tail + 'p.style.fontSize*' + Lp + '/100)';
+            var RX = '[\\{\\}]'; if (typeof STRIP2 != "undefined" && STRIP2[disp]) RX = '[\\{\\}\\[\\]]';   // 67: {} 와 [] 두 가지 강조
+            if (disp != src) P.expression = 'var p=thisComp.layer("' + src + '").text.sourceText; p.style.setText((""+p).replace(/' + RX + '/g,""))' + tail + 'p.style.fontSize*' + Lp + '/100)';
             else P.expression = 'var s=thisProperty.style; s' + tail + 's.fontSize*' + Lp + '/100)';
         }
     }
@@ -1018,9 +1246,9 @@
         w("프로젝트 " + aep.fsName);
         var ids = [], of = new File(OUT + "\\only.txt");
         if (of.exists) { of.open("r"); var s = of.read(); of.close(); var m = s.match(/(\d+)\s*-\s*(\d+)/); for (var i = +m[1]; i <= +m[2]; i++) ids.push(i); }
-        else for (var i = 1; i <= 62; i++) if (!new File(OUT + "\\export_" + (i < 10 ? "0" : "") + i + "\\done.txt").exists) ids.push(i);
-        // 사용자가 지운 템플릿은 만들지 않음 (2026-10-17 "안쓸건 삭제했어. 데이터도 지워도 돼." · 37·39·44는 "검토했어 필요없는 건 삭제했어. 반영해줘." · 57·58·59·62는 "지운 것 제외하고 반영해줘.")
-        var DROP = { 5: 1, 6: 1, 8: 1, 9: 1, 16: 1, 22: 1, 23: 1, 25: 1, 27: 1, 28: 1, 29: 1, 30: 1, 32: 1, 37: 1, 39: 1, 44: 1, 57: 1, 58: 1, 59: 1, 62: 1 }, keep = [];
+        else for (var i = 1; i <= 77; i++) if (!new File(OUT + "\\export_" + (i < 10 ? "0" : "") + i + "\\done.txt").exists) ids.push(i);
+        // 사용자가 지운 템플릿은 만들지 않음 (2026-10-17 "안쓸건 삭제했어. 데이터도 지워도 돼." · 37·39·44는 "검토했어 필요없는 건 삭제했어. 반영해줘." · 57·58·59·62는 "지운 것 제외하고 반영해줘." · 63·66·68~71·74·75는 "필요없는 건 지웠어. 범용으로 쓸 수 있는 것 위주로만 남긴거야.")
+        var DROP = { 5: 1, 6: 1, 8: 1, 9: 1, 16: 1, 22: 1, 23: 1, 25: 1, 27: 1, 28: 1, 29: 1, 30: 1, 32: 1, 37: 1, 39: 1, 44: 1, 57: 1, 58: 1, 59: 1, 62: 1, 63: 1, 66: 1, 68: 1, 69: 1, 70: 1, 71: 1, 74: 1, 75: 1 }, keep = [];
         for (var i = 0; i < ids.length; i++) if (!DROP[ids[i]]) keep.push(ids[i]);
         ids = keep;
         w("대상 " + ids.join(","));

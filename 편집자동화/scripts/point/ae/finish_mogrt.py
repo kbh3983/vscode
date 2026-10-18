@@ -32,6 +32,13 @@ with zipfile.ZipFile(src) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED
         if it.filename == "definition.json":
             d = json.loads(b)
             d["capsuleName"] = display
+            # 2026-10-17 사용자가 정한 쓰기 편한 이름이 있으면 그걸로 (rename_names.json, "용도 · 특징 [스타일]") — 다시 설치해도 이름 유지
+            RN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rename_names.json")
+            if os.path.exists(RN):
+                rn = json.load(open(RN, encoding="utf-8"))
+                if name in rn: d["capsuleName"] = rn[name]
+            # 한국어 프리미어는 capsuleNameLocalized(ko_KR)를 보여 줌 — AE 내보내기는 "제목 없음"으로 넣음 → 같은 이름으로 (2026-10-17 사용자: "최근에 추가된 것들 이름이 여전히 제목없음이야")
+            d["capsuleNameLocalized"] = {"strDB": [{"localeString": "ko_KR", "str": d["capsuleName"]}, {"localeString": "en_US", "str": d["capsuleName"]}]}
             for c in d.get("clientControls", []):
                 fe = c.get("fonteditinfo")
                 if fe:
