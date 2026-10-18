@@ -141,5 +141,29 @@ var FIT = {
                  "스티커3": { j: "C", x: 1353, top: 669, h: 46, f: "BlackHanSans-Regular" } } },
     "74": { e: { "이름": { j: "R", x: 1163, top: 568, h: 98, f: "NotoSansKR-Medium" }, "설명": { j: "R", x: 1150, top: 696, h: 47, f: "GangwonEduHyeonokTMedium" },
                  "인용": { j: "C", x: 1020, top: 362, h: 46, f: "GangwonEduHyeonokTMedium" } } },
-    "75": { e: { "검은 말": { j: "C", x: 1303, top: 246, h: 58, f: "Pretendard-Medium" }, "흰 말": { j: "C", x: 830, top: 474, h: 56, f: "GangwonEduHyeonokTMedium" } } }
+    "75": { e: { "검은 말": { j: "C", x: 1303, top: 246, h: 58, f: "Pretendard-Medium" }, "흰 말": { j: "C", x: 830, top: 474, h: 56, f: "GangwonEduHyeonokTMedium" } } },
+    // 2026-10-18 지식인초대석 EP.18 (ref/ep18 a f134, b f050, c f100 실측)
+    "78": { e: { "여는 따옴표": { j: "C", x: 389, top: 253, h: 93, f: "GangwonEduHyeonokTMedium", after: { size: 250 } },   // after = 2026-10-18 사용자 수정값
+                 "인용": { j: "C", x: 401, top: 389, h: 89, p: 110, f: "GangwonEduHyeonokTMedium", after: { size: 130 } },
+                 "닫는 따옴표": { j: "C", x: 371, top: 761, h: 86, f: "GangwonEduHyeonokTMedium", after: { size: 250 } } } },
+    "79": { e: { "앞마디": { j: "L", x: 201, top: 288, h: 95, f: "GangwonEduHyeonokTMedium" },
+                 "뒷마디": { j: "L", x: 1040, top: 300, h: 95, f: "GangwonEduHyeonokTMedium" } } },
+    "80": { e: { "여는 따옴표": { j: "C", x: 967, top: 284, h: 66, f: "NotoSerifKR-Black", after: { size: 180, font: "MangoDdobak-B" } },   // after = 2026-10-18 사용자 수정값
+                 "인용": { j: "C", x: 960, top: 404, h: 70, p: 103, f: "Pretendard-Regular", after: { size: 90, italic: true } },
+                 "닫는 따옴표": { j: "C", x: 967, top: 635, h: 66, f: "NotoSerifKR-Black", after: { size: 180, font: "MangoDdobak-B" } } } },
+    // 2026-10-18 장영란 큰 자막 (r14 원본 1920×1080 실측: 첫 줄 잉크 위끝·높이, 가운데 정렬 x 960)
+    "81": { e: { "자막": { j: "C", x: 960, top: 866, h: 130, w: 1300 } } },
+    "82": { e: { "자막": { j: "C", x: 962, top: 852, h: 158, w: 1395 } } },
+    "83": { e: { "자막": { j: "C", x: 960, top: 866, h: 130, w: 1575 } } },
+    "84": { e: { "자막": { j: "C", x: 956, top: 834, h: 163, w: 1150 } } },
+    "85": { e: { "자막": { j: "C", x: 960, top: 827, h: 174, w: 1691 } } },
+    "86": { e: { "자막": { j: "C", x: 952, top: 830, h: 165, w: 1275 } } },
+    "87": { e: { "자막": { j: "C", x: 960, top: 872, h: 128, w: 1260 } } },
+    "88": { e: { "자막": { j: "C", x: 682, top: 82, h: 108 } } },
+    "89": { e: { "왼쪽 말": { j: "C", x: 1076, top: 465, h: 170 }, "오른쪽 말": { j: "C", x: 1076, top: 465, h: 170 } } },   // x = 두 말의 가운데 (맞춤은 띄움 간격 식 빼고 잼 → 간격 488이 양옆으로 벌림 = 832·1320)
+    "90": { e: { "자막": { j: "C", x: 962, top: 852, h: 158, w: 1255 } } },
+    "91": { e: { "자막": { j: "C", x: 948, top: 800, h: 190, w: 690 } } },
+    "92": { e: { "자막": { j: "C", x: 930, top: 896, h: 92, w: 1290 } } },
+    // 93: 테스트영상_교양_v3 94.09초 그래픽 실측 (다 나타난 뒤 3초 시점)
+    "93": { e: { "문장": { j: "C", x: 965, top: 487, h: 108, w: 1478 }, "여는 따옴표": { j: "C", x: 971, top: 273, h: 60, f: "Paperlogy-9Black" }, "닫는 따옴표": { j: "C", x: 976, top: 728, h: 60, f: "Paperlogy-9Black" } } }
 };

@@ -15,6 +15,9 @@ def fix_ranges(d):
         if "자간" in nm: c["min"], c["max"] = -500, 1500
         elif "행간" in nm: c["min"], c["max"] = 30, 400
         elif "(초)" in nm: c["min"], c["max"] = 0, 10
+        elif "띄움 간격" in nm: c["min"], c["max"] = 0, 1800   # 2026-10-18 장영란 띄워 쓰기 (기본 488)
+        elif "간격" in nm: c["min"], c["max"] = -300, 300   # 2026-10-18 개념카드 라벨·뜻 간격 (기본 0, − = 가깝게)
+        elif "여백" in nm: c["min"], c["max"] = 0, 200
         elif "크기(%)" in nm or "늘림" in nm: c["min"], c["max"] = 0, 500
         elif "(%)" in nm: pass
         else:
