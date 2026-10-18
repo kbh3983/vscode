@@ -89,6 +89,39 @@
         A.moveToBeginning();
         return A;
     }
+    // 2026-10-18 세부 조절 칸 (사용자: "28초 그래픽 내가 디테일 수정할 수 있게 … 배경색 크기. 간격, 그림자 효과 등등" → "다른 것돌도 수정 가능하도록 변경해줘.")
+    //   요소별 크기·위치·자간·행간, 상자 여백·둥글기, 요소 사이 간격, 그림자(요소별 켜기 + 공통 색·진하기·거리·부드러움·방향). 기본값 = 예전 모양
+    function hasCtl(comp, n) { var e = ctl(comp).property("ADBE Effect Parade"); for (var i = 1; i <= e.numProperties; i++) if (e.property(i).name == n) return true; return false; }
+    function cref(n) { return 'thisComp.layer("템플릿 조절").effect("' + n + '")(1)'; }
+    function S_(comp, n, v) { return hasCtl(comp, n) ? cref(n) : addCtl(comp, "ADBE Slider Control", n, v); }
+    function P_(comp, n) { return hasCtl(comp, n) ? cref(n) : addCtl(comp, "ADBE Point Control", n, [0, 0]); }
+    function K_(comp, n, v) { return hasCtl(comp, n) ? cref(n) : addCtl(comp, "ADBE Checkbox Control", n, v); }
+    function A_(comp, n, v) { return hasCtl(comp, n) ? cref(n) : addCtl(comp, "ADBE Angle Control", n, v); }
+    function Cc(comp, n, v) { return hasCtl(comp, n) ? cref(n) : addCtl(comp, "ADBE Color Control", n, v); }
+    function scaleCtl(comp, L, label) { tp(L, "ADBE Scale").expression = 'var k=' + S_(comp, label + " 크기(%)", 100) + '/100; [value[0]*k, value[1]*k]'; }
+    function spacing(comp, L, label, src) {
+        var td = tdoc(src ? comp.layer(src) : L).value, pct = td.autoLeading ? 120 : Math.round(td.leading / td.fontSize * 1000) / 10;
+        var T = S_(comp, label + " 자간", td.tracking), Lp = S_(comp, label + " 행간(%)", pct);
+        var tail = '.setTracking(' + T + ').setAutoLeading(false).setLeading(';
+        if (src) tdoc(L).expression = 'var p=thisComp.layer("' + src + '").text.sourceText; p.style.setText((""+p).replace(/[\\{\\}]/g,""))' + tail + 'p.style.fontSize*' + Lp + '/100)';
+        else tdoc(L).expression = 'var s=thisProperty.style; s' + tail + 's.fontSize*' + Lp + '/100)';
+    }
+    // list = [[레이어 이름, 칸 이름, 이미 있는 그림자 [진하기, 거리, 부드러움] 또는 null], ...], def = 공통 칸 기본 [진하기, 거리, 부드러움]
+    function shadowCtl(comp, list, def) {
+        var col = Cc(comp, "그림자 색", BLK), op = S_(comp, "그림자 진하기(%)", def[0]), dist = S_(comp, "그림자 거리", def[1]), soft = S_(comp, "그림자 부드러움", def[2]), dir = A_(comp, "그림자 방향", 135);
+        function k(v, v0) { return v0 ? '*' + (v / v0) : ''; }
+        for (var i = 0; i < list.length; i++) {
+            var nm = list[i][0], ex = list[i][2], fxp = comp.layer(nm).property("ADBE Effect Parade");
+            if (!fxp.property("ADBE Drop Shadow")) fxp.addProperty("ADBE Drop Shadow");
+            var on = K_(comp, list[i][1] + " 그림자", ex ? 1 : 0), v = ex || def;
+            var D = comp.layer(nm).property("ADBE Effect Parade").property("ADBE Drop Shadow");
+            D.property("ADBE Drop Shadow-0001").expression = col;
+            D.property("ADBE Drop Shadow-0002").expression = op + k(v[0], def[0]) + '*2.55*' + on;
+            D.property("ADBE Drop Shadow-0003").expression = dir;
+            D.property("ADBE Drop Shadow-0004").expression = dist + k(v[1], def[1]);
+            D.property("ADBE Drop Shadow-0005").expression = soft + k(v[2], def[2]);
+        }
+    }
     function reg(comp, name, label) { tdoc(comp.layer(name)).addToMotionGraphicsTemplateAs(comp, label); }
     function regCtl(comp) { var N = ctl(comp); for (var i = 0; i < ORDER.length; i++) N.property("ADBE Effect Parade").property(ORDER[i]).property(1).addToMotionGraphicsTemplateAs(comp, ORDER[i]); }
     function findComp(n) { for (var i = 1; i <= app.project.numItems; i++) if (app.project.item(i) instanceof CompItem && app.project.item(i).name == n) return app.project.item(i); return null; }
@@ -118,18 +151,26 @@
             ORDER = [];
             var c = app.project.items.addComp("소제목띠", 1920, 1080, 1, 120, FPS);
             var acc = addCtl(c, "ADBE Color Control", "강조 색 (선·태그 바탕)", PEACH);
-            var line = rect(c, "세로선", PEACH, 0); rectProp(line, "ADBE Vector Rect Size").setValue([4, 105]); tp(line, "ADBE Position").setValue([26, 76.5]);
+            var line = rect(c, "세로선", PEACH, 0); tp(line, "ADBE Position").setValue([26, 76.5]);
+            rectProp(line, "ADBE Vector Rect Size").expression = '[' + S_(c, "선 두께", 4) + ', ' + S_(c, "선 길이", 105) + ']';
             fillOf(line).expression = acc;
+            tp(c.layer("세로선"), "ADBE Opacity").expression = S_(c, "선 투명도(%)", 100);
             var T = addText(c, "소제목", "영화 '오디세이' 결말에 숨겨진 진짜 의미", "Pretendard-SemiBold", 44, WHT, "L"); tp(T, "ADBE Position").setValue([50, 56]);
             shadow(T, 2, 10, 45);
             textColor(c, c.layer("소제목"), "소제목 색", WHT);
+            tp(c.layer("소제목"), "ADBE Position").expression = 'value+' + P_(c, "소제목 위치"); scaleCtl(c, c.layer("소제목"), "소제목"); spacing(c, c.layer("소제목"), "소제목");
             var G = addText(c, "이름 태그", "○○○ 교수", "Pretendard-Bold", 33, BLK, "L"); tp(G, "ADBE Position").setValue([58, 112]);
             textColor(c, c.layer("이름 태그"), "이름 태그 색", BLK);
+            tp(c.layer("이름 태그"), "ADBE Position").expression = 'value+' + P_(c, "이름 태그 위치") + '+[0,' + S_(c, "이름 태그 간격", 0) + ']'; scaleCtl(c, c.layer("이름 태그"), "이름 태그"); spacing(c, c.layer("이름 태그"), "이름 태그");
             var bg = rect(c, "태그 바탕", PEACH, 6);
             fillOf(bg).expression = acc;
-            rectProp(bg, "ADBE Vector Rect Size").expression = 'var L=thisComp.layer("이름 태그"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [r.width*s+16, 45*s]';
-            tp(bg, "ADBE Position").expression = 'var L=thisComp.layer("이름 태그"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.toComp([r.left,0])[0]-8+(r.width*s+16)/2, L.toComp([0,r.top+r.height/2])[1]]';
-            bg.moveAfter(c.layer("이름 태그"));
+            var pw = S_(c, "태그 가로 여백", 8), th = S_(c, "태그 높이", 45);
+            rectProp(bg, "ADBE Vector Rect Size").expression = 'var L=thisComp.layer("이름 태그"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [r.width*s+2*' + pw + ', ' + th + '*s]';
+            tp(bg, "ADBE Position").expression = 'var L=thisComp.layer("이름 태그"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.toComp([r.left,0])[0]-' + pw + '+(r.width*s+2*' + pw + ')/2, L.toComp([0,r.top+r.height/2])[1]]';
+            rectProp(c.layer("태그 바탕"), "ADBE Vector Rect Roundness").expression = S_(c, "태그 둥글기", 6);
+            tp(c.layer("태그 바탕"), "ADBE Opacity").expression = S_(c, "태그 바탕 투명도(%)", 100);
+            bg = c.layer("태그 바탕"); bg.moveAfter(c.layer("이름 태그"));
+            shadowCtl(c, [["소제목", "소제목", [45, 2, 10]], ["이름 태그", "이름 태그", null]], [45, 2, 10]);
             master(c, 26, 76);
             entrance(c, 8, 0, 0);
             reg(c, "소제목", "소제목"); reg(c, "이름 태그", "이름 태그"); regCtl(c);
@@ -141,25 +182,67 @@
             var c = app.project.items.addComp("이름자막", 1920, 1080, 1, 15, FPS);
             var N = addText(c, "이름", "○○○", "Pretendard-ExtraBold", 84, BLK, "L"); tp(N, "ADBE Position").setValue([156, 572]);
             textColor(c, c.layer("이름"), "이름 색", BLK);
-            var H = addText(c, "호칭", "교수", "Pretendard-Medium", 40, BLK, "L");
-            tp(H, "ADBE Position").expression = 'var L=thisComp.layer("이름"), r=L.sourceRectAtTime(time,false); [r.left+r.width+16+L.transform.position[0], L.transform.position[1]]';
+            // 2026-10-18 EP.10(김진명 작가 54초) 실측에 맞춤 (사용자: "이름 뒤 배경 이미지가 레퍼런스랑 다른 것 같아. 맞춰서 수정해줘.")
+            //   종이 = 흰 찢어진 띠, 이름 글자 높이만큼(위로 솟지 않음), 호칭 뒤로 길게 / 호칭 Regular 40 / 설명 검정에 가까운 색, 그림자 없음
+            tp(c.layer("이름"), "ADBE Position").expression = 'value+' + P_(c, "이름 위치"); scaleCtl(c, c.layer("이름"), "이름"); spacing(c, c.layer("이름"), "이름");
+            var H = addText(c, "호칭", "교수", "Pretendard-Regular", 40, BLK, "L");
+            tp(H, "ADBE Position").expression = 'var L=thisComp.layer("이름"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.transform.position[0]+(r.left+r.width)*s+' + S_(c, "호칭 간격", 30) + ', L.transform.position[1]]+' + P_(c, "호칭 위치");
             textColor(c, c.layer("호칭"), "호칭 색", BLK);
-            var paper = rect(c, "종이", WHT, 2);
+            scaleCtl(c, c.layer("호칭"), "호칭"); spacing(c, c.layer("호칭"), "호칭");
+            var paper = rect(c, "종이", WHT, 0);
             fillOf(paper).expression = addCtl(c, "ADBE Color Control", "종이 색", WHT);
-            rectProp(paper, "ADBE Vector Rect Size").expression = 'var a=thisComp.layer("이름"), b=thisComp.layer("호칭"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false); var l=a.transform.position[0]+ra.left, r=b.transform.position[0]+rb.left+rb.width; [r-l+48, Math.max(ra.height,rb.height)+46]';
-            tp(paper, "ADBE Position").expression = 'var a=thisComp.layer("이름"), b=thisComp.layer("호칭"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false); var l=a.transform.position[0]+ra.left, r=b.transform.position[0]+rb.left+rb.width; [(l+r)/2, a.transform.position[1]+ra.top+ra.height/2-16]   // v1 기본값과 같게 (글자보다 위로 16px)';
-            tp(paper, "ADBE Rotate Z").setValue(-0.6);
-            paper.property("ADBE Effect Parade").addProperty("ADBE Roughen Edges").property(4).setValue(3);
-            paper.moveToEnd();
-            var D1 = addText(c, "설명1", "○○대학교 ○○학과 교수", "Pretendard-Regular", 38, WHT, "L"); tp(D1, "ADBE Position").setValue([149, 636]);
-            var D2 = addText(c, "설명2", "저서 <○○○○>", "Pretendard-Regular", 38, WHT, "L"); tp(D2, "ADBE Position").setValue([149, 688]);
-            shadow(D1, 2, 10, 55); shadow(D2, 2, 10, 55);
-            textColor(c, c.layer("설명1"), "설명 색", WHT);
+            // 종이 = 이름 왼쪽 끝 − 왼쪽 여백 ~ 호칭 오른쪽 끝 + 오른쪽 여백, 높이 = 이름 글자 높이 × 높이(%) (기본 15·55·86% = EP.10 맞춤)
+            var PL = S_(c, "종이 왼쪽 여백", 15), PR = S_(c, "종이 오른쪽 여백", 55), PH = S_(c, "종이 높이(%)", 86), PY = S_(c, "종이 위아래 이동", 2);
+            var LR = 'var a=thisComp.layer("이름"), b=thisComp.layer("호칭"), ra=a.sourceRectAtTime(time,false), rb=b.sourceRectAtTime(time,false), sa=a.transform.scale[0]/100, sb=b.transform.scale[0]/100; var l=a.transform.position[0]+ra.left*sa-' + PL + ', r=b.transform.position[0]+(rb.left+rb.width)*sb+' + PR + '; ';
+            rectProp(paper, "ADBE Vector Rect Size").expression = LR + '[r-l, ra.height*sa*' + PH + '/100]';
+            tp(paper, "ADBE Position").expression = LR + '[(l+r)/2, a.transform.position[1]+(ra.top+ra.height/2)*sa+' + PY + ']';
+            tp(paper, "ADBE Rotate Z").expression = A_(c, "종이 기울기", -0.4);
+            tp(c.layer("종이"), "ADBE Opacity").expression = S_(c, "종이 투명도(%)", 100);
+            var RE = c.layer("종이").property("ADBE Effect Parade").addProperty("ADBE Roughen Edges"); RE.property("ADBE Roughen Edges-0005").setValue(22);
+            c.layer("종이").property("ADBE Effect Parade").property("ADBE Roughen Edges").property("ADBE Roughen Edges-0002").expression = S_(c, "종이 찢김 정도", 9);   // 찢어진 가장자리 (경계 9, 비율 22)
+            paper = c.layer("종이"); paper.moveToEnd();
+            var D1 = addText(c, "설명1", "○○대학교 ○○학과 교수", "Pretendard-Regular", 40, INK, "L"); tp(D1, "ADBE Position").setValue([150, 650]);
+            var D2 = addText(c, "설명2", "저서 <○○○○>", "Pretendard-Regular", 40, INK, "L"); tp(D2, "ADBE Position").setValue([150, 704]);
+            textColor(c, c.layer("설명1"), "설명 색", INK);
             var A2 = c.layer("설명2").property("ADBE Text Properties").property("ADBE Text Animators").addProperty("ADBE Text Animator"); A2.name = "색 바꾸기";
             var A2b = c.layer("설명2").property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기"); A2b.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
             c.layer("설명2").property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기").property("ADBE Text Animator Properties").addProperty("ADBE Text Fill Color").expression = 'thisComp.layer("템플릿 조절").effect("설명 색")(1)';
+            // 설명 두 줄은 같은 칸: 크기·위치·자간·행간 + 이름↔설명 간격 · 설명 1줄↔2줄 간격
+            var dsc = S_(c, "설명 크기(%)", 100), dpp = P_(c, "설명 위치"), dg = S_(c, "설명 간격", 0), dg2 = S_(c, "설명 2줄 간격", 0);
+            tp(c.layer("설명1"), "ADBE Position").expression = 'value+' + dpp + '+[0,' + dg + ']';
+            // 설명 2줄 = 설명 1줄의 마지막 줄 아래 (1줄 칸에 여러 줄을 써도 겹치지 않음). 46 = 40px 한 줄일 때 줄 아래끝→다음 줄 기준선 (예전 650→704와 같음)
+            tp(c.layer("설명2"), "ADBE Position").expression = 'var L=thisComp.layer("설명1"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.transform.position[0], L.transform.position[1]+(r.top+r.height+46)*s+' + dg2 + ']';
+            for (var q = 1; q <= 2; q++) { tp(c.layer("설명" + q), "ADBE Scale").expression = 'var k=' + dsc + '/100; [value[0]*k, value[1]*k]'; spacing(c, c.layer("설명" + q), "설명"); }
+            shadowCtl(c, [["이름", "이름", null], ["호칭", "호칭", null], ["설명1", "설명", null], ["설명2", "설명", null]], [55, 2, 10]);
             master(c, 149, 572);
-            entrance(c, 12, 0, 40);
+            var EN = entrance(c, 12, 0, 40);
+            // 2026-10-18 "등장 방식" 2 = EP.10 (김진명 작가 53초 실측, 29.97fps): 이름 글자 하나씩 페이드(0.07초부터 간격 0.13초·각 0.17초)
+            //   / 종이 왼쪽→오른쪽 펼침(0.60~0.73초) / 호칭 한 글자씩(0.63초부터 간격 0.09초) / 설명 통째로 페이드(0.43~0.93초). 1 = 예전(밀려 올라옴)
+            //   사용자: "1초 v3에 있는 클립에 (중첩 시퀀스야) v4와 같은 요소별 디테일 모션 작업해줘. 책 목업만 배고."
+            ctl(c).property("ADBE Effect Parade").addProperty("ADBE Dropdown Control"); var di = ctl(c).property("ADBE Effect Parade").numProperties;
+            ctl(c).property("ADBE Effect Parade").property(di).property(1).setPropertyParameters(["밀려 올라옴", "글자씩 (EP.10)"]);
+            ctl(c).property("ADBE Effect Parade").property(di).name = "등장 방식"; ctl(c).property("ADBE Effect Parade").property(di).property(1).setValue(1); ORDER.push("등장 방식");
+            var MODE = cref("등장 방식"), GAP = S_(c, "글자 간격(초)", 0.13);
+            EN = c.layer("등장"); var G2 = EN.property("ADBE Effect Parade").property("ADBE Geometry2");
+            G2.property("ADBE Geometry2-0008").expression = 'Math.round(' + MODE + ')==2 ? 100 : value';
+            G2 = c.layer("등장").property("ADBE Effect Parade").property("ADBE Geometry2");
+            G2.property("ADBE Geometry2-0002").expression = 'Math.round(' + MODE + ')==2 ? [960,540] : value';
+            function perChar(L, start, gap, dur) {
+                var A = c.layer(L).property("ADBE Text Properties").property("ADBE Text Animators").addProperty("ADBE Text Animator"); A.name = "글자씩";
+                var g = function () { return c.layer(L).property("ADBE Text Properties").property("ADBE Text Animators").property("글자씩"); };
+                g().property("ADBE Text Animator Properties").addProperty("ADBE Text Opacity");
+                g().property("ADBE Text Animator Properties").property("ADBE Text Opacity").setValue(0);
+                g().property("ADBE Text Selectors").addProperty("ADBE Text Expressible Selector");
+                g().property("ADBE Text Selectors").property(1).property("ADBE Text Expressible Amount").expression =
+                    'var v=0; if (Math.round(' + MODE + ')==2) { var s=' + start + '+(textIndex-1)*' + gap + '; v=100*(1-linear(time,s,s+' + dur + ',0,1)); } [v,v,v]';
+            }
+            perChar("이름", "0.07", GAP, 0.17);
+            perChar("호칭", "0.63", "(" + GAP + "*0.7)", 0.12);
+            for (var q = 1; q <= 2; q++) tp(c.layer("설명" + q), "ADBE Opacity").expression = 'Math.round(' + MODE + ')==2 ? linear(time,0.43,0.93,0,100)*value/100 : value';
+            // 종이 펼침: 왼쪽 끝을 고정하고 폭을 0 → 끝까지 늘림 (0.60~0.73초). 지우기 효과는 도형 레이어 좌표 기준이 애매해 안 씀 (2026-10-18)
+            var KX = 'var k=Math.round(' + MODE + ')==2 ? ease(time,0.60,0.73,0,1) : 1; ';
+            rectProp(c.layer("종이"), "ADBE Vector Rect Size").expression = LR + KX + '[(r-l)*k, ra.height*sa*' + PH + '/100]';
+            tp(c.layer("종이"), "ADBE Position").expression = LR + KX + '[l+(r-l)*k/2, a.transform.position[1]+(ra.top+ra.height/2)*sa+' + PY + ']';
             reg(c, "이름", "이름"); reg(c, "호칭", "호칭"); reg(c, "설명1", "설명 1줄"); reg(c, "설명2", "설명 2줄"); regCtl(c);
             made.push(["이름자막", 1]); w("2 이름자막");
         }
@@ -174,9 +257,14 @@
             accent(c, c.layer("글자"), "원문", acc);
             D = c.layer("글자");
             tp(D, "ADBE Position").setValue([960, 1012]);
-            tp(D, "ADBE Scale").expression = 'var r=sourceRectAtTime(time,false); var k=Math.min(100,1720/Math.max(1,r.width)*100); var p=linear(time,0,4*thisComp.frameDuration,112,100); [k*p/100,k*p/100]';
+            var K = S_(c, "글자 크기(%)", 100);
+            tp(D, "ADBE Scale").expression = 'var r=sourceRectAtTime(time,false); var k=Math.min(100,1720/Math.max(1,r.width)*100); var p=linear(time,0,4*thisComp.frameDuration,112,100); var K=' + K + '/100; [k*p/100*K,k*p/100*K]';
             tp(D, "ADBE Anchor Point").expression = 'var r=sourceRectAtTime(time,false); [r.left+r.width/2, 0]';
             shadow(D, 3, 18, 75);
+            D = c.layer("글자");
+            tp(D, "ADBE Position").expression = 'value+' + P_(c, "글자 위치");
+            spacing(c, D, "글자", "원문");
+            shadowCtl(c, [["글자", "글자", [75, 3, 18]]], [75, 3, 18]);
             master(c, 960, 1012);
             entrance(c, 5, 18, 0);
             reg(c, "원문", "자막 ({}=강조)"); regCtl(c);
@@ -194,18 +282,45 @@
             var td = tdoc(Q).value; td.leading = 92; tdoc(Q).setValue(td);
             shadow(Q, 2, 14, 60);
             var qc = textColor(c, c.layer("문구"), "문구 색", WHT);
-            var O = addText(c, "여는 따옴표", "\u201C", "Georgia-Bold", 130, WHT, "C");
-            tp(O, "ADBE Position").expression = 'var L=thisComp.layer("문구"), r=L.sourceRectAtTime(time,false); [L.transform.position[0]+r.left+r.width/2, L.transform.position[1]+r.top+6]';
-            var Cq = addText(c, "닫는 따옴표", "\u201D", "Georgia-Bold", 130, WHT, "C");
-            tp(Cq, "ADBE Position").expression = 'var L=thisComp.layer("문구"), r=L.sourceRectAtTime(time,false); [L.transform.position[0]+r.left+r.width/2, L.transform.position[1]+r.top+r.height+128]';
+            Q = c.layer("문구");
+            tp(Q, "ADBE Position").expression = 'value+' + P_(c, "문구 위치"); scaleCtl(c, Q, "문구"); spacing(c, c.layer("문구"), "문구");
+            // 따옴표는 문구 위·아래를 따라감 (문구 크기 반영) + 따옴표 크기·간격 칸 (+ 멀리, − 가깝게)
+            var g1 = S_(c, "여는 따옴표 간격", 0), g2 = S_(c, "닫는 따옴표 간격", 0), qs = S_(c, "따옴표 크기(%)", 100);
+            var O = addText(c, "여는 따옴표", "“", "Georgia-Bold", 130, WHT, "C");
+            tp(O, "ADBE Position").expression = 'var L=thisComp.layer("문구"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.transform.position[0]+(r.left+r.width/2)*s, L.transform.position[1]+r.top*s+6-' + g1 + ']';
+            var Cq = addText(c, "닫는 따옴표", "”", "Georgia-Bold", 130, WHT, "C");
+            tp(Cq, "ADBE Position").expression = 'var L=thisComp.layer("문구"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.transform.position[0]+(r.left+r.width/2)*s, L.transform.position[1]+(r.top+r.height)*s+128+' + g2 + ']';
+            tp(c.layer("여는 따옴표"), "ADBE Scale").expression = 'var k=' + qs + '/100; [value[0]*k, value[1]*k]';
+            tp(c.layer("닫는 따옴표"), "ADBE Scale").expression = 'var k=' + qs + '/100; [value[0]*k, value[1]*k]';
             var oc = addCtl(c, "ADBE Color Control", "따옴표 색", WHT);
             var nm = ["여는 따옴표", "닫는 따옴표"];
             for (var q = 0; q < 2; q++) { var LL = c.layer(nm[q]); var an = LL.property("ADBE Text Properties").property("ADBE Text Animators").addProperty("ADBE Text Animator"); an.name = "색 바꾸기"; LL.property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기").property("ADBE Text Selectors").addProperty("ADBE Text Selector"); c.layer(nm[q]).property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기").property("ADBE Text Animator Properties").addProperty("ADBE Text Fill Color").expression = oc; }
+            shadowCtl(c, [["문구", "문구", [60, 2, 14]], ["여는 따옴표", "따옴표", null], ["닫는 따옴표", "따옴표", null]], [60, 2, 14]);
             c.layer("어둡게").moveToEnd();
             c.layer("어둡게").locked = false;
             master(c, 960, 560);
             c.layer("어둡게").parent = null;   // 배경은 화면 전체 고정
             entrance(c, 6, 14, 0);
+            // 2026-10-18 사용자: "9초에 v5 클립에 있는 자막 v6 처럼 모션 넣어주고, 디테일 내가 수정할 수 있게 템플릿 업데이트 해줘."
+            //   "등장 방식" 2 = 천천히 (EP.10 113.88초 실측): 문구·따옴표가 살짝 흐렸다 선명해지며 0.33~1.07초 페이드 → 배경 어둡게 0.80~1.13초. 1 = 예전(0.2초 한꺼번에)
+            ctl(c).property("ADBE Effect Parade").addProperty("ADBE Dropdown Control"); var dq = ctl(c).property("ADBE Effect Parade").numProperties;
+            ctl(c).property("ADBE Effect Parade").property(dq).property(1).setPropertyParameters(["빠르게 (한꺼번에)", "천천히 (EP.10)"]);
+            ctl(c).property("ADBE Effect Parade").property(dq).name = "등장 방식"; ctl(c).property("ADBE Effect Parade").property(dq).property(1).setValue(1); ORDER.push("등장 방식");
+            var QM = 'Math.round(' + cref("등장 방식") + ')==2';
+            var ts = S_(c, "글자 등장 시작(초)", 0.33), tl = S_(c, "글자 등장 길이(초)", 0.74), tb = S_(c, "글자 흐림", 8);
+            var bs = S_(c, "배경 어둡게 시작(초)", 0.8), bl = S_(c, "배경 어둡게 길이(초)", 0.33);
+            var GQ = c.layer("등장").property("ADBE Effect Parade").property("ADBE Geometry2");
+            GQ.property("ADBE Geometry2-0008").expression = QM + ' ? 100 : value';
+            c.layer("등장").property("ADBE Effect Parade").property("ADBE Gaussian Blur 2").property(1).expression = QM + ' ? 0 : value';
+            tp(c.layer("어둡게"), "ADBE Opacity").expression = dk + '*(' + QM + ' ? linear(time,' + bs + ',' + bs + '+' + bl + ',0,1) : 1)';
+            var TXT = ["문구", "여는 따옴표", "닫는 따옴표"];
+            for (var q = 0; q < 3; q++) {
+                tp(c.layer(TXT[q]), "ADBE Opacity").expression = QM + ' ? value*linear(time,' + ts + ',' + ts + '+' + tl + ',0,1) : value';
+                var GB = c.layer(TXT[q]).property("ADBE Effect Parade").addProperty("ADBE Gaussian Blur 2");
+                GB = c.layer(TXT[q]).property("ADBE Effect Parade").property("ADBE Gaussian Blur 2");
+                GB.property(1).expression = QM + ' ? linear(time,' + ts + ',' + ts + '+' + tl + '*0.6,' + tb + ',0) : 0';
+                c.layer(TXT[q]).property("ADBE Effect Parade").property("ADBE Gaussian Blur 2").property(3).setValue(1);   // 가장자리 반복
+            }
             reg(c, "문구", "인용 문구"); regCtl(c);
             made.push(["인용카드", 1]); w("4 인용카드");
         }
@@ -228,6 +343,19 @@
             c.layer("2줄").property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기").property("ADBE Text Selectors").addProperty("ADBE Text Selector");
             c.layer("2줄").property("ADBE Text Properties").property("ADBE Text Animators").property("색 바꾸기").property("ADBE Text Animator Properties").addProperty("ADBE Text Fill Color").expression = acc;
             shadow(c.layer("1줄"), 3, 16, 60); shadow(c.layer("2줄"), 3, 16, 60);
+            // 2026-10-18 세부 칸: 요소별 크기·위치·자간·행간, 라벨 바탕 여백·둥글기·투명도, 라벨↔1줄·1줄↔2줄 간격, 그림자
+            var gl = S_(c, "라벨 간격", 0), g2 = S_(c, "2줄 간격", 0);
+            tp(c.layer("라벨"), "ADBE Position").expression = 'value+' + P_(c, "라벨 위치") + '+[0,-' + gl + ']';
+            tp(c.layer("1줄"), "ADBE Position").expression = 'value+' + P_(c, "1줄 위치");
+            tp(c.layer("2줄"), "ADBE Position").expression = 'value+' + P_(c, "2줄 위치") + '+[0,' + g2 + ']';
+            var EQ = ["라벨", "1줄", "2줄"];
+            for (var q = 0; q < 3; q++) { scaleCtl(c, c.layer(EQ[q]), EQ[q]); spacing(c, c.layer(EQ[q]), EQ[q]); }
+            var lw = S_(c, "라벨 바탕 가로 여백", 13), lh = S_(c, "라벨 바탕 세로 여백", 11);
+            rectProp(c.layer("라벨 바탕"), "ADBE Vector Rect Size").expression = 'var L=thisComp.layer("라벨"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [(r.width+2*' + lw + ')*s, (r.height+2*' + lh + ')*s]';
+            tp(c.layer("라벨 바탕"), "ADBE Position").expression = 'var L=thisComp.layer("라벨"), r=L.sourceRectAtTime(time,false), s=L.transform.scale[0]/100; [L.transform.position[0]+(r.left-' + lw + '+(r.width+2*' + lw + ')/2)*s, L.transform.position[1]+(r.top+r.height/2-3)*s]';
+            rectProp(c.layer("라벨 바탕"), "ADBE Vector Rect Roundness").expression = S_(c, "라벨 바탕 둥글기", 12);
+            tp(c.layer("라벨 바탕"), "ADBE Opacity").expression = S_(c, "라벨 바탕 투명도(%)", 100);
+            shadowCtl(c, [["1줄", "1줄", [60, 3, 16]], ["2줄", "2줄", [60, 3, 16]], ["라벨", "라벨", null]], [60, 3, 16]);
             master(c, 104, 868);
             entrance(c, 6, 16, 0);
             reg(c, "1줄", "1줄"); reg(c, "2줄", "2줄 (강조색)"); reg(c, "라벨", "라벨"); regCtl(c);
