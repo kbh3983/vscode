@@ -1,0 +1,53 @@
+== r14 시작 19:08:15
+ok ../../work/브이로그예능/분석/r14/stems ['drums', 'bass', 'other', 'vocals']
+프레임 31640 컷 571 점진 92
+샷 520 평균 1.92초 중앙 1.77초
+../../work/브이로그예능/분석/r14/t.json 426 segments 1056초
+그래프 생략 No module named 'matplotlib'
+음악 구간 36 덮는 비율 87% 목소리−음악 17.5 dB 효과음 후보 309
+{'music_db_per_min': [-38.5, -40.2, -42.6, -48.0, -45.1, -45.1, -41.8, -40.2, -40.3, -44.1, -45.4, -44.3, -42.6, -39.1, -44.9, -43.7, -45.7, -28.9], 'music_db_when_silent': -36.5, 'silent_windows': 740, 'music_flatness_median': 0.321, 'music_windows_over_55': 1821, 'lufs': -17.5, 'lra': 6.6, 'true_peak': -0.2}
+== r14 끝 19:13:46
+== r15 시작 19:13:46
+프레임 41858 컷 705 점진 158
+1397 장
+../../work/브이로그예능/분석/r15/t.json 618 segments 1397초
+그래프 생략 No module named 'matplotlib'
+음악 구간 48 덮는 비율 86% 목소리−음악 17.7 dB 효과음 후보 451
+{'music_db_per_min': [-32.2, -43.6, -42.5, -44.1, -43.0, -42.7, -43.8, -43.6, -49.5, -45.1, -45.7, -41.9, -41.0, -41.6, -38.7, -40.5, -40.6, -45.6, -38.7, -47.7, -40.7, -37.8, -40.1, -34.5], 'music_db_when_silent': -36.7, 'silent_windows': 1360, 'music_flatness_median': 0.333, 'music_windows_over_55': 2413, 'lufs': -17.7, 'lra': 6.3, 'true_peak': -4.0}
+== r15 끝 19:19:22
+== r16 시작 19:19:23
+ok ../../work/브이로그예능/분석/r16/stems ['drums', 'bass', 'other', 'vocals']
+프레임 49771 컷 816 점진 188
+샷 820 평균 1.85초 중앙 1.64초
+../../work/브이로그예능/분석/r16/t.json 711 segments 1661초
+그래프 생략 No module named 'matplotlib'
+음악 구간 47 덮는 비율 90% 목소리−음악 15.6 dB 효과음 후보 447
+{'music_db_per_min': [-34.7, -40.6, -39.9, -43.7, -39.7, -40.9, -32.6, -40.5, -37.6, -38.9, -40.7, -42.6, -42.7, -38.2, -40.6, -37.8, -36.8, -40.5, -38.0, -37.7, -41.7, -41.1, -35.5, -36.3, -39.3, -43.7, -41.3, -33.6], 'music_db_when_silent': -32.1, 'silent_windows': 2086, 'music_flatness_median': 0.315, 'music_windows_over_55': 2955, 'lufs': -17.3, 'lra': 7.1, 'true_peak': 1.5}
+== r16 끝 19:26:59
+== r17 시작 19:26:59
+프레임 35193 컷 621 점진 184
+1174 장
+../../work/브이로그예능/분석/r17/t.json 546 segments 1174초
+그래프 생략 No module named 'matplotlib'
+음악 구간 36 덮는 비율 88% 목소리−음악 16.1 dB 효과음 후보 302
+{'music_db_per_min': [-37.7, -39.3, -41.1, -39.0, -36.9, -41.8, -40.3, -41.6, -41.8, -41.1, -40.1, -39.2, -42.0, -38.2, -41.5, -41.3, -38.1, -45.2, -41.2, -37.9], 'music_db_when_silent': -33.9, 'silent_windows': 1120, 'music_flatness_median': 0.299, 'music_windows_over_55': 2036, 'lufs': -17.8, 'lra': 6.4, 'true_peak': -2.1}
+== r17 끝 19:31:17
+== r18 시작 19:31:17
+ok ../../work/브이로그예능/분석/r18/stems ['drums', 'bass', 'other', 'vocals']
+프레임 36452 컷 627 점진 129
+샷 645 평균 1.75초 중앙 1.60초
+../../work/브이로그예능/분석/r18/t.json 581 segments 1216초
+그래프 생략 No module named 'matplotlib'
+음악 구간 49 덮는 비율 82% 목소리−음악 17.3 dB 효과음 후보 297
+{'music_db_per_min': [-35.5, -36.8, -40.7, -43.5, -41.3, -46.4, -46.8, -40.4, -45.7, -41.3, -42.2, -42.1, -39.5, -59.5, -47.0, -38.2, -42.4, -42.5, -46.9, -40.6, -27.8], 'music_db_when_silent': -36.8, 'silent_windows': 946, 'music_flatness_median': 0.288, 'music_windows_over_55': 2018, 'lufs': -17.5, 'lra': 5.1, 'true_peak': -3.9}
+== r18 끝 19:36:50
+ALLDONE
+�/r18/stems ['drums', 'bass', 'other', 'vocals']
+프레임 36452 컷 627 점진 129
+1216 장
+../../work/브이로그예능/분석/r18/t.json 582 segments 1216초
+그래프 생략 No module named 'matplotlib'
+음악 구간 49 덮는 비율 82% 목소리−음악 17.3 dB 효과음 후보 297
+{'music_db_per_min': [-35.5, -36.8, -40.7, -43.5, -41.3, -46.4, -46.8, -40.4, -45.7, -41.3, -42.2, -42.1, -39.5, -59.5, -47.0, -38.2, -42.4, -42.5, -46.9, -40.6, -27.8], 'music_db_when_silent': -36.8, 'silent_windows': 946, 'music_flatness_median': 0.288, 'music_windows_over_55': 2018, 'lufs': -17.5, 'lra': 5.1, 'true_peak': -3.9}
+== r18 끝 19:35:56
+ALLDONE

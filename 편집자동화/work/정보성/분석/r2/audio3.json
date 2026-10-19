@@ -1,0 +1,257 @@
+{
+"stereo_corr": 1.0,
+"lr_diff_db": 0.0,
+"crest_db_median": 13.6,
+"short_lufs_p10_50_90": [
+-22.2,
+-19.4,
+-17.1
+],
+"lufs": -18.9,
+"true_peak": 0.0,
+"lra": 5.6,
+"voice_db_p10_50_90": [
+-27.7,
+-22.1,
+-17.7
+],
+"voice_spread_db": 10.0,
+"voice_low_lt120_pct": 22.22,
+"voice_high_gt6k_pct": 0.16,
+"music_segments": [
+{
+"s": 0.0,
+"e": 51.0,
+"music_db": -39.4,
+"voice_minus_music": 19.5,
+"fade_in": 14.0,
+"fade_out": 5.0
+},
+{
+"s": 53.5,
+"e": 122.5,
+"music_db": -43.0,
+"voice_minus_music": 23.2,
+"fade_in": 0.5,
+"fade_out": 3.0
+},
+{
+"s": 142.0,
+"e": 144.0,
+"music_db": -53.2,
+"voice_minus_music": 33.9,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 211.5,
+"e": 213.5,
+"music_db": -49.3,
+"voice_minus_music": 31.6,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 219.0,
+"e": 223.0,
+"music_db": -51.3,
+"voice_minus_music": 30.8,
+"fade_in": 3.5,
+"fade_out": 0.0
+},
+{
+"s": 226.0,
+"e": 229.5,
+"music_db": -49.4,
+"voice_minus_music": 30.7,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 264.0,
+"e": 267.0,
+"music_db": -50.7,
+"voice_minus_music": 32.8,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 318.0,
+"e": 320.5,
+"music_db": -55.7,
+"voice_minus_music": 35.3,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 393.5,
+"e": 395.5,
+"music_db": -51.1,
+"voice_minus_music": 31.7,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 436.5,
+"e": 439.0,
+"music_db": -50.4,
+"voice_minus_music": 30.9,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 465.0,
+"e": 468.5,
+"music_db": -50.0,
+"voice_minus_music": 28.9,
+"fade_in": 2.0,
+"fade_out": 1.0
+},
+{
+"s": 523.0,
+"e": 526.5,
+"music_db": -49.8,
+"voice_minus_music": 32.1,
+"fade_in": 0.5,
+"fade_out": 2.5
+},
+{
+"s": 546.0,
+"e": 551.5,
+"music_db": -51.1,
+"voice_minus_music": 32.3,
+"fade_in": 0.0,
+"fade_out": 5.0
+},
+{
+"s": 571.5,
+"e": 574.5,
+"music_db": -53.0,
+"voice_minus_music": 32.0,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 670.0,
+"e": 672.0,
+"music_db": -50.7,
+"voice_minus_music": 28.7,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 693.0,
+"e": 701.5,
+"music_db": -51.2,
+"voice_minus_music": 32.2,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 710.0,
+"e": 713.0,
+"music_db": -48.9,
+"voice_minus_music": 30.4,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 718.5,
+"e": 721.0,
+"music_db": -51.7,
+"voice_minus_music": 34.1,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 753.5,
+"e": 756.5,
+"music_db": -51.4,
+"voice_minus_music": 33.0,
+"fade_in": 0.0,
+"fade_out": 1.0
+},
+{
+"s": 798.5,
+"e": 804.5,
+"music_db": -50.9,
+"voice_minus_music": 30.4,
+"fade_in": 4.0,
+"fade_out": 1.5
+},
+{
+"s": 871.5,
+"e": 876.5,
+"music_db": -49.9,
+"voice_minus_music": 28.6,
+"fade_in": 0.0,
+"fade_out": 2.0
+},
+{
+"s": 922.5,
+"e": 925.0,
+"music_db": -49.1,
+"voice_minus_music": 27.4,
+"fade_in": 2.0,
+"fade_out": 0.0
+},
+{
+"s": 929.5,
+"e": 932.0,
+"music_db": -52.8,
+"voice_minus_music": 31.2,
+"fade_in": 2.0,
+"fade_out": 0.0
+},
+{
+"s": 1005.5,
+"e": 1010.0,
+"music_db": -53.0,
+"voice_minus_music": 35.1,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 1131.5,
+"e": 1142.5,
+"music_db": -49.0,
+"voice_minus_music": 30.4,
+"fade_in": 1.0,
+"fade_out": 9.0
+},
+{
+"s": 1315.5,
+"e": 1319.0,
+"music_db": -47.4,
+"voice_minus_music": 24.7,
+"fade_in": 0.0,
+"fade_out": 3.0
+},
+{
+"s": 1421.0,
+"e": 1426.5,
+"music_db": -55.7,
+"voice_minus_music": 35.3,
+"fade_in": 0.0,
+"fade_out": 0.0
+},
+{
+"s": 1444.0,
+"e": 1448.5,
+"music_db": -56.1,
+"voice_minus_music": 32.7,
+"fade_in": 2.0,
+"fade_out": 2.0
+},
+{
+"s": 1489.0,
+"e": 1578.5,
+"music_db": -45.4,
+"voice_minus_music": 23.0,
+"fade_in": 1.0,
+"fade_out": 0.5
+}
+],
+"music_bar_per_min": "■■·▪▪··▪▪▪·▪▪▪·▪▪·▪▪···▪▪■■",
+"silences_over_0_3s": 2
+}

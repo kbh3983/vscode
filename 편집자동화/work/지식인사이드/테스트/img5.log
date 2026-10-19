@@ -1,0 +1,48 @@
+C:\DADA\9.AI\vscode\\ud3b8\uc9d1\uc790\ub3d9\ud654\.venv\Lib\site-packages\diffusers\utils\deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:00,  8.14it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][ALoading weights: 100%|##########| 196/196 [00:00<00:00, 2015.75it/s]
+Loading pipeline components...:  29%|##8       | 2/7 [00:00<00:00,  5.33it/s]
+Loading weights:   0%|          | 0/219 [00:00<?, ?it/s][A
+Loading weights:   1%|          | 2/219 [00:00<00:12, 17.00it/s][A
+Loading weights:   2%|1         | 4/219 [00:00<00:17, 12.53it/s][A
+Loading weights:   7%|6         | 15/219 [00:00<00:05, 36.06it/s][A
+Loading weights:   9%|8         | 19/219 [00:01<00:10, 18.35it/s][A
+Loading weights:  10%|#         | 22/219 [00:01<00:16, 12.25it/s][A
+Loading weights:  11%|#         | 24/219 [00:01<00:16, 12.05it/s][A
+Loading weights:  12%|#1        | 26/219 [00:02<00:21,  9.00it/s][A
+Loading weights:  13%|#2        | 28/219 [00:02<00:23,  8.30it/s][A
+Loading weights:  14%|#3        | 30/219 [00:02<00:24,  7.71it/s][A
+Loading weights:  15%|#5        | 33/219 [00:02<00:19,  9.45it/s][A
+Loading weights:  16%|#5        | 35/219 [00:03<00:21,  8.44it/s][A
+Loading weights:  16%|#6        | 36/219 [00:03<00:24,  7.38it/s][A
+Loading weights:  17%|#6        | 37/219 [00:03<00:25,  7.02it/s][A
+Loading weights:  17%|#7        | 38/219 [00:04<00:32,  5.65it/s][A
+Loading weights:  18%|#7        | 39/219 [00:04<00:45,  3.94it/s][A
+Loading weights:  18%|#8        | 40/219 [00:04<00:45,  3.96it/s][A
+Loading weights:  19%|#8        | 41/219 [00:05<00:47,  3.77it/s][A
+Loading weights:  19%|#9        | 42/219 [00:05<00:51,  3.43it/s][A
+Loading weights:  20%|#9        | 43/219 [00:05<00:51,  3.39it/s][A
+Loading weights:  20%|##        | 44/219 [00:06<00:54,  3.19it/s][A
+Loading weights:  21%|##        | 45/219 [00:06<01:00,  2.86it/s][A
+Loading weights:  21%|##1       | 46/219 [00:06<01:01,  2.80it/s][A
+Loading weights:  21%|##1       | 47/219 [00:07<01:06,  2.59it/s][A
+Loading weights:  22%|##1       | 48/219 [00:07<01:05,  2.62it/s][A
+Loading weights:  22%|##2       | 49/219 [00:07<01:01,  2.75it/s][ALoading weights: 100%|##########| 219/219 [00:07<00:00, 27.49it/s]
+Loading pipeline components...:  43%|####2     | 3/7 [00:08<00:15,  3.93s/it]Loading pipeline components...:  57%|#####7    | 4/7 [00:08<00:07,  2.42s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|#####     | 1/2 [00:00<00:00,  2.59it/s][A
+Loading checkpoint shards: 100%|##########| 2/2 [00:00<00:00,  3.51it/s][ALoading checkpoint shards: 100%|##########| 2/2 [00:00<00:00,  3.34it/s]
+Loading pipeline components...:  71%|#######1  | 5/7 [00:09<00:03,  1.82s/it]Loading pipeline components...: 100%|##########| 7/7 [00:09<00:00,  1.38s/it]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (97 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden ship oar planted in the earth , gritty bronze age realism , painterly brush strokes , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:17<07:49, 17.39s/it]  7%|7         | 2/28 [00:19<03:30,  8.11s/it] 11%|#         | 3/28 [00:20<02:07,  5.12s/it] 14%|#4        | 4/28 [00:21<01:27,  3.65s/it] 18%|#7        | 5/28 [00:23<01:04,  2.82s/it] 21%|##1       | 6/28 [00:24<00:52,  2.37s/it] 25%|##5       | 7/28 [00:26<00:44,  2.12s/it] 29%|##8       | 8/28 [00:27<00:37,  1.86s/it] 32%|###2      | 9/28 [00:29<00:32,  1.70s/it] 36%|###5      | 10/28 [00:30<00:28,  1.61s/it] 39%|###9      | 11/28 [00:31<00:26,  1.58s/it] 43%|####2     | 12/28 [00:33<00:25,  1.58s/it] 46%|####6     | 13/28 [00:35<00:24,  1.62s/it] 50%|#####     | 14/28 [00:36<00:22,  1.62s/it] 54%|#####3    | 15/28 [00:38<00:20,  1.61s/it] 57%|#####7    | 16/28 [00:40<00:19,  1.59s/it] 61%|######    | 17/28 [00:41<00:17,  1.57s/it] 64%|######4   | 18/28 [00:43<00:15,  1.56s/it] 68%|######7   | 19/28 [00:44<00:14,  1.58s/it] 71%|#######1  | 20/28 [00:46<00:12,  1.55s/it] 75%|#######5  | 21/28 [00:47<00:10,  1.49s/it] 79%|#######8  | 22/28 [00:48<00:08,  1.44s/it] 82%|########2 | 23/28 [00:50<00:07,  1.44s/it] 86%|########5 | 24/28 [00:51<00:05,  1.42s/it] 89%|########9 | 25/28 [00:53<00:04,  1.43s/it] 93%|#########2| 26/28 [00:54<00:02,  1.48s/it] 96%|#########6| 27/28 [00:56<00:01,  1.51s/it]100%|##########| 28/28 [00:57<00:00,  1.48s/it]100%|##########| 28/28 [00:57<00:00,  2.06s/it]
+ok img\oldage_film_81.png
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden ship oar planted in the earth , gritty bronze age realism , painterly brush strokes , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:25<11:15, 25.01s/it]  7%|7         | 2/28 [00:26<04:51, 11.22s/it] 11%|#         | 3/28 [00:28<02:48,  6.76s/it] 14%|#4        | 4/28 [00:29<01:51,  4.66s/it] 18%|#7        | 5/28 [00:30<01:19,  3.47s/it] 21%|##1       | 6/28 [00:32<01:00,  2.75s/it] 25%|##5       | 7/28 [00:33<00:48,  2.32s/it] 29%|##8       | 8/28 [00:35<00:40,  2.02s/it] 32%|###2      | 9/28 [00:36<00:35,  1.85s/it] 36%|###5      | 10/28 [00:37<00:31,  1.72s/it] 39%|###9      | 11/28 [00:39<00:28,  1.69s/it] 43%|####2     | 12/28 [00:41<00:26,  1.67s/it] 46%|####6     | 13/28 [00:42<00:24,  1.64s/it] 50%|#####     | 14/28 [00:44<00:22,  1.62s/it] 54%|#####3    | 15/28 [00:45<00:21,  1.63s/it] 57%|#####7    | 16/28 [00:47<00:19,  1.63s/it] 61%|######    | 17/28 [00:49<00:17,  1.58s/it] 64%|######4   | 18/28 [00:50<00:15,  1.52s/it] 68%|######7   | 19/28 [00:51<00:13,  1.48s/it] 71%|#######1  | 20/28 [00:53<00:11,  1.44s/it] 75%|#######5  | 21/28 [00:54<00:10,  1.53s/it] 79%|#######8  | 22/28 [00:56<00:09,  1.55s/it] 82%|########2 | 23/28 [00:58<00:07,  1.54s/it] 86%|########5 | 24/28 [00:59<00:05,  1.49s/it] 89%|########9 | 25/28 [01:00<00:04,  1.44s/it] 93%|#########2| 26/28 [01:02<00:02,  1.41s/it] 96%|#########6| 27/28 [01:03<00:01,  1.38s/it]100%|##########| 28/28 [01:04<00:00,  1.44s/it]100%|##########| 28/28 [01:04<00:00,  2.32s/it]
+ok img\oldage_film_82.png
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['wooden ship oar planted in the earth , gritty bronze age realism , painterly brush strokes , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:22<10:17, 22.87s/it]  7%|7         | 2/28 [00:24<04:25, 10.21s/it] 11%|#         | 3/28 [00:25<02:34,  6.16s/it] 14%|#4        | 4/28 [00:26<01:41,  4.23s/it] 18%|#7        | 5/28 [00:28<01:13,  3.18s/it] 21%|##1       | 6/28 [00:29<00:55,  2.50s/it] 25%|##5       | 7/28 [00:30<00:43,  2.07s/it] 29%|##8       | 8/28 [00:31<00:35,  1.79s/it] 32%|###2      | 9/28 [00:32<00:30,  1.60s/it] 36%|###5      | 10/28 [00:34<00:26,  1.47s/it] 39%|###9      | 11/28 [00:35<00:23,  1.38s/it] 43%|####2     | 12/28 [00:36<00:21,  1.32s/it] 46%|####6     | 13/28 [00:37<00:19,  1.28s/it] 50%|#####     | 14/28 [00:38<00:17,  1.25s/it] 54%|#####3    | 15/28 [00:40<00:16,  1.24s/it] 57%|#####7    | 16/28 [00:41<00:14,  1.22s/it] 61%|######    | 17/28 [00:42<00:13,  1.21s/it] 64%|######4   | 18/28 [00:43<00:12,  1.20s/it] 68%|######7   | 19/28 [00:44<00:10,  1.20s/it] 71%|#######1  | 20/28 [00:45<00:09,  1.19s/it] 75%|#######5  | 21/28 [00:47<00:08,  1.20s/it] 79%|#######8  | 22/28 [00:48<00:07,  1.19s/it] 82%|########2 | 23/28 [00:49<00:05,  1.19s/it] 86%|########5 | 24/28 [00:50<00:04,  1.19s/it] 89%|########9 | 25/28 [00:51<00:03,  1.19s/it] 93%|#########2| 26/28 [00:53<00:02,  1.19s/it] 96%|#########6| 27/28 [00:54<00:01,  1.19s/it]100%|##########| 28/28 [00:55<00:00,  1.19s/it]100%|##########| 28/28 [00:55<00:00,  1.98s/it]
+ok img\oldage_film_83.png
+DONE

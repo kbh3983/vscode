@@ -1,0 +1,49 @@
+{
+"stereo_corr": 0.992,
+"lr_diff_db": -0.01,
+"crest_db_median": 14.3,
+"short_lufs_p10_50_90": [
+-22.7,
+-20.1,
+-17.7
+],
+"lufs": -19.4,
+"true_peak": -0.5,
+"lra": 5.7,
+"voice_db_p10_50_90": [
+-29.6,
+-23.4,
+-19.1
+],
+"voice_spread_db": 10.5,
+"voice_low_lt120_pct": 0.12,
+"voice_high_gt6k_pct": 0.13,
+"music_segments": [
+{
+"s": 0.0,
+"e": 37.0,
+"music_db": -37.5,
+"voice_minus_music": 15.2,
+"fade_in": 31.0,
+"fade_out": 3.0
+},
+{
+"s": 1102.5,
+"e": 1157.5,
+"music_db": -42.3,
+"voice_minus_music": 20.0,
+"fade_in": 3.0,
+"fade_out": 3.0
+},
+{
+"s": 1543.5,
+"e": 1742.5,
+"music_db": -39.6,
+"voice_minus_music": 18.3,
+"fade_in": 58.0,
+"fade_out": 1.0
+}
+],
+"music_bar_per_min": "■·················■▪·····▪■■■▪",
+"silences_over_0_3s": 3
+}

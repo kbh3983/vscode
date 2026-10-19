@@ -1,0 +1,58 @@
+C:\DADA\9.AI\vscode\\ud3b8\uc9d1\uc790\ub3d9\ud654\.venv\Lib\site-packages\diffusers\utils\deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:00,  6.54it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|#####     | 1/2 [00:00<00:00,  8.78it/s][A
+Loading checkpoint shards: 100%|##########| 2/2 [00:00<00:00,  5.71it/s][ALoading checkpoint shards: 100%|##########| 2/2 [00:00<00:00,  6.02it/s]
+Loading pipeline components...:  29%|##8       | 2/7 [00:00<00:01,  3.35it/s]
+Loading weights:   0%|          | 0/219 [00:00<?, ?it/s][A
+Loading weights:   3%|3         | 7/219 [00:00<00:04, 50.32it/s][A
+Loading weights:   6%|5         | 13/219 [00:00<00:06, 29.99it/s][A
+Loading weights:   8%|7         | 17/219 [00:00<00:08, 23.06it/s][A
+Loading weights:   9%|9         | 20/219 [00:00<00:08, 24.41it/s][A
+Loading weights:  11%|#         | 23/219 [00:01<00:09, 21.22it/s][A
+Loading weights:  12%|#1        | 26/219 [00:01<00:15, 12.15it/s][A
+Loading weights:  13%|#2        | 28/219 [00:01<00:17, 10.71it/s][A
+Loading weights:  16%|#5        | 35/219 [00:01<00:09, 18.90it/s][A
+Loading weights:  18%|#7        | 39/219 [00:02<00:10, 16.51it/s][A
+Loading weights:  19%|#9        | 42/219 [00:02<00:10, 16.88it/s][A
+Loading weights:  21%|##        | 45/219 [00:02<00:11, 15.22it/s][A
+Loading weights:  21%|##1       | 47/219 [00:02<00:12, 14.07it/s][A
+Loading weights:  22%|##2       | 49/219 [00:02<00:12, 13.84it/s][A
+Loading weights:  23%|##3       | 51/219 [00:03<00:13, 12.28it/s][A
+Loading weights:  24%|##4       | 53/219 [00:03<00:18,  9.14it/s][A
+Loading weights:  27%|##7       | 60/219 [00:03<00:12, 12.40it/s][A
+Loading weights:  30%|##9       | 65/219 [00:04<00:09, 16.62it/s][A
+Loading weights:  31%|###1      | 68/219 [00:04<00:09, 16.69it/s][A
+Loading weights:  49%|####8     | 107/219 [00:04<00:01, 64.66it/s][A
+Loading weights:  52%|#####2    | 114/219 [00:05<00:03, 26.54it/s][A
+Loading weights:  55%|#####4    | 120/219 [00:05<00:03, 25.11it/s][A
+Loading weights:  57%|#####7    | 125/219 [00:06<00:04, 22.80it/s][A
+Loading weights:  59%|#####8    | 129/219 [00:06<00:04, 18.44it/s][A
+Loading weights:  60%|######    | 132/219 [00:06<00:04, 18.32it/s][A
+Loading weights:  62%|######1   | 135/219 [00:07<00:05, 14.52it/s][A
+Loading weights:  63%|######2   | 137/219 [00:07<00:05, 13.80it/s][A
+Loading weights:  80%|########  | 176/219 [00:07<00:00, 59.26it/s][A
+Loading weights:  86%|########5 | 188/219 [00:07<00:00, 43.23it/s][A
+Loading weights:  90%|########9 | 197/219 [00:08<00:00, 33.28it/s][A
+Loading weights:  93%|#########3| 204/219 [00:08<00:00, 29.04it/s][A
+Loading weights:  96%|#########5| 210/219 [00:09<00:00, 25.91it/s][ALoading weights: 100%|##########| 219/219 [00:09<00:00, 24.20it/s]
+Loading pipeline components...:  71%|#######1  | 5/7 [00:10<00:04,  2.38s/it]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s][A
+Loading weights:  74%|#######3  | 145/196 [00:00<00:00, 1348.73it/s][ALoading weights: 100%|##########| 196/196 [00:00<00:00, 1473.53it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:10<00:01,  1.85s/it]Loading pipeline components...: 100%|##########| 7/7 [00:10<00:00,  1.43s/it]Loading pipeline components...: 100%|##########| 7/7 [00:10<00:00,  1.54s/it]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (89 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['field , anamorphic film look , muted natural palette , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [01:00<27:01, 60.07s/it]  7%|7         | 2/28 [01:28<17:54, 41.33s/it] 11%|#         | 3/28 [01:29<09:29, 22.80s/it] 14%|#4        | 4/28 [01:30<05:43, 14.30s/it] 18%|#7        | 5/28 [01:31<03:40,  9.59s/it] 21%|##1       | 6/28 [01:32<02:28,  6.75s/it] 25%|##5       | 7/28 [01:34<01:44,  4.96s/it] 29%|##8       | 8/28 [01:35<01:15,  3.77s/it] 32%|###2      | 9/28 [01:36<00:56,  2.97s/it] 36%|###5      | 10/28 [01:37<00:43,  2.42s/it] 39%|###9      | 11/28 [01:38<00:34,  2.05s/it] 43%|####2     | 12/28 [01:40<00:28,  1.79s/it] 46%|####6     | 13/28 [01:41<00:24,  1.62s/it] 50%|#####     | 14/28 [01:42<00:20,  1.49s/it] 54%|#####3    | 15/28 [01:43<00:18,  1.40s/it] 57%|#####7    | 16/28 [01:44<00:15,  1.33s/it] 61%|######    | 17/28 [01:46<00:14,  1.30s/it] 64%|######4   | 18/28 [01:47<00:12,  1.27s/it] 68%|######7   | 19/28 [01:48<00:11,  1.24s/it] 71%|#######1  | 20/28 [01:49<00:09,  1.23s/it] 75%|#######5  | 21/28 [01:50<00:08,  1.23s/it] 79%|#######8  | 22/28 [01:52<00:07,  1.30s/it] 82%|########2 | 23/28 [01:53<00:06,  1.34s/it] 86%|########5 | 24/28 [01:55<00:05,  1.37s/it] 89%|########9 | 25/28 [01:56<00:03,  1.33s/it] 93%|#########2| 26/28 [01:57<00:02,  1.30s/it] 96%|#########6| 27/28 [01:58<00:01,  1.29s/it]100%|##########| 28/28 [02:00<00:00,  1.28s/it]100%|##########| 28/28 [02:00<00:00,  4.29s/it]
+ok img\calypso_scene_101.png
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['field , anamorphic film look , muted natural palette , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:26<11:54, 26.45s/it]  7%|7         | 2/28 [00:27<05:02, 11.65s/it] 11%|#         | 3/28 [00:29<02:54,  6.96s/it] 14%|#4        | 4/28 [00:30<01:55,  4.79s/it] 18%|#7        | 5/28 [00:31<01:20,  3.50s/it] 21%|##1       | 6/28 [00:32<00:59,  2.71s/it] 25%|##5       | 7/28 [00:34<00:46,  2.21s/it] 29%|##8       | 8/28 [00:35<00:37,  1.89s/it] 32%|###2      | 9/28 [00:36<00:31,  1.66s/it] 36%|###5      | 10/28 [00:37<00:27,  1.52s/it] 39%|###9      | 11/28 [00:38<00:24,  1.43s/it] 43%|####2     | 12/28 [00:40<00:22,  1.38s/it] 46%|####6     | 13/28 [00:41<00:20,  1.40s/it] 50%|#####     | 14/28 [00:42<00:19,  1.36s/it] 54%|#####3    | 15/28 [00:44<00:17,  1.32s/it] 57%|#####7    | 16/28 [00:45<00:15,  1.29s/it] 61%|######    | 17/28 [00:46<00:14,  1.34s/it] 64%|######4   | 18/28 [00:48<00:13,  1.33s/it] 68%|######7   | 19/28 [00:49<00:11,  1.29s/it] 71%|#######1  | 20/28 [00:50<00:10,  1.27s/it] 75%|#######5  | 21/28 [00:51<00:08,  1.26s/it] 79%|#######8  | 22/28 [00:53<00:07,  1.31s/it] 82%|########2 | 23/28 [00:54<00:06,  1.31s/it] 86%|########5 | 24/28 [00:55<00:05,  1.33s/it] 89%|########9 | 25/28 [00:57<00:03,  1.31s/it] 93%|#########2| 26/28 [00:58<00:02,  1.28s/it] 96%|#########6| 27/28 [00:59<00:01,  1.26s/it]100%|##########| 28/28 [01:00<00:00,  1.24s/it]100%|##########| 28/28 [01:00<00:00,  2.17s/it]
+ok img\calypso_scene_102.png
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['field , anamorphic film look , muted natural palette , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:16<07:13, 16.05s/it]  7%|7         | 2/28 [00:17<03:09,  7.31s/it] 11%|#         | 3/28 [00:18<01:52,  4.52s/it] 14%|#4        | 4/28 [00:19<01:17,  3.23s/it] 18%|#7        | 5/28 [00:21<00:58,  2.57s/it] 21%|##1       | 6/28 [00:22<00:47,  2.16s/it] 25%|##5       | 7/28 [00:23<00:39,  1.89s/it] 29%|##8       | 8/28 [00:25<00:33,  1.68s/it] 32%|###2      | 9/28 [00:26<00:29,  1.53s/it] 36%|###5      | 10/28 [00:27<00:25,  1.43s/it] 39%|###9      | 11/28 [00:28<00:23,  1.37s/it] 43%|####2     | 12/28 [00:29<00:21,  1.35s/it] 46%|####6     | 13/28 [00:31<00:20,  1.34s/it] 50%|#####     | 14/28 [00:32<00:18,  1.33s/it] 54%|#####3    | 15/28 [00:33<00:16,  1.31s/it] 57%|#####7    | 16/28 [00:35<00:15,  1.28s/it] 61%|######    | 17/28 [00:36<00:13,  1.25s/it] 64%|######4   | 18/28 [00:37<00:12,  1.23s/it] 68%|######7   | 19/28 [00:38<00:11,  1.23s/it] 71%|#######1  | 20/28 [00:39<00:09,  1.22s/it] 75%|#######5  | 21/28 [00:41<00:08,  1.22s/it] 79%|#######8  | 22/28 [00:42<00:07,  1.23s/it] 82%|########2 | 23/28 [00:43<00:06,  1.24s/it] 86%|########5 | 24/28 [00:44<00:04,  1.23s/it] 89%|########9 | 25/28 [00:45<00:03,  1.22s/it] 93%|#########2| 26/28 [00:47<00:02,  1.21s/it] 96%|#########6| 27/28 [00:48<00:01,  1.20s/it]100%|##########| 28/28 [00:49<00:00,  1.20s/it]100%|##########| 28/28 [00:49<00:00,  1.77s/it]
+ok img\calypso_scene_103.png
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['field , anamorphic film look , muted natural palette , no text']
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|3         | 1/28 [00:27<12:27, 27.69s/it]  7%|7         | 2/28 [00:29<05:16, 12.18s/it] 11%|#         | 3/28 [00:30<03:00,  7.22s/it] 14%|#4        | 4/28 [00:31<01:57,  4.88s/it] 18%|#7        | 5/28 [00:32<01:22,  3.59s/it] 21%|##1       | 6/28 [00:34<01:02,  2.83s/it] 25%|##5       | 7/28 [00:35<00:49,  2.35s/it] 29%|##8       | 8/28 [00:36<00:39,  1.99s/it] 32%|###2      | 9/28 [00:38<00:33,  1.79s/it] 36%|###5      | 10/28 [00:39<00:29,  1.63s/it] 39%|###9      | 11/28 [00:40<00:25,  1.51s/it] 43%|####2     | 12/28 [00:42<00:23,  1.45s/it] 46%|####6     | 13/28 [00:43<00:20,  1.38s/it] 50%|#####     | 14/28 [00:44<00:18,  1.34s/it] 54%|#####3    | 15/28 [00:45<00:17,  1.31s/it] 57%|#####7    | 16/28 [00:47<00:15,  1.31s/it] 61%|######    | 17/28 [00:48<00:14,  1.32s/it] 64%|######4   | 18/28 [00:49<00:13,  1.33s/it] 68%|######7   | 19/28 [00:51<00:12,  1.34s/it] 71%|#######1  | 20/28 [00:52<00:10,  1.35s/it] 75%|#######5  | 21/28 [00:53<00:09,  1.34s/it] 79%|#######8  | 22/28 [00:55<00:08,  1.33s/it] 82%|########2 | 23/28 [00:56<00:06,  1.33s/it] 86%|########5 | 24/28 [00:57<00:05,  1.33s/it] 89%|########9 | 25/28 [00:59<00:04,  1.34s/it] 93%|#########2| 26/28 [01:00<00:02,  1.34s/it] 96%|#########6| 27/28 [01:01<00:01,  1.34s/it]100%|##########| 28/28 [01:03<00:00,  1.34s/it]100%|##########| 28/28 [01:03<00:00,  2.26s/it]
+ok img\calypso_scene_104.png
+DONE

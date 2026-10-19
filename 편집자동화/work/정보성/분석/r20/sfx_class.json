@@ -1,0 +1,54 @@
+{
+"per_min": 0.1,
+"groups": [
+{
+"group": 0,
+"n": 3,
+"dur": 0.4,
+"centroid_hz": 1336,
+"flat": 0.16,
+"attack": 1.0,
+"tonal": 0.57,
+"examples": [
+217.7,
+292.3,
+21.5
+]
+}
+],
+"sfx": [
+{
+"t": 21.5,
+"dur": 0.4,
+"jump": 12.2,
+"peak_db": -31.3,
+"centroid_hz": 6681,
+"flat": 0.751,
+"attack": 0.61,
+"tonal": 0.08,
+"group": 0
+},
+{
+"t": 217.7,
+"dur": 0.3,
+"jump": 16.7,
+"peak_db": -37.2,
+"centroid_hz": 838,
+"flat": 0.091,
+"attack": 1.0,
+"tonal": 0.57,
+"group": 0
+},
+{
+"t": 292.3,
+"dur": 0.5,
+"jump": 13.7,
+"peak_db": -38.7,
+"centroid_hz": 1336,
+"flat": 0.16,
+"attack": 1.0,
+"tonal": 0.87,
+"group": 0
+}
+]
+}

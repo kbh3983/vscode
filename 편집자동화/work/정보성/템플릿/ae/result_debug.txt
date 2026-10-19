@@ -1,0 +1,8 @@
+02_장제목_왼쪽2줄 | 아랫줄 val=70.0,345.0 parent=전체 pos@2=110.0,345.0 anchor@2=455.7,-27.6 expr=value+thisComp.layer("템플릿 조절").effect("아랫줄 위치")(1) rect=2.9,-62.3,452.8,69.5 just=7413 (L=7413) anchorExpr=var r=sourceRectAtTime(time,false); [r.left+r.width, r.top+r.height/2]
+02_장제목_왼쪽2줄 | 윗줄 val=70.0,250.0 parent=전체 pos@2=110.0,250.0 anchor@2=280.8,-22.7 expr=value+thisComp.layer("템플릿 조절").effect("윗줄 위치")(1) rect=4.9,-50.2,275.9,55.2 just=7413 (L=7413) anchorExpr=var r=sourceRectAtTime(time,false); [r.left+r.width, r.top+r.height/2]
+02_장제목_왼쪽2줄 | 전체 val=110.0,300.0 parent=- pos@2=110.0,300.0 anchor@2=110.0,300.0 expr=value+thisComp.layer("템플릿 조절").effect("전체 위치")(1) rect=0.0,0.0,100.0,100.0 rectERR null은(는) 개체가 아닙니다.
+02_장제목_왼쪽2줄 | 템플릿 조절 val=960.0,540.0 parent=- pos@2=960.0,540.0 anchor@2=0.0,0.0 expr= rect=0.0,0.0,100.0,100.0 rectERR null은(는) 개체가 아닙니다.
+07_손글씨_속마음 | 글자 val=560.0,380.0 parent=전체 pos@2=560.0,380.0 anchor@2=266.9,11.8 expr=value+thisComp.layer("템플릿 조절").effect("글자 위치")(1) rect=2.7,-31.7,264.2,87.0 just=7413 (L=7413) anchorExpr=var r=sourceRectAtTime(time,false); [r.left+r.width, r.top+r.height/2]
+07_손글씨_속마음 | 전체 val=560.0,380.0 parent=- pos@2=560.0,380.0 anchor@2=560.0,380.0 expr=value+thisComp.layer("템플릿 조절").effect("전체 위치")(1) rect=0.0,0.0,100.0,100.0 rectERR null은(는) 개체가 아닙니다.
+07_손글씨_속마음 | 템플릿 조절 val=960.0,540.0 parent=- pos@2=960.0,540.0 anchor@2=0.0,0.0 expr= rect=0.0,0.0,100.0,100.0 rectERR null은(는) 개체가 아닙니다.
+Debug 끝

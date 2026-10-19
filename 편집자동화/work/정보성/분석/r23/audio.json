@@ -1,0 +1,50 @@
+{
+"total": 1522.6,
+"music_segments": [
+{
+"s": 3.0,
+"e": 27.0,
+"dur": 24.0,
+"music_db": -48.3,
+"voice_db": -24.9
+},
+{
+"s": 29.7,
+"e": 32.2,
+"dur": 2.5,
+"music_db": -47.2,
+"voice_db": -27.9
+},
+{
+"s": 35.0,
+"e": 38.8,
+"dur": 3.8,
+"music_db": -52.5,
+"voice_db": -25.6
+}
+],
+"music_cover": 0.02,
+"voice_minus_music_db": 28.8,
+"voice_median_db": -24.4,
+"music_median_db": -48.9,
+"sfx": [
+{
+"t": 10.0,
+"peak_db": -40.0,
+"dur": 0.2,
+"jump": 10.3
+},
+{
+"t": 18.8,
+"peak_db": -38.1,
+"dur": 0.3,
+"jump": 11.0
+},
+{
+"t": 25.8,
+"peak_db": -31.9,
+"dur": 0.1,
+"jump": 13.7
+}
+]
+}

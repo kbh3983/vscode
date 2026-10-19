@@ -1,0 +1,22 @@
+A2Z / 1 Thin / -1Thin
+A2Z / 2 ExtraLight / -2ExtraLight
+A2Z / 3 Light / -3Light
+A2Z / 4 Regular / -4Regular
+A2Z / 5 Medium / -5Medium
+A2Z / 6 SemiBold / -6SemiBold
+A2Z / 7 Bold / -7Bold
+A2Z / 8 ExtraBold / -8ExtraBold
+A2Z / 9 Black / -9Black
+HYGothic-Extra / Regular / H2gtrE
+HYMyeongJo-Extra / Regular / H2mjrE
+HYGungSo-Bold / Regular / H2gsrB
+HYGraphic-Medium / Regular / H2gprM
+HYPMokGak-Bold / Regular / H2mkpB
+HYSinMyeongJo-Medium / Regular / H2mjsM
+HYShortSamul-Medium / Regular / H2sa1M
+HYPost-Light / Regular / H2porL
+HYPost-Medium / Regular / H2porM
+HYGothic-Medium / Regular / H2gtrM
+HYHeadLine-Medium / Regular / H2hdrM
+Headline R / Regular / HeadlineR-HM
+FONT 끝

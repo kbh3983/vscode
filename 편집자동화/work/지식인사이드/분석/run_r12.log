@@ -1,0 +1,16 @@
+== 시작 11:07:06
+프레임 46593 컷 118 점진 15
+frames 11:08:06
+샷 117 평균 13.18초 중앙 11.78초
+shots 11:08:20
+1555 장
+sheet 11:08:31
+ok 분석/r12/stems ['drums', 'bass', 'other', 'vocals']
+separate 11:09:08
+분석/r12/t.json 532 segments 1555초
+transcribe 11:10:39
+그래프 생략 No module named 'matplotlib'
+음악 구간 20 덮는 비율 84% 목소리−음악 35.0 dB 효과음 후보 123
+{'music_db_per_min': [-52.2, -48.6, -49.4, -47.7, -48.3, -49.1, -48.4, -51.2, -47.6, -47.4, -47.7, -49.4, -48.2, -49.5, -48.6, -51.0, -48.3, -48.5, -51.8, -48.3, -48.6, -50.6, -48.2, -52.0, -48.5, -48.8], 'music_db_when_silent': -54.7, 'silent_windows': 417, 'music_flatness_median': 0.363, 'music_windows_over_55': 3104, 'lufs': -9.3, 'lra': 2.4, 'true_peak': 0.0}
+audio 11:10:46
+ALLDONE

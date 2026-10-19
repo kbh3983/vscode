@@ -1,0 +1,53 @@
+== r26 시작 20:18:15
+ok ../../work/정보성/분석/r26/stems ['drums', 'bass', 'other', 'vocals']
+프레임 12181 컷 129 점진 27
+샷 133 평균 2.92초 중앙 2.50초
+11 22 74초 [9, 10, 13, 16, 17, 18, 29, 45, 48, 50, 51, 52, 80, 82, 86, 87, 88, 104, 110, 111, 112, 113]
+41 장
+../../work/정보성/분석/r26/t.json 57 segments 407초
+그래프 생략 No module named 'matplotlib'
+음악 구간 1 덮는 비율 100% 목소리−음악 15.9 dB 효과음 후보 20
+{'music_db_per_min': [-32.7, -33.5, -32.2, -34.1, -33.7, -35.4, -31.9], 'music_db_when_silent': -26.7, 'silent_windows': 222, 'music_flatness_median': 0.297, 'music_windows_over_55': 813, 'lufs': -13.8, 'lra': 4.6, 'true_peak': 1.7}
+후보 20 분당 3.0
+lufs_p10_50_90': [-16.4, -13.8, -12.2], 'lufs': -13.8, 'true_peak': 1.7, 'lra': 4.6, 'voice_db_p10_50_90': [-21.5, -17.1, -14.1], 'voice_spread_db': 7.4, 'voice_low_lt120_pct': 0.11, 'voice_high_gt6k_pct': 0.34, 'music_bar_per_min': '■■■■■■■', 'silences_over_0_3s': 0} 음악 구간 1
+== r26 끝 20:19:38
+== r27 시작 20:19:39
+ok ../../work/정보성/분석/r27/stems ['drums', 'bass', 'other', 'vocals']
+프레임 10559 컷 167 점진 41
+샷 146 평균 2.27초 중앙 1.69초
+11 24 51초 [8, 29, 30, 31, 32, 50, 51, 64, 65, 89, 91, 93, 96, 97, 103, 106, 108, 121, 123, 124, 127, 130, 138, 144]
+35 장
+../../work/정보성/분석/r27/t.json 52 segments 352초
+그래프 생략 No module named 'matplotlib'
+음악 구간 1 덮는 비율 99% 목소리−음악 12.1 dB 효과음 후보 78
+{'music_db_per_min': [-33.0, -40.6, -41.4, -41.8, -39.3, -42.5], 'music_db_when_silent': -39.4, 'silent_windows': 416, 'music_flatness_median': 0.283, 'music_windows_over_55': 698, 'lufs': -22.2, 'lra': 4.2, 'true_peak': -1.5}
+후보 78 분당 13.3
+_lufs_p10_50_90': [-24.5, -22.5, -20.8], 'lufs': -22.2, 'true_peak': -1.5, 'lra': 4.2, 'voice_db_p10_50_90': [-33.6, -26.8, -22.1], 'voice_spread_db': 11.5, 'voice_low_lt120_pct': 0.24, 'voice_high_gt6k_pct': 0.16, 'music_bar_per_min': '■■■■■■', 'silences_over_0_3s': 1} 음악 구간 1
+== r27 끝 20:20:54
+== r28 시작 20:20:54
+ok ../../work/정보성/분석/r28/stems ['drums', 'bass', 'other', 'vocals']
+프레임 10319 컷 149 점진 21
+샷 136 평균 2.43초 중앙 2.02초
+11 14 29초 [6, 9, 10, 11, 12, 13, 14, 17, 46, 72, 120, 121, 122, 130]
+34 장
+../../work/정보성/분석/r28/t.json 93 segments 344초
+그래프 생략 No module named 'matplotlib'
+음악 구간 4 덮는 비율 97% 목소리−음악 14.7 dB 효과음 후보 75
+{'music_db_per_min': [-41.4, -40.7, -42.9, -40.6, -39.6, -44.8], 'music_db_when_silent': -41.0, 'silent_windows': 581, 'music_flatness_median': 0.205, 'music_windows_over_55': 665, 'lufs': -21.9, 'lra': 4.8, 'true_peak': -1.9}
+후보 75 분당 13.1
+t_lufs_p10_50_90': [-25.0, -22.6, -20.6], 'lufs': -21.9, 'true_peak': -1.9, 'lra': 4.8, 'voice_db_p10_50_90': [-31.0, -25.8, -22.0], 'voice_spread_db': 9.0, 'voice_low_lt120_pct': 0.09, 'voice_high_gt6k_pct': 0.66, 'music_bar_per_min': '■■■■■■', 'silences_over_0_3s': 1} 음악 구간 2
+== r28 끝 20:22:40
+== r29 시작 20:22:40
+ok ../../work/정보성/분석/r29/stems ['drums', 'bass', 'other', 'vocals']
+프레임 11769 컷 210 점진 47
+샷 188 평균 1.95초 중앙 1.33초
+11 15 22초 [19, 20, 43, 119, 120, 124, 127, 128, 134, 155, 159, 173, 174, 179, 180]
+39 장
+../../work/정보성/분석/r29/t.json 63 segments 393초
+그래프 생략 No module named 'matplotlib'
+음악 구간 5 덮는 비율 96% 목소리−음악 14.8 dB 효과음 후보 92
+{'music_db_per_min': [-31.0, -34.8, -41.0, -45.8, -40.0, -45.0, -39.0], 'music_db_when_silent': -36.6, 'silent_windows': 262, 'music_flatness_median': 0.37, 'music_windows_over_55': 754, 'lufs': -18.3, 'lra': 6.2, 'true_peak': 0.5}
+후보 92 분당 14.1
+lufs_p10_50_90': [-21.3, -19.0, -16.3], 'lufs': -18.3, 'true_peak': 0.5, 'lra': 6.2, 'voice_db_p10_50_90': [-27.8, -22.6, -18.0], 'voice_spread_db': 9.8, 'voice_low_lt120_pct': 0.41, 'voice_high_gt6k_pct': 0.15, 'music_bar_per_min': '■■■■■■■', 'silences_over_0_3s': 2} 음악 구간 3
+== r29 끝 20:24:07
+ALLDONE

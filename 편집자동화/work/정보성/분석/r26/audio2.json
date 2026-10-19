@@ -1,0 +1,18 @@
+{
+"music_db_per_min": [
+-32.7,
+-33.5,
+-32.2,
+-34.1,
+-33.7,
+-35.4,
+-31.9
+],
+"music_db_when_silent": -26.7,
+"silent_windows": 222,
+"music_flatness_median": 0.297,
+"music_windows_over_55": 813,
+"lufs": -13.8,
+"lra": 4.6,
+"true_peak": 1.7
+}

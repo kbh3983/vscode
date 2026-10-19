@@ -1,0 +1,549 @@
+{
+"per_min": 1.4,
+"groups": [
+{
+"group": 0,
+"n": 6,
+"dur": 0.35,
+"centroid_hz": 1784,
+"flat": 0.174,
+"attack": 0.52,
+"tonal": 0.87,
+"examples": [
+479.2,
+1001.2,
+1352.2,
+1700.4,
+20.1,
+1.0
+]
+},
+{
+"group": 1,
+"n": 4,
+"dur": 0.3,
+"centroid_hz": 6420,
+"flat": 0.36,
+"attack": 0.24,
+"tonal": 0.95,
+"examples": [
+697.5,
+493.7,
+891.8,
+408.6
+]
+},
+{
+"group": 2,
+"n": 10,
+"dur": 0.25,
+"centroid_hz": 1204,
+"flat": 0.103,
+"attack": 1.0,
+"tonal": 0.82,
+"examples": [
+12.1,
+12.7,
+1706.0,
+7.8,
+1642.1,
+1603.4,
+1657.4,
+1628.9
+]
+},
+{
+"group": 3,
+"n": 7,
+"dur": 1.1,
+"centroid_hz": 791,
+"flat": 0.061,
+"attack": 0.72,
+"tonal": 0.87,
+"examples": [
+1721.4,
+1713.4,
+21.1,
+1697.7,
+1753.3,
+1658.5,
+1626.2
+]
+},
+{
+"group": 4,
+"n": 3,
+"dur": 0.1,
+"centroid_hz": 4644,
+"flat": 0.49,
+"attack": 1.0,
+"tonal": 0.34,
+"examples": [
+35.4,
+989.5,
+1726.6
+]
+},
+{
+"group": 5,
+"n": 10,
+"dur": 0.2,
+"centroid_hz": 8959,
+"flat": 0.464,
+"attack": 1.0,
+"tonal": 0.98,
+"examples": [
+1213.2,
+506.0,
+625.2,
+168.3,
+480.6,
+821.9,
+1160.9,
+1319.6
+]
+}
+],
+"sfx": [
+{
+"t": 1.0,
+"dur": 0.4,
+"jump": 12.2,
+"peak_db": -35.2,
+"centroid_hz": 1921,
+"flat": 0.134,
+"attack": 0.56,
+"tonal": 0.89,
+"group": 0
+},
+{
+"t": 7.8,
+"dur": 0.1,
+"jump": 16.2,
+"peak_db": -29.1,
+"centroid_hz": 1362,
+"flat": 0.104,
+"attack": 0.88,
+"tonal": 0.82,
+"group": 2
+},
+{
+"t": 12.1,
+"dur": 0.5,
+"jump": 28.3,
+"peak_db": -28.0,
+"centroid_hz": 1239,
+"flat": 0.233,
+"attack": 0.78,
+"tonal": 0.78,
+"group": 2
+},
+{
+"t": 12.7,
+"dur": 0.2,
+"jump": 17.5,
+"peak_db": -27.9,
+"centroid_hz": 732,
+"flat": 0.101,
+"attack": 0.74,
+"tonal": 0.8,
+"group": 2
+},
+{
+"t": 20.1,
+"dur": 0.4,
+"jump": 15.5,
+"peak_db": -27.2,
+"centroid_hz": 1515,
+"flat": 0.195,
+"attack": 0.57,
+"tonal": 0.8,
+"group": 0
+},
+{
+"t": 21.1,
+"dur": 1.1,
+"jump": 11.6,
+"peak_db": -29.2,
+"centroid_hz": 1058,
+"flat": 0.191,
+"attack": 0.81,
+"tonal": 0.73,
+"group": 3
+},
+{
+"t": 35.4,
+"dur": 0.1,
+"jump": 18.1,
+"peak_db": -38.2,
+"centroid_hz": 5657,
+"flat": 0.49,
+"attack": 1.0,
+"tonal": 0.56,
+"group": 4
+},
+{
+"t": 168.3,
+"dur": 0.1,
+"jump": 17.6,
+"peak_db": -38.8,
+"centroid_hz": 7944,
+"flat": 0.515,
+"attack": 0.63,
+"tonal": 0.96,
+"group": 5
+},
+{
+"t": 408.6,
+"dur": 0.3,
+"jump": 16.7,
+"peak_db": -38.1,
+"centroid_hz": 8844,
+"flat": 0.317,
+"attack": 0.28,
+"tonal": 0.98,
+"group": 1
+},
+{
+"t": 479.2,
+"dur": 0.3,
+"jump": 40.4,
+"peak_db": -13.7,
+"centroid_hz": 2164,
+"flat": 0.204,
+"attack": 0.47,
+"tonal": 0.85,
+"group": 0
+},
+{
+"t": 480.6,
+"dur": 0.2,
+"jump": 16.1,
+"peak_db": -38.5,
+"centroid_hz": 4188,
+"flat": 0.501,
+"attack": 1.0,
+"tonal": 0.81,
+"group": 5
+},
+{
+"t": 493.7,
+"dur": 0.3,
+"jump": 24.2,
+"peak_db": -29.0,
+"centroid_hz": 6053,
+"flat": 0.392,
+"attack": 0.59,
+"tonal": 0.91,
+"group": 1
+},
+{
+"t": 506.0,
+"dur": 0.2,
+"jump": 23.2,
+"peak_db": -32.1,
+"centroid_hz": 8903,
+"flat": 0.456,
+"attack": 1.0,
+"tonal": 0.95,
+"group": 5
+},
+{
+"t": 625.2,
+"dur": 0.1,
+"jump": 17.7,
+"peak_db": -37.3,
+"centroid_hz": 11554,
+"flat": 0.466,
+"attack": 1.0,
+"tonal": 0.99,
+"group": 5
+},
+{
+"t": 697.5,
+"dur": 0.3,
+"jump": 32.9,
+"peak_db": -20.9,
+"centroid_hz": 3203,
+"flat": 0.327,
+"attack": 0.19,
+"tonal": 0.9,
+"group": 1
+},
+{
+"t": 753.9,
+"dur": 0.4,
+"jump": 10.7,
+"peak_db": -31.8,
+"centroid_hz": 9015,
+"flat": 0.428,
+"attack": 0.8,
+"tonal": 0.99,
+"group": 5
+},
+{
+"t": 821.9,
+"dur": 0.3,
+"jump": 15.7,
+"peak_db": -39.4,
+"centroid_hz": 10913,
+"flat": 0.461,
+"attack": 0.96,
+"tonal": 0.99,
+"group": 5
+},
+{
+"t": 891.8,
+"dur": 0.8,
+"jump": 19.9,
+"peak_db": -25.0,
+"centroid_hz": 6788,
+"flat": 0.473,
+"attack": 0.03,
+"tonal": 0.98,
+"group": 1
+},
+{
+"t": 989.5,
+"dur": 0.1,
+"jump": 16.6,
+"peak_db": -38.1,
+"centroid_hz": 4644,
+"flat": 0.506,
+"attack": 1.0,
+"tonal": 0.34,
+"group": 4
+},
+{
+"t": 1001.2,
+"dur": 0.2,
+"jump": 17.6,
+"peak_db": -39.9,
+"centroid_hz": 2713,
+"flat": 0.296,
+"attack": 0.03,
+"tonal": 0.74,
+"group": 0
+},
+{
+"t": 1160.9,
+"dur": 0.2,
+"jump": 13.9,
+"peak_db": -38.9,
+"centroid_hz": 10045,
+"flat": 0.417,
+"attack": 1.0,
+"tonal": 0.91,
+"group": 5
+},
+{
+"t": 1213.2,
+"dur": 0.2,
+"jump": 25.5,
+"peak_db": -30.1,
+"centroid_hz": 8077,
+"flat": 0.462,
+"attack": 1.0,
+"tonal": 0.98,
+"group": 5
+},
+{
+"t": 1318.4,
+"dur": 0.1,
+"jump": 10.5,
+"peak_db": -38.9,
+"centroid_hz": 8699,
+"flat": 0.555,
+"attack": 1.0,
+"tonal": 0.99,
+"group": 5
+},
+{
+"t": 1319.6,
+"dur": 0.3,
+"jump": 13.6,
+"peak_db": -33.5,
+"centroid_hz": 10446,
+"flat": 0.533,
+"attack": 1.0,
+"tonal": 0.99,
+"group": 5
+},
+{
+"t": 1352.2,
+"dur": 0.2,
+"jump": 16.6,
+"peak_db": -19.9,
+"centroid_hz": 1648,
+"flat": 0.153,
+"attack": 0.63,
+"tonal": 0.99,
+"group": 0
+},
+{
+"t": 1603.4,
+"dur": 0.5,
+"jump": 14.8,
+"peak_db": -32.9,
+"centroid_hz": 1256,
+"flat": 0.114,
+"attack": 0.87,
+"tonal": 0.82,
+"group": 2
+},
+{
+"t": 1626.2,
+"dur": 0.9,
+"jump": 10.1,
+"peak_db": -36.6,
+"centroid_hz": 791,
+"flat": 0.061,
+"attack": 0.59,
+"tonal": 0.87,
+"group": 3
+},
+{
+"t": 1628.9,
+"dur": 0.2,
+"jump": 11.6,
+"peak_db": -38.8,
+"centroid_hz": 2351,
+"flat": 0.159,
+"attack": 1.0,
+"tonal": 0.84,
+"group": 2
+},
+{
+"t": 1642.1,
+"dur": 0.4,
+"jump": 15.7,
+"peak_db": -30.6,
+"centroid_hz": 1128,
+"flat": 0.076,
+"attack": 1.0,
+"tonal": 0.8,
+"group": 2
+},
+{
+"t": 1657.4,
+"dur": 0.2,
+"jump": 13.5,
+"peak_db": -27.1,
+"centroid_hz": 1170,
+"flat": 0.074,
+"attack": 1.0,
+"tonal": 0.9,
+"group": 2
+},
+{
+"t": 1658.5,
+"dur": 0.6,
+"jump": 10.2,
+"peak_db": -25.7,
+"centroid_hz": 697,
+"flat": 0.045,
+"attack": 0.87,
+"tonal": 0.91,
+"group": 3
+},
+{
+"t": 1697.7,
+"dur": 0.7,
+"jump": 10.4,
+"peak_db": -32.3,
+"centroid_hz": 773,
+"flat": 0.046,
+"attack": 0.33,
+"tonal": 0.87,
+"group": 3
+},
+{
+"t": 1700.4,
+"dur": 0.7,
+"jump": 16.1,
+"peak_db": -30.7,
+"centroid_hz": 1013,
+"flat": 0.087,
+"attack": 0.27,
+"tonal": 0.89,
+"group": 0
+},
+{
+"t": 1702.0,
+"dur": 0.1,
+"jump": 10.4,
+"peak_db": -32.3,
+"centroid_hz": 1904,
+"flat": 0.125,
+"attack": 1.0,
+"tonal": 0.85,
+"group": 2
+},
+{
+"t": 1706.0,
+"dur": 0.4,
+"jump": 16.4,
+"peak_db": -29.6,
+"centroid_hz": 879,
+"flat": 0.058,
+"attack": 1.0,
+"tonal": 0.95,
+"group": 2
+},
+{
+"t": 1713.4,
+"dur": 1.3,
+"jump": 12.9,
+"peak_db": -23.5,
+"centroid_hz": 605,
+"flat": 0.035,
+"attack": 0.61,
+"tonal": 0.73,
+"group": 3
+},
+{
+"t": 1721.4,
+"dur": 1.5,
+"jump": 22.6,
+"peak_db": -31.7,
+"centroid_hz": 1651,
+"flat": 0.122,
+"attack": 0.94,
+"tonal": 0.9,
+"group": 3
+},
+{
+"t": 1726.6,
+"dur": 0.1,
+"jump": 12.5,
+"peak_db": -37.3,
+"centroid_hz": 4376,
+"flat": 0.287,
+"attack": 0.38,
+"tonal": 0.27,
+"group": 4
+},
+{
+"t": 1730.9,
+"dur": 0.3,
+"jump": 10.5,
+"peak_db": -36.7,
+"centroid_hz": 1036,
+"flat": 0.1,
+"attack": 1.0,
+"tonal": 0.7,
+"group": 2
+},
+{
+"t": 1753.3,
+"dur": 1.3,
+"jump": 10.4,
+"peak_db": -27.5,
+"centroid_hz": 910,
+"flat": 0.105,
+"attack": 0.72,
+"tonal": 0.83,
+"group": 3
+}
+]
+}
