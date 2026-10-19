@@ -3,7 +3,7 @@
     var OUT = "C:\\DADA\\9.AI\\vscode\\편집자동화\\work\\정보성\\템플릿\\ae", log = [];
     function w(s) { log.push(s); var f = new File(OUT + "\\result_fonts.txt"); f.encoding = "UTF-8"; f.open("w"); f.write(log.join("\n")); f.close(); }
     try {
-        var keys = ["Gmarket", "YEONSUNG", "Yeonsung", "연성", "Santokki", "산토끼", "Mongtori", "몽토리"];
+        var keys = ["HY", "헤드라인", "HeadLine", "Headline", "에이투지", "A2Z", "a2z"];
         var all = app.fonts.allFonts;
         for (var i = 0; i < all.length; i++) {
             for (var j = 0; j < all[i].length; j++) {
