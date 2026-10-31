@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 spec = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]
 C = int(sys.argv[3]) if len(sys.argv) > 3 else 4; W = int(sys.argv[4]) if len(sys.argv) > 4 else 480; H = W * 9 // 16; CAP = 30
-try: font = ImageFont.truetype("C:/Windows/Fonts/malgunbd.ttf", 17)
+try: font = ImageFont.truetype(next(p for p in ["C:/Windows/Fonts/malgunbd.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc"] if __import__("os").path.exists(p)), 17)
 except Exception: font = ImageFont.load_default()
 def grab(src, t):
     b = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(t), "-i", src, "-frames:v", "1", "-vf", f"scale={W}:{H}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True).stdout

@@ -4,11 +4,11 @@
 - 얼굴을 못 찾으면 사람 실루엣(밝은 배경과 차이 나는 어두운 옷·몸) 가로 무게중심
 - k: 기본 1.0 (세로 꽉), 사람 둘이 1080 폭에 안 들어가면 0.958(=1035/1080, 위아래 꽉 맞춤 최소)까지 줄임
 """
-import json, os, sys
+import os, json, os, sys
 import shutil, tempfile
 import cv2, numpy as np
 
-MODEL = "C:/DADA/9.AI/vscode/편집자동화/models/face_detection_yunet_2023mar.onnx"
+MODEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "models", "face_detection_yunet_2023mar.onnx")   # 2026-10-27 맥 경로
 _m = os.path.join(tempfile.gettempdir(), "yunet_short.onnx"); shutil.copy(MODEL, _m)   # OpenCV가 한글 경로를 못 읽음
 det = cv2.FaceDetectorYN.create(_m, "", (1920, 1080), 0.6, 0.3, 5000)
 

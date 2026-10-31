@@ -57,7 +57,11 @@ def speech_segments(m, frame=0.05, gap=0.4):
     k = len(m) // n
     rms = np.sqrt((m[:k * n].reshape(k, n, 2) ** 2).mean(axis=(1, 2)))
     db = 20 * np.log10(rms + 1e-9)
-    on = db > np.percentile(db, 10) + 20
+    has = db > -120   # 클립 사이 빈 곳(디지털 무음)은 바닥 소음 계산에서 뺌 — 빈 곳이 10%를 넘으면 전부 말로 잡힘 (2026-10-20 스틱 뜀뛰기)
+    # 문턱 = 바닥 소음 + 20 dB, 단 말이 거의 쉬지 않아 바닥이 높으면(큰 소리가 바닥보다 20 dB 못 넘음) 상위 10% 소리 − 6 dB 중 낮은 쪽
+    # (2026-10-26 261013 근감소증·체어: 바닥 −31.6, 상위 1% −13.9 → 말 구간 0개·14개로 검증 실패)
+    th = min(np.percentile(db[has], 10) + 20, np.percentile(db[has], 90) - 6)
+    on = has & (db > th)
     segs, cur = [], None
     for i, v in enumerate(on):
         if v:

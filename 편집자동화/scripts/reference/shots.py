@@ -19,7 +19,7 @@ for i, s in enumerate(S):
     s.update(i=i, s=round(s["f0"] / fps, 3), e=round((s["f1"] + 1) / fps, 3)); s["dur"] = round(s["e"] - s["s"], 3)
 json.dump(S, open(os.path.join(d, "shots.json"), "w"), indent=0)
 os.makedirs(os.path.join(d, "shots"), exist_ok=True)
-font = ImageFont.truetype("C:/Windows/Fonts/malgunbd.ttf", 15)
+font = ImageFont.truetype(next(p for p in ["C:/Windows/Fonts/malgunbd.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc"] if __import__("os").path.exists(p)), 15)
 W, H = 320, 180
 def grab(t):
     x = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", src, "-frames:v", "1", "-vf", f"scale={W}:{H}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True).stdout

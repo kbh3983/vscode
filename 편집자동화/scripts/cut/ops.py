@@ -41,6 +41,9 @@ def main(work):
     for g in ed["takes"]:
         for t in g["takes"]:
             cuts |= {frame(t["start"]), frame(t["end"])}
+    for d in ed["decisions"]:   # 확인 필요 중 split 표시 = 지우지 않고 잘라만 둠 — 사용자가 검토 때 바로 끌 수 있게 (2026-10-22 사용자: "나눠주고 동일하게 마커로 구분만 해줘")
+        if d["action"] == "review" and d.get("split"):
+            cuts |= {frame(d["start"]), frame(d["end"])}
     cuts = sorted(c for c in cuts if 0 < c < end_f)
     lines += [f"R|{df_tc(c)}" for c in cuts]
     lines += [f"{'X' if d.get('confirmed') else 'D'}|{frame(d['start'])}|{frame(d['end'])}" for d in dels]

@@ -143,7 +143,7 @@ def align_cues(cues, audio, off, block_max=25.0):
     (자막마다 따로 ±1초 정렬하면 앞뒤 자막의 말소리를 끌어와 시간이 당겨짐)"""
     from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
     proc = Wav2Vec2Processor.from_pretrained(P.MODEL_ALIGN)
-    model = Wav2Vec2ForCTC.from_pretrained(P.MODEL_ALIGN).cuda().eval()
+    model = Wav2Vec2ForCTC.from_pretrained(P.MODEL_ALIGN).to(P.device()).eval()
     vocab = proc.tokenizer.get_vocab()
     total = len(audio) / P.SR
 
@@ -185,14 +185,14 @@ class Voice:
         from speechbrain.inference.speaker import EncoderClassifier
         save = os.path.join(os.path.expanduser("~"), ".cache", "speechbrain", "spkrec-ecapa-voxceleb")
         self.enc = EncoderClassifier.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb", savedir=save,
-                                                  run_opts={"device": "cuda:0"})
+                                                  run_opts={"device": P.device()})
         self.torch, self.audio, self.off = torch, audio, off
         self.centroids = []
 
     def emb(self, a, b):
         x = self.audio[int((a - self.off) * P.SR):int((b - self.off) * P.SR)].copy()
         with self.torch.no_grad():
-            e = self.enc.encode_batch(self.torch.from_numpy(x)[None].cuda()).squeeze().cpu().numpy()
+            e = self.enc.encode_batch(self.torch.from_numpy(x)[None].to(P.device())).squeeze().cpu().numpy()
         return e / (np.linalg.norm(e) + 1e-9)
 
     def build(self, spans):

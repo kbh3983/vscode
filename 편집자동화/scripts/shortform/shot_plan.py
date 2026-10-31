@@ -18,12 +18,13 @@ HEAD, FOOT = 0.07, 0.03      # 헤드룸, 발 아래 여백
 HMIN = 400                   # 너무 크게 확대하지 않음 (4K 원본 800px → 1035, 1.3배)
 NOSE, LSH, RSH, LHIP, RHIP, LKN, RKN = 0, 5, 6, 11, 12, 13, 14
 
-model = keypointrcnn_resnet50_fpn(weights=KeypointRCNN_ResNet50_FPN_Weights.DEFAULT).eval().cuda()
+DEV = "cuda" if torch.cuda.is_available() else "cpu"   # 2026-10-27 맥은 CPU
+model = keypointrcnn_resnet50_fpn(weights=KeypointRCNN_ResNet50_FPN_Weights.DEFAULT).eval().to(DEV)
 
 CACHE = {}
 def people(path):
     if path in CACHE: return CACHE[path]
-    img = read_image(path).float().cuda() / 255
+    img = read_image(path).float().to(DEV) / 255
     with torch.no_grad(): o = model([img])[0]
     P = []
     for b, s, k in zip(o["boxes"], o["scores"], o["keypoints"]):

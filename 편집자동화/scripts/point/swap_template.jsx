@@ -2,6 +2,8 @@
 // 사용: var SEQ_ID="<ID>"; var FIRST=<첫 포인트 트랙 index>; var FROM="<바꿀 템플릿 이름(클립 이름)>"; var TO_NAME="<새 템플릿 이름>"; var TO_PATH="<새 .mogrt>";
 //       var AT=<빈 오디오 트랙>; var FONT="Paperlogy-7Bold"; var SWAP_RESULT=""; $.evalFile("<이 파일>"); return SWAP_RESULT;
 (function () {
+    // 끝만 앞당기면 원본 끝점(out)이 템플릿 끝에 남아 프리미어에서 끝을 끌어 늘릴 수 없음 → out = in + 길이 (2026-10-21 사용자: 3초 → 6~7초로 늘리고 싶은데 안 됨)
+    function keepHandle(k) { var o = new Time(); o.seconds = k.inPoint.seconds + (k.end.seconds - k.start.seconds); k.outPoint = o; }
     var seq = null;
     for (var i = 0; i < app.project.sequences.numSequences; i++) if (app.project.sequences[i].sequenceID == SEQ_ID) seq = app.project.sequences[i];
     app.project.activeSequence = seq;
@@ -37,7 +39,7 @@
             for (var a_ = 0; a_ < A_.length; a_++) if (j[A_[a_]] && j[A_[a_]].length) j[A_[a_]] = [j[A_[a_]][0]];
             m.properties[q].setValue(JSON.stringify(j), true);
         }
-        var e2 = new Time(); e2.seconds = jb.e; got.end = e2;
+        var e2 = new Time(); e2.seconds = jb.e; got.end = e2; keepHandle(got);
         try { got.name = TO_NAME; } catch (e3) {}
         done.push("V" + (jb.v + 1) + " " + jb.s.toFixed(2) + " " + jb.t);
     }

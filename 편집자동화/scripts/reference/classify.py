@@ -22,7 +22,7 @@ for _ in range(50):
     C = np.array([F[lab == k].mean(0) if (lab == k).any() else C[k] for k in range(K)])
 for s, l in zip(S, lab): s["grp"] = int(l)
 json.dump(S, open(os.path.join(d, "shots.json"), "w"), indent=0)
-font = ImageFont.truetype("C:/Windows/Fonts/malgunbd.ttf", 14)
+font = ImageFont.truetype(next(p for p in ["C:/Windows/Fonts/malgunbd.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc"] if __import__("os").path.exists(p)), 14)
 sh = Image.new("RGB", (256 * 7, 144 * K))
 for k in range(K):
     idx = [i for i in range(len(S)) if lab[i] == k]; tot = sum(S[i]["dur"] for i in idx)

@@ -114,6 +114,7 @@
 - Premiere Pro MCP: 시퀀스 복제, razor, 클립 비활성화(enable_disable_clip), 색 라벨, 마커, 오디오 트랜지션, 프레임 캡처(점프컷 확인)
 - 외부: 무음 탐지는 Premiere `detect_silence` 또는 오디오 분석 스크립트(`scripts/`)
 - 스크립트: 에이전트가 대본을 읽고 `work/<p>/cut/manual.json`(C2~C8 컷, 운동 동작 구간 `keep_silence`, 테이크 그룹, 리뷰로 확인된 삭제 `confirmed_ids_before`) 작성 → `scripts/cut/plan.py`(C1 무음, 단어 컷 경계 오디오 쉼 맞춤, `edit_decisions.json`) → `scripts/cut/ops.py`(`ops.txt`) → `scripts/cut/apply_ops.jsx`(razor → 확인된 삭제 지우기 → 비활성화 → 마커 → **빈 구간 닫기**)
+  - [최박사] 습관 "네": 후보(앞 말 끝·다음 말 시작·운동 중 여부)를 적어 `scripts/cut/ne_find.py`로 소리 덩어리·받아쓰기 확인 → 삭제는 manual.json에 task `C4네`(경계 다시 맞추지 않음), 받아쓰기가 다른 말이면 review (2026-10-25)
   - 실행: `execute_extendscript` code = `var SEQ_ID="..."; var OPS="C:/.../cut/ops.txt"; $.evalFile("C:/.../scripts/cut/apply_ops.jsx"); return APPLY_RESULT;`
 - 리뷰 읽기: 사용자가 V3에 넣은 그래픽 텍스트는 `export_as_fcp_xml`로 내보내 그래픽 클립의 효과 이름에서 읽는다 (XML 끝부분이 잘릴 수 있으니 정규식으로 읽기). 내보낸 뒤 Premiere가 1분쯤 응답하지 않을 수 있음
 - 주의: MCP `razor_all_tracks`는 29.97 드롭프레임을 잘못 계산함 → QE `razor(드롭프레임 타임코드)` 사용. 트랙 클립 라벨 색 API 없음 → 마커 색으로 구분. 마커 `end`는 숫자(초)로

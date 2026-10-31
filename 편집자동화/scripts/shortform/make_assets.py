@@ -8,9 +8,10 @@
 import os, sys
 from PIL import Image, ImageDraw, ImageFont
 
-FD = os.path.expandvars(r"%LOCALAPPDATA%\Microsoft\Windows\Fonts")
+FD = os.path.expandvars(r"%LOCALAPPDATA%\Microsoft\Windows\Fonts") if os.name == "nt" else os.path.expanduser("~/Library/Fonts")   # 2026-10-27 맥
 FONT = {w: os.path.join(FD, f"Pretendard-{w}.otf") for w in ("Regular", "Medium", "SemiBold", "Bold", "ExtraBold", "Black")}
-EMOJI = r"C:\Windows\Fonts\seguiemj.ttf"
+EMOJI = r"C:\Windows\Fonts\seguiemj.ttf" if os.name == "nt" else "/System/Library/Fonts/Apple Color Emoji.ttc"
+EMOJI_FIXED = os.name != "nt"   # 맥 이모지 폰트는 160px 크기만 됨 → 160으로 그리고 줄여서 붙임
 W, H = 1080, 1920
 TEAL, PURPLE = (0, 167, 132), (58, 51, 143)
 WHITE, YELLOW, MINT, GREEN, LIME, BLACK = (255, 255, 255), (252, 224, 1), (81, 225, 187), (69, 220, 176), (112, 255, 42), (0, 0, 0)
@@ -22,7 +23,9 @@ TRACK = -0.04   # 글자 사이 (크기 비율) — 레퍼런스가 기본보다
 EMO = 0.78      # 이모지 크기 (글자 크기 비율)
 
 def adv(ch, wt, size, track):
-    if is_emoji(ch): return ImageFont.truetype(EMOJI, round(size * EMO)).getlength(ch)
+    if is_emoji(ch):
+        if EMOJI_FIXED: return ImageFont.truetype(EMOJI, 160).getlength(ch) * size * EMO / 160
+        return ImageFont.truetype(EMOJI, round(size * EMO)).getlength(ch)
     return ImageFont.truetype(FONT[wt], size).getlength(ch) + size * track
 
 def seg_width(segs, size, track=TRACK):
@@ -35,7 +38,12 @@ def draw_line(img, segs, cx, cy, size, track=TRACK):
     d = ImageDraw.Draw(img); x = cx - seg_width(segs, size, track) / 2
     for t, col, wt in segs:
         for ch in t:
-            if is_emoji(ch):
+            if is_emoji(ch) and EMOJI_FIXED:
+                f = ImageFont.truetype(EMOJI, 160); tmp = Image.new("RGBA", (220, 220), (0, 0, 0, 0))
+                ImageDraw.Draw(tmp).text((0, 110), ch, font=f, anchor="lm", embedded_color=True)
+                k = size * EMO / 160; tmp = tmp.resize((round(220 * k), round(220 * k)), Image.LANCZOS)
+                img.alpha_composite(tmp, (round(x), round(cy - size * 0.04 - 110 * k)))
+            elif is_emoji(ch):
                 f = ImageFont.truetype(EMOJI, round(size * EMO))
                 d.text((x, cy - size * 0.04), ch, font=f, anchor="lm", embedded_color=True)
             else:
@@ -119,6 +127,8 @@ if __name__ == "__main__":
         info("라이브", below=True).save(os.path.join(out, "14_라이브_영상아래.png"))
         title("중년 이후 꼭 해야하는", "허리 통증 삭제 운동").save(os.path.join(out, "20_상단제목_예시.png"))
         sub("내 무릎 바로 밑에", "무릎").save(os.path.join(out, "30_자막_예시.png"))
+        bottom("단톡방").save(os.path.join(out, "15_하단_단톡방.png"))
+        bottom("플레오라").save(os.path.join(out, "16_하단_플레오라.png"))
         print("ok", out)
     elif cmd == "title": title(sys.argv[3], sys.argv[4]).save(sys.argv[2])
     elif cmd == "sub": sub(sys.argv[3], sys.argv[4] if len(sys.argv) > 4 else "").save(sys.argv[2])

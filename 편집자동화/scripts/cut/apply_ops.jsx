@@ -64,9 +64,15 @@
         }
         var mk = [], m = seq.markers.getFirstMarker();
         while (m) { mk.push(m); m = seq.markers.getNextMarker(m); }
+        // 2026-10-22: 지운 구간 안에 시작하는 마커는 지운 내용의 마커라 지움 (안 그러면 엉뚱한 자리에 남음),
+        //             끝은 끝 위치 기준 당김 양으로 (시작 기준으로 옮기면 뒤에서 지운 만큼 끝이 남음 — 누워서_컷편집 "V1 미세조정")
+        function inside(fm) { for (var k = 0; k < X.length; k++) if (fm >= X[k][0] && fm < X[k][1]) return X[k]; return null; }
         for (var i = 0; i < mk.length; i++) {
-            var s = Math.round(mk[i].start.seconds * FPS), e = Math.round(mk[i].end.seconds * FPS), o = cum(s);
-            if (o > 0) { mk[i].start = (s - o) / FPS; mk[i].end = (e - o) / FPS; }
+            var s = Math.round(mk[i].start.seconds * FPS), e = Math.round(mk[i].end.seconds * FPS);
+            if (inside(s)) { seq.markers.deleteMarker(mk[i]); continue; }
+            var xe = inside(e); if (xe) e = xe[0];
+            var os = cum(s), oe = cum(e);
+            if (os > 0 || oe > 0) { mk[i].start = (s - os) / FPS; mk[i].end = (e - oe) / FPS; }
         }
     }
     APPLY_RESULT = "razor " + R.length + ", removed " + rem.length + ", disabled " + dis + ", partial " + bad

@@ -92,6 +92,8 @@ Premiere: `_포인트` 새 시퀀스(새 비디오 트랙에 후보 템플릿 + 
 - 효과·후기·변화를 말하는 대사는 **긍정** (놀람 아님, 2026-10-13)
 - 설명형 영상의 정보·요약은 `정보` → `요약_색강조_한줄_AE` (명사형 요약, `{하늘}` `[초록]`), 제품 안내는 `제품안내` → `정보바_2줄_AE` (`윗줄 / 아랫줄`, `{노랑}`) (2026-10-13)
 - points에 `genre`(운동/설명) — 강조 1순위가 다름. 해부·척추 설명 대사는 `image_prompt`(GPT용 설명 이미지 프롬프트, criteria 틀), 제품 결론 대사는 `suggest`에 반짝 강조 + 제품 사진 (2026-10-13)
+- (2026-10-21 노년필수근육 회고) 요령 구간에서 주의점·팁("~말고", "A가 아니라 B", 실수 막는 말)은 `"tip": true` (문구 패턴으로 못 찾을 때) → Tip! 1순위, 나머지는 노랑 2단 1순위. 요령·정보·세트안내는 `cues` 끝을 **그 설명이 끝나는 줄**로 적는다 (끝 = 그 줄 끝). 정보 문구는 핵심어 결과형. 트레이너가 동작 이름을 말하지 않으면 운동 순서 제목을 지어 넣지 않는다
+- [최박사] **운동 순서 제목은 넣지 않는다** (2026-10-26 — 노년·누워서 모두 지움). 반응·감정 후보는 트레이너 혼자 나오는 영상이라도 계속 깐다 (사용자가 필요 없으면 지움)
 - 엔딩 앞 60초 안의 웃음·마무리는 고르지 않는다 — points에 `ending`(엔딩 시작 초)을 적으면 plan.py가 뺌 (2026-10-13)
 - 화면 효과가 어울리는 대사·제품 메시지는 `suggest`에 효과음·확대·화면 효과를 적는다 (제안만, 마커와 보고에 나옴)
 - 학습 기록상 사용자가 포인트 자막을 남긴 유형과 비슷한 대사
@@ -173,7 +175,7 @@ Premiere: `_포인트` 새 시퀀스(새 비디오 트랙에 후보 템플릿 + 
 ---
 
 ## 9. 기술 메모 (2026-10-11 확인)
-- 배치: `dump_audio.jsx`(말소리 트랙) → `.venv/Scripts/python scripts/point/cue_words.py <audio.json> <srt> <points.json> <words.json>` → `scripts/point/plan.py <points.json> <srt> <배치.json> <words.json>` → `apply_point.jsx` (PLAN, AT=빈 오디오 트랙, 클립 이름 = 템플릿 이름) → `fix_twoline.jsx` → `set_font.jsx` → `fix_runs.jsx`
+- 배치: `dump_audio.jsx`(말소리 트랙) → `.venv/Scripts/python scripts/point/cue_words.py <audio.json> <srt> <points.json> <words.json>` → `scripts/point/plan.py <points.json> <srt> <배치.json> <words.json>` → `apply_point.jsx` (PLAN, AT=빈 오디오 트랙, 클립 이름 = 템플릿 이름) → `fix_twoline.jsx` → `set_font.jsx` → `fix_runs.jsx` → **`add_dissolve.jsx`** (끝 디졸브 10프레임, 2026-10-26)
 - 위치: `dump_points.jsx` → `fit_person.py split` → 띠(`fit_guide.py jobs/plan`)·인물(`fit_person.py jobs/plan`) → `render_solo.jsx`(jobs 경로는 **절대 경로**로 바꿔 넣기 — 상대 경로면 "folder doesn't exist") → `apply_guide.jsx` → 다시 렌더(a 접두) → verify. `fit_person.py`는 OpenCV가 필요해 **`.venv` 파이썬**으로
 - 넣기 전에 비디오 트랙을 `first_track + 최대 후보 수`만큼, **빈 오디오 트랙 1개**를 먼저 만든다 (템플릿 소리가 기존 오디오를 덮지 않게)
 - AE로 만든 템플릿: `getMGTComponent()` 속성 값이 JSON, `textEditValue`를 바꿔 setValue. 두 칸(윗줄/아랫줄)이면 나눠 넣기
@@ -183,6 +185,7 @@ Premiere: `_포인트` 새 시퀀스(새 비디오 트랙에 후보 템플릿 + 
 - AE 템플릿 만들기 (2026-10-12): 애프터이펙트 스크립트는 **반드시 `scripts/point/ae/run_ae.ps1`로** 보낸다 — 프리미어가 띄운 창 없는 AE(`-m`)와 구분, 내보내기 전 저장, 단계별 기록 ([playbook_AE변환.md](playbook_AE변환.md) 9장). 정보형 4종 `_AE`는 원본 폰트 유지(`set_font.jsx` KEEP_FONTS)
 - 프리미어 템플릿은 `importMGT`가 오류 없이 **안 들어갈 때가 있음** → 배치 후 반드시 `fill_missing.jsx`(배치.json 기준으로 빠진 후보를 넣고 바로 확인)를 돌려 전부 들어갔는지 확인. 한 번에 많이 넣으면 45초 시간 초과 → `LIMIT`로 나눠서
 - 원래 시퀀스에 편집자의 강조 자막(캡션 트랙 등)이 이미 있어도 **그대로 두고 평소대로 배치** (criteria.md). 있으면 완료 보고에 알리기만 한다
+- **클립 길이를 줄일 때 원본 끝점(out)도 같이** (2026-10-21): `item.end`만 바꾸면 out이 템플릿 끝에 남아 프리미어에서 끝을 끌어 늘릴 수 없음 → `keepHandle()`로 out = in + 길이 (apply_point·fill_missing·swap_template·replace_ae). 늘릴 수 있는 한계는 템플릿 길이 (우리 `_AE` 15초, PYNPA 강한말·강조말·뾰족말 3초·의성어 5초·러블리 10초)
 
 ## 10. 미결 사항
 - [x] **템플릿 파일명이 대부분 태그 형식이 아님** (2026-10-10 스캔: 약 290개, `1.mogrt`·`Runningman (N)` 등) → **사용자가 나중에 파일명을 직접 정리** (사용자 결정, 2026-10-10: "파일명은 내가 나중에 직접 정리할거야."). 에이전트는 파일명을 바꾸지 않는다(8장). 작업 시작 시 스캔에서 정리 여부를 확인하고, 아직 정리 전이면 첫 작업 전에 진행 방법을 사용자에게 묻는다
@@ -191,3 +194,4 @@ Premiere: `_포인트` 새 시퀀스(새 비디오 트랙에 후보 템플릿 + 
 - [ ] 포인트 자막 밀도 제한 (분당 최대 개수 — `tasks/태스크리스트.md` 13번 "밀도 제한")
 - [ ] 기본 자막·기존 그래픽(V4 소제목 등)과 위치가 겹칠 때 처리
 - [ ] "3회 이상 선택 → 1순위" 규칙은 사용자 지정이므로 자동 적용. 다만 `criteria.md` 기준값 변경은 공통 규칙대로 사용자 승인 후
+- **폰트 수정 막힘 (2026-10-26)**: 우리 `_AE` 템플릿이 10-17 수정 전에 내보내져 텍스트 칸 `capPropFontEdit/SizeEdit/FauxStyleEdit`=false → 프리미어 기본 그래픽 패널에 폰트 칸이 안 나옴 (누워서 `_정렬` 1:36 해설 사용자 지적). 설치된 템플릿 18개는 `ae/allow_font_edit.py`로 고침(백업 `work/포인트/mogrt_백업_폰트허용1026/`) → **새로 넣는 클립은 허용됨**. 이미 올라간 클립은 클립 JSON 값을 켜도(`unlock_font.jsx`) 패널에 안 나옴(사용자 확인) → **`refresh_mgt.jsx`로 같은 시간에 다시 넣기** (list → tracks → run → finish, 원래 트랙에 바로 넣으면 importMGT 15초가 뒤 클립을 덮어씀 — 새 빈 트랙에 넣고 마지막에 원래 클립·빈 트랙 정리). 작업 전 시퀀스 복제 백업, 끝나고 백업과 전체 비교

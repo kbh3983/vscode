@@ -11,7 +11,9 @@
     for (var i = 0; i < app.project.sequences.numSequences; i++) if (app.project.sequences[i].sequenceID == SEQ_ID) seq = app.project.sequences[i];
     app.project.activeSequence = seq;
     var q = qe.project.getActiveSequence(), eff = qe.project.getVideoEffectByName("Lumetri 색상");
-    function isCam(n) { return (n.indexOf("C0") == 0 || n.indexOf("20260908_B_CAM") == 0) && n.indexOf("엔딩") < 0; }
+    // 카메라 파일 이름 앞부분 — 프로젝트마다 다르면 var CAMS=["C0","A_CAM_"]; (batch.py COLOR_CAM과 같게)
+    var cams = typeof CAMS != "undefined" ? CAMS : ["C0", "20260908_B_CAM"];
+    function isCam(n) { if (n.indexOf("엔딩") >= 0) return false; for (var i = 0; i < cams.length; i++) if (n.indexOf(cams[i]) == 0) return true; return false; }
     function lum(cl) { for (var k = 0; k < cl.components.numItems; k++) if (cl.components[k].displayName == "Lumetri 색상") return cl.components[k]; return null; }
     var res = [];
     for (var T = 0; T < 2; T++) {

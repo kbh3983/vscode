@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 src, pre = sys.argv[1], sys.argv[2]
-font = ImageFont.truetype("C:/Windows/Fonts/malgunbd.ttf", 16)
+font = ImageFont.truetype(next(p for p in ["C:/Windows/Fonts/malgunbd.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc"] if __import__("os").path.exists(p)), 16)
 def grab(t, w):
     h = w * 9 // 16
     b = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", src, "-frames:v", "1", "-vf", f"scale={w}:{h}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True).stdout

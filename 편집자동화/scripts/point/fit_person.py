@@ -26,6 +26,7 @@ MAX_W = 600        # 자막 최대 폭 px (사용자 최종본 큰 반응 자막
 MAX_W_FACE = 6.0   # 얼굴 폭의 몇 배까지
 MIN_SCALE = 0.6    # 이보다 작게 줄이지 않음 (장식이 큰 의성어 템플릿이 30%대로 줄어 글자가 안 보임 — 2026-10-12 시험)
 MARGIN = 40
+WIDE_FACE = 0.10  # 얼굴 높이가 화면의 10%보다 작으면 넓은 화면 → 반응 자막을 옮기지 않음 (2026-10-21)
 TOP_SAFE = 120     # 화면 위쪽 소제목·출연자 이름 자리(옆구리살 y 0~110) — 자막 위 끝이 이보다 위로 가지 않게 (2026-10-12 시험: 소제목과 겹침)
 MODEL = os.path.join(os.path.dirname(__file__), "..", "..", "models", "face_detection_yunet_2023mar.onnx")
 
@@ -65,10 +66,10 @@ def faces(img_path):
     return [] if F is None else [tuple(int(v) for v in f[:4]) for f in F]   # x, y, w, h
 
 
-def pick(F, who):
+def pick(F, who, W=1920):
     if not F: return None, "얼굴 못 찾음"
     if who:
-        k = {"왼쪽": lambda f: f[0], "오른쪽": lambda f: -f[0], "가운데": lambda f: abs(f[0] + f[2] / 2 - 960)}.get(who)
+        k = {"왼쪽": lambda f: f[0], "오른쪽": lambda f: -f[0], "가운데": lambda f: abs(f[0] + f[2] / 2 - W / 2)}.get(who)
         if k: return sorted(F, key=k)[0], ""
     big = max(F, key=lambda f: f[2] * f[3])
     return big, ("" if len(F) == 1 else f"인물 {len(F)}명 — who 없음, 가장 큰 얼굴")
@@ -79,26 +80,30 @@ def plan(out):
     for i, c in enumerate(C):
         _, fb = fit_guide.core(fit_guide.mask(out, i, "c"))
         if fb is None: print(i, c["name"], "자막이 안 보임 — 확인 필요"); continue
-        F = faces(os.path.join(out, f"c{i:02d}_0_bg0.png"))
-        f, note = pick(F, c.get("who"))
+        bg = os.path.join(out, f"c{i:02d}_0_bg0.png")
+        W, H = Image.open(bg).size; S = W / 1920   # 렌더 = 시퀀스 크기 (2026-10-21: 4K 시퀀스에서 1920 고정이라 화면 밖으로 감)
+        F = faces(bg)
+        f, note = pick(F, c.get("who"), W)
         if f is None: print(i, c["n"], c["name"], "확인 필요:", note, "— 그대로 둠"); continue
         fx, fy, fw, fh = f
+        if fh < WIDE_FACE * H:   # 전신 넓은 화면 — 머리 위에 두면 너무 작아짐 → 기본 위치(아래) 그대로 (2026-10-21 사용자 승인, 노년필수근육 얼굴 8%)
+            print(i, c["n"], c["name"], f"얼굴 {f} 높이 {fh / H:.0%} — 넓은 화면, 기본 위치 그대로"); continue
         w0, h0 = fb[1] - fb[0] + 1, fb[3] - fb[2] + 1
-        k = max(MIN_SCALE, min(1.0, MAX_W / w0, MAX_W_FACE * fw / w0))
+        k = max(MIN_SCALE, min(1.0, MAX_W * S / w0, MAX_W_FACE * fw / w0))
         w1, h1 = w0 * k, h0 * k
         cx = fx + fw / 2
         bottom = fy + 0.16 * fh                      # 머리 위에 얹기
         top = bottom - h1; where = "머리 위"
-        if top < TOP_SAFE:                            # 위에 자리가 없으면 턱 밑
+        if top < TOP_SAFE * S:                            # 위에 자리가 없으면 턱 밑
             top = fy + fh - 0.10 * fh; where = "턱 밑"
-        cx = min(max(cx, MARGIN + w1 / 2), 1920 - MARGIN - w1 / 2)
-        top = min(max(top, TOP_SAFE), 1080 - MARGIN - h1)
+        cx = min(max(cx, MARGIN * S + w1 / 2), W - MARGIN * S - w1 / 2)
+        top = min(max(top, TOP_SAFE * S), H - MARGIN * S - h1)
         tcx, tcy = cx, top + h1 / 2
         pcx, pcy = (fb[0] + fb[1]) / 2, (fb[2] + fb[3]) / 2
-        d0x, d0y = (c["pos"][0] - 0.5) * 1920, (c["pos"][1] - 0.5) * 1080
-        d1x = (960 + d0x - pcx) * k + tcx - 960; d1y = (540 + d0y - pcy) * k + tcy - 540
+        d0x, d0y = (c["pos"][0] - 0.5) * W, (c["pos"][1] - 0.5) * H
+        d1x = (W / 2 + d0x - pcx) * k + tcx - W / 2; d1y = (H / 2 + d0y - pcy) * k + tcy - H / 2
         P.append(dict(i=i, v=c["v"], s=c["s"], name=c["name"], sc=round(c["sc"] * k, 2),
-                      pos=[round(0.5 + d1x / 1920, 5), round(0.5 + d1y / 1080, 5)], face=list(f), where=where, note=note))
+                      pos=[round(0.5 + d1x / W, 5), round(0.5 + d1y / H, 5)], face=list(f), where=where, note=note))
         print(i, c["n"], c["name"], f"얼굴 {f} → {where}, 비율 {c['sc']}→{P[-1]['sc']}" + (f"  확인 필요: {note}" if note else ""))
     save(P, os.path.join(out, "plan.json"))
     print(len(P), "clips to set")
@@ -109,7 +114,8 @@ def verify(out):
     for p in load(os.path.join(out, "plan.json")):
         _, fb = fit_guide.core(fit_guide.mask(out, p["i"], "a"))
         fx, fy, fw, fh = p["face"]
-        ok = fb is not None and abs((fb[0] + fb[1]) / 2 - (fx + fw / 2)) < max(60, fw) and fb[0] > 3 and fb[1] < 1916 \
+        W = Image.open(os.path.join(out, f"c{p['i']:02d}_0_bg0.png")).size[0]   # 4K 시퀀스 (2026-10-21)
+        ok = fb is not None and abs((fb[0] + fb[1]) / 2 - (fx + fw / 2)) < max(60, fw) and fb[0] > 3 and fb[1] < W - 4 \
             and (fb[3] <= fy + 0.4 * fh or fb[2] >= fy + 0.6 * fh)   # 얼굴 위나 아래 (얼굴 가운데를 덮지 않음)
         bad += 0 if ok else 1
         print(p["i"], C[p["i"]]["name"], p["where"], "자막", fb, "OK" if ok else "확인")

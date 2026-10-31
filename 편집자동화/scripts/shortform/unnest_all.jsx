@@ -2,7 +2,7 @@
 // 사용: (function(){ NAMES=["목교정기_숏폼2", …]; LOG="<로그 txt>"; $.evalFile("<이 파일>"); return "시작"; })()
 // 숏폼마다: _정리4 없으면 init+video, A1 비었으면 audio, 그다음 verify → LOG에 한 줄
 (function () {
-    var F = "C:/DADA/9.AI/vscode/편집자동화/scripts/shortform/unnest.jsx", P = app.project;
+    var F = new File($.fileName).path + "/unnest.jsx", P = app.project;
     function w(s) { var f = new File(LOG); f.encoding = "UTF-8"; f.open("a"); f.writeln(s); f.close(); }
     function seq(n) { for (var i = 0; i < P.sequences.numSequences; i++) if (P.sequences[i].name == n) return P.sequences[i]; return null; }
     function run(m) { MODE = m; UN_RESULT = ""; try { $.evalFile(F); } catch (e) { UN_RESULT = "오류 " + m + " " + e.message + " line " + e.line; } return UN_RESULT; }

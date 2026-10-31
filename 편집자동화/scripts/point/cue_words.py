@@ -77,7 +77,10 @@ def main(audio_json, srt, points_json, out_json):
     pts = json.load(open(points_json, encoding="utf-8"))["points"]
     add_cuda_dlls()
     from faster_whisper import WhisperModel
-    model = WhisperModel("large-v3", device="cuda", compute_type="float16")
+    if sys.platform == "darwin":   # Mac (2026-10-21): CUDA 없음 → CPU int8
+        model = WhisperModel("large-v3", device="cpu", compute_type="int8")
+    else:
+        model = WhisperModel("large-v3", device="cuda", compute_type="float16")
     words = []
     for p in pts:
         a, z = p["cues"]

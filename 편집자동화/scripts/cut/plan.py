@@ -19,7 +19,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 SIL_DB = -40.0       # 무음 판정 음량
 SIL_MIN = 0.7        # 긴 무음 판정 길이
-KEEP_BREATH = 0.3    # 줄인 뒤 남길 호흡 (앞뒤 반씩)
+KEEP_BREATH = 0.2    # 줄인 뒤 남길 호흡 (앞뒤 반씩) — criteria "문장 사이 쉼" 약 0.2초 (2026-10-26 확정, 이전 0.3)
+SENT_MIN = 0.4       # 문장 사이(자막 줄 경계) 쉼은 이보다 길면 0.2초로 줄임 (2026-10-26 확정 — 0.4~0.7초는 문장 사이만, 말 중간은 그대로)
 REVIEW_LONG = 2.0    # 이보다 긴 무음은 동작 시연일 수 있어 review
 FRAME = 0.02
 MIN_CONF = 0.8
@@ -44,7 +45,7 @@ def snap_to_dip(db, t):
     return round(i * FRAME + FRAME / 2, 3)
 
 
-def silences(audio, words):
+def silences(audio, words, min_len=None):
     n = int(FRAME * P.SR)
     k = len(audio) // n
     db = 20 * np.log10(np.sqrt((audio[:k * n].reshape(k, n) ** 2).mean(1)) + 1e-9)
@@ -61,7 +62,7 @@ def silences(audio, words):
             s = None
     if s is not None:
         runs.append((s * FRAME, k * FRAME))
-    return [r for r in runs if r[1] - r[0] >= SIL_MIN]
+    return [r for r in runs if r[1] - r[0] >= (SIL_MIN if min_len is None else min_len)]
 
 
 def overlaps(a, b, ranges):
@@ -100,7 +101,10 @@ def main(work):
     keep_ranges = [(k["start"], k["end"]) for k in man["keep_silence"]]
     take_ranges = [(t["start"], t["end"]) for g in man["takes"] for t in g["takes"]]
     n_keep = 0
-    for s, e in silences(audio, words):
+    bounds = [(a["end"], b["start"]) for a, b in zip(sub["cues_final"], sub["cues_final"][1:])]
+    sents = [r for r in silences(audio, words, SENT_MIN) if r[1] - r[0] < SIL_MIN
+             and any(r[0] - 0.1 <= be and bs <= r[1] + 0.1 for be, bs in bounds)]   # 0.4~0.7초: 자막 줄 경계에 걸친 쉼만
+    for s, e in sorted(silences(audio, words) + sents):
         if overlaps(s, e, manual_ranges):
             continue
         if overlaps(s, e, keep_ranges):

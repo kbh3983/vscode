@@ -2,6 +2,8 @@
 // 사용: var PLAN="<배치.json>"; var AT=<빈 오디오 트랙 index>; var LIMIT=<최대 몇 개>; var FILL_RESULT=""; $.evalFile("<이 파일>"); return FILL_RESULT;
 // 넣은 뒤 바로 다시 찾아서 실제로 있는지 확인. 프리미어 템플릿은 텍스트를 건드리지 않는다 (글자가 사라짐)
 (function () {
+    // 끝만 앞당기면 원본 끝점(out)이 템플릿 끝에 남아 프리미어에서 끝을 끌어 늘릴 수 없음 → out = in + 길이 (2026-10-21 사용자: 3초 → 6~7초로 늘리고 싶은데 안 됨)
+    function keepHandle(k) { var o = new Time(); o.seconds = k.inPoint.seconds + (k.end.seconds - k.start.seconds); k.outPoint = o; }
     var f = new File(PLAN); f.encoding = "UTF-8"; f.open("r"); var plan = JSON.parse(f.read()); f.close();
     var seq = null;
     for (var i = 0; i < app.project.sequences.numSequences; i++) if (app.project.sequences[i].sequenceID == plan.sequence_id) seq = app.project.sequences[i];
@@ -21,7 +23,7 @@
             var t = new Time(); t.seconds = pt.start;
             var item = seq.importMGT(pt.candidates[k].path, t.ticks, vt, AT);
             var got = find(vt, pt.start);
-            if (got) { var e = new Time(); e.seconds = pt.end; got.end = e; }
+            if (got) { var e = new Time(); e.seconds = pt.end; got.end = e; keepHandle(got); }
             got = find(vt, pt.start);
             (got ? done : failed).push(pt.n + ":V" + (vt + 1) + (item ? "" : "(null)") + (got ? " " + got.end.seconds.toFixed(2) : ""));
         }

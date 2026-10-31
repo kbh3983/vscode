@@ -3,6 +3,7 @@
   plan <video.json>                    원본 파일에서 V2·V1 흰 배경을 재서 처음 값 계산 → <이름>_plan.json
   match <video.json> <ref.mp4> <cur.mp4> <values.json>
                                        V1이 보이는 클립마다 같은 순간의 V2(ref)와 V1(cur)을 비교 → 다음 값 (values_next.json)
+  frames <video.json>                  프레임 방식: 내보낼 프레임 번호 → <이름>_frames.json (ref·cur·final 자리에 mp4 대신 PNG 폴더)
   check <video.json> <final.mp4>       최종 렌더에서 V2 보이는 곳·V1 보이는 곳 흰 배경 무채색·밝기·검정 요약
 
 video.json: ExtendScript로 저장한 {"name","id","end","tracks":{"V1":[{name,start,end,in,path,disabled}],...}}
@@ -26,13 +27,13 @@ K_TEMP_V1 = 1.8       # B캠, 채도 115
 K_EXPO = 34.0         # 노출 1당 흰 배경 밝기
 K_BLACK = 0.9         # 검정 1당 어두운 5% (어두운 영역 0)
 # 2026-10-13 사용자 승인 (목교정기 최종본 회고): B캠은 A캠보다 밝지 않게, 바닥·벽 기준. 같은 장면 B캠은 한 값
-FLOOR_GAP = 15        # B캠 "흰 면" 밝기가 A캠 벽보다 이만큼 이상 어두우면 바닥(클로즈업)으로 보고 노출을 올리지 않음
+FLOOR_GAP = float(os.environ.get("COLOR_FLOOR_GAP", 15))   # (2026-10-26 체어: B캠이 넓은 벽 화면인데 카메라가 28 어두워 바닥으로 잘못 판별 → 환경 변수로 바꿔 쓸 수 있게) B캠 "흰 면" 밝기가 A캠 벽보다 이만큼 이상 어두우면 바닥(클로즈업)으로 보고 노출을 올리지 않음
 SCENE_GAP = 5.0       # B캠 클립 사이 원본 시간 빈틈이 이보다 작으면 같은 장면 → 값 묶음(중간값)
 SCENE_EXPO, SCENE_TEMP = 0.2, 1.5   # 이어진 클립이라도 계산 값이 이만큼 넘게 다르면 다른 장면(화각·밝기가 바뀜) — 틀어진골반 1회차 77클립이 10묶음으로 뭉쳐서 추가 (2026-10-13)
 # 승인된 30초 결과의 B캠 기준값 (옆구리살, 가려진 클립에 넣은 중간값)과 그때의 원본 흰 배경 R−B
 V1_BASE = {"14": -13.6, "15": 2.7, "16": 100, "19": 0.21, "22": 0, "24": -8}
 V1_BASE_SRC_RB = 16.3
-CAM = ("C0", "20260908_B_CAM")   # V2, V1 카메라 파일 이름 앞부분
+CAM = tuple(os.environ.get("COLOR_CAM", "C0,20260908_B_CAM").split(","))   # V2, V1 카메라 파일 이름 앞부분 (프로젝트마다 다르면 COLOR_CAM="C0,A_CAM_")
 
 
 def is_cam(c):
@@ -103,8 +104,41 @@ def plan(path):
           f"V1 원본 R−B {p['v1_src_rb']:+.1f} → 기준 온도 {v1['14']} | V1 보이는 클립 {len(vis)}개")
 
 
-def frame_at(mp4, t):
-    return img.frame_from_video(mp4, t)
+FPS = 30000 / 1001
+SAMPLES = (0.25, 0.5, 0.75)   # 프레임 방식: 클립마다 재는 지점 (긴 클립이 적을 때 — 2026-10-19 누워서, 전체 렌더 대신)
+
+
+def frame_no(t):
+    return int(round(t * FPS))
+
+
+def sample_frames(c):
+    return [frame_no(c["start"] + (c["end"] - c["start"]) * k) for k in SAMPLES]
+
+
+def frame_at(src, t):
+    """src가 mp4면 그 시각 프레임, 폴더면 프레임 방식 PNG(<폴더>/f<프레임번호>.png — In/Out 1프레임 PNG 내보내기)"""
+    if os.path.isdir(src):
+        return img.read_rgb(os.path.join(src, f"f{frame_no(t)}.png"))
+    return img.frame_from_video(src, t)
+
+
+def times_of(src, c):
+    return [f / FPS for f in sample_frames(c)] if os.path.isdir(src) else [mid(c)]
+
+
+def avg_stats(ims):
+    ss = [img.stats(im) for im in ims]
+    return {"wall": np.mean([s["wall"] for s in ss], 0), "wall_luma": float(np.mean([s["wall_luma"] for s in ss])),
+            "black_p5": float(np.mean([s["black_p5"] for s in ss])), "p95": float(np.mean([s["p95"] for s in ss]))}
+
+
+def frames(path):
+    """프레임 방식: 내보낼 프레임 번호 목록 (V1·V2 카메라 클립마다 SAMPLES 지점) → <이름>_frames.json"""
+    d = json.load(open(path, encoding="utf-8"))
+    fs = sorted({f for k in ("V1", "V2") for c in d["tracks"].get(k, []) if is_cam(c) for f in sample_frames(c)})
+    json.dump(fs, open(path.replace("_video.json", "_frames.json"), "w"))
+    print(f"프레임 {len(fs)}개: {fs}")
 
 
 def match(path, ref, cur, vals_path):
@@ -112,8 +146,8 @@ def match(path, ref, cur, vals_path):
     vals = json.load(open(vals_path, encoding="utf-8"))
     nxt = {}
     for i, c in visible_v1(d):
-        t = mid(c)
-        a, b = img.stats(frame_at(cur, t)), img.stats(frame_at(ref, t))
+        ts = times_of(cur, c)
+        a, b = avg_stats([frame_at(cur, t) for t in ts]), avg_stats([frame_at(ref, t) for t in ts])
         v = vals.get(str(i))
         w = a["wall"]
         rb, gm = w[0] - w[2], w[1] - (w[0] + w[2]) / 2
@@ -189,13 +223,14 @@ def check(path, final):
     v2 = [c for c in d["tracks"]["V2"] if is_cam(c) and not c["disabled"]]
     rows = []
     for c in v2[:: max(1, len(v2) // 12)]:
-        w, frac = wall_of(frame_at(final, mid(c)))
-        if frac > 0.15:
-            rows.append((w[0] - w[2], w[1] - (w[0] + w[2]) / 2))
+        for t in times_of(final, c):
+            w, frac = wall_of(frame_at(final, t))
+            if frac > 0.15:
+                rows.append((w[0] - w[2], w[1] - (w[0] + w[2]) / 2))
     rows = np.array(rows)
     print(f"{d['name']}: V2 {len(rows)}곳 흰 배경 R−B 중앙 {np.median(rows[:, 0]):+.1f} (최대 {np.abs(rows[:, 0]).max():.1f}), "
           f"G−중간 중앙 {np.median(rows[:, 1]):+.1f}")
 
 
 if __name__ == "__main__":
-    {"plan": plan, "match": match, "check": check, "group": group}[sys.argv[1]](*sys.argv[2:])
+    {"plan": plan, "match": match, "check": check, "group": group, "frames": frames}[sys.argv[1]](*sys.argv[2:])

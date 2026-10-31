@@ -36,7 +36,7 @@ RAISE_TWO_LINE = {"봄자막 03-잔망스럽고 귀여운 움직임": 70, "봄�
                   "PYNPA-강한말-주황_2106": 70, "05_실망 우울 좌절 모션자막": 70, "08_분노 화나는 모션자막": 70, "10_분노 화나는 모션자막": 70,
                   "PYNPA-[데코]우울1_2109": 100, "PYNPA-[데코]에필-노랑_2110": 100, "PYNPA-[데코]에필-초록_2110": 100}   # 두 줄일 때 올릴 px (틀어진골반 8:51·13:45·17:01 아래 끝 닿음 → 100)
 COLORS = "빨강|주황|노랑|초록|하늘|민트|분홍|보라|검정|회색|파랑|흰색"
-TEMPLATE_DIR = os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates")
+TEMPLATE_DIR = (os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates") if os.name == "nt" else os.path.expanduser("~/Library/Application Support/Adobe/Common/Motion Graphics Templates"))
 
 # 2026-10-11 임시 태그표 — 사용자가 파일명을 정리하면 파일명 태그로 바꾼다
 TYPES = {
@@ -58,13 +58,15 @@ TYPES = {
     "마무리": ["PYNPA-[데코]에필-노랑_2110", "PYNPA-[데코]에필-초록_2110", "PYNPA-강조말-노랑_2106",
                "PYNPA-강한말-검정_2106"],
     # 2026-10-12 회고 반영 — 사용자 종편(옆구리살)의 정보형 그래픽을 AE 템플릿으로 (원본 폰트 유지, playbook_AE변환.md 8장)
-    "요령": ["Tip_동작요령_2단", "요령_노랑_2단"],   # 동작 요령·주의점 (Tip! 8회 — 운동 영상의 중심)
+    "요령": ["요령_노랑_2단", "Tip_동작요령_2단"],   # 준비 자세·동작 방법 = 노랑 2단 1순위, 주의점·팁 = Tip! 1순위 (is_tip) — 2026-10-21 사용자 승인 (노년필수근육 노랑 9 / Tip 4)
     "세트안내": ["정보바_세트안내"],                  # 세트·횟수·시청자 참여 안내 (4회)
     "해설": ["해설_괄호"],                            # 출연자 상태를 제작진이 해설 (3회). PD·출연자 속마음("죄송합니다..ㅎ")은 사용자 템플릿 최박사_PD_속마음 — 내 템플릿 폴더에 들어오면 여기 추가 (보류 2번)
     "제품안내": ["정보바_2줄"],                       # 2026-10-13 제품 안내 정보 바 두 줄 (문구 고정 — 목교정기 최종본)
 }
 # 영상 성격별 1순위 (2026-10-13 사용자 승인 — 세 영상 회고: 운동 하체루틴 강한말-빨강 5 / 설명·상담 목교정기 강조말-하늘 3·자세교정 강조말-노랑 4)
-GENRE_FIRST = {"운동": {"강조": "PYNPA-강한말-빨강_2106"}, "설명": {"강조": "PYNPA-강조말-노랑_2106"}}
+GENRE_FIRST = {"운동": {"강조": "PYNPA-강조말-노랑_2106"}, "설명": {"강조": "PYNPA-강조말-노랑_2106"}}   # 운동 2026-10-21 강한말-빨강 → 강조말-노랑 (사용자 승인 — 노년필수근육 강조말-노랑 2/4·강한말-빨강 0/4)
+TIP_WORDS = re.compile(r"말고|아니라|않게|않도록|주의|안 돼|안돼|금지|하지 마")   # 주의점·팁 문구 → Tip! 1순위
+CUE_END_TYPES = {"요령", "정보", "세트안내"}   # 끝 = 구간 마지막 자막 줄 끝 (2026-10-21 사용자 승인 — 사용자 최종본 끝이 그 설명이 끝나는 줄 끝 ±0.1초)
 # 이 유형 자막이 나오는 순간은 B캠 반응 컷을 제안 (마커·보고) — 목교정기·자세교정 최종본에서 반응·강조 자막 순간 B캠 (2026-10-13 확정)
 BCAM_TYPES = {"웃음", "놀람", "부정", "화남", "강조"}
 # 반응 자막 — 인물 근처(머리 위·턱 밑)에 놓는 유형 (fit_person.py). 나머지는 가이드 띠 (fit_guide.py)
@@ -223,6 +225,8 @@ def main(points_path, srt_path, out_path, words_path=None):
         first = GENRE_FIRST.get(GENRE_FIRST_ALIAS.get(g, g), {}).get(p["type"])
         if first in order:
             order.remove(first); order.insert(0, first)
+        if p["type"] == "요령" and (p.get("tip") or (p.get("tip") is None and TIP_WORDS.search(p["text"]))):
+            order.remove("Tip_동작요령_2단"); order.insert(0, "Tip_동작요령_2단")
         for name in order:
             if len(cands) >= pts.get("max_candidates", MAX_CANDIDATES):   # 사용자가 구간당 후보 수를 정하면 (2026-10-13 하체루틴 "후보 2개씩")
                 break
@@ -265,7 +269,10 @@ def main(points_path, srt_path, out_path, words_path=None):
         ps, pe, how = phrase_time(p.get("at") or shown, a, z, cues, words)
         lo, hi = DURATION.get(p["type"], (1.3, 4.0))
         start = pe + 0.3 if p["type"] == "해설" and p.get("at") else ps   # 해설은 그 말(질문 등)이 끝난 뒤
-        end = content_end(cues, a, z, start, p["text"]) if p["type"] in LONG_TYPES else pe + 0.4   # 말 길이 = 자막 문구 핵심어가 마지막으로 나오는 대사 줄 끝
+        if p["type"] in CUE_END_TYPES:
+            end = cues[z][1]   # 그 설명이 끝나는 자막 줄 끝 — points의 cues 끝을 설명이 끝나는 줄로 적는다
+        else:
+            end = content_end(cues, a, z, start, p["text"]) if p["type"] in LONG_TYPES else pe + 0.4   # 말 길이 = 자막 문구 핵심어가 마지막으로 나오는 대사 줄 끝
         if p["type"] == "해설":
             end = start + 2.3   # 해설은 말이 끝난 뒤 조용한 동안 (최종본 69~105프레임)
         end = min(max(end, start + lo), start + hi)

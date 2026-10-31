@@ -12,7 +12,7 @@
     app.project.activeSequence = seq;
     var q = qe.project.getActiveSequence();
     var T = plan.track - 1;
-    function base(p) { return p.split("\\").pop(); }
+    function base(p) { return p.split(/[\\\/]/).pop(); }
     var srcNames = {}; for (var i = 0; i < plan.sources.length; i++) srcNames[base(plan.sources[i])] = true;
 
     var muted = [];

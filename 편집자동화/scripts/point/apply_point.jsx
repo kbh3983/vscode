@@ -6,6 +6,8 @@
 // 여러 칸 템플릿(Tip!·노랑 2단·정보 바·해설 — plan.py fields)은 칸 이름(displayName)대로 채운다 (2026-10-12). 효과 제안(suggest)은 마커 설명에
 // ExtendScript는 ES3: map/forEach 쓰지 않음
 (function () {
+    // 끝만 앞당기면 원본 끝점(out)이 템플릿 끝에 남아 프리미어에서 끝을 끌어 늘릴 수 없음 → out = in + 길이 (2026-10-21 사용자: 3초 → 6~7초로 늘리고 싶은데 안 됨)
+    function keepHandle(k) { var o = new Time(); o.seconds = k.inPoint.seconds + (k.end.seconds - k.start.seconds); k.outPoint = o; }
     function half(t) { var w = t.split(" "); if (w.length < 2) return t; var best = 1, d = 1e9; for (var k = 1; k < w.length; k++) { var a = w.slice(0, k).join(" ").length, b = w.slice(k).join(" ").length; if (Math.abs(a - b) < d) { d = Math.abs(a - b); best = k; } } return w.slice(0, best).join(" ") + "\r" + w.slice(best).join(" "); }
     var f = new File(PLAN); f.encoding = "UTF-8"; f.open("r"); var plan = JSON.parse(f.read()); f.close();
     var seq = null;
@@ -48,7 +50,7 @@
                     fields[0].setValue(JSON.stringify(j), true);
                     if (fields.length > 1) multiText.push(pt.n + ":" + c.template + "(" + fields.length + ")");
                 }
-                var e2 = new Time(); e2.seconds = pt.end; item.end = e2;
+                var e2 = new Time(); e2.seconds = pt.end; item.end = e2; keepHandle(item);
                 try { item.name = c.template; } catch (en) {}   // AE 템플릿 클립 이름이 "제목 없음"으로 나옴 → 템플릿 이름 (set_font KEEP_TEMPLATES·보고에 씀)
                 if (c.two_line && c.raise) for (var mq = 0; mq < item.components.numItems; mq++) if (item.components[mq].matchName == "AE.ADBE Motion") { var mp = item.components[mq].properties; for (var pp = 0; pp < mp.numItems; pp++) if (mp[pp].displayName == "위치" || mp[pp].displayName == "Position") mp[pp].setValue([0.5, 0.5 - (c.raise === true ? 70 : c.raise) / 1080], true); }   // 두 줄이면 아래 끝에 닿지 않게 70px 위로
                 placed++;

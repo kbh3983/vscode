@@ -9,12 +9,13 @@ from demucs.apply import apply_model
 
 src, out = sys.argv[1], sys.argv[2]; os.makedirs(out, exist_ok=True)
 wav, sr = sf.read(src, dtype="float32", always_2d=True)          # (n, 2)
-m = get_model("htdemucs"); m.cuda().eval()
+DEV = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
+m = get_model("htdemucs"); m.to(DEV).eval()
 assert sr == m.samplerate, (sr, m.samplerate)
 x = torch.from_numpy(wav.T.copy())                                  # (2, n)
 ref = x.mean(0); mu, sd = ref.mean(), ref.std()
 with torch.no_grad():
-    y = apply_model(m, ((x - mu) / sd)[None], device="cuda", split=True, overlap=0.25, progress=False)[0] * sd + mu
+    y = apply_model(m, ((x - mu) / sd)[None], device=DEV, split=True, overlap=0.25, progress=False)[0] * sd + mu
 rest = None
 for name, s in zip(m.sources, y):
     a = s.cpu().numpy().T

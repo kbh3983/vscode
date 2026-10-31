@@ -12,7 +12,7 @@ import json, os, shutil, sys, zipfile
 backup = sys.argv[1]
 here = os.path.dirname(os.path.abspath(__file__))
 names = json.load(open(os.path.join(here, "rename_names.json"), encoding="utf-8"))
-mt = os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates")
+mt = (os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates") if os.name == "nt" else os.path.expanduser("~/Library/Application Support/Adobe/Common/Motion Graphics Templates"))
 os.makedirs(backup, exist_ok=True)
 
 done = same = 0

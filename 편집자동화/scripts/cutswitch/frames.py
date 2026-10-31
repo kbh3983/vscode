@@ -12,6 +12,12 @@ import tempfile
 sys.stdout.reconfigure(encoding="utf-8")
 
 
+FONT = "C\\:/Windows/Fonts/arial.ttf" if os.name == "nt" else "/System/Library/Fonts/Supplemental/Arial.ttf"
+FFMPEG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "bin", "ffmpeg")
+if not os.path.exists(FFMPEG):
+    FFMPEG = "ffmpeg"
+
+
 def clip_at(d, track, t):
     for c in d["tracks"][track]:
         if c["start"] <= t < c["end"]:
@@ -21,8 +27,8 @@ def clip_at(d, track, t):
 
 def grab(c, t, out, label):
     src_t = c["in"] + (t - c["start"])
-    vf = "scale=480:-2,drawtext=fontfile='C\\:/Windows/Fonts/arial.ttf':text='" + label + "':x=8:y=8:fontsize=28:fontcolor=yellow:box=1:boxcolor=black@0.6"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{src_t:.3f}", "-i", c["path"], "-frames:v", "1", "-vf", vf, out], check=True)
+    vf = "scale=480:-2,drawtext=fontfile='" + FONT + "':text='" + label + "':x=8:y=8:fontsize=28:fontcolor=yellow:box=1:boxcolor=black@0.6"
+    subprocess.run([FFMPEG, "-v", "error", "-y", "-ss", f"{src_t:.3f}", "-i", c["path"], "-frames:v", "1", "-vf", vf, out], check=True)
 
 
 def main(vj, out, track, *ts):
@@ -47,7 +53,7 @@ def main(vj, out, track, *ts):
     layout = "|".join(f"{480 * (i % cols)}_{270 * (i // cols)}" for i in range(n))
     scale = "".join(f"[{i}:v]scale=480:270[s{i}];" for i in range(n))
     flt = scale + "".join(f"[s{i}]" for i in range(n)) + f"xstack=inputs={n}:layout={layout}"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", flt, "-frames:v", "1", out], check=True)
+    subprocess.run([FFMPEG, "-v", "error", "-y", *inputs, "-filter_complex", flt, "-frames:v", "1", out], check=True)
     print(out, len(rows), "rows")
 
 

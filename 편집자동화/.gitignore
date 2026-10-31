@@ -17,3 +17,6 @@ output/
 
 # 애프터이펙트 자동 저장
 **/자동 저장/
+
+# Mac용 ffmpeg/ffprobe 실행 파일
+bin/

@@ -39,6 +39,12 @@ HALLU_COMPRESSION = 2.4
 HALLU_REPEAT = re.compile(r"(.)\1{5,}")   # 같은 글자 6번 이상 (ㅋㅋㅋㅋㅋㅋ)
 
 
+def device():
+    """정렬·화자 모델을 돌릴 장치: CUDA(Windows PC)가 있으면 cuda, 없으면 cpu (Mac)"""
+    import torch
+    return "cuda" if torch.cuda.is_available() else "cpu"
+
+
 def add_cuda_dlls():
     for base in site.getsitepackages():
         for sub in ("cublas", "cudnn"):
@@ -230,7 +236,7 @@ def align_text(model, proc, vocab, audio_seg, text, t0):
         return out
     with torch.inference_mode():
         # 모델이 학습된 방식대로 정규화(평균 0, 분산 1)해서 넣는다
-        x = proc(audio_seg, sampling_rate=SR, return_tensors="pt").input_values.cuda()
+        x = proc(audio_seg, sampling_rate=SR, return_tensors="pt").input_values.to(device())
         emis = torch.log_softmax(model(x).logits.float(), dim=-1)
     frames = emis.shape[1]
     if frames < len(chars):
@@ -317,7 +323,7 @@ def stage_align(out):
     asr = asr_all["chunks"]
     overlap_chunks = asr_all.get("model") != "clova-speech"   # CLOVA 구간은 겹치지 않음
     proc = Wav2Vec2Processor.from_pretrained(MODEL_ALIGN)
-    model = Wav2Vec2ForCTC.from_pretrained(MODEL_ALIGN).cuda().eval()
+    model = Wav2Vec2ForCTC.from_pretrained(MODEL_ALIGN).to(device()).eval()
     vocab = proc.tokenizer.get_vocab()
 
     words = []

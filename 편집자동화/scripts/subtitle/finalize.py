@@ -137,7 +137,7 @@ def main():
 
     from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
     proc = Wav2Vec2Processor.from_pretrained(P.MODEL_ALIGN)
-    model = Wav2Vec2ForCTC.from_pretrained(P.MODEL_ALIGN).cuda().eval()
+    model = Wav2Vec2ForCTC.from_pretrained(P.MODEL_ALIGN).to(P.device()).eval()
     vocab = proc.tokenizer.get_vocab()
 
     raw_parts, corr_parts, words, notes_all = [], [], [], []

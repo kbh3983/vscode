@@ -3,6 +3,8 @@
 // PLAN 후보 중 replace_from(원래 PR 템플릿 이름)이 있는 것만: 그 자리 클립 지우기 → AE판 넣기 → 문구 넣기 → 끝 시간 → 바로 다시 찾아 확인
 // 이미 AE판으로 바뀐 자리(MGT 구성요소 있음)는 건너뛴다. AE판 클립 이름이 "제목 없음"으로 들어와서 템플릿 이름으로 바꿔 둔다 → 시간 초과로 끊겨도 다시 실행하면 이어서 함
 (function () {
+    // 끝만 앞당기면 원본 끝점(out)이 템플릿 끝에 남아 프리미어에서 끝을 끌어 늘릴 수 없음 → out = in + 길이 (2026-10-21 사용자: 3초 → 6~7초로 늘리고 싶은데 안 됨)
+    function keepHandle(k) { var o = new Time(); o.seconds = k.inPoint.seconds + (k.end.seconds - k.start.seconds); k.outPoint = o; }
     var f = new File(PLAN); f.encoding = "UTF-8"; f.open("r"); var plan = JSON.parse(f.read()); f.close();
     var seq = null;
     for (var i = 0; i < app.project.sequences.numSequences; i++) if (app.project.sequences[i].sequenceID == plan.sequence_id) seq = app.project.sequences[i];
@@ -32,7 +34,7 @@
                     try { v = String(pr.getValue()); } catch (e) {}
                     if (v.indexOf("textEditValue") >= 0) { var j = JSON.parse(v); j.textEditValue = pt.text; j.fontTextRunLength = [String(j.textEditValue).length]; j.capPropTextRunCount = 1; var A_ = ["fontEditValue","fontFSAllCapsValue","fontFSBoldValue","fontFSItalicValue","fontFSSmallCapsValue","fontSizeEditValue"]; for (var a_ = 0; a_ < A_.length; a_++) if (j[A_[a_]] && j[A_[a_]].length) j[A_[a_]] = [j[A_[a_]][0]];   /* 글자 묶음을 새 문구 길이 하나로 (fix_runs.jsx 참고) */ pr.setValue(JSON.stringify(j), true); txt = "text"; break; }
                 }
-                var e2 = new Time(); e2.seconds = pt.end; got.end = e2;
+                var e2 = new Time(); e2.seconds = pt.end; got.end = e2; keepHandle(got);
                 try { got.name = c.template; } catch (e3) {}
                 got = find(vt, pt.start);
             }

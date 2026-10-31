@@ -14,7 +14,10 @@ from mogrt_ranges import fix_ranges
 
 src_dir, name, display = sys.argv[1:4]
 thumb = None
-if len(sys.argv) > 5:
+if len(sys.argv) > 4 and sys.argv[4].lower().endswith(".png"):   # 정지 화면 png를 바로 줌 (AE saveFrameToPng)
+    from PIL import Image
+    thumb = Image.open(sys.argv[4]).convert("RGB")
+elif len(sys.argv) > 5:
     import subprocess, tempfile
     from PIL import Image
     td = tempfile.mkdtemp()
@@ -24,7 +27,10 @@ if len(sys.argv) > 5:
     thumb = Image.open(png).convert("RGB")
 assert name.endswith("_AE"), "원본 템플릿을 덮어쓰지 않도록 _AE 이름만 허용"
 src = max(glob.glob(os.path.join(src_dir, "*.mogrt")), key=os.path.getmtime)
-dst = os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates", name + ".mogrt")
+# 맥: ~/Library/Application Support/Adobe/Common/… (2026-10-27 맥에서 첫 AE 템플릿)
+MGT = os.path.join(os.environ["APPDATA"], "Adobe", "Common", "Motion Graphics Templates") if "APPDATA" in os.environ else \
+    os.path.expanduser("~/Library/Application Support/Adobe/Common/Motion Graphics Templates")
+dst = os.path.join(MGT, name + ".mogrt")
 tmp = dst + ".tmp"
 with zipfile.ZipFile(src) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
     for it in zin.infolist():
